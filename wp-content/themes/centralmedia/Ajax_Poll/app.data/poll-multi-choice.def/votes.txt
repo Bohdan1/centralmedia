@@ -1,0 +1,4 @@
+Dog=0
+Cat=1
+Fish=0
+Snake=0
