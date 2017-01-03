@@ -1,4 +1,3 @@
-	<!--footer-->
 	<br><br>
 	<footer class="page-footer">
     <div >
@@ -6,7 +5,6 @@
         <div class="offset-l1 col l3">
         <p>
           <img src="<?php bloginfo('template_url') ?>/img/logo/logo-central-media — footer.png" class="footer-logo-float">
-
           <span class="main-sign-footer">CENTRAL MEDIA</span>
           <span>МУЛЬТИМЕДІЙНА ПЛАТФОРМА</span>
          </p>
@@ -41,12 +39,6 @@
     </div>
   </footer>
 
-	<!--Import jQuery before materialize.js-->
-	<script  src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/materialize.min.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/wow.min.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/typed.min.js"></script>
-	<script src="https://use.fontawesome.com/d97a6585c2.js"></script>
 	<script type="text/javascript">
 		$('.carousel.carousel-slider').carousel({full_width: true});
 		setTimeout(autoplay, 4000);

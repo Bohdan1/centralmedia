@@ -5,44 +5,19 @@
 		<?php bloginfo('name'); ?>
 	</title>
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-	<!--Import Google Icon Font-->
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/materialize.min.css" media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/normalize.css" media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/font-awesome.min.css" media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/animate.css" media="screen,projection"/>
-	<!--Let browser know website is optimized for mobile-->
+	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<style>
-		/* mobile */
-		@media screen and (max-width: 768px) {
-			.main-sign{
-				font-size: 25px;
-			}
-			.additional-sign{
-				font-size: 18px;
-				display: none;
-			}
-			.social{
-				float: center;
-				padding-top: 0px;
-				padding-bottom: 5px;
-				padding-left: 5px;
-				padding-right: 10px;
-			}
-		}
-	</style>
+	<?php wp_head(); ?>
 </head>
 
 <body>
-<?php
-if (is_admin_bar_showing()) {
-    echo '<div style="height: 30px;"></div>';
-}
-?>
+	<?php
+		/*
+		if (is_admin_bar_showing()) {
+		    echo '<div style="height: 30px;"></div>';
+		}
+		*/
+	?>
 
 	<div id="menu" class="row ">
 		<div class="col l1 ">
