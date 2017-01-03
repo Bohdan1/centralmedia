@@ -26,21 +26,17 @@
 			</a>
 		</div>
 		<div class="col l5 ">
-		<div class="nav-wrapper">
-			<ul id="nav-mobile" class="left hide-on-med-and-down">
-			    <li><a class="menu-list" href="collapsible.html">ВІДЕО</a></li>
-			    <li><a class="menu-list" href="collapsible.html">БЛОГИ</a></li>
-			    <li><a class="menu-list" href="badges.html">СТАТТІ</a></li>
-      	 		<li><a class="menu-list" href="sass.html">НОВИНИ</a></li>
-      </ul>
-      </div>
+		    <?php
+		    	// header menu
+		    	wp_nav_menu(array('theme_location'=>'menu', 'menu_class'=>'left hide-on-med-and-down', 'container'=>'false') );
+		    ?>
 		</div>
 		<div class="col l6">
 			<nav class="hide-on-med-and-down">
 				<div class="nav-wrapper">
-					<form>
+					<form action="">
 						<div class="input-field">
-							<input id="search" placeholder="Пошук..." type="search" required>
+							<input id="search" placeholder="Пошук..." type="search" required name="s">
 							<label for="search"><i class="material-icons">search</i></label>
 						</div>
 					</form>
