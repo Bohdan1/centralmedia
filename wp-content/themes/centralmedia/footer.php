@@ -11,10 +11,12 @@
           <p class="black-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
         <div class="col l4 center nav-footer-pos">
-          <?php
-            // footer menu
-            wp_nav_menu(array('theme_location'=>'menu', 'container'=>'false') );
-          ?>
+          <ul>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/news">Новини</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/articles">Статті</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/blogs">Блоги</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/video">Відео</a></li>
+          </ul>
         </div>
         <div class="col l4 center nav-contact-pos">
           <span class="black-text email-footer">central-media@gmail.com</span><br>

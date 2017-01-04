@@ -1,4 +1,3 @@
-<div style="height: 58px;"></div>
 <div class="row slider-section">
 	<!--slider-->
 	<div class="col l8 s12 m12">
@@ -32,12 +31,12 @@
 
 			<?php 
 			 $args = array(
-		                'post_type' => 'blogs',
-		                'posts_per_page' => 3,
-		                'publish' => true,
-		                'orderby' => 'date',
-		                'order' => 'DESC'
-		            );
+                'post_type' => 'blogs',
+                'posts_per_page' => 3,
+                'publish' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
             $myposts = get_posts( $args );
 
             function short_desc_blog($charlength) {		// function for display short content for blogs
@@ -83,21 +82,19 @@
 <div class="row content">
 	<div class="col l6 s12 m6 news-block ">
 		<div class="news-sign center">ОСТАННІ НОВИНИ</div>
-		
 		<?php 
 			 $args = array(
-		                'post_type' => 'news',
-		                'posts_per_page' => 10,
-		                'publish' => true,
-		                'orderby' => 'date',
-		                'order' => 'DESC'
-		            );
+                'post_type' => 'news',
+                'posts_per_page' => 10,
+                'publish' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
             $myposts = get_posts( $args );
 
             foreach( $myposts as $post ){
             	setup_postdata($post);
         ?>
-
 		<div class="article"> 
 			<div class="article-title">
 				<a href="<?php the_permalink(); ?>" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
@@ -109,7 +106,6 @@
     		} /* end foreach */
 			wp_reset_postdata();
 		?>
-		
 		<div class="article"> 
 			<div class="article-title">
 				<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
@@ -127,7 +123,6 @@
 				<a href="#" class="hover-link"><em>фото</em>В Росії цензура не пропустила три книги для Сущенка</a>
 			</div>
 		</div>
-		
 	</div>
 
 	<!--Videos-->
@@ -143,16 +138,15 @@
 				<div class="center">Онлайн трансляція</div>
 			</div>
 		</div>
-
 		<div class="top-video">Топ-5 Відео</div>
 		<?php 
 			 $args = array(
-		                'post_type' => 'video',
-		                'posts_per_page' => 5,
-		                'publish' => true,
-		                'orderby' => 'date',
-		                'order' => 'DESC'
-		            );
+                'post_type' => 'video',
+                'posts_per_page' => 5,
+                'publish' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+	        );
             $myposts = get_posts( $args );
             foreach( $myposts as $post ){
             	setup_postdata($post);
@@ -192,16 +186,13 @@
 
 		            function short_desc_article($charlength) {		// function for display short content for states
 						$excerpt = get_the_excerpt();
-						?>
-						<?php
-							if ( mb_strlen( $excerpt ) > $charlength ) {
-								$subex = mb_substr( $excerpt, 0, $charlength);
-								echo $subex . '...';
-							} else {
-								echo $subex;
-							}
+						if ( mb_strlen( $excerpt ) > $charlength ) {
+							$subex = mb_substr( $excerpt, 0, $charlength);
+							echo $subex . '...';
+						} else {
+							echo $subex;
+						}
 					}
-
 					foreach( $myposts as $post ){
 						setup_postdata($post);
 						if ($firstArticle == false) {
@@ -220,8 +211,8 @@
 					</div>
 				</div>
 				<?php
-					} /* end if */
-					else{
+						} /* end if */
+						else{
 				?>
 				<div class="row other-state">
 					<div class="col s12 m12 l12">

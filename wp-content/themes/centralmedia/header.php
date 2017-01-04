@@ -11,25 +11,21 @@
 </head>
 
 <body>
-	<?php
-		/*
-		if (is_admin_bar_showing()) {
-		    echo '<div style="height: 30px;"></div>';
-		}
-		*/
-	?>
-
 	<div id="menu" class="row ">
 		<div class="col l1 ">
-			<a href="<?php echo home_url(); ?>">
+			<a href="<?php echo get_home_url(); ?>">
 				<img src="<?php bloginfo('template_url') ?>/img/logo/logo-central-media1.jpeg" class="header-logo">
 			</a>
 		</div>
 		<div class="col l5 ">
-		    <?php
-		    	// header menu
-		    	wp_nav_menu(array('theme_location'=>'menu', 'menu_class'=>'left hide-on-med-and-down', 'container'=>'false') );
-		    ?>
+		    <div class="nav-wrapper">
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+				    <li><a class="menu-list" href="<?php echo get_home_url(); ?>/video">ВІДЕО</a></li>
+				    <li><a class="menu-list" href="<?php echo get_home_url(); ?>/blogs">БЛОГИ</a></li>
+				    <li><a class="menu-list" href="<?php echo get_home_url(); ?>/articles">СТАТТІ</a></li>
+		  	 		<li><a class="menu-list" href="<?php echo get_home_url(); ?>/news">НОВИНИ</a></li>
+		  		</ul>
+			</div>
 		</div>
 		<div class="col l6">
 			<nav class="hide-on-med-and-down">
@@ -49,3 +45,5 @@
 			</ul>
 		</div>
 	</div>
+
+	<div style="height: 58px;"></div>
