@@ -422,6 +422,22 @@ em{
     background-color: transparent;
 }
 
+/* pagination */
+.pagination{
+    background-color: white;
+    width: auto;
+    height: auto;
+    right: auto;
+    position: static;
+    margin-top: 0px;
+    color:#000;
+}
+
+.pagination a{
+    color:#000;
+}
+/* end pagination */
+
 footer.page-footer {
     margin-top: 0px;
     padding-top: 0px;

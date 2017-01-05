@@ -22,21 +22,31 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'register_scripts' );
 
-	register_nav_menu( 'menu', 'Меню сайту' ); // добавлення можливості створювати меню
+	register_nav_menu( 'menu', 'Меню сайту' ); // addition of the ability to create menus
 
-	/*
-	// Обмеження кількості слів для функції the_except()
-	function new_excerpt_length($length) {
-		return 20;
-	}
-	add_filter('excerpt_length', 'new_excerpt_length');
-	//end
+	register_sidebar();
 
-	//Створення посилання "Читати далі ..." в кінці
-	add_filter('excerpt_more', 'new_excerpt_more');
-	function new_excerpt_more($more) {
-		global $post;
-		return '...<div><a href="'. get_permalink($post->ID) . '"> Читати далі...</a>';
+
+	// pagination settings
+	// delete H2 from pagination template
+	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+	function my_navigation_template( $template, $class ){
+		/*
+		Вид базового шаблону:
+		<nav class="navigation %1$s" role="navigation">
+			<h2 class="screen-reader-text">%2$s</h2>
+			<div class="nav-links">%3$s</div>
+		</nav>
+		*/
+		return '
+			<nav class="%1$s" role="navigation">
+				<div class="nav-links">%3$s</div>
+			</nav>    
+		';
 	}
-	//end
-	*/
+
+	$pagination_args = array(
+		'prev_text' => __( '«' ),
+		'next_text' => __( '»' ),
+	);
+	// end pagination

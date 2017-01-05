@@ -30,12 +30,7 @@
 		<div class="col l6">
 			<nav class="hide-on-med-and-down">
 				<div class="nav-wrapper">
-					<form action="">
-						<div class="input-field">
-							<input id="search" placeholder="Пошук..." type="search" required name="s">
-							<label for="search"><i class="material-icons">search</i></label>
-						</div>
-					</form>
+					<?php get_search_form(); ?>
 				</div>
 			</nav>
 			<ul >

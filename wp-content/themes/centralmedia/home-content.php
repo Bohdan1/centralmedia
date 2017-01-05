@@ -27,7 +27,7 @@
 	<!--Blogs-->
 	<div class="col l4 s12 m12">
 		<div class="blogs">
-			<span class="blog-sign">БЛОГИ </span>
+			<a class="black-text" href="<?php echo get_home_url(); ?>/blogs"><span class="blog-sign"> БЛОГИ </span></a>
 
 			<?php 
 			 $args = array(
@@ -81,7 +81,7 @@
 <!--news-->
 <div class="row content">
 	<div class="col l6 s12 m6 news-block ">
-		<div class="news-sign center">ОСТАННІ НОВИНИ</div>
+		<div class="news-sign center"><a class="black-text" href="<?php echo get_home_url(); ?>/news"> ОСТАННІ НОВИНИ </a></div>
 		<?php 
 			 $args = array(
                 'post_type' => 'news',
@@ -127,7 +127,7 @@
 
 	<!--Videos-->
 	<div class="col l3 s12 m6 center video-block">
-		<div class="news-sign-video center">ВІДЕО</div>
+		<div class="news-sign-video center"><a class="black-text" href="<?php echo get_home_url(); ?>/video"> ВІДЕО </a></div>
 		<div class="video-list row">
 			<div class="youtube col l6">
 				<img width="80%" src="<?php bloginfo('template_url'); ?>/img/logo/youtube-icon.png" alt="альтернативный текст" />
@@ -170,7 +170,7 @@
 	<!--state-->
 	<div class="col l3 s12 m6 center state-block">
 		<div class="state-list">
-			<div class="state-sign center">СТАТТІ</div>
+			<div class="state-sign center"><a class="black-text" href="<?php echo get_home_url(); ?>/articles"> СТАТТІ </a></div>
 			<div class="blogs">
 				<?php 
 					$args = array(
