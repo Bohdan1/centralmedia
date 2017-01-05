@@ -3,7 +3,7 @@
 <!--header-->
 
 <!--home-content-->
-	<?php get_template_part('home', 'content') ?>
+	<?php get_template_part('content', 'home') ?>
 <!--end home-content-->
 
 <!--footer-->
