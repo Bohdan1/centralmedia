@@ -1,11 +1,11 @@
 <!--header-->
-	<?php get_header() ?>
-<!--header-->
+<?php get_header() ?>
 
-<!--home-content-->
-	<?php get_template_part('content', 'home') ?>
-<!--end home-content-->
+<!--content-home-->
+<?php get_template_part('content', 'home') ?>
+
+<!--content-footer-->
+<?php get_template_part('content', 'footer') ?>
 
 <!--footer-->
-	<?php get_footer() ?>
-<!--end footer-->
+<?php get_footer() ?>

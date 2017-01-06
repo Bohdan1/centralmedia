@@ -4,7 +4,7 @@ Theme URI: http://CentralMedia/
 Description: Тема для Central Media.
 Author: Platform-IT
 Author URI: http://platform-it.com/
-Version: 0.3
+Version: 0.4
 */
 
 ::-webkit-scrollbar{
@@ -153,6 +153,7 @@ hr{
     border: 2px solid black;  
 }
 
+
 #menu{
     overflow: hidden; 
     position: fixed;
@@ -166,6 +167,7 @@ hr{
     margin-top: 58px;
 }
 #menu li{
+    text-transform: uppercase;
     display: inline;
     list-style:none;
     margin: 5px 10px;
@@ -224,6 +226,12 @@ nav .input-field label i  {
     background-color: #f61c0d !important;
     font-weight: bolder !important  ;
 }
+
+.slider-section{
+    border-bottom: 10px solid #d82d19;
+    margin-bottom: 20px;
+}
+
 .article{
     border-radius: 2px;
     margin: 20px;
@@ -286,7 +294,7 @@ em{
     border-bottom: #e3e3e3 1px solid;
     margin: 15px;
 }
-.blogs{
+.blogs, .actual{
     margin-top: 25px;
     height: 300px;
 
@@ -357,12 +365,12 @@ em{
 
 
 
-.state-list{
+.state-list, .actual-list{
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.state-sign{
+.state-sign, .actual-sign{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: -10px;
@@ -379,13 +387,13 @@ em{
     border-bottom: #e3e3e3 1px solid;
 }
 
-.other-state{
+.other-state, .other-actual{
     padding-bottom: 10px;
     margin-top: 10px;
     border-bottom: #e3e3e3 1px solid;
 }
 
-.state-other-name{
+.state-other-name, .actual-other-name{
     font-weight: bold;
     font-size: 14px;
 
@@ -416,10 +424,6 @@ em{
     text-align: justify;
     border-right: #e3e3e3 1px solid;
 
-}
-
-.reklama{
-    background-color: transparent;
 }
 
 /* pagination */
@@ -526,4 +530,136 @@ footer.page-footer .footer-copyright {
         padding-left: 5px;
         padding-right: 10px;
     }
+}
+
+a{
+    color: black;
+}
+.single-news-sign{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.text-news{
+    font-size: 19px;
+    padding: 25px;
+}
+
+.blogger-crop-photo{
+    border-radius: 50%;
+}
+
+.all-blogs-blogger-speach{
+    text-align: center;
+}
+
+.all-blog-block{
+
+    padding: 10px;
+}
+
+.single-blogs-sign{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.top10-bloggers-sign{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.all-blogs{
+    border-right: 1px solid #e3e3e3;
+}
+
+.top10-blogger-photo-pos{
+    margin-left: 10px;
+    float: left;
+    margin-right: 10px;
+}
+
+.top10-blogger-name{
+    font-size: 15px;
+
+}
+
+
+.top10-blogger-name:hover{
+    transition-duration: .5s;
+    text-decoration: none;
+    color: #f61c0d;
+}
+
+
+.top10-blogger-number{
+    float: left;
+    margin-left: 10px; 
+    margin-top: 10px;
+}
+
+.top10-blogger-list{
+    margin-bottom: 10px;
+}
+
+.top10-blogger-name-single{
+    font-size: 25px;
+}
+
+.single-blogs-sign{
+    margin-left: 20px;
+}
+
+.top10-blogger-photo-pos-single{
+        margin-left: 20px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.text-blog-single{
+    margin-left: 20px;
+     font-size: 19px;
+    padding: 0px 50px 0px 0px;
+}
+
+.top10-same-blogger-states{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.top10-same-blogger-states-list-name{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.top10-same-blogger-states-list-text{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.all-state{
+  padding: 5px;
+  
+  border-top: 1px red solid; 
+}
+.all-state-sing{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.all-state-other{
+    padding: 10px;
+}
+.all-other-state-sing{
+     font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-bottom: 1px red solid;
+    padding: 200px;
 }

@@ -27,6 +27,37 @@
 	register_sidebar();
 
 
+
+    function short_desc_blog($charlength) {		// function for display short content for blogs
+		$excerpt = get_the_excerpt();
+		?>
+		<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
+		<?php
+			if ( mb_strlen( $excerpt ) > $charlength ) {
+				$subex = mb_substr( $excerpt, 0, $charlength);
+				echo $subex . '...';
+			} else {
+				echo $subex;
+			}
+			?>
+		</a>
+	<?php
+	} // end function short_desc_blog()
+
+
+	function short_desc_article($charlength) {		// function for display short content for states
+		$excerpt = get_the_excerpt();
+		if ( mb_strlen( $excerpt ) > $charlength ) {
+			$subex = mb_substr( $excerpt, 0, $charlength);
+			echo $subex . '...';
+		} else {
+			echo $subex;
+		}
+	}
+
+
+
+
 	// pagination settings
 	// delete H2 from pagination template
 	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
@@ -50,3 +81,5 @@
 		'next_text' => __( '»' ),
 	);
 	// end pagination
+
+?>

@@ -32,37 +32,24 @@
 			<?php 
 			 $args = array(
                 'post_type' => 'blogs',
-                'posts_per_page' => 3,
+                'numberposts' => 3,
                 'publish' => true,
                 'orderby' => 'date',
                 'order' => 'DESC'
             );
             $myposts = get_posts( $args );
 
-            function short_desc_blog($charlength) {		// function for display short content for blogs
-				$excerpt = get_the_excerpt();
-				?>
-				<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
-				<?php
-					if ( mb_strlen( $excerpt ) > $charlength ) {
-						$subex = mb_substr( $excerpt, 0, $charlength);
-						echo $subex . '...';
-					} else {
-						echo $subex;
-					}
-					?>
-				</a>
-			<?php
-			} // end function short_desc_blog()
             foreach( $myposts as $post ){
             	setup_postdata($post);
         ?>
 		<div class="blog-block row">
 			<div class="blogger-photo col l3 s1 center" >
-				<img src="<?php bloginfo('template_url') ?>/img/users/user2.png" alt="user">
+				<img src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="bloger_avatar">
 			</div> 
 			<div class="blogger-article col l9 s11">
-				<div class="blogger-name"><?php the_author(); ?></div>
+				<div class="blogger-name">
+					<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
+				</div>
 				<div class="blogger-speach">
 					<?php
 						short_desc_blog(100);		// display short content
@@ -85,7 +72,7 @@
 		<?php 
 			 $args = array(
                 'post_type' => 'news',
-                'posts_per_page' => 10,
+                'numberposts' => 10,
                 'publish' => true,
                 'orderby' => 'date',
                 'order' => 'DESC'
@@ -142,7 +129,7 @@
 		<?php 
 			 $args = array(
                 'post_type' => 'video',
-                'posts_per_page' => 5,
+                'numberposts' => 5,
                 'publish' => true,
                 'orderby' => 'date',
                 'order' => 'DESC'
@@ -175,7 +162,7 @@
 				<?php 
 					$args = array(
 		                'post_type' => 'articles',
-		                'posts_per_page' => 3,
+		                'numberposts' => 3,
 		                'publish' => true,
 		                'orderby' => 'date',
 		                'order' => 'DESC',
@@ -183,16 +170,6 @@
 		            );
 		            $firstArticle = false;
 		            $myposts = get_posts( $args );
-
-		            function short_desc_article($charlength) {		// function for display short content for states
-						$excerpt = get_the_excerpt();
-						if ( mb_strlen( $excerpt ) > $charlength ) {
-							$subex = mb_substr( $excerpt, 0, $charlength);
-							echo $subex . '...';
-						} else {
-							echo $subex;
-						}
-					}
 					foreach( $myposts as $post ){
 						setup_postdata($post);
 						if ($firstArticle == false) {
@@ -239,38 +216,3 @@
 	</div>
 </div>
 <br>
-
-<!--polling-->
-<div class="row polling">
-	<div class="col l4 s12 m6 asking-block">
-		<h5 class="asking">Опитування</h5>
-		<div class='ajax-poll' tclass='poll-simple' style='width:450px;'></div>
-	</div>
-	<!--partners news-->
-	<div class="col l4 s12 m6 news-partners-block">
-		<h5 class="partners-news center">Новини партнерів</h5>
-		<div class="article"> 
-	<div class="article-title">
-		<a href="#" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
-			Активісти на авто з єврономерами перекрили центр Києва</a>
-		</div>
-	</div>
-	<div class="article"> 
-		<div class="article-title">
-			<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
-				Путін заявив, що Росія сильніша за будь-якого агресора</a>
-			</div>
-
-		</div>
-		<div class="article"> 
-			<div class="article-title">
-				<a href="#" class="hover-link red-text "><em>фото</em>ДЕПУТАТ У ДНІПРІ ПОПАВСЯ НА ХАБАРІ</a>
-			</div>
-
-		</div>
-	</div>
-	<!--advertising-->
-	<div class="col l4 s12 m6 center reklama">
-		<img src="<?php bloginfo('template_url'); ?>/img/logo/logo_kodeks.png" width="40%">
-	</div>
-</div>
