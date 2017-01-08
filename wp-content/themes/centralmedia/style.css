@@ -535,11 +535,13 @@ footer.page-footer .footer-copyright {
 a{
     color: black;
 }
+
 .single-news-sign{
     font-size: 30px;
     font-weight: bold;
     margin-left: 30px;
 }
+
 .text-news{
     font-size: 19px;
     padding: 25px;
@@ -554,7 +556,6 @@ a{
 }
 
 .all-blog-block{
-
     padding: 10px;
 }
 
@@ -583,9 +584,7 @@ a{
 
 .top10-blogger-name{
     font-size: 15px;
-
 }
-
 
 .top10-blogger-name:hover{
     transition-duration: .5s;
@@ -613,7 +612,7 @@ a{
 }
 
 .top10-blogger-photo-pos-single{
-        margin-left: 20px;
+    margin-left: 20px;
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -643,11 +642,12 @@ a{
     margin-left: 10px;
     margin-bottom: 20px;
 }
+
 .all-state{
-  padding: 5px;
-  
-  border-top: 1px red solid; 
+    padding: 5px;
+    border-top: 1px red solid; 
 }
+
 .all-state-sing{
     font-size: 20px;
     font-weight: bold;
@@ -656,10 +656,15 @@ a{
 .all-state-other{
     padding: 10px;
 }
+
 .all-other-state-sing{
-     font-size: 20px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 15px;
     border-bottom: 1px red solid;
     padding: 200px;
+}
+
+.clear{
+    clear:both;
 }

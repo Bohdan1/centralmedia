@@ -3,24 +3,10 @@
 	<div class="row content">
 		<div class="col l9 s12 m6 all-blogs">
 			<div class=" col l12 s12 m12 single-blogs-sign center">Блоги:</div>
-			
-			<?php
-			if( is_paged() ){
-				echo '<div>213123213213 </div>';
-}			
-			// 1 значение по умолчанию
-$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-
-$the_query = new WP_Query( array(
-	'post_type' => 'blogs',
-	'posts_per_page' => 6,
-	'paged'          => $paged,
-) );
-
-// цикл вывода полученных записей
-while( $the_query->have_posts() ){
-	$the_query->the_post();
-	?>
+			<?php 
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post(); // Start the Loop.
+			?>
 						<div class="col l4 s12 m6">
 							<div class="blogger-article center all-blog-block">
 
@@ -29,27 +15,24 @@ while( $the_query->have_posts() ){
 									<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
 								</div>
 								<div class="all-blogs-blogger-speach">
-										<?php
-											//display 120 symbols
-											short_desc_blog(120);
-										?>
+										<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
+											<?php
+												short_desc_post(120);		// display short content (120 symbols)
+											?>
+										</a>
 								</div>
 							</div>
 						</div>
-			<?php 
-} 
-wp_reset_postdata();
-
-// пагинация для произвольного запроса
-$big = 999999999; // уникальное число
-
-echo paginate_links( array(
-	'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-	'format'  => '?paged=%#%',
-	'current' => max( 1, get_query_var('paged') ),
-	'total'   => $the_query->max_num_pages
-) );
-?>
+			<?php
+					endwhile; // End the loop.
+					echo '<div class="clear"></div>';
+					the_posts_pagination( $pagination_args );
+					wp_reset_postdata();
+				else :
+					// If no content, include the "No posts found" template.
+					echo '<div> Блогів не знайдено </div>';
+				endif;
+			?>
 		</div>
 
 		<div class="col l3 s12 m6">
@@ -115,7 +98,7 @@ echo paginate_links( array(
 			</div>
 		</div>
 	</div>
-<br>
+	<br>
 
 <?php get_template_part('content', 'footer') ?>
 

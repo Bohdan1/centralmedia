@@ -17,8 +17,14 @@ ver. 0.34
   - добавив файли searchform.php та search.php
   - добавив пагінацію для архівних сторінок та пошуку
 
- ver. 0.35
-   - добавив сторінку content-footer.php
-   - добавив стилі для archive-blogs.php (all_blogs.php)
-   - добавив стилі для archive-news.php (all_news.php)
-   - зробив правильне виведення аватарів для блогерів на головні сторінці
+ver. 0.35
+  - добавив сторінку content-footer.php
+  - добавив стилі для archive-blogs.php (all_blogs.php)
+  - добавив стилі для archive-news.php (all_news.php)
+  - зробив правильне виведення аватарів для блогерів на головні сторінці
+
+ ver. 0.4
+  - виправив помилки з пагінацією для архівних сторінок та пошуку
+  - добавив стилі для archive-articles.php (all_states.php)
+  - добавив стилі для single-blogs.php
+  - добавив стилі для single-news.php

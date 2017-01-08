@@ -4,33 +4,32 @@
 		<div class="col l8 s12 m6 news-block ">
 			<div class="news-sign center">НОВИНИ</div>
 			<?php 
-				 $args = array(
-	                'post_type' => 'news',
-	                'posts_per_page' => 10,
-	                'publish' => true,
-	                'orderby' => 'date',
-	                'order' => 'DESC'
-	            );
-	            $myposts = get_posts( $args );
-	            if ( $myposts ) {
-		            foreach( $myposts as $post ){
-		            	the_post($post);
-	        ?>
-							<div class="article"> 
-								<div class="article-title">
-									<a href="<?php the_permalink(); ?>" class="hover-link"><em>фото</em><?php the_title(); ?></a>
-								</div>
-							</div>
-			<?php
-	    			} //end foreach
-				wp_reset_postdata();
-					the_posts_pagination( $pagination_args );
-				} //end if
-				else {
-					// If no content, include the "No posts found" template.
-					echo '<div> Публікацій не знайдено </div>';
-				}
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post(); // Start the Loop.
 			?>
+						<div class="article"> 
+							<div class="article-title">
+								<a href="<?php the_permalink(); ?>" class="hover-link"><em>фото</em><?php the_title(); ?></a>
+							</div>
+						</div>
+			<?php
+	    			endwhile; // End the loop.
+	    			echo '<div class="clear"></div>';
+					the_posts_pagination( $pagination_args );
+					wp_reset_postdata();
+				else :
+					// If no content, include the "No posts found" template.
+					echo '<div> Новин не знайдено </div>';
+				endif;
+			?>
+			<!-- приклад виводу новин з іншими іконками
+			<div class="article"> 
+				<div class="article-title">
+					<a href="#" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+						Lorem ipsum
+					</a>
+				</div>
+			</div>
 			<div class="article"> 
 				<div class="article-title">
 					<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
@@ -38,6 +37,7 @@
 					</a>
 				</div>
 			</div>
+			-->
 		</div>
 	
 		<!--state-->
@@ -51,8 +51,7 @@
 			                'numberposts' => 3,
 			                'publish' => true,
 			                'orderby' => 'date',
-			                'order' => 'DESC',
-			                'paged' => get_query_var('paged')
+			                'order' => 'DESC'
 			            );
 			            $myposts = get_posts( $args );
 						foreach( $myposts as $post ){
@@ -66,7 +65,7 @@
 									</a>
 									<div class="state-other-text">
 										<?php
-											short_desc_article(120);
+											short_desc_post(120);	// display short content (120 symbols)
 										?>
 									</div>
 								</div>

@@ -51,9 +51,11 @@
 					<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
 				</div>
 				<div class="blogger-speach">
-					<?php
-						short_desc_blog(100);		// display short content
-					?>
+					<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
+						<?php
+							short_desc_post(100);		// display short content (100 symbols)
+						?>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -84,7 +86,8 @@
         ?>
 		<div class="article"> 
 			<div class="article-title">
-				<a href="<?php the_permalink(); ?>" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+				<a href="<?php the_permalink(); ?>" class="hover-link">
+					<i class="fa fa-bar-chart" aria-hidden="true"></i>
 					<?php the_title(); ?>
 				</a>
 			</div>
@@ -93,6 +96,8 @@
     		} /* end foreach */
 			wp_reset_postdata();
 		?>
+		
+		<!-- приклад виводу новин з іншими іконками
 		<div class="article"> 
 			<div class="article-title">
 				<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
@@ -110,6 +115,7 @@
 				<a href="#" class="hover-link"><em>фото</em>В Росії цензура не пропустила три книги для Сущенка</a>
 			</div>
 		</div>
+		-->
 	</div>
 
 	<!--Videos-->
@@ -166,7 +172,6 @@
 		                'publish' => true,
 		                'orderby' => 'date',
 		                'order' => 'DESC',
-		                'paged' => get_query_var('paged')
 		            );
 		            $firstArticle = false;
 		            $myposts = get_posts( $args );
@@ -182,7 +187,7 @@
 						</a>
 						<div>
 							<?php
-								short_desc_article(120);		// display short content
+								short_desc_post(120);	// display short content (120 symbols)
 							?>
 						</div>
 					</div>
@@ -199,7 +204,7 @@
 						</a>
 						<div class="state-other-text">
 							<?php
-								short_desc_article(120);
+								short_desc_post(120);	// display short content (120 symbols)
 							?>
 						</div>
 					</div>

@@ -1,5 +1,5 @@
 <?php
-	add_theme_support( 'post-thumbnails' ); // добавлення можливості створювати мініатюри для постів
+	add_theme_support( 'post-thumbnails' ); // adds capabilities to create thumbnails for posts
 
 	function register_styles() { // adds files with styles
 		wp_enqueue_style( 'materialize.min', get_template_directory_uri() . '/css/materialize.min.css' );
@@ -27,25 +27,7 @@
 	register_sidebar();
 
 
-
-    function short_desc_blog($charlength) {		// function for display short content for blogs
-		$excerpt = get_the_excerpt();
-		?>
-		<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
-		<?php
-			if ( mb_strlen( $excerpt ) > $charlength ) {
-				$subex = mb_substr( $excerpt, 0, $charlength);
-				echo $subex . '...';
-			} else {
-				echo $subex;
-			}
-			?>
-		</a>
-	<?php
-	} // end function short_desc_blog()
-
-
-	function short_desc_article($charlength) {		// function for display short content for states
+	function short_desc_post($charlength) {		// function for display short content for posts
 		$excerpt = get_the_excerpt();
 		if ( mb_strlen( $excerpt ) > $charlength ) {
 			$subex = mb_substr( $excerpt, 0, $charlength);
@@ -56,30 +38,47 @@
 	}
 
 
+	//settings for display archive posts
+		function my_pre_get_posts( $query ) {
+		    //if ( ! is_admin() && $query->is_main_query() ) {
+			$queried_object = get_queried_object();
+			if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'news' && $query->is_main_query() ) { //якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
+		        $query->set( 'posts_per_page', 10 );
+			}
+			else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'articles' && $query->is_main_query() ) {
+		        $query->set( 'posts_per_page', 12 );
+			}
+			else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'blogs' && $query->is_main_query() ) {
+		        $query->set( 'posts_per_page', 6 );
+			}
+			else if ( !is_admin() && $query->is_search && $query->is_main_query() ) {
+		        $query->set( 'posts_per_page', 10 );
+			}
+		}
+		add_action( 'pre_get_posts', 'my_pre_get_posts' );
+	//end settings for display archive posts
 
 
 	// pagination settings
-	// delete H2 from pagination template
-	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
-	function my_navigation_template( $template, $class ){
-		/*
-		Вид базового шаблону:
-		<nav class="navigation %1$s" role="navigation">
-			<h2 class="screen-reader-text">%2$s</h2>
-			<div class="nav-links">%3$s</div>
-		</nav>
-		*/
-		return '
-			<nav class="%1$s" role="navigation">
+		// delete H2 from pagination template
+		add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+		function my_navigation_template( $template, $class ){
+			/*
+			Вид базового шаблону:
+			<nav class="navigation %1$s" role="navigation">
+				<h2 class="screen-reader-text">%2$s</h2>
 				<div class="nav-links">%3$s</div>
-			</nav>    
-		';
-	}
-
-	$pagination_args = array(
-		'prev_text' => __( '«' ),
-		'next_text' => __( '»' ),
-	);
-	// end pagination
-
+			</nav>
+			*/
+			return '
+				<nav class="%1$s" role="navigation">
+					<div class="nav-links">%3$s</div>
+				</nav>    
+			';
+		}
+		$pagination_args = array(
+			'prev_text' => __( '«' ),
+			'next_text' => __( '»' ),
+		);
+	// end pagination settings
 ?>
