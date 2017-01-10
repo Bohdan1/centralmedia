@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 	
 	<div class="row content">
+		<!--slider-->
+		<?php get_template_part('content', 'slider') ?>
+		
 		<div class="col l8 s12 m6 news-block ">
 			<div class="news-sign center">НОВИНИ</div>
 			<?php 

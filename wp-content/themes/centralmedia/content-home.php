@@ -27,42 +27,43 @@
 	<!--Blogs-->
 	<div class="col l4 s12 m12">
 		<div class="blogs">
-			<a class="black-text" href="<?php echo get_home_url(); ?>/blogs"><span class="blog-sign"> БЛОГИ </span></a>
-
+			<a class="black-text" href="<?php echo get_home_url(); ?>/blogs">
+				<span class="blog-sign"> БЛОГИ </span>
+			</a>
 			<?php 
-			 $args = array(
-                'post_type' => 'blogs',
-                'numberposts' => 3,
-                'publish' => true,
-                'orderby' => 'date',
-                'order' => 'DESC'
-            );
-            $myposts = get_posts( $args );
+				$args = array(
+	                'post_type' => 'blogs',
+	                'numberposts' => 3,
+	                'publish' => true,
+	                'orderby' => 'date',
+	                'order' => 'DESC'
+	            );
+            	$myposts = get_posts( $args );
 
-            foreach( $myposts as $post ){
-            	setup_postdata($post);
-        ?>
-		<div class="blog-block row">
-			<div class="blogger-photo col l3 s1 center" >
-				<img src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="bloger_avatar">
-			</div> 
-			<div class="blogger-article col l9 s11">
-				<div class="blogger-name">
-					<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
-				</div>
-				<div class="blogger-speach">
-					<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
-						<?php
-							short_desc_post(100);		// display short content (100 symbols)
-						?>
-					</a>
+            	foreach( $myposts as $post ){
+            		setup_postdata($post);
+        	?>
+			<div class="blog-block row">
+				<div class="blogger-photo col l3 s1 center" >
+					<img src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="bloger_avatar">
+				</div> 
+				<div class="blogger-article col l9 s11">
+					<div class="blogger-name">
+						<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
+					</div>
+					<div class="blogger-speach">
+						<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
+							<?php
+								short_desc_post(100);		// display short content (100 symbols)
+							?>
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-        <?php
-    		} /* end foreach */
-			wp_reset_postdata();
-		?>
+	        <?php
+	    		} /* end foreach */
+				wp_reset_postdata();
+			?>
 		</div>
 	</div>
 </div>

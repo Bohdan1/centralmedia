@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 	
 	<div class="row content">
+		<!--slider-->
+		<?php get_template_part('content', 'slider') ?>
+		
 		<div class="col l9 s12 m6 all-blogs">
 			<div class=" col l12 s12 m12 single-blogs-sign center">Блоги:</div>
 			<?php 

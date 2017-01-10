@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 	
 	<div class="row">
+		<!--slider-->
+		<?php get_template_part('content', 'slider') ?>
+
 		<div class="col l12 s12 m12  all-state-sing">Актуально:</div>
 			<div class="row state-bottom">
 				<div class="col l3 s6 m6 ">
