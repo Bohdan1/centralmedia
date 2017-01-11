@@ -4,7 +4,7 @@
 		<!--slider-->
 		<?php get_template_part('content', 'slider') ?>
 
-		<div class="col l12 s12 m12  all-state-sing">Актуально:</div>
+		<div class="col l12 s12 m12  all-state-sing center">АКТУАЛЬНО</div>
 			<div class="row state-bottom">
 				<div class="col l3 s6 m6 ">
 					<div class="all-state">
@@ -54,7 +54,7 @@
 			</div>
 			
 			<div class="row other-state-bottom">
-				<div class="col l12 s12 m12 all-other-state-sing">Всі статті:</div>
+				<div class="col l12 s12 m12 all-other-state-sing center">ВСІ СТАТТІ</div>
 				<?php 
 					if ( have_posts() ) :
 						$article_numb = 0; //змінна для підрухунку кількості статтей в рядку

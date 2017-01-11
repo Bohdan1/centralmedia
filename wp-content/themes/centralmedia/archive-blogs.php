@@ -5,7 +5,7 @@
 		<?php get_template_part('content', 'slider') ?>
 		
 		<div class="col l9 s12 m6 all-blogs">
-			<div class=" col l12 s12 m12 single-blogs-sign center">Блоги:</div>
+			<div class=" col l12 s12 m12 single-blogs-sign center">БЛОГИ</div>
 			<?php 
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post(); // Start the Loop.
@@ -39,7 +39,7 @@
 		</div>
 
 		<div class="col l3 s12 m6">
-			<div class="top10-bloggers-sign">Топ-10 блогерів:</div>
+			<div class="top10-bloggers-sign">ТОП-10 БЛОГЕРІВ:</div>
 			<div class="top10-blogger-list col l12 m12 s12">
 			<div class="top10-blogger-number">1.</div>
 			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">

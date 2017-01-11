@@ -46,7 +46,7 @@
 		<!--state-->
 		<div class="col l4 s12 m6 center state-block">
 			<div class="state-list">
-				<div class="state-sign center">Актуальне</div>
+				<div class="state-sign center">АКТУАЛЬНЕ</div>
 				<div class="blogs">
 					<?php 
 						$args = array(

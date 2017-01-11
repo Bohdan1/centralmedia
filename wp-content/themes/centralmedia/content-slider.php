@@ -1,4 +1,4 @@
-<div class="col l12 s12 m12">
+<div class="col l12 s12 m12 slider-all-news">
 	<div class="carousel carousel-slider center" data-indicators="true">
 		<div class="carousel-fixed-item center">
 			<a class="btn waves-effect slider-button white-text darken-text-2">Перейти</a>

@@ -45,7 +45,7 @@
         	?>
 			<div class="blog-block row">
 				<div class="blogger-photo col l3 s1 center" >
-					<img src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="bloger_avatar">
+					<img class="blogger-photo-min" src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="bloger_avatar">
 				</div> 
 				<div class="blogger-article col l9 s11">
 					<div class="blogger-name">
@@ -221,4 +221,3 @@
 		</div>
 	</div>
 </div>
-<br>

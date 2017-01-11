@@ -1,12 +1,12 @@
-	<br><br>
+
 	<footer class="page-footer">
     <div >
       <div class="row">
         <div class="offset-l1 col l3">
         <p>
           <img src="<?php bloginfo('template_url') ?>/img/logo/logo-central-media — footer.png" class="footer-logo-float">
-          <span class="main-sign-footer">CENTRAL MEDIA</span>
-          <span>МУЛЬТИМЕДІЙНА ПЛАТФОРМА</span>
+          <div class="main-sign-footer">CENTRAL MEDIA</div>
+          <div>МУЛЬТИМЕДІЙНА ПЛАТФОРМА</div>
          </p>
           <p class="black-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
@@ -52,5 +52,11 @@
   <script type="text/javascript" src="<?php bloginfo('template_url') ?>/Ajax_Poll/ajax-poll.php"></script>
   <!-- end Ajax Poll Script -->
 	<?php wp_footer(); ?>
+  <script>
+     $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+  </script>
 </body>
 </html>

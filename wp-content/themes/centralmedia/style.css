@@ -79,6 +79,11 @@ Version: 0.4
     font-weight: normal;
 }
 
+html {
+    max-width: 2000px; 
+    margin: 0 auto;
+}
+
 .row .col{
     padding: 0;
 }
@@ -91,7 +96,7 @@ body{
 }
 .social{
     margin-top: -5px;
-    position: absolute;
+    position: relative;
     margin-left:-25px; 
 }
 .main-sign{
@@ -159,7 +164,7 @@ hr{
     position: fixed;
     z-index: 9999;
     width: 100%;
-
+max-width: 2000px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);  
 }
@@ -171,7 +176,6 @@ hr{
     display: inline;
     list-style:none;
     margin: 5px 10px;
-    float: right;
     padding-left: 16px;
     padding-right: 5px;
 }
@@ -228,8 +232,8 @@ nav .input-field label i  {
 }
 
 .slider-section{
-    border-bottom: 10px solid #d82d19;
-    margin-bottom: 20px;
+    border-bottom: 7px solid #d82d19;
+    margin-bottom: 15px;
 }
 
 .article{
@@ -294,9 +298,13 @@ em{
     border-bottom: #e3e3e3 1px solid;
     margin: 15px;
 }
+.blog-block:nth-last-child(1){
+    border-bottom: 0px;
+}
 .blogs, .actual{
-    margin-top: 25px;
+    margin-top: 10px;
     height: 300px;
+    margin-bottom: -10px;
 
 }
 .blogger-speach{
@@ -326,7 +334,7 @@ em{
     padding: 10px;
 }
 .top-video{
-    margin-top: 10px; 
+    margin-top: 30px; 
     padding-bottom: 10px;  
     font-size: 20px;
 }
@@ -358,23 +366,32 @@ em{
 
 .news-sign-video{
     font-size: 20px; 
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     font-weight: bold;
 }
 
-
-
-
-.state-list, .actual-list{
-    padding-left: 10px;
+.state-list{
+    padding-left: 25px;
     padding-right: 10px;
 }
 
-.state-sign, .actual-sign{
+.actual-list{
+    padding-left: 25px;
+    padding-right: 10px;
+    margin-top: 25px;
+}   
+
+.state-sign{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: -10px;
+    margin-bottom: 25px;
 }
+.actual-sign{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
 
 .state-first-name{
     font-weight: bold;
@@ -418,6 +435,7 @@ em{
     padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
+    margin-top: 15px;
 }
 
 .news-partners-block{
@@ -453,6 +471,7 @@ footer.page-footer {
     padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
+    margin-top: 15px;
 }
 
 .asking-block{
@@ -462,11 +481,12 @@ footer.page-footer {
 
 .footer-logo-float{
     float: left;
-    margin: 10px 10px 0px 0px;
+    margin: 0px 10px 0px 0px;
 }
 
 .main-sign-footer{
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .nav-footer{
@@ -474,7 +494,7 @@ footer.page-footer {
 }
 
 .nav-footer-pos{
-
+    padding-top: 20px;
 }
 
 .nav-contact-pos{
@@ -507,29 +527,11 @@ footer.page-footer .footer-copyright {
 }
 
 .polling{
-    border-top: 2px solid #d82d19;
+    border-top: 3px solid #d82d19;
 }
 
 .blog-short-desc{
     color: black;
-}
-
-/* mobile */
-@media screen and (max-width: 768px) {
-    .main-sign{
-        font-size: 25px;
-    }
-    .additional-sign{
-        font-size: 18px;
-        display: none;
-    }
-    .social{
-        float: center;
-        padding-top: 0px;
-        padding-bottom: 5px;
-        padding-left: 5px;
-        padding-right: 10px;
-    }
 }
 
 a{
@@ -539,7 +541,9 @@ a{
 .single-news-sign{
     font-size: 30px;
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
 }
 
 .text-news{
@@ -556,19 +560,19 @@ a{
 }
 
 .all-blog-block{
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 .single-blogs-sign{
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .top10-bloggers-sign{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding-left: 10px;
 }
 
@@ -605,30 +609,34 @@ a{
 
 .top10-blogger-name-single{
     font-size: 25px;
+    margin-top: 15px;
 }
 
 .single-blogs-sign{
-    margin-left: 20px;
+    margin-left: 25px;
+    font-size: 20px;
 }
 
-.top10-blogger-photo-pos-single{
-    margin-left: 20px;
+.top10-blogger-photo-pos-single {
+    margin-left: 25px;
+    margin-top: 20px;
     float: left;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .text-blog-single{
-    margin-left: 20px;
+    margin-left: 25px;
      font-size: 19px;
     padding: 0px 50px 0px 0px;
 }
 
 .top10-same-blogger-states{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
     padding-left: 10px;
+    margin-top: 25px;
 }
 
 .top10-same-blogger-states-list-name{
@@ -645,13 +653,12 @@ a{
 
 .all-state{
     padding: 5px;
-    border-top: 1px red solid; 
 }
 
 .all-state-sing{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .all-state-other{
     padding: 10px;
@@ -661,10 +668,87 @@ a{
     font-size: 20px;
     font-weight: bold;
     margin-top: 15px;
-    border-bottom: 1px red solid;
     padding: 200px;
+    margin-bottom: 25px;
 }
 
 .clear{
     clear:both;
+}
+
+.blogger-photo-min{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.slider-all-news{
+    border-bottom: 7px solid #d82d19;
+    margin-bottom: 15px;
+}
+
+.state-bottom{
+    border-bottom: 7px solid #d82d19;
+    padding-bottom: 10px;
+}
+
+.modal{
+    margin-top: 50px;
+    width: 50%;
+
+}
+.login-form{
+    width: 60%;
+    margin: 0 auto;
+}
+.modal-close{
+    position: relative;
+    float: right;
+    margin-top: -60px;
+    margin-left: 35px;
+}
+
+.nav-wrapper{
+    margin-top: 5px;
+}
+
+.search-form{
+    position: absolute;
+    top: 5px;
+    right: 250px;
+}
+
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .modal-close{
+        position: relative;
+    }
+    .modal {
+        margin-top: 50px;
+        width: 100%;
+    }
+    .main-sign{
+        font-size: 25px;
+    }
+    .additional-sign{
+        font-size: 18px;
+        display: none;
+    }
+    .social{
+        float: center;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+    .login-form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .modal-close {
+        position: relative;
+        float: right;
+        margin-top: -70px;
+        margin-right: -20px;
+    }
 }
