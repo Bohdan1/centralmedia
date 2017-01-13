@@ -78,8 +78,8 @@
 			';
 		}
 		$pagination_args = array(
-			'prev_text' => __( '«' ),
-			'next_text' => __( '»' ),
+			'prev_text' => __( '&#8249;' ),
+			'next_text' => __( '&#8250;' ),
 		);
 	// end pagination settings
 ?>

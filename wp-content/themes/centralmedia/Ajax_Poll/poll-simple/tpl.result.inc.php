@@ -4,7 +4,7 @@
 <div class='poll-result <?php echo $poll->prt->getTClassName(); ?>' style='display:none;'>
 <div class='poll-inner'>
 
-<form class='poll-form col l12 '>
+<form class='poll-form col l10 s8'>
 
 <div class='poll-title'>
 	<?php echo $poll->attr( "title" ); ?>
@@ -35,7 +35,7 @@
 <!-- [END] Looping through all the items -->
 
 <!-- [BEGIN] Show total vote counts -->
-<div style='text-align:left;margin-bottom:20px;'>
+<div style='text-align:left;margin-bottom:20px; margin-left: 25px;'>
 	<span style='font-weight:bold;'>
 		<?php echo $poll->attr( "msg-total" ); ?>
 		<?php echo $poll->getTotal(); ?>
@@ -50,7 +50,7 @@
 <?php else: ?>
 <!-- [BEGIN] Back button -->
 <div class='ap-ref-tipbox' style='text-align:left;margin-bottom:20px;'>
-	<button class="ap-front poll-button ">
+	<button class="ap-front poll-button button-polling" style="margin-left: 25px">
 		<?php echo $poll->attr( "msg-return" ); ?>
 	</button>
 </div>

@@ -176,7 +176,7 @@ hr{
     display: inline;
     list-style:none;
     margin: 5px 10px;
-    padding-left: 16px;
+    padding-left: 7px;
     padding-right: 5px;
 }
 
@@ -528,6 +528,7 @@ footer.page-footer .footer-copyright {
 
 .polling{
     border-top: 3px solid #d82d19;
+    margin-top: 20px;
 }
 
 .blog-short-desc{
@@ -968,8 +969,46 @@ background: url(img/ch2.png) top right no-repeat, url(img/ch1.png) top left no-r
 color: red;
 border-radius: 10px;
 }
+.userView{
+   margin-top: 60px;
+}
+.background-image-sideNav{
+    border-radius: 50%;
+}
+.if-not-login{
+    display: block;
+}
+.current {
+    background-color: #d82d19;
+    width: auto;
+    height: auto;
+    right: auto;
+    position: static;
+    margin: 7px;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
 
+.pagination{
+    text-align: center;
+}
 
+.prev{
+    font-weight: bolder;
+    color: #d82d19;
+    font-size: 25px; 
+}
+
+.next{
+    font-weight: bolder;
+    color: #d82d19;
+    font-size: 25px; 
+}
+
+.page-numbers{
+    margin: 7px;
+}
 
 
 

@@ -37,13 +37,26 @@ $style=<<<_EOM_
 
 
 .%tclass% .poll-title {
-
+	margin-left: 25px;
 }
 
 
 .%tclass% .poll-table td.poll-caption-cont {
 	padding:10px;
 	padding-right:0;
+}
+
+.%tclass% .poll-table{
+	margin-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .%tclass% .poll-table{
+	margin-left: 7px;
+}
+	.%tclass% .poll-title {
+	margin-left: 7px;
+}
 }
 
 .%tclass% .poll-bar {
@@ -166,14 +179,33 @@ $style=<<<_EOM_
 	display:none;
 }
 
-.%tclass% .btn,
-.%tclass% .btn-large {
+.%tclass% .btn{
     text-decoration: none;
     color: #fff;
     background-color: #d82d19;
-    letter-spacing: .5px;
+    letter-spacing: .0px;
     transition: .2s ease-out;
     cursor: pointer;
+}
+
+.%tclass% .ap-ref-tipbox{
+	margin-left: 8px;
+}
+
+.%tclass% .ap-vote{
+	margin-left: 8px;
+}
+
+.%tclass% .button-polling{
+	background-color: #d82d19;
+	color: white;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	letter-spacing: .5px;
 }
 
 </style>
