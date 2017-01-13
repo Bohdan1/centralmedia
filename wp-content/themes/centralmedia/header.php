@@ -8,11 +8,46 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<?php wp_head(); ?>
+	<style>
+	
+/* mobile */
+@media screen and (max-width: 768px) {
+    .modal-close{
+        position: relative;
+    }
+    .modal {
+        margin-top: 50px;
+        width: 100%;
+    }
+    .main-sign{
+        font-size: 25px;
+    }
+    .additional-sign{
+        font-size: 18px;
+        display: none;
+    }
+
+    .login-form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .modal-close {
+        position: relative;
+        float: right;
+        margin-top: -70px;
+        margin-right: -20px;
+    }
+    .carousel {
+    height: 219px !important;
+}
+}	
+	</style>
+	
 </head>
 
 <body>
 	<div id="menu" class="row ">
-		<div class="col l1 ">
+		<div class="col l1 s4 ">
 			<a href="<?php echo get_home_url(); ?>">
 				<img src="<?php bloginfo('template_url') ?>/img/logo/logo-central-media1.jpeg" class="header-logo">
 			</a>
@@ -27,13 +62,13 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col l6">
-			<div class="hide-on-med-and-down">
+		<div class="col l6 s8">
+			<div class="">
 				<ul class="right">
-					<li>
+					<li class="hide-on-med-and-down">
 						<?php get_search_form(); ?>
 					</li>
-					<li><a href="#"><img class="social" src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a></li> 
+					<li><a href="#"><img class="social " src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a></li> 
 					<li><a href="#"><img class="social" src="<?php bloginfo('template_url') ?>/img/social/yb.png"></a></li>
 					<li><a href="#"><img class="social" src="<?php bloginfo('template_url') ?>/img/social/tw.png"></a></li>
 					<li><a href="#modal1"><img class="social" src="<?php bloginfo('template_url') ?>/img/social/user.png"></a></li>

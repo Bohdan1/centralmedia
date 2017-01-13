@@ -15,29 +15,7 @@
 $style=<<<_EOM_
 <style>
 /* [BEGIN] CSS Reset */
-.%tclass% tbody,
-.%tclass% tfoot,
-.%tclass% thead,
-.%tclass% tr,
-.%tclass% th,
-.%tclass% td {
-	margin:0;
-	padding:0;
-	border:0;
-	font-size:100%;
-	font-style:normal;
-	font-weight:normal;
-	vertical-align:middle;
-	background-color:transparent;
-	box-shadow:none;
-}
-.%tclass% img {
-	margin:0;
-	padding:0;
-	border:0;
-	background-color:transparent;
-	box-shadow:none;
-}
+
 .%tclass% table {
 }
 .%tclass% label {
@@ -55,55 +33,13 @@ $style=<<<_EOM_
 	font-family: "Verdana", "Arial", "Helvetica", "serif";
 }
 
-.%tclass% {
-	box-sizing:content-box;
-	position:relative;
-	overflow:hidden;
-}
 
-.%tclass% .poll-inner {
-	position:relative;
 
-	margin:20px;
-	margin-bottom:0;
-	padding:0;
-	font-size:16px;
-	color:black;
-	letter-spacing:normal;
-	line-height: normal;
-	word-spacing: 0px;
-}
-
-.%tclass% .poll-form {
-	margin:0;
-}
 
 .%tclass% .poll-title {
-	margin-bottom:20px;
-	padding:0;
-	text-align: left;
 
-	color:black;
-	font-weight:bold;
-	font-size:16px;
-	line-height: 0px;
 }
 
-.%tclass% .poll-table {
-	border-collapse:collapse;
-}
-
-.%tclass% .poll-table tr {
-}
-
-.%tclass% .poll-table td {
-	margin:0;
-	padding:0;
-	font-size:16px;
-	color:black;
-	*border:1px solid transparent;
-	vertical-align:middle;
-}
 
 .%tclass% .poll-table td.poll-caption-cont {
 	padding:10px;
@@ -123,27 +59,15 @@ $style=<<<_EOM_
 }
 
 .%tclass% .poll-button {
-	margin:0 0 3px 0;
-	font-size:16px;
-	width:140px;
+	
 }
 
 .%tclass% .poll-button:focus {
-	outline: 0;
+	
 }
 
 .%tclass% .poll-time-msg {
-	color:#888;
-	text-align:center;
-	font-weight:bold;
-	margin-bottom:20px;
-	padding:3px 0;
-
-	border:1px solid #888;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
+	
 }
 
 .%tclass% .ap-clear-block {
@@ -175,10 +99,13 @@ $style=<<<_EOM_
 .%tclass% .poll-tipbox .poll-tipbox-selectone,
 .%tclass% .poll-tipbox .poll-tipbox-havevoted,
 .%tclass% .poll-tipbox .poll-tipbox-thankyou {
+
+
+
 	margin:0;
 	padding:10px 15px;
 
-	text-align:center;
+	text-align:left;
 	font-size:16px;
 	font-weight:normal;
 	font-style:normal;
@@ -216,17 +143,12 @@ $style=<<<_EOM_
 	height:35px;
 	border-radius:5px;
 	vertical-align:middle;
-	text-align:center;
+	text-align:left;
 	cursor:pointer;
 	background-color:#eee;
 }
 .%tclass% .poll-input-inner {
-	margin:10%;
-	padding:0;
-	width:80%;
-	height:80%;
-	background-color:#eee;
-	border-radius:2px;
+	
 }
 .%tclass% .poll-input-cont-on,
 .%tclass% .poll-input-inner-on {
@@ -249,7 +171,6 @@ $style=<<<_EOM_
     text-decoration: none;
     color: #fff;
     background-color: #d82d19;
-    text-align: center;
     letter-spacing: .5px;
     transition: .2s ease-out;
     cursor: pointer;

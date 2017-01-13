@@ -1,6 +1,6 @@
 <div class="col l12 s12 m12 slider-all-news">
 	<div class="carousel carousel-slider center" data-indicators="true">
-		<div class="carousel-fixed-item center">
+		<div class="carousel-fixed-item center  hide-on-med-and-down">
 			<a class="btn waves-effect slider-button white-text darken-text-2">Перейти</a>
 		</div>
 		<div class="carousel-item slide-1 white-text" href="#one!">

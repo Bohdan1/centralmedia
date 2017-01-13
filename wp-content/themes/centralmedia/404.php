@@ -15,7 +15,5 @@
 		<form class="search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
   			<input type="search" placeholder="пошук" class="input" required name="s"/>
 		</form>
-  
-<?php get_template_part('content', 'footer') ?>
 
 <?php get_footer() ?>

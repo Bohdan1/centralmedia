@@ -7,6 +7,7 @@
 		wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 		wp_enqueue_style( 'font-awesome.min', get_template_directory_uri() . '/css/font-awesome.min.css' );
 		wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
+		wp_enqueue_style( 'media', get_template_directory_uri() . '/css/media.css' );
 		wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
 	}
 	add_action( 'wp_enqueue_scripts', 'register_styles' );

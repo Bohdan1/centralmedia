@@ -4,17 +4,17 @@
 <div class='poll-result <?php echo $poll->prt->getTClassName(); ?>' style='display:none;'>
 <div class='poll-inner'>
 
-<form class='poll-form'>
+<form class='poll-form col l12 '>
 
 <div class='poll-title'>
 	<?php echo $poll->attr( "title" ); ?>
 </div>
 
 <!-- [BEGIN] Looping through all the items -->
-<div style='margin-bottom:20px;'>
+<div  style='margin-bottom:20px;'>
 <table class='poll-table' border='0' cellpadding="0" cellspacing="0" width='100%'>
 <?php foreach( $poll->getAllItems() as $item ) { ?>
-<tr>
+<tr >
 	<td width='50' align='right' class='poll-caption-cont'>
 		<span <?php if ( $item->isVoted() ){ ?> style='font-weight:bold;' <?php } ?>>
 		<?php echo $item->getName(); ?>
@@ -35,7 +35,7 @@
 <!-- [END] Looping through all the items -->
 
 <!-- [BEGIN] Show total vote counts -->
-<div style='text-align:right;margin-bottom:20px;'>
+<div style='text-align:left;margin-bottom:20px;'>
 	<span style='font-weight:bold;'>
 		<?php echo $poll->attr( "msg-total" ); ?>
 		<?php echo $poll->getTotal(); ?>
@@ -49,8 +49,8 @@
 </div>
 <?php else: ?>
 <!-- [BEGIN] Back button -->
-<div class='ap-ref-tipbox' style='text-align:center;margin-bottom:20px;'>
-	<button class="ap-front poll-button waves-effect waves-light btn">
+<div class='ap-ref-tipbox' style='text-align:left;margin-bottom:20px;'>
+	<button class="ap-front poll-button ">
 		<?php echo $poll->attr( "msg-return" ); ?>
 	</button>
 </div>

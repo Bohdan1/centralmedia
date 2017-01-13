@@ -7,7 +7,7 @@
 <img class="poll-input-img" src="<?php echo $poll->getFolderUrl();
 ?>images/<?php echo $poll->attr( "vote-input" ); ?>.png" />
 
-<form class='poll-form'>
+<form class='poll-form col l12 '>
 
 <div class='poll-title'>
 	<?php echo $poll->attr( "title" ); ?>
@@ -37,15 +37,15 @@
 
 <?php if ( $poll->started() ): ?>
 <!-- [BEGIN] Vote & View Buttons -->
-<div class='ap-ref-tipbox' style='text-align:center;margin-bottom:20px;'>
-	<button class="ap-vote poll-button waves-effect waves-light btn">
+<div class='ap-ref-tipbox col l12' style='text-align:center; margin-bottom:20px;'>
+	<button class="ap-vote   ">
 	<?php echo $poll->attr( "msg-vote" ); ?></button>
-	<button class="ap-result poll-button waves-effect waves-light btn">
+	<button class="ap-result  ">
 	<?php echo $poll->attr( "msg-view-result" ); ?></button>
 </div>
 <!-- [END] Vote & View Buttons -->
 <?php else: ?>
-<div class='poll-time-msg'>
+<div class='poll-time-msg col l12'>
 	<?php echo $poll->attr( "msg-not-started" ); ?>
 </div>
 <?php endif; ?>

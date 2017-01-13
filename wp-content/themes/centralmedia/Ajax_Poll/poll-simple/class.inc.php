@@ -21,7 +21,7 @@ class CTClass extends CTClassBase
 		$poll->addItem( "Ні" );
 
 		//-- Text used in polls
-		$poll->attr( "msg-vote", "Проголосувати" );
+		$poll->attr( "msg-vote", "Голоcувати" );
 		$poll->attr( "msg-select-one", "Виберіть один з варіантів" );
 		$poll->attr( "msg-already-voted", "Ви вже брали участь в опитуванні!" );
 		$poll->attr( "msg-view-result", "Результат" );

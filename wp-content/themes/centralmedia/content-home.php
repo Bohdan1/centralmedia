@@ -2,7 +2,7 @@
 	<!--slider-->
 	<div class="col l8 s12 m12">
 		<div class="carousel carousel-slider center" data-indicators="true">
-			<div class="carousel-fixed-item center">
+			<div class="carousel-fixed-item center  hide-on-med-and-down">
 				<a class="btn waves-effect slider-button white-text darken-text-2">Перейти</a>
 			</div>
 			<div class="carousel-item slide-1 white-text" href="#one!">
@@ -46,10 +46,10 @@
 					if ( has_wp_user_avatar($author_id) ) { //blog displayed in homepage only if blogger has avatar
         	?>
 						<div class="blog-block row">
-							<div class="blogger-photo col l3 s1 center" >
+							<div class="blogger-photo col l3 m2 s3 center" >
 								<img class="blogger-photo-min" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="bloger_avatar">
 							</div> 
-							<div class="blogger-article col l9 s11">
+							<div class="blogger-article col l9 m10 s9">
 								<div class="blogger-name">
 									<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
 								</div>
@@ -73,7 +73,7 @@
 
 <!--news-->
 <div class="row content">
-	<div class="col l6 s12 m6 news-block ">
+	<div class="col l6 s12 m12 s12 news-block ">
 		<div class="news-sign center"><a class="black-text" href="<?php echo get_post_type_archive_link('news'); ?>"> ОСТАННІ НОВИНИ </a></div>
 		<?php 
 			 $args = array(
@@ -126,11 +126,11 @@
 	<div class="col l3 s12 m6 center video-block">
 		<div class="news-sign-video center"><a class="black-text" href="<?php echo get_post_type_archive_link('video'); ?>"> ВІДЕО </a></div>
 		<div class="video-list row">
-			<div class="youtube col l6">
+			<div class="youtube col l6 s6">
 				<img width="80%" src="<?php bloginfo('template_url'); ?>/img/logo/youtube-icon.png" alt="альтернативный текст" />
 				<div class="center">Канал YouTube</div>
 			</div>
-			<div class="youtube col l6">
+			<div class="youtube col l6 s6">
 				<img  width="80%" src="<?php bloginfo('template_url'); ?>/img/logo/youtube-icon-stream.png" alt="альтернативный текст" />
 				<div class="center">Онлайн трансляція</div>
 			</div>
@@ -149,10 +149,10 @@
             	setup_postdata($post);
         ?>
 		<div class="row video-padding">
-			<div class="youtube-top-video col l4">
+			<div class="youtube-top-video col l4 s6">
 				<img width="80%" src="<?php video_thumbnail(); ?>" alt="альтернативный текст" />
 			</div>
-			<div class="video-text col l8">
+			<div class="video-text col l8 s6">
 				<a href="<?php the_permalink(); ?>" class="hover-link">
 					<?php the_title(); ?>
 				</a>

@@ -36,7 +36,7 @@
 
 	</div>
 	<!--advertising-->
-	<div class="col l4 s12 m6 center">
-		<img src="<?php bloginfo('template_url'); ?>/img/logo/logo_kodeks.png" width="40%">
+	<div class="col l4 s12 m12 center hide-on-med-and-down">
+		<img src="<?php bloginfo('template_url'); ?>/img/logo/logo_kodeks.png" width="50%">
 	</div>
 </div>
