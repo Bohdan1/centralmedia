@@ -6,26 +6,34 @@
 	</div>
 	<!--partners news-->
 	<div class="col l4 s12 m6 news-partners-block">
-		<h5 class="partners-news center">НОВИНИ ПАРТНЕРІВ</h5>
-		<div class="article"> 
-	<div class="article-title">
-		<a href="#" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
-			Активісти на авто з єврономерами перекрили центр Києва</a>
-		</div>
-	</div>
-	<div class="article"> 
-		<div class="article-title">
-			<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
-				Путін заявив, що Росія сильніша за будь-якого агресора</a>
-			</div>
+		<h5 class="partners-news center"><a href="<?php echo get_post_type_archive_link('partner-news'); ?>">НОВИНИ ПАРТНЕРІВ</a></h5>
+		<?php 
+			 $args = array(
+                'post_type' => 'partner-news',
+                'numberposts' => 3,
+                'publish' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
+            $myposts = get_posts( $args );
 
-		</div>
-		<div class="article"> 
-			<div class="article-title">
-				<a href="#" class="hover-link red-text "><em>фото</em>ДЕПУТАТ У ДНІПРІ ПОПАВСЯ НА ХАБАРІ</a>
-			</div>
+            foreach( $myposts as $post ){
+            	setup_postdata($post);
+        ?>
+				<div class="article"> 
+					<div class="article-title">
+						<i class="fa fa-bar-chart" aria-hidden="true"></i>
+						<?php
+							echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" =>
+"blank" ) );
+						?>
+					</div>
+				</div>
+		<?php
+    		} /* end foreach */
+			wp_reset_postdata();
+		?>
 
-		</div>
 	</div>
 	<!--advertising-->
 	<div class="col l4 s12 m6 center">

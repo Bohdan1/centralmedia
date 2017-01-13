@@ -9,11 +9,12 @@
 			<?php 
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post(); // Start the Loop.
+						$author_id = get_the_author_meta('ID');
 			?>
 						<div class="col l4 s12 m6">
 							<div class="blogger-article center all-blog-block">
 
-								<img class="blogger-crop-photo" src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="user" width="30%">
+								<img class="blogger-crop-photo" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="user" width="30%">
 								<div class="blogger-name">
 									<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
 								</div>

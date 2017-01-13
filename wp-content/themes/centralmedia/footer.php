@@ -12,10 +12,10 @@
         </div>
         <div class="col l4 center nav-footer-pos">
           <ul>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/news">Новини</a></li>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/articles">Статті</a></li>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/blogs">Блоги</a></li>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_home_url(); ?>/video">Відео</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
           </ul>
         </div>
         <div class="col l4 center nav-contact-pos">
@@ -34,7 +34,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container center">
-      © 2017 PLATFROM IT-Company
+        © 2017 PLATFROM IT-Company
       </div>
     </div>
   </footer>

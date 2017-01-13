@@ -6,51 +6,35 @@
 
 		<div class="col l12 s12 m12  all-state-sing center">АКТУАЛЬНО</div>
 			<div class="row state-bottom">
-				<div class="col l3 s6 m6 ">
-					<div class="all-state">
-						<img src="http://centralmedia/wp-content/uploads/2016/12/ca8a491-1320-dokazova-meditsina.jpg" width="100%" alt=""> 
-						<a href="#" class="hover-link"> 
-							<span class="state-first-name">Надвисока ціна. Чому важлива доказова медицина</span> 
-						</a> 
-						<div> 
-							Немає національної науки, як немає й національної таблиці множення. І справді. Як українець може лікуватися інакше, ніж,... 
-						</div> 
-					</div>
-				</div>
-				<div class="col l3 s6 m6 ">
-					<div class="all-state">
-						<img src="http://img.pravda.com/images/doc/5/2/52ab5d6-hakeri_300x185.jpg" width="100%" alt=""> 
-						<a href="#" class="hover-link"> 
-							<span class="state-first-name">Надвисока ціна. Чому важлива доказова медицина</span> 
-						</a> 
-						<div> 
-							Немає національної науки, як немає й національної таблиці множення. І справді. Як українець може лікуватися інакше, ніж,... 
-						</div> 
-					</div>
-				</div>
-				<div class="col l3 s6 m6 ">
-					<div class="all-state">
-						<img src="http://img.pravda.com/images/doc/1/0/107dcd6-690-shimkiv_300x185.jpg" width="100%" alt=""> 
-						<a href="#" class="hover-link"> 
-							<span class="state-first-name">Надвисока ціна. Чому важлива доказова медицина</span> 
-						</a> 
-						<div> 
-							Немає національної науки, як немає й національної таблиці множення. І справді. Як українець може лікуватися інакше, ніж,... 
-						</div> 
-
-					</div>
-				</div>
-				<div class="col l3 s6 m6 ">
-					<div class="all-state">
-						<img src="http://img.pravda.com/images/doc/3/9/39ca2e7-sharji-485-1_300x185.jpg" width="100%" alt=""> 
-						<a href="#" class="hover-link"> 
-							<span class="state-first-name">Надвисока ціна. Чому важлива доказова медицина</span> 
-						</a> 
-						<div> 
-							Немає національної науки, як немає й національної таблиці множення. І справді. Як українець може лікуватися інакше, ніж,...
-						</div> 
-					</div>
-				</div>
+				<?php 
+					$args = array(
+		                'post_type' => 'articles',
+		                'numberposts' => 4,
+		                'publish' => true,
+		                'orderby' => 'date',
+		                'order' => 'DESC'
+		            );
+		            $myposts = get_posts( $args );
+					foreach( $myposts as $post ){
+						setup_postdata($post);
+				?>
+						<div class="col l3 s6 m6 ">
+							<div class="all-state">
+								<img src="<?php the_post_thumbnail_url(); ?>" width="100%" alt=""> 
+								<a href="<?php the_permalink(); ?>" class="hover-link"> 
+									<span class="state-first-name"><?php the_title(); ?></span> 
+								</a> 
+								<div> 
+									<?php
+										short_desc_post(120);	// display short content (120 symbols)
+									?>
+								</div> 
+							</div>
+						</div>
+				<?php
+					} /* end foreach */
+					wp_reset_postdata();
+		        ?>		
 			</div>
 			
 			<div class="row other-state-bottom">

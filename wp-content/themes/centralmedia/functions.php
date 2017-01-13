@@ -43,7 +43,7 @@
 		    //if ( ! is_admin() && $query->is_main_query() ) {
 			$queried_object = get_queried_object();
 			if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'news' && $query->is_main_query() ) { //якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
-		        $query->set( 'posts_per_page', 10 );
+				$query->set( 'posts_per_page', 10 );
 			}
 			else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'articles' && $query->is_main_query() ) {
 		        $query->set( 'posts_per_page', 12 );

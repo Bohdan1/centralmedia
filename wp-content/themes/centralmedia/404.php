@@ -1,14 +1,21 @@
 <?php get_header() ?>
 
-<div style="width:900px; padding:30px 0 30px 0; margin:0 auto;">
-	<img src="<?php bloginfo('template_url') ?>/img/404.jpg" style="width:37%">
-	<div style="float:right; margin-top:50px;">
-		<h3>404 Сторінка не знайдена!</h3>
-		<h5>Спробуйте повернутися на <a href="<?php echo get_home_url(); ?>" style="color:#f61c0d;">головну</a></h5>
-	</div>
-	
-</div>
-
+<div class="comingcontainer">
+    <div class="checkbacksoon">
+		<p>
+			<span class="go3d">4</span>
+			<span class="go3d">0</span>
+			<span class="go3d">4</span>
+			<span class="go3d">!</span>
+		</p>
+        <p class="error">
+			Схоже, ви зайши на неіснуючу сторінку. <br> Не хвилюйтеся, час від часу, це трапляється з кожним з нас. <br>
+        	Пошукова форма та посилання нижче, допоможуть вам найти потрійбну інформацію.
+		</p>
+		<form class="search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+  			<input type="search" placeholder="пошук" class="input" required name="s"/>
+		</form>
+  
 <?php get_template_part('content', 'footer') ?>
 
 <?php get_footer() ?>

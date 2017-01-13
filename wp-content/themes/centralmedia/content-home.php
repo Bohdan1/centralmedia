@@ -27,7 +27,7 @@
 	<!--Blogs-->
 	<div class="col l4 s12 m12">
 		<div class="blogs">
-			<a class="black-text" href="<?php echo get_home_url(); ?>/blogs">
+			<a class="black-text" href="<?php echo get_post_type_archive_link('blogs'); ?>">
 				<span class="blog-sign"> БЛОГИ </span>
 			</a>
 			<?php 
@@ -42,26 +42,29 @@
 
             	foreach( $myposts as $post ){
             		setup_postdata($post);
+            		$author_id = get_the_author_meta('ID');
+					if ( has_wp_user_avatar($author_id) ) { //blog displayed in homepage only if blogger has avatar
         	?>
-			<div class="blog-block row">
-				<div class="blogger-photo col l3 s1 center" >
-					<img class="blogger-photo-min" src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="bloger_avatar">
-				</div> 
-				<div class="blogger-article col l9 s11">
-					<div class="blogger-name">
-						<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
-					</div>
-					<div class="blogger-speach">
-						<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
-							<?php
-								short_desc_post(100);		// display short content (100 symbols)
-							?>
-						</a>
-					</div>
-				</div>
-			</div>
+						<div class="blog-block row">
+							<div class="blogger-photo col l3 s1 center" >
+								<img class="blogger-photo-min" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="bloger_avatar">
+							</div> 
+							<div class="blogger-article col l9 s11">
+								<div class="blogger-name">
+									<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
+								</div>
+								<div class="blogger-speach">
+									<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
+										<?php
+											short_desc_post(100);	// display short content (100 symbols)
+										?>
+									</a>
+								</div>
+							</div>
+						</div>
 	        <?php
-	    		} /* end foreach */
+	        		} // end if
+	    		} // end foreach
 				wp_reset_postdata();
 			?>
 		</div>
@@ -71,7 +74,7 @@
 <!--news-->
 <div class="row content">
 	<div class="col l6 s12 m6 news-block ">
-		<div class="news-sign center"><a class="black-text" href="<?php echo get_home_url(); ?>/news"> ОСТАННІ НОВИНИ </a></div>
+		<div class="news-sign center"><a class="black-text" href="<?php echo get_post_type_archive_link('news'); ?>"> ОСТАННІ НОВИНИ </a></div>
 		<?php 
 			 $args = array(
                 'post_type' => 'news',
@@ -121,7 +124,7 @@
 
 	<!--Videos-->
 	<div class="col l3 s12 m6 center video-block">
-		<div class="news-sign-video center"><a class="black-text" href="<?php echo get_home_url(); ?>/video"> ВІДЕО </a></div>
+		<div class="news-sign-video center"><a class="black-text" href="<?php echo get_post_type_archive_link('video'); ?>"> ВІДЕО </a></div>
 		<div class="video-list row">
 			<div class="youtube col l6">
 				<img width="80%" src="<?php bloginfo('template_url'); ?>/img/logo/youtube-icon.png" alt="альтернативный текст" />
@@ -164,12 +167,12 @@
 	<!--state-->
 	<div class="col l3 s12 m6 center state-block">
 		<div class="state-list">
-			<div class="state-sign center"><a class="black-text" href="<?php echo get_home_url(); ?>/articles"> СТАТТІ </a></div>
+			<div class="state-sign center"><a class="black-text" href="<?php echo get_post_type_archive_link('articles'); ?>"> СТАТТІ </a></div>
 			<div class="blogs">
 				<?php 
 					$args = array(
 		                'post_type' => 'articles',
-		                'numberposts' => 3,
+		                'numberposts' => 4,
 		                'publish' => true,
 		                'orderby' => 'date',
 		                'order' => 'DESC',

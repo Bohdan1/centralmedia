@@ -5,9 +5,10 @@
 	<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); // Start the Loop.
+				$author_id = get_the_author_meta('ID');
 	?>
 				<div class="col l12 m12 s12">
-					<img src="<?php $author_id = get_the_author_meta('ID'); echo get_avatar_url($author_id);?>" alt="user" width="5%" class="blogger-crop-photo top10-blogger-photo-pos-single">
+					<img src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="user" width="5%" class="blogger-crop-photo top10-blogger-photo-pos-single">
 					<div class="top10-blogger-name-single">
 						<div><?php echo get_the_author_meta('first_name'); ?></div>
 						<div><?php echo get_the_author_meta('last_name'); ?></div>

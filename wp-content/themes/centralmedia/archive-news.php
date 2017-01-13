@@ -50,7 +50,7 @@
 				<div class="blogs">
 					<?php 
 						$args = array(
-			                'post_type' => 'articles',
+			                'post_type' => 'news',
 			                'numberposts' => 3,
 			                'publish' => true,
 			                'orderby' => 'date',
