@@ -21,12 +21,12 @@ class CTClass extends CTClassBase
 		$poll->addItem( "Ні" );
 
 		//-- Text used in polls
-		$poll->attr( "msg-vote", "Голоcувати" );
+		$poll->attr( "msg-vote", "ГОЛОСУВАТИ" );
 		$poll->attr( "msg-select-one", "Виберіть один з варіантів" );
 		$poll->attr( "msg-already-voted", "Ви вже брали участь в опитуванні!" );
-		$poll->attr( "msg-view-result", "Результат" );
+		$poll->attr( "msg-view-result", "РЕЗУЛЬТАТ" );
 		$poll->attr( "msg-thank-you", "Дякуємо за голосування!" );
-		$poll->attr( "msg-return", "Повернутись" );
+		$poll->attr( "msg-return", "ПОВЕРНУТИСЬ" );
 		$poll->attr( "msg-total", "Загалом проголосували:" );
 		$poll->attr( "msg-reset-block", "Reset IP & Cookie Block" );
 		$poll->attr( "msg-not-started", "Голосування ще не почалося." );

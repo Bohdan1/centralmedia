@@ -7,6 +7,27 @@ Author URI: http://platform-it.com/
 Version: 0.4
 */
 
+/* font-family: "JuraRegular"; */
+@font-face {
+    font-family: "JuraRegular";
+    src: url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.eot");
+    src: url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.eot?#iefix")format("embedded-opentype"),
+    url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.woff") format("woff"),
+    url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "UKIJQolyazmaRegular";
+    src: url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.eot");
+    src: url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.eot?#iefix")format("embedded-opentype"),
+    url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.woff") format("woff"),
+    url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 ::-webkit-scrollbar{
     width:12px;
 }
@@ -31,53 +52,6 @@ Version: 0.4
     background-color: #eee;
 }
 
-@font-face {
-    font-family: "CalligraphMedium";
-    src: url("fonts/CalligraphMedium/CalligraphMedium.eot");
-    src: url("fonts/CalligraphMedium/CalligraphMedium.eot?#iefix")format("embedded-opentype"), url("fonts/CalligraphMedium/CalligraphMedium.woff") format("woff"), url("fonts/CalligraphMedium/CalligraphMedium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "CaviarDreamsRegular";
-    src: url("fonts/CaviarDreamsRegular/CaviarDreamsRegular.eot");
-    src: url("fonts/CaviarDreamsRegular/CaviarDreamsRegular.eot?#iefix")format("embedded-opentype"), url("fonts/CaviarDreamsRegular/CaviarDreamsRegular.woff") format("woff"), url("fonts/CaviarDreamsRegular/CaviarDreamsRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "FundamentalRegular";
-    src: url("fonts/FundamentalRegular/FundamentalRegular.eot");
-    src: url("fonts/FundamentalRegular/FundamentalRegular.eot?#iefix")format("embedded-opentype"), url("fonts/FundamentalRegular/FundamentalRegular.woff") format("woff"), url("fonts/FundamentalRegular/FundamentalRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "BoblicRegular";
-    src: url("fonts/BoblicRegular/BoblicRegular.eot");
-    src: url("fonts/BoblicRegular/BoblicRegular.eot?#iefix")format("embedded-opentype"), url("fonts/BoblicRegular/BoblicRegular.woff") format("woff"), url("fonts/BoblicRegular/BoblicRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Broadway";
-    src: url("fonts/broadway/ufonts.com_broadway__2_.eot");
-    src: url("fonts/broadway/ufonts.com_broadway__2_.eot?#iefix")format("embedded-opentype"), url("fonts/broadway/ufonts.com_broadway.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "BadScriptRegular";
-    src: url("fonts/BadScriptRegular/BadScriptRegular.eot");
-    src: url("fonts/BadScriptRegular/BadScriptRegular.eot?#iefix")format("embedded-opentype"), url("fonts/BadScriptRegular/BadScriptRegular.woff") format("woff"), url("fonts/BadScriptRegular/BadScriptRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
 
 html {
     max-width: 2000px; 
@@ -114,10 +88,12 @@ body{
 
 
 .blog-sign{
+    font-family: "UKIJQolyazmaRegular";
     font-size: 20px;
     margin: 10px;
     font-weight: bold;
     margin: 5px 0px 6px 8px;
+
 }
 
 .blog-name{
@@ -140,7 +116,8 @@ hr{
 }
 
 .blogger-name{
-    font-size: 12px;
+    font-family: "UKIJQolyazmaRegular";
+    font-size: 15px;
     font-weight: bolder;
     color: #f61c0d;
 
@@ -217,6 +194,7 @@ nav .input-field label i  {
 }
 
 .slider-sign-main{
+    font-family: Arial;
     font-weight: bolder !important  ;
     font-size: 40px !important;
 }
@@ -237,6 +215,7 @@ nav .input-field label i  {
 }
 
 .article{
+    font-family: "UKIJQolyazmaRegular";
     border-radius: 2px;
     margin: 20px;
     border-bottom: #e3e3e3 1px solid;
@@ -278,6 +257,7 @@ em{
 }
 
 .news-sign{
+    font-family: "UKIJQolyazmaRegular";
     font-size: 20px; 
     padding-bottom: 10px;
     font-weight: bold;
@@ -308,7 +288,7 @@ em{
 
 }
 .blogger-speach{
-    text-align: 
+        font-family: "UKIJQolyazmaRegular";
 }
 .blog-sign{
     padding-left: 20px;
@@ -334,9 +314,11 @@ em{
     padding: 10px;
 }
 .top-video{
+    font-family: "UKIJQolyazmaRegular";
     margin-top: 30px; 
     padding-bottom: 10px;  
     font-size: 20px;
+    font-weight: bold;
 }
 .video-text{
     text-align: left;
@@ -365,6 +347,7 @@ em{
 
 
 .news-sign-video{
+    font-family: "UKIJQolyazmaRegular";
     font-size: 20px; 
     padding-bottom: 30px;
     font-weight: bold;
@@ -382,6 +365,7 @@ em{
 }   
 
 .state-sign{
+    font-family: "UKIJQolyazmaRegular";
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 25px;
@@ -428,9 +412,11 @@ em{
 .menu-list{
     text-decoration: none;
     color: black;
+    font-family: "UKIJQolyazmaRegular";
 }
 
 .partners-news{
+    font-family: "UKIJQolyazmaRegular";
     font-size: 20px;
     padding-bottom: 10px;
     font-weight: bold;
@@ -467,6 +453,7 @@ footer.page-footer {
 }
 
 .asking{
+    font-family: "UKIJQolyazmaRegular";
     font-size: 20px;
     padding-bottom: 10px;
     font-weight: bold;
@@ -485,6 +472,7 @@ footer.page-footer {
 }
 
 .main-sign-footer{
+    font-family: "UKIJQolyazmaRegular";
     font-weight: bold;
     margin-top: 15px;
 }
@@ -494,10 +482,12 @@ footer.page-footer {
 }
 
 .nav-footer-pos{
+    font-family: "UKIJQolyazmaRegular";
     padding-top: 20px;
 }
 
 .nav-contact-pos{
+    font-family: "UKIJQolyazmaRegular";
     margin-top: 15px;
 }
 
@@ -942,8 +932,12 @@ background: url(img/ch2.png) top right no-repeat, url(img/ch1.png) top left no-r
                     input[type="search"] {
                         -webkit-appearance: none;
                     }
+                    body{
+                         font-family: "UKIJQolyazmaRegular";
+                    }
 
                     *+html .search {
+
                         width: 28%;
                         padding: 0 52px 0 0;
                     }
@@ -1009,7 +1003,6 @@ border-radius: 10px;
 .page-numbers{
     margin: 7px;
 }
-
 
 
 

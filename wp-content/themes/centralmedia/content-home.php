@@ -135,7 +135,7 @@
 				<div class="center">Онлайн трансляція</div>
 			</div>
 		</div>
-		<div class="top-video">Топ-5 Відео</div>
+		<div class="top-video">Топ Відео</div>
 		<?php 
 			 $args = array(
                 'post_type' => 'video',
