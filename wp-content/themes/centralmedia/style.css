@@ -1003,8 +1003,38 @@ border-radius: 10px;
 .page-numbers{
     margin: 7px;
 }
+#primary{
+    margin-top: 30px;
+   text-align: justify;
 
-
+}
+.search-request{
+    font-size: 20px;
+    color: silver;
+}
+.search-post-number{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.search-result{
+    color: #d82d19;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.entry-summary{
+    border-bottom: 1px solid #e3e3e3;
+}
+.search-post-title{
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.search-null{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-size: 20px;
+}
 
 
 
