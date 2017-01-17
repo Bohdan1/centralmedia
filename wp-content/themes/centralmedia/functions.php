@@ -17,6 +17,8 @@
 		wp_enqueue_script( 'jquery-2.1.1.min', get_template_directory_uri() . '/js/jquery-2.1.1.min.js');
 		wp_enqueue_script( 'materialize.min', get_template_directory_uri() . '/js/materialize.min.js');
 		wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/wow.min.js');
+		wp_enqueue_script( 'skdslider', get_template_directory_uri() . '/js/skdslider.js');
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js');
 		wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
 		wp_enqueue_script( 'd97a6585c2', get_template_directory_uri() . '/js/d97a6585c2.js'); // https://use.fontawesome.com/d97a6585c2.js
 		//wp_enqueue_script( 'ajax-poll', get_template_directory_uri() . '/Ajax_Poll/ajax-poll.php'); - підключається в футері
