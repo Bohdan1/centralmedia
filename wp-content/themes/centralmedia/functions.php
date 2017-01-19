@@ -52,6 +52,12 @@
 			else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'blogs' && $query->is_main_query() ) {
 		        $query->set( 'posts_per_page', 6 );
 			}
+			else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'video' && $query->is_main_query() ) {
+		        $query->set( 'posts_per_page', 12 );
+			}
+			else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'partner-news' && $query->is_main_query() ) {
+		        $query->set( 'posts_per_page', 15 );
+			}
 			else if ( !is_admin() && $query->is_search && $query->is_main_query() ) {
 		        $query->set( 'posts_per_page', 10 );
 			}

@@ -5,14 +5,16 @@
 		<?php get_template_part('content', 'slider') ?>
 		
 		<div class="col l8 s12 m6 news-partners-block">
-			<div class="news-partners-sign center">НОВИНИ</div>
+			<div class="news-partners-sign center">НОВИНИ ПАРТНЕРІВ</div>
 			<?php 
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post(); // Start the Loop.
 			?>
 						<div class="article"> 
 							<div class="article-title">
-								<a href="<?php the_permalink(); ?>" class="hover-link"><em>фото</em><?php the_title(); ?></a>
+								<?php
+									echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
+								?>
 							</div>
 						</div>
 			<?php
@@ -25,32 +27,16 @@
 					echo '<div> Новин не знайдено </div>';
 				endif;
 			?>
-			<!-- приклад виводу новин з іншими іконками
-			<div class="article"> 
-				<div class="article-title">
-					<a href="#" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
-						Lorem ipsum
-					</a>
-				</div>
-			</div>
-			<div class="article"> 
-				<div class="article-title">
-					<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
-						Путін заявив, що Росія сильніша за будь-якого агресора
-					</a>
-				</div>
-			</div>
-			-->
 		</div>
 	
-		<!--state-->
+		<!--important-->
 		<div class="col l4 s12 m6 center state-block">
 			<div class="state-list">
 				<div class="state-sign center">АКТУАЛЬНЕ</div>
 				<div class="blogs">
 					<?php 
 						$args = array(
-			                'post_type' => 'news',
+			                'post_type' => 'partner-news',
 			                'numberposts' => 3,
 			                'publish' => true,
 			                'orderby' => 'date',
@@ -63,9 +49,9 @@
 							<div class="row other-state">
 								<div class="col s12 m12 l12">
 									<img src="<?php the_post_thumbnail_url(); ?>" width="40%" alt="" class="state-other-float">
-									<a href="<?php the_permalink(); ?>" class="hover-link">
-										<div class="state-other-name"><?php the_title(); ?></div>
-									</a>
+									<?php
+										echo types_render_field( "partner_news_url", array("class" => "hover-link state-other-name", "title" => get_the_title(), "target" => "blank" ) );
+									?>
 									<div class="state-other-text">
 										<?php
 											short_desc_post(120);	// display short content (120 symbols)

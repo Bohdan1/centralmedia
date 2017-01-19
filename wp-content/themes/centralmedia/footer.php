@@ -25,9 +25,9 @@
           <span class="black-text address-footer">м.Львів, вул. Зелена 82</span><br>
 
           <div class="soial-footer">
-    				<a href="#"><img  src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a>                 
-    				<a href="#"><img  src="<?php bloginfo('template_url') ?>/img/social/yb.png"></a>
-    				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/social/tw.png"></a>
+    				<a href="https://www.facebook.com/"><img  src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a>                 
+    				<a href="https://www.youtube.com/"><img  src="<?php bloginfo('template_url') ?>/img/social/yb.png"></a>
+    				<a href="https://twitter.com/"><img src="<?php bloginfo('template_url') ?>/img/social/tw.png"></a>
     			</div>
         </div>
       </div>

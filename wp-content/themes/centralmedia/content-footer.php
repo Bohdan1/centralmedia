@@ -22,10 +22,8 @@
         ?>
 				<div class="article"> 
 					<div class="article-title">
-						<i class="fa fa-bar-chart" aria-hidden="true"></i>
 						<?php
-							echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" =>
-"blank" ) );
+							echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
 						?>
 					</div>
 				</div>

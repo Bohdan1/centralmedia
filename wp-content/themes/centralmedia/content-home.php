@@ -153,9 +153,9 @@
 				<img width="80%" src="<?php video_thumbnail(); ?>" alt="альтернативный текст" />
 			</div>
 			<div class="video-text col l8 s6">
-				<a href="<?php the_permalink(); ?>" class="hover-link">
-					<?php the_title(); ?>
-				</a>
+				<?php
+					echo types_render_field( "video_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
+				?>
 			</div>
 		</div>
         <?php

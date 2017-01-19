@@ -170,9 +170,9 @@
 				<li class="hide-on-med-and-down">
 					<?php get_search_form(); ?>
 				</li>
-				<li class="iphone-hide"><a href="#"><img class="social iphone-hide " src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a></li> 
-				<li class="iphone-hide"><a href="#"><img class="social iphone-hide" src="<?php bloginfo('template_url') ?>/img/social/yb.png"></a></li>
-				<li class="iphone-hide"><a href="#"><img class="social iphone-hide" src="<?php bloginfo('template_url') ?>/img/social/tw.png"></a></li>
+				<li class="iphone-hide"><a href="https://www.facebook.com/"><img class="social iphone-hide " src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a></li> 
+				<li class="iphone-hide"><a href="https://www.youtube.com/"><img class="social iphone-hide" src="<?php bloginfo('template_url') ?>/img/social/yb.png"></a></li>
+				<li class="iphone-hide"><a href="https://twitter.com/"><img class="social iphone-hide" src="<?php bloginfo('template_url') ?>/img/social/tw.png"></a></li>
 				<li class=""><a href="#modal1"><img class="social social-user" src="<?php bloginfo('template_url') ?>/img/social/user.png"></a></li>
 			</ul>
 		</div>
