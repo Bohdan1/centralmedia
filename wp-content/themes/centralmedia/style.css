@@ -262,6 +262,12 @@ em{
     padding-bottom: 10px;
     font-weight: bold;
 }
+.news-partners-sign{
+    font-family: "UKIJQolyazmaRegular";
+    font-size: 20px; 
+    padding-bottom: 10px;
+    font-weight: bold;
+}
 .all-news{
 
     padding-left: 25px;
@@ -285,30 +291,27 @@ em{
     margin-top: 10px;
     height: 300px;
     margin-bottom: -10px;
-
 }
 .blogger-speach{
         font-family: "UKIJQolyazmaRegular";
 }
 .blog-sign{
     padding-left: 20px;
-
 }
-
 
 .news-block{
     text-align: justify;
     border-right: #e3e3e3 1px solid;
-
+}
+.news-partners-block{
+    text-align: justify;
+    border-right: #e3e3e3 1px solid;
 }
 .state-block{
     text-align: left;
-
 }
 .video-block{
     border-right: #e3e3e3 1px solid;
-
-
 }
 .youtube{
     padding: 10px;

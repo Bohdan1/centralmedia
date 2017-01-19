@@ -1,79 +1,86 @@
 <?php get_header(); ?>
-
-<div class="row content">
-	<div class="col l8 s12 m6 news-block ">
-		<?php 
-			if ( have_posts() ) :
-				while ( have_posts() ) : the_post(); // Start the Loop.
-		?>
-					<div class="single-partners-news-sign ">
-						<?php
-							$post_thumbnail_url = get_the_post_thumbnail_url();
-							$post_thumpnail = '<img src="' . $post_thumbnail_url . '" width="100%"';	//при закриванні тегу img('>'), перед зображенням на екран виводиться '">'
-							echo types_render_field( "partner_news_url", array("title" => $post_thumpnail, "target" =>
-"blank" ) );
-							$post_title = get_the_title();
-							echo types_render_field( "partner_news_url", array("title" => $post_title, "target" =>
-"blank" ) );
-						?>
-					</div>
-					<div class="partners-text-news">
-						<?php the_content(); ?>
-					</div>
-		<?php
-				endwhile; // End the loop.
-				echo '<div class="clear"></div>';
-				the_posts_pagination( $pagination_args );
-				wp_reset_postdata();
-			else :
-				// If no content, include the "No posts found" template.
-				echo '<div> Новин партнерів не знайдено </div>';
-			endif;
-		?>
-	</div>
-
-	<div class="col l4 s12 m6">
-		<div class="partners-actual-list">
-			<div class="partners-actual-sign">По темі:</div>
-			<div class="partners-actual">
-				<?php 
-					 $args = array(
-		                'post_type' => 'partner-news',
-		                'numberposts' => 10,
-		                'publish' => true,
-		                'orderby' => 'date',
-		                'order' => 'DESC'
-		            );
-		            $myposts = get_posts( $args );
-
-		            foreach( $myposts as $post ) {
-		            	setup_postdata($post);
-		        ?>
-				<div class="row partner-other-actual">
-					<div class="col s12 m12 l12">
-						<div class="partners-actual-other-name">
-							<?php
-								echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" =>
-"blank" ) );
-							?>
+	
+	<div class="row content">
+		<!--slider-->
+		<?php get_template_part('content', 'slider') ?>
+		
+		<div class="col l8 s12 m6 news-partners-block">
+			<div class="news-partners-sign center">НОВИНИ</div>
+			<?php 
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post(); // Start the Loop.
+			?>
+						<div class="article"> 
+							<div class="article-title">
+								<a href="<?php the_permalink(); ?>" class="hover-link"><em>фото</em><?php the_title(); ?></a>
+							</div>
 						</div>
-						<div class="actual-other-text">
-							<?php
-								short_desc_post(120);	// display short content (120 symbols)
-							?>
-						</div>
-					</div>
-				</div>
-
-				 <?php
-		    		} /* end foreach */
+			<?php
+	    			endwhile; // End the loop.
+	    			echo '<div class="clear"></div>';
+					the_posts_pagination( $pagination_args );
 					wp_reset_postdata();
-				?>		
+				else :
+					// If no content, include the "No posts found" template.
+					echo '<div> Новин не знайдено </div>';
+				endif;
+			?>
+			<!-- приклад виводу новин з іншими іконками
+			<div class="article"> 
+				<div class="article-title">
+					<a href="#" class="hover-link"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+						Lorem ipsum
+					</a>
+				</div>
+			</div>
+			<div class="article"> 
+				<div class="article-title">
+					<a href="#" class="hover-link"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+						Путін заявив, що Росія сильніша за будь-якого агресора
+					</a>
+				</div>
+			</div>
+			-->
+		</div>
+	
+		<!--state-->
+		<div class="col l4 s12 m6 center state-block">
+			<div class="state-list">
+				<div class="state-sign center">АКТУАЛЬНЕ</div>
+				<div class="blogs">
+					<?php 
+						$args = array(
+			                'post_type' => 'news',
+			                'numberposts' => 3,
+			                'publish' => true,
+			                'orderby' => 'date',
+			                'order' => 'DESC'
+			            );
+			            $myposts = get_posts( $args );
+						foreach( $myposts as $post ){
+							setup_postdata($post);
+					?>
+							<div class="row other-state">
+								<div class="col s12 m12 l12">
+									<img src="<?php the_post_thumbnail_url(); ?>" width="40%" alt="" class="state-other-float">
+									<a href="<?php the_permalink(); ?>" class="hover-link">
+										<div class="state-other-name"><?php the_title(); ?></div>
+									</a>
+									<div class="state-other-text">
+										<?php
+											short_desc_post(120);	// display short content (120 symbols)
+										?>
+									</div>
+								</div>
+							</div>
+					<?php
+						} /* end foreach */
+						wp_reset_postdata();
+			        ?>		
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<br>
 
 <?php get_template_part('content', 'footer') ?>
 
