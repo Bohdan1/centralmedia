@@ -1105,12 +1105,16 @@ border-radius: 10px;
     margin-top: 20px;
 }
 
+.single-state-sign{
+    margin: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
 
-
-
-
-
-
+.text-state{
+    margin: 25px;
+    font-size: 19px;
+}
 
 
 

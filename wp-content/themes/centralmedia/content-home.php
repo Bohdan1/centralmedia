@@ -91,7 +91,7 @@
 		<div class="article"> 
 			<div class="article-title">
 				<a href="<?php the_permalink(); ?>" class="hover-link">
-					<i class="fa fa-bar-chart" aria-hidden="true"></i>
+					<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 					<?php the_title(); ?>
 				</a>
 			</div>
