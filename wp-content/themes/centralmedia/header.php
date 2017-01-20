@@ -37,6 +37,9 @@
 		}
 		/* mobile */
 		@media screen and (max-width: 668px) {
+			.header-height{
+    height: 55px;
+}
 			#menu li{
 			    text-transform: uppercase;
 			    display: inline;
@@ -58,9 +61,7 @@
 			.modal-close{
 				position: relative;
 			}
-			.header-logo{
-				width: 100%;
-			}
+			
 			.modal {
 				margin-top: 50px;
 				width: 100%;
@@ -177,6 +178,6 @@
 			</ul>
 		</div>
 	</div>
-	<div style="height: 58px;"></div>
+	<div class="header-height"></div>
 	<!-- Modal Structure -->
 	<?php author_log(); ?>

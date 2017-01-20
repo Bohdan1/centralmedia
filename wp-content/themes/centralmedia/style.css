@@ -7,26 +7,31 @@ Author URI: http://platform-it.com/
 Version: 0.4
 */
 
-/* font-family: "JuraRegular"; */
 @font-face {
-    font-family: "JuraRegular";
-    src: url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.eot");
-    src: url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.eot?#iefix")format("embedded-opentype"),
-    url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.woff") format("woff"),
-    url("/wp-content/themes/centralmedia/fonts/JuraRegular/JuraRegular.ttf") format("truetype");
+    font-family: "CenturyGothicRegular";
+    src: url("/wp-content/themes/centralmedia/fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
+    src: url("/wp-content/themes/centralmedia/fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
+    url("/wp-content/themes/centralmedia/fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
+    url("/wp-content/themes/centralmedia/fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+/* font-family: "DroidSansRegular"; */
 @font-face {
-    font-family: "UKIJQolyazmaRegular";
-    src: url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.eot");
-    src: url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.eot?#iefix")format("embedded-opentype"),
-    url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.woff") format("woff"),
-    url("/wp-content/themes/centralmedia/fonts/UKIJQolyazmaRegular/UKIJQolyazmaRegular.ttf") format("truetype");
+    font-family: "DroidSansRegular";
+    src: url("/wp-content/themes/centralmedia/fonts/DroidSansRegular/DroidSansRegular.eot");
+    src: url("/wp-content/themes/centralmedia/fonts/DroidSansRegular/DroidSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("/wp-content/themes/centralmedia/fonts/DroidSansRegular/DroidSansRegular.woff") format("woff"),
+    url("/wp-content/themes/centralmedia/fonts/DroidSansRegular/DroidSansRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
-
+.header-height{
+    height: 65px;
+}
+.side-nav{
+    z-index: 99999;
+}
 
 ::-webkit-scrollbar{
     width:12px;
@@ -65,9 +70,6 @@ html {
 .row{
     margin-bottom: 0;
 }
-body{
-
-}
 .social{
     margin-top: -5px;
     position: relative;
@@ -88,7 +90,7 @@ body{
 
 
 .blog-sign{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px;
     margin: 10px;
     font-weight: bold;
@@ -116,7 +118,7 @@ hr{
 }
 
 .blogger-name{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 15px;
     font-weight: bolder;
     color: #f61c0d;
@@ -137,13 +139,15 @@ hr{
 
 
 #menu{
-    overflow: hidden; 
+        border-bottom: 5px solid #d82d19;
+    overflow: hidden;
     position: fixed;
     z-index: 9999;
     width: 100%;
+    
     max-width: 2000px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);  
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */ 
 }
 .down{
     margin-top: 58px;
@@ -156,7 +160,9 @@ hr{
     padding-left: 7px;
     padding-right: 5px;
 }
-
+.header-logo{
+   margin-top: 3px;
+}
 nav{
     background-color: white;
     width: 300px;
@@ -170,6 +176,7 @@ nav .input-field label i  {
     transition: color 999999999999999999999999s;
     margin-top: -10px;
 }
+
 
 .blogs-background {
     background-color: rgba(245, 245, 245, 0.8);
@@ -194,7 +201,7 @@ nav .input-field label i  {
 }
 
 .slider-sign-main{
-    font-family: Arial;
+    font-family: ;
     font-weight: bolder !important  ;
     font-size: 40px !important;
 }
@@ -210,12 +217,12 @@ nav .input-field label i  {
 }
 
 .slider-section{
-    border-bottom: 7px solid #d82d19;
+    border-bottom: 5px solid #d82d19;
     margin-bottom: 15px;
 }
 
 .article{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     border-radius: 2px;
     margin: 20px;
     border-bottom: #e3e3e3 1px solid;
@@ -257,13 +264,13 @@ em{
 }
 
 .news-sign{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px; 
     padding-bottom: 10px;
     font-weight: bold;
 }
 .news-partners-sign{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px; 
     padding-bottom: 10px;
     font-weight: bold;
@@ -293,10 +300,10 @@ em{
     margin-bottom: -10px;
 }
 .blogger-speach{
-        font-family: "UKIJQolyazmaRegular";
+        font-family: ;
 }
 .blog-sign{
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .news-block{
@@ -317,7 +324,7 @@ em{
     padding: 10px;
 }
 .top-video{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     margin-top: 30px; 
     padding-bottom: 10px;  
     font-size: 20px;
@@ -350,7 +357,7 @@ em{
 
 
 .news-sign-video{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px; 
     padding-bottom: 30px;
     font-weight: bold;
@@ -368,7 +375,7 @@ em{
 }   
 
 .state-sign{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 25px;
@@ -415,11 +422,11 @@ em{
 .menu-list{
     text-decoration: none;
     color: black;
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
 }
 
 .partners-news{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px;
     padding-bottom: 10px;
     font-weight: bold;
@@ -456,7 +463,7 @@ footer.page-footer {
 }
 
 .asking{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px;
     padding-bottom: 10px;
     font-weight: bold;
@@ -475,7 +482,7 @@ footer.page-footer {
 }
 
 .main-sign-footer{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-weight: bold;
     margin-top: 15px;
 }
@@ -485,12 +492,12 @@ footer.page-footer {
 }
 
 .nav-footer-pos{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     padding-top: 20px;
 }
 
 .nav-contact-pos{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     margin-top: 15px;
 }
 
@@ -936,7 +943,7 @@ background: url(img/ch2.png) top right no-repeat, url(img/ch1.png) top left no-r
                         -webkit-appearance: none;
                     }
                     body{
-                         font-family: "UKIJQolyazmaRegular";
+                         font-family: "DroidSansRegular";
                     }
 
                     *+html .search {
@@ -1045,7 +1052,7 @@ border-radius: 10px;
 }
 
 .video-sign-page{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px; 
     padding-bottom: 10px;
     font-weight: bold;
@@ -1061,7 +1068,7 @@ border-radius: 10px;
 }
 
 .topvideo-sign-page{
-    font-family: "UKIJQolyazmaRegular";
+    font-family: ;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 25px;
@@ -1088,9 +1095,15 @@ border-radius: 10px;
 .video-page-sign{
     font-size: 20px;
 }
+.enter-button-styles{
+    color: #343434;
+    vertical-align: top;
+    font-family: ;
+}
 
-
-
+#nav-mobile{
+    margin-top: 20px;
+}
 
 
 
