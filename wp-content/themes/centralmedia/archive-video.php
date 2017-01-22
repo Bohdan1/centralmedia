@@ -12,9 +12,9 @@
 									<div class="col l3 m12 s12 video-page-section">
 										<img class="video-page-photo" src="<?php video_thumbnail(); ?>">
 										<div class="video-page-sign center">
-											<?php
-												echo types_render_field( "video_url", array("title" => get_the_title(), "target" => "blank" ) );
-											?>
+											<a href="<?php echo get_post_meta( $post->ID, 'video_url', true ); ?>" class="hover-link" target="_blank">
+												<?php the_title(); ?>
+											</a> 
 										</div>	
 									</div>		
 						<?php
@@ -50,9 +50,9 @@
 									<img width="80%" src="<?php video_thumbnail(); ?>" alt="альтернативный текст" />
 								</div>
 								<div class="video-text col l8 s6">
-									<?php
-										echo types_render_field( "video_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
-									?>
+									<a href="<?php echo get_post_meta( $post->ID, 'video_url', true ); ?>" class="hover-link" target="_blank">
+										<?php the_title(); ?>
+									</a> 
 								</div>
 							</div>
 					        <?php

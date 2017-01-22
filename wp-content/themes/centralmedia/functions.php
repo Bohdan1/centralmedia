@@ -12,14 +12,14 @@ wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/googl
 }
 add_action( 'wp_enqueue_scripts', 'register_styles' );
 
-function register_scripts() { //adds files with script
+function register_scripts() { // adds files with script
 	wp_deregister_script('jquery');
 	wp_enqueue_script( 'jquery-2.1.1.min', get_template_directory_uri() . '/js/jquery-2.1.1.min.js');
 	wp_enqueue_script( 'materialize.min', get_template_directory_uri() . '/js/materialize.min.js');
 	wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/wow.min.js');
 	wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
 wp_enqueue_script( 'd97a6585c2', get_template_directory_uri() . '/js/d97a6585c2.js'); // https://use.fontawesome.com/d97a6585c2.js
-//wp_enqueue_script( 'ajax-poll', get_template_directory_uri() . '/Ajax_Poll/ajax-poll.php'); - підключається в футері
+// wp_enqueue_script( 'ajax-poll', get_template_directory_uri() . '/Ajax_Poll/ajax-poll.php'); - підключається в футері
 }
 add_action( 'wp_enqueue_scripts', 'register_scripts' );
 
@@ -40,198 +40,181 @@ function short_desc_post($charlength) {		// function for display short content f
 
 
 //settings for display archive posts
-function my_pre_get_posts( $query ) {
-//if ( ! is_admin() && $query->is_main_query() ) {
-	$queried_object = get_queried_object();
-if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'news' && $query->is_main_query() ) { //якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
-	$query->set( 'posts_per_page', 10 );
-}
-else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'articles' && $query->is_main_query() ) {
-	$query->set( 'posts_per_page', 12 );
-}
-else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'blogs' && $query->is_main_query() ) {
-	$query->set( 'posts_per_page', 6 );
-}
-else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'video' && $query->is_main_query() ) {
-	$query->set( 'posts_per_page', 12 );
-}
-else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'partner-news' && $query->is_main_query() ) {
-	$query->set( 'posts_per_page', 15 );
-}
-else if ( !is_admin() && $query->is_search && $query->is_main_query() ) {
-	$query->set( 'posts_per_page', 10 );
-}
-}
-add_action( 'pre_get_posts', 'my_pre_get_posts' );
-//end settings for display archive posts
+	function my_pre_get_posts( $query ) {
+		// if ( ! is_admin() && $query->is_main_query() ) {
+			$queried_object = get_queried_object();
+		if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'news' && $query->is_main_query() ) { // якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
+			$query->set( 'posts_per_page', 10 );
+		}
+		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'articles' && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 12 );
+		}
+		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'blogs' && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 6 );
+		}
+		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'video' && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 12 );
+		}
+		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'partner-news' && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 15 );
+		}
+		else if ( !is_admin() && $query->is_search && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 10 );
+		}
+	}
+	add_action( 'pre_get_posts', 'my_pre_get_posts' );
+// end settings for display archive posts
 
 
 // pagination settings
-// delete H2 from pagination template
-add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
-function my_navigation_template( $template, $class ){
-/*
-Вид базового шаблону:
-<nav class="navigation %1$s" role="navigation">
-<h2 class="screen-reader-text">%2$s</h2>
-<div class="nav-links">%3$s</div>
-</nav>
-*/
-return '
-<nav class="%1$s" role="navigation">
+	// delete H2 from pagination template
+	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+	function my_navigation_template( $template, $class ) {
+	/*
+	Вид базового шаблону:
+	<nav class="navigation %1$s" role="navigation">
+	<h2 class="screen-reader-text">%2$s</h2>
 	<div class="nav-links">%3$s</div>
-</nav>    
-';
-}
-$pagination_args = array(
-	'prev_text' => __( '&#8249;' ),
-	'next_text' => __( '&#8250;' ),
-	);
+	</nav>
+	*/
+	return '
+	<nav class="%1$s" role="navigation">
+		<div class="nav-links">%3$s</div>
+	</nav>    
+	';
+	}
+	$pagination_args = array(
+		'prev_text' => __( '&#8249;' ),
+		'next_text' => __( '&#8250;' ),
+		);
 // end pagination settings
 
 
 // login form settings
-function author_log() {
-	if ( !is_user_logged_in() ): ?>
+	function author_log() {
+		if ( !is_user_logged_in() ): ?>
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4 class="center ">Авторизація</h4>
+				<a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
+					<i class="material-icons">&#xE14C;</i>
+				</a>
+				<form class="login-form center" name="form" action="<?php $home_url = get_home_url(); echo wp_login_url( $home_url ); ?>" method="post">
+					<div id="">
+						<input type="text" name="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" id="login" placeholder="Логін" required/>
+						<input type="password" name="pwd" id="password" placeholder="Пароль" required/>
+						<button type="submit" id="submit" name="submit" class="waves-effect  waves-red btn-flat"><span class="enter-button-styles">Вхід</span></button>
+						<a href="<?php bloginfo('url') ?>/registration.php" class="waves-effect center  waves-red btn-flat">Зареєструватися</a>
+						<div>
+							<a href="<?php bloginfo('url') ?>/wp-login.php?action=lostpassword" id="forgot" class="waves-effect waves-red btn-flat">Забули пароль?</a>
+						</div>
+					</div>
+				</form>
+				<div class="modal-fooedter "> </div>
+			</div>
+		</div>
+	<? else: ?>
 	<div id="modal1" class="modal">
 		<div class="modal-content">
-			<h4 class="center ">Авторизація</h4>
+			<h4 class="center ">Ваш профіль</h4>
 			<a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
 				<i class="material-icons">&#xE14C;</i>
 			</a>
-			<form class="login-form center" name="form" action="<?php $home_url = get_home_url(); echo wp_login_url( $home_url ); ?>" method="post">
-				<div id="">
-					<input type="text" name="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" id="login" placeholder="Логін" required/>
-					<input type="password" name="pwd" id="password" placeholder="Пароль" required/>
-					<button type="submit" id="submit" name="submit" class="waves-effect  waves-red btn-flat"><span class="enter-button-styles">Вхід</span></button>
-					<a href="<?php bloginfo('url') ?>/registration.php" class="waves-effect center  waves-red btn-flat">Зареєструватися</a>
-					<div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<a href="<?php bloginfo('url') ?>/wp-login.php?action=lostpassword" id="forgot" class="waves-effect waves-red btn-flat">Забули пароль?</a>
-					</div>
-				</div>
-			</form>
-			<div class="modal-fooedter "> </div>
-		</div>
-	</div>
-<? else: ?>
-<div id="modal1" class="modal">
-	<div class="modal-content">
-		<h4 class="center ">Ваш профіль</h4>
-		<a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
-			<i class="material-icons">&#xE14C;</i>
-		</a>
-		<div id="popup_name" class="popup_block">
-			<div id="loginForm" action="" method="post">
-				<div class="cont-side">
-					<center>
-						<?php
-						global $current_user;  get_currentuserinfo(); echo get_avatar( $current_user->user_email, '96' ); 
-//$current_user = wp_get_current_user();
-						?>
-						<div class="login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
-						<div class="name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
-						<?php
-						global $user_ID;
-						if( $user_ID ) :
-							if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
-						<div> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
-						<?php
-						else :
+			<div id="popup_name" class="popup_block">
+				<div id="loginForm" action="" method="post">
+					<div class="cont-side">
+						<center>
+							<?php
+								global $current_user;  get_currentuserinfo(); echo get_avatar( $current_user->user_email, '96' ); 
+								// $current_user = wp_get_current_user();
+							?>
+							<div class="login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
+							<div class="name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
+							<?php
+							global $user_ID;
+							if( $user_ID ) :
+								if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
+							<div> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
+							<?php
+							else :
+								endif;
 							endif;
-						endif;
-						?>
-						<a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
-					</center>
-					<div class="submit" style="float:right; padding-bottom:10px;">
-						<a href="<?php $home_url = get_home_url(); echo wp_logout_url( $home_url ); ?>" class="modal-action waves-effect waves-red accent-4 btn-flat">
-							<i class="material-icons">Вийти</i>
-						</a>
+							?>
+							<a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
+						</center>
+						<div class="submit" style="float:right; padding-bottom:10px;">
+							<a href="<?php $home_url = get_home_url(); echo wp_logout_url( $home_url ); ?>" class="modal-action waves-effect waves-red accent-4 btn-flat">
+								<i class="material-icons">Вийти</i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<?php endif;
-}
+	<?php endif;
+	}
 // end login form settings
 
 
-
 // registration form settings
-function registration_form( $username, $password, $email, $website, $first_name, $last_name, $bio ) {
-	echo '
-	<form class="contact_form" action="' . $_SERVER['REQUEST_URI'] . '" method="post">
-		<ul>
-			<li>
-				<h2 class="center">Реєстрація</h2>
-			</li>
-			<li>
-				<label for="username">Логін <strong>*</strong></label>
-				<input type="text" name="username" value="' . ( isset( $_POST['username'] ) ? $username : null ) . '" required >
-			</li>
+	function registration_form( $username, $password, $email, $website, $first_name, $last_name, $bio ) {
+		echo '
+			<form class="contact_form" action="' . $_SERVER['REQUEST_URI'] . '" method="post">
+				<ul>
+					<li>
+						<h2 class="center">Реєстрація</h2>
+					</li>
+					<li>
+						<label for="username">Логін <strong>*</strong></label>
+						<input type="text" name="username" value="' . ( isset( $_POST['username'] ) ? $username : null ) . '" required >
+					</li>
 
-			<li>
-				<label for="password">Пароль <strong>*</strong></label>
-				<input type="password" name="password" value="' . ( isset( $_POST['password'] ) ? $password : null ) . '" required>
-			</li>
+					<li>
+						<label for="password">Пароль <strong>*</strong></label>
+						<input type="password" name="password" value="' . ( isset( $_POST['password'] ) ? $password : null ) . '" required>
+					</li>
 
-			<li>
-				<label for="email">Email <strong>*</strong></label>
-				<input type="text" name="email" value="' . ( isset( $_POST['email']) ? $email : null ) . '" required>
-			</li>
+					<li>
+						<label for="email">Email <strong>*</strong></label>
+						<input type="text" name="email" value="' . ( isset( $_POST['email']) ? $email : null ) . '" required>
+					</li>
 
-			<li>
-				<label for="website">Веб-сайт</label>
-				<input type="text" name="website" value="' . ( isset( $_POST['website']) ? $website : null ) . '">
-			</li>
+					<li>
+						<label for="website">Веб-сайт</label>
+						<input type="text" name="website" value="' . ( isset( $_POST['website']) ? $website : null ) . '">
+					</li>
 
-			<li>
-				<label for="firstname">Ім\'я</label>
-				<input type="text" name="fname" value="' . ( isset( $_POST['fname']) ? $first_name : null ) . '">
-			</li>
+					<li>
+						<label for="firstname">Ім\'я</label>
+						<input type="text" name="fname" value="' . ( isset( $_POST['fname']) ? $first_name : null ) . '">
+					</li>
 
-			<li>
-				<label for="website">Прізвище</label>
-				<input type="text" name="lname" value="' . ( isset( $_POST['lname']) ? $last_name : null ) . '">
-			</li>
+					<li>
+						<label for="website">Прізвище</label>
+						<input type="text" name="lname" value="' . ( isset( $_POST['lname']) ? $last_name : null ) . '">
+					</li>
 
-			<li>
-				<label for="bio">Біографічна інформація</label>
-				<textarea name="bio">' . ( isset( $_POST['bio']) ? $bio : null ) . '</textarea>
-			</li>
+					<li>
+						<label for="bio">Біографічна інформація</label>
+						<textarea name="bio">' . ( isset( $_POST['bio']) ? $bio : null ) . '</textarea>
+					</li>
 
-			<li>
-				<input type="submit" name="submit" value="Зареєструватися" class="submit btn-flat green waves-effect waves-red white-text"/>
-			</li>
-			<div class="registration-errors">';
-				global $reg_errors;
-				if ( is_wp_error( $reg_errors ) ) {
-					foreach ( $reg_errors->get_error_messages() as $error ) {
-						echo '<div class="registration-error"><strong>Помилка</strong>:' . $error . '<br/></div>';
-					}
-				}
-				echo '</div>
-			</ul>
-		</form>
+					<li>
+						<input type="submit" name="submit" value="Зареєструватися" class="submit btn-flat green waves-effect waves-red white-text"/>
+					</li>
+					<div class="registration-errors">';
+						global $reg_errors;
+						if ( is_wp_error( $reg_errors ) ) {
+							foreach ( $reg_errors->get_error_messages() as $error ) {
+								echo '<div class="registration-error"><strong>Помилка</strong>:' . $error . '<br/></div>';
+							}
+						}
+					echo '</div>
+				</ul>
+			</form>
 		';
 	}
-
 
 	function registration_validation( $username, $password, $email, $website, $first_name, $last_name, $bio )  {
 		global $reg_errors;
@@ -263,7 +246,6 @@ function registration_form( $username, $password, $email, $website, $first_name,
 		}
 	}
 
-
 	function complete_registration() {
 		global $reg_errors, $username, $password, $email, $website, $first_name, $last_name, $bio;
 		if ( 1 > count( $reg_errors->get_error_messages() ) ) {
@@ -282,7 +264,6 @@ function registration_form( $username, $password, $email, $website, $first_name,
 		}
 	}
 
-
 	function custom_registration_function() {
 		if ( isset($_POST['submit'] ) ) {
 			registration_validation(
@@ -293,9 +274,9 @@ function registration_form( $username, $password, $email, $website, $first_name,
 				$_POST['fname'],
 				$_POST['lname'],
 				$_POST['bio']
-				);
+			);
 
-// sanitize user form input
+			// sanitize user form input
 			global $username, $password, $email, $website, $first_name, $last_name, $bio;
 			$username   =   sanitize_user( $_POST['username'] );
 			$password   =   esc_attr( $_POST['password'] );
@@ -305,8 +286,8 @@ function registration_form( $username, $password, $email, $website, $first_name,
 			$last_name  =   sanitize_text_field( $_POST['lname'] );
 			$bio        =   esc_textarea( $_POST['bio'] );
 
-// call @function complete_registration to create the user
-// only when no WP_error is found
+			// call @function complete_registration to create the user
+			// only when no WP_error is found
 			complete_registration(
 				$username,
 				$password,
@@ -315,7 +296,7 @@ function registration_form( $username, $password, $email, $website, $first_name,
 				$first_name,
 				$last_name,
 				$bio
-				);
+			);
 		}
 
 		registration_form(
@@ -326,7 +307,12 @@ function registration_form( $username, $password, $email, $website, $first_name,
 			$first_name,
 			$last_name,
 			$bio
-			);
+		);
 	}
 // end registration form settings
-	?>
+
+
+// capabilityes
+    require 'my-custom-posts.php';
+// end capabilityes
+?>

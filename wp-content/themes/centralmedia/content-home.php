@@ -43,7 +43,7 @@
             	foreach( $myposts as $post ){
             		setup_postdata($post);
             		$author_id = get_the_author_meta('ID');
-					if ( has_wp_user_avatar($author_id) ) { //blog displayed in homepage only if blogger has avatar
+					//if ( has_wp_user_avatar($author_id) ) { //blog displayed in homepage only if blogger has avatar
         	?>
 						<div class="blog-block row">
 							<div class="blogger-photo col l3 m2 s3 center" >
@@ -63,7 +63,7 @@
 							</div>
 						</div>
 	        <?php
-	        		} // end if
+	        		//} // end if
 	    		} // end foreach
 				wp_reset_postdata();
 			?>
@@ -153,9 +153,9 @@
 				<img width="80%" src="<?php video_thumbnail(); ?>" alt="альтернативный текст" />
 			</div>
 			<div class="video-text col l8 s6">
-				<?php
-					echo types_render_field( "video_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
-				?>
+				<a href="<?php echo get_post_meta( $post->ID, 'video_url', true ); ?>" class="hover-link" target="_blank">
+					<?php the_title(); ?>
+				</a> 
 			</div>
 		</div>
         <?php

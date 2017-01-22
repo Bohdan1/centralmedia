@@ -12,9 +12,9 @@
 			?>
 						<div class="article"> 
 							<div class="article-title">
-								<?php
-									echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
-								?>
+								<a href="<?php echo get_post_meta( $post->ID, 'partner_news_url', true ); ?>" class="hover-link" target="_blank">
+									<?php the_title(); ?>
+								</a> 
 							</div>
 						</div>
 			<?php
@@ -49,9 +49,9 @@
 							<div class="row other-state">
 								<div class="col s12 m12 l12">
 									<img src="<?php the_post_thumbnail_url(); ?>" width="40%" alt="" class="state-other-float">
-									<?php
-										echo types_render_field( "partner_news_url", array("class" => "hover-link state-other-name", "title" => get_the_title(), "target" => "blank" ) );
-									?>
+									<a href="<?php echo get_post_meta( $post->ID, 'partner_news_url', true ); ?>" class="hover-link" target="_blank">
+										<?php the_title(); ?>
+									</a> 
 									<div class="state-other-text">
 										<?php
 											short_desc_post(120);	// display short content (120 symbols)

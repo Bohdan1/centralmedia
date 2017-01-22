@@ -22,9 +22,9 @@
         ?>
 				<div class="article"> 
 					<div class="article-title">
-						<?php
-							echo types_render_field( "partner_news_url", array("class" => "hover-link", "title" => get_the_title(), "target" => "blank" ) );
-						?>
+						<a href="<?php echo get_post_meta( $post->ID, 'partner_news_url', true ); ?>" class="hover-link" target="_blank">
+							<?php the_title(); ?>
+						</a>
 					</div>
 				</div>
 		<?php
