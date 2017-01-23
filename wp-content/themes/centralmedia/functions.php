@@ -333,4 +333,13 @@ function short_desc_post($charlength) {		// function for display short content f
 	}
 	add_action('admin_menu', 'remove_menus');
 //end hide not used fields
+
+//custom login form
+	function my_custom_login_logo(){
+	echo '<style type="text/css">
+		h1 a { background-image:url('.get_bloginfo('template_directory').'/img/logo/login-logo.png) !important;}
+		</style>';
+	}
+	add_action('login_head', 'my_custom_login_logo');
+//end custom login form
 ?>
