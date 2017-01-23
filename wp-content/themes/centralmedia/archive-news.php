@@ -62,7 +62,7 @@
 					?>
 							<div class="row other-state">
 								<div class="col s12 m12 l12">
-									<img src="<?php the_post_thumbnail_url(); ?>" width="40%" alt="" class="state-other-float">
+									<a href="#"><img src="<?php the_post_thumbnail_url(); ?>" width="40%" alt="" class="state-other-float"></a>
 									<a href="<?php the_permalink(); ?>" class="hover-link">
 										<div class="state-other-name"><?php the_title(); ?></div>
 									</a>

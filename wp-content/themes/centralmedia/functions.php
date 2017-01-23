@@ -116,32 +116,44 @@ function short_desc_post($charlength) {		// function for display short content f
 	<? else: ?>
 	<div id="modal1" class="modal">
 		<div class="modal-content">
-			<h4 class="center ">Ваш профіль</h4>
+			<h4 class="center logged-user-sign">Ваш профіль</h4>
 			<a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
 				<i class="material-icons">&#xE14C;</i>
 			</a>
 			<div id="popup_name" class="popup_block">
 				<div id="loginForm" action="" method="post">
 					<div class="cont-side">
-						<center>
-							<?php
-								global $current_user;  get_currentuserinfo(); echo get_avatar( $current_user->user_email, '96' ); 
-								// $current_user = wp_get_current_user();
-							?>
-							<div class="login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
-							<div class="name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
+						<div class="row logged-user">
+							<div class="col l5 s12 m12 logged-user-photo">
+								<?php
+									global $current_user;
+									get_currentuserinfo();
+									setup_postdata($post);
+									// $current_user = wp_get_current_user();
+								?>
+								<img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( get_the_author_meta('ID') ); ?>" alt="bloger_avatar">
+							</div>
+							<div class="col l7 s12 m12  ">
+							<div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
+							<div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
+							
 							<?php
 							global $user_ID;
 							if( $user_ID ) :
 								if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
-							<div> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
+							
 							<?php
 							else :
 								endif;
 							endif;
 							?>
-							<a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
-						</center>
+							
+						</div>
+						</div>
+						<div class="center logged-user-tools-padding">
+						<span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </span>
+						<span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a> </span>
+						</div>
 						<div class="submit" style="float:right; padding-bottom:10px;">
 							<a href="<?php $home_url = get_home_url(); echo wp_logout_url( $home_url ); ?>" class="modal-action waves-effect waves-red accent-4 btn-flat">
 								<i class="material-icons">Вийти</i>
@@ -342,4 +354,25 @@ function short_desc_post($charlength) {		// function for display short content f
 	}
 	add_action('login_head', 'my_custom_login_logo');
 //end custom login form
+
+
+//algorithm declension of nouns after numerals 
+	function getNumEnding($number, $endingArray) { 
+		$number = $number % 100; 
+		if ($number>=11 && $number<=19) { 
+			$ending=$endingArray[2]; 
+		} 
+		else { 
+			$i = $number % 10; 
+			switch ($i) { 
+				case (1): $ending = $endingArray[0]; break; 
+				case (2): 
+				case (3): 
+				case (4): $ending = $endingArray[1]; break; 
+				default: $ending=$endingArray[2]; 
+			} 
+		} 
+		return $ending; 
+	} 
+//end algorithm declension of nouns after numerals
 ?>

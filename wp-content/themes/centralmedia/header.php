@@ -35,11 +35,27 @@
 				margin-top: 0 !important;
 			}
 		}
+		/*tablet*/
+		@media screen and (min-width: 768px) and (max-width: 1024px) {
+.logged-user-name, .logged-user-login, .logged-user-photo{
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+		}
 		/* mobile */
 		@media screen and (max-width: 668px) {
 			.header-height{
-    height: 55px;
-}
+			    height: 55px;
+			}
+			.logged-user-name{
+				padding-top: 20px;
+				padding-left: 0;
+			}
+			.logged-user-name, .logged-user-login, .logged-user-photo{
+				margin: 0 auto;
+				text-align: center;
+			}
 			#menu li{
 			    text-transform: uppercase;
 			    display: inline;

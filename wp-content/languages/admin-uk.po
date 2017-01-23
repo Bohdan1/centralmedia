@@ -1861,7 +1861,7 @@ msgstr "Втратили свій телефон або залишили сві�
 
 #: wp-admin/user-edit.php:543
 msgid "Generate Password"
-msgstr "Згенерувати пароль"
+msgstr "Змінити пароль"
 
 #: wp-admin/user-edit.php:537
 msgid "Account Management"

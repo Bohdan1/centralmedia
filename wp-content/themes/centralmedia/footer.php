@@ -4,7 +4,9 @@
       <div class="row">
         <div class="offset-l1 col l3 s12">
         <p>
+        <a href="<?php echo get_home_url(); ?>">
           <img src="<?php bloginfo('template_url') ?>/img/logo/logo-central-media — footer.png" class="footer-logo-float">
+          </a>
           <div class="main-sign-footer">CENTRAL MEDIA</div>
           <div>МУЛЬТИМЕДІЙНА ПЛАТФОРМА</div>
          </p>
@@ -12,17 +14,17 @@
         </div>
         <div class="col l4 s12 center nav-footer-pos">
           <ul>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
-            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('news'); ?>"><span class="footer-nav">Новини</span></a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('articles'); ?>"><span class="footer-nav">Статті</span></a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('blogs'); ?>"><span class="footer-nav">Блоги</span></a></li>
+            <li><a class="black-text text-lighten-3 nav-footer" href="<?php echo get_post_type_archive_link('video'); ?>"><span class="footer-nav">Відео</span></a></li>
           </ul>
         </div>
         <div class="col l4 s12 center nav-contact-pos">
-          <span class="black-text email-footer">central-media@gmail.com</span><br>
-          <span class="black-text number-footer">+38(067)904-74-15</span><br>
-          <span class="black-text number-footer">+38(067)904-74-15</span><br>
-          <span class="black-text address-footer">м.Львів, вул. Зелена 82</span><br>
+          <span class="email-footer">central-media@gmail.com</span><br>
+          <span class="number-footer">+38(067)904-74-15</span><br>
+          <span class="number-footer">+38(067)904-74-15</span><br>
+          <span class="address-footer">м.Львів, вул. Зелена 82</span><br>
 
           <div class="soial-footer">
     				<a href="https://www.facebook.com/"><img  src="<?php bloginfo('template_url') ?>/img/social/fb.png"></a>                 

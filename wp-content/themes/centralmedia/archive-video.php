@@ -10,7 +10,7 @@
 								while ( have_posts() ) : the_post(); // Start the Loop.
 						?>
 									<div class="col l3 m12 s12 video-page-section">
-										<img class="video-page-photo" src="<?php video_thumbnail(); ?>">
+										<a href="#"><img class="video-page-photo" src="<?php video_thumbnail(); ?>"></a>
 										<div class="video-page-sign center">
 											<a href="<?php echo get_post_meta( $post->ID, 'video_url', true ); ?>" class="hover-link" target="_blank">
 												<?php the_title(); ?>
@@ -47,7 +47,7 @@
 		        			?>
 							<div class="row video-padding">
 								<div class="youtube-top-video col l4 s6">
-									<img width="80%" src="<?php video_thumbnail(); ?>" alt="альтернативный текст" />
+									<a href="#"><img width="80%" src="<?php video_thumbnail(); ?>" alt="альтернативный текст" /></a>
 								</div>
 								<div class="video-text col l8 s6">
 									<a href="<?php echo get_post_meta( $post->ID, 'video_url', true ); ?>" class="hover-link" target="_blank">

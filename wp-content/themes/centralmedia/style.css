@@ -488,12 +488,17 @@ footer.page-footer {
 }
 
 .nav-footer{
+    font-size: 15px;
     font-size: 30px;
 }
 
 .nav-footer-pos{
     font-family: ;
     padding-top: 20px;
+}
+.footer-nav{
+    font-size: 20px;
+
 }
 
 .nav-contact-pos{
@@ -502,15 +507,15 @@ footer.page-footer {
 }
 
 .email-footer{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .number-footer{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .address-footer{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .soial-footer{
@@ -646,6 +651,9 @@ a{
     font-weight: bold;
     margin-bottom: -10px;
 }
+
+
+
 
 .top10-same-blogger-states-list-text{
     margin-left: 10px;
@@ -1093,7 +1101,7 @@ border-radius: 10px;
     padding: 5px;
 }
 .video-page-sign{
-    font-size: 20px;
+    font-size: 15px;
 }
 .enter-button-styles{
     color: #343434;
@@ -1115,11 +1123,57 @@ border-radius: 10px;
     margin: 25px;
     font-size: 19px;
 }
+.logged-user-sign{
+    font-size: 20px;
+}
+.logged-user-photo{
+   
+    width: 50%;
+    border-radius: 50%;
+}
+.logged-user-login{
+    font-weight: 800;
+    padding-right: 25px;
+    padding-left: 20px;
+}
+.looged-user-tools{
+    padding-left: 20px;
+}
+.logged-user-name{
+    font-weight: 800;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.logged-user{
+    padding-top: 20px;
+}
+.logged-user-tools-padding{
+    padding-top: 20px;
+}
+.one-user-blog-name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
 
+.one-user-blog-text{
+    font-size: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
 
-
-
-
+.about-author{
+    margin-top: 5px;
+    font-size: 15px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.single-state-block{
+    border-right: #e3e3e3 1px solid;
+}
 
 
 

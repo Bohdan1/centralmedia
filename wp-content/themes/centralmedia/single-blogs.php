@@ -49,7 +49,7 @@
 
         <div class="top10-same-blogger-states-list">
 			<div class="top10-same-blogger-states-list-name">
-				<a href="<?php the_permalink(); ?>">
+				<a href="<?php the_permalink(); ?>" class="hover-link">
 					<?php the_title(); ?>
 				</a>
 			</div><br>

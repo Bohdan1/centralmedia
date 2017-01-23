@@ -20,7 +20,7 @@
 				?>
 						<div class="col l3 s6 m6 ">
 							<div class="all-state">
-								<img src="<?php the_post_thumbnail_url(); ?>" width="100%" alt=""> 
+								<a href="#"><img src="<?php the_post_thumbnail_url(); ?>" width="100%" alt=""> </a>
 								<a href="<?php the_permalink(); ?>" class="hover-link"> 
 									<span class="state-first-name"><?php the_title(); ?></span> 
 								</a> 
@@ -46,7 +46,7 @@
 				?>
 							<div class="col l2 s6 m6 ">
 								<div class="all-state-other">
-									<img src="<?php the_post_thumbnail_url(); ?>" width="100%" alt=""> 
+									<a href="#"><img src="<?php the_post_thumbnail_url(); ?>" width="100%" alt=""> </a>
 									<a href="<?php the_permalink(); ?>" class="hover-link"> 
 										<span class="state-first-name"><?php the_title(); ?></span> 
 									</a> 
