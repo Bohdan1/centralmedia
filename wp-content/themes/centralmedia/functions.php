@@ -315,4 +315,22 @@ function short_desc_post($charlength) {		// function for display short content f
 // capabilityes
     require 'my-custom-posts.php';
 // end capabilityes
+
+//hide not used fields
+	function remove_menus(){
+		global $menu;
+		$restricted = array(
+			__('Dashboard'),
+			__('Posts'),
+		);
+		end ($menu);
+		while (prev($menu)){
+			$value = explode(' ', $menu[key($menu)][0]);
+			if( in_array( ($value[0] != NULL ? $value[0] : "") , $restricted ) ){
+				unset($menu[key($menu)]);
+			}
+		}
+	}
+	add_action('admin_menu', 'remove_menus');
+//end hide not used fields
 ?>
