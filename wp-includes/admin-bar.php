@@ -115,11 +115,11 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		$about_url = false;
 	}
 
-	$wp_logo_menu_args = array(
+	/*$wp_logo_menu_args = array(
 		'id'    => 'wp-logo',
 		'title' => '<span class="ab-icon"></span><span class="screen-reader-text">' . __( 'About WordPress' ) . '</span>',
 		'href'  => $about_url,
-	);
+	);*/
 
 	// Set tabindex="0" to make sub menus accessible when no URL is available.
 	if ( ! $about_url ) {

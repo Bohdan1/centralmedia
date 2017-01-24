@@ -489,34 +489,39 @@ if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_c
 	<p class="description"><?php _e('Share a little biographical information to fill out your profile. This may be shown publicly.'); ?></p></td>
 </tr>
 
-<?php if ( get_option( 'show_avatars' ) ) : ?>
-<tr class="user-profile-picture">
-	<th><?php _e( 'Profile Picture' ); ?></th>
-	<td>
-		<?php echo get_avatar( $user_id ); ?>
-		<p class="description"><?php
-			if ( IS_PROFILE_PAGE ) {
-				/* translators: %s: Gravatar URL */
-				$description = sprintf( __( 'You can change your profile picture on <a href="%s">Gravatar</a>.' ),
-					__( 'https://en.gravatar.com/' )
-				);
-			} else {
-				$description = '';
-			}
 
-			/**
-			 * Filters the user profile picture description displayed under the Gravatar.
-			 *
-			 * @since 4.4.0
-			 * @since 4.7.0 Added the `$profileuser` parameter.
-			 *
-			 * @param string  $description The description that will be printed.
-			 * @param WP_User $profileuser The current WP_User object.
-			 */
-			echo apply_filters( 'user_profile_picture_description', $description, $profileuser );
-		?></p>
-	</td>
-</tr>
+<!-- 
+	<?php if ( get_option( 'show_avatars' ) ) : ?>
+	<tr class="user-profile-picture">
+		<th><?php _e( 'Profile Picture' ); ?></th>
+		<td>
+			<?php echo get_avatar( $user_id ); ?>
+			<p class="description"><?php
+				if ( IS_PROFILE_PAGE ) {
+					/* translators: %s: Gravatar URL */
+					$description = sprintf( __( 'You can change your profile picture on <a href="%s">Gravatar</a>.' ),
+						__( 'https://en.gravatar.com/' )
+					);
+				} else {
+					$description = '';
+				}
+
+				/**
+				 * Filters the user profile picture description displayed under the Gravatar.
+				 *
+				 * @since 4.4.0
+				 * @since 4.7.0 Added the `$profileuser` parameter.
+				 *
+				 * @param string  $description The description that will be printed.
+				 * @param WP_User $profileuser The current WP_User object.
+				 */
+				echo apply_filters( 'user_profile_picture_description', $description, $profileuser );
+			?></p>
+		</td>
+	</tr>
+-->
+
+
 <?php endif; ?>
 
 <?php
@@ -540,7 +545,7 @@ if ( $show_password_fields = apply_filters( 'show_password_fields', true, $profi
 	<th><label for="pass1"><?php _e( 'New Password' ); ?></label></th>
 	<td>
 		<input class="hidden" value=" " /><!-- #24364 workaround -->
-		<button type="button" class="button wp-generate-pw hide-if-no-js"><?php _e( 'Generate Password' ); ?></button>
+		<button type="button" class="button wp-generate-pw hide-if-no-js"><?php _e( 'Змінити пароль' ); ?></button>
 		<div class="wp-pwd hide-if-js">
 			<span class="password-input-wrapper">
 				<input type="password" name="pass1" id="pass1" class="regular-text" value="" autocomplete="off" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" aria-describedby="pass-strength-result" />

@@ -375,4 +375,13 @@ function short_desc_post($charlength) {		// function for display short content f
 		return $ending; 
 	} 
 //end algorithm declension of nouns after numerals
+
+## Видалення віджетів з Консоли 
+add_action('wp_dashboard_setup', 'clear_wp_dash' );
+function clear_wp_dash(){
+	$dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
+	$dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
+	unset($dash_side['dashboard_primary']);       //Блог WordPress
+	unset($dash_side['dashboard_secondary']);     //Інші новини WordPress
+}
 ?>

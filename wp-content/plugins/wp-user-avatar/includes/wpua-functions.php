@@ -149,10 +149,10 @@ function wpua_after_avatar_admin() {
  */
 function wpua_do_before_avatar_admin() {
 ?>
-  <h3><?php _e('Avatar') ?></h3>
+  <h3><?php _e('Зображення облікового запису') ?></h3>
   <table class="form-table">
     <tr>
-      <th><label for="wp_user_avatar"><?php _e('Image','wp-user-avatar'); ?></label></th>
+      <th><label for="wp_user_avatar"><?php _e('Зображення','wp-user-avatar'); ?></label></th>
       <td>
   <?php
 }
