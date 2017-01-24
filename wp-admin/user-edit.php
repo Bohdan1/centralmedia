@@ -235,6 +235,8 @@ if ( ! IS_PROFILE_PAGE ) {
 		<td><label for="rich_editing"><input name="rich_editing" type="checkbox" id="rich_editing" value="false" <?php if ( ! empty( $profileuser->rich_editing ) ) checked( 'false', $profileuser->rich_editing ); ?> /> <?php _e( 'Disable the visual editor when writing' ); ?></label></td>
 	</tr>
 <?php endif; ?>
+
+	<!-- 
 <?php if ( count($_wp_admin_css_colors) > 1 && has_action('admin_color_scheme_picker') ) : ?>
 <tr class="user-admin-color-wrap">
 <th scope="row"><?php _e('Admin Color Scheme')?></th>
@@ -252,7 +254,10 @@ if ( ! IS_PROFILE_PAGE ) {
 	 */
 	do_action( 'admin_color_scheme_picker', $user_id );
 ?></td>
-</tr>
+</tr> 
+	-->
+
+
 <?php
 endif; // $_wp_admin_css_colors
 if ( !( IS_PROFILE_PAGE && !$user_can_edit ) ) : ?>
