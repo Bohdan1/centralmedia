@@ -13,7 +13,7 @@ wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/googl
 add_action( 'wp_enqueue_scripts', 'register_styles' );
 
 function register_scripts() { // adds files with script
-	wp_deregister_script('jquery');
+	//wp_deregister_script('jquery');
 	wp_enqueue_script( 'jquery-2.1.1.min', get_template_directory_uri() . '/js/jquery-2.1.1.min.js');
 	wp_enqueue_script( 'materialize.min', get_template_directory_uri() . '/js/materialize.min.js');
 	wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/wow.min.js');
@@ -384,4 +384,44 @@ function clear_wp_dash(){
 	unset($dash_side['dashboard_primary']);       //Блог WordPress
 	unset($dash_side['dashboard_secondary']);     //Інші новини WordPress
 }
+		
+
+// comments settings
+	if (!class_exists('clean_comments_constructor')) { // если класс уже есть в дочерней теме - нам не надо его определять
+		class clean_comments_constructor extends Walker_Comment { // класс, который собирает всю структуру комментов
+			public function start_lvl( &$output, $depth = 0, $args = array()) { // что выводим перед дочерними комментариями
+				$output .= '<ul class="children">' . "\n";
+			}
+			public function end_lvl( &$output, $depth = 0, $args = array()) { // что выводим после дочерних комментариев
+				$output .= "</ul><!-- .children -->\n";
+			}
+		    protected function comment( $comment, $depth, $args ) { // разметка каждого комментария, без закрывающего </li>!
+		    	$classes = implode(' ', get_comment_class()).($comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : ''); // берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
+		        echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n"; // родительский тэг комментария с классами выше и уникальным якорным id
+		        echo '<div class="media-body">';
+		    	 
+		    	//echo ' '.get_comment_author_email(); // email автора коммента, плохой тон выводить почту
+		    	echo ' '.get_comment_author_url(); // url автора коммента
+		    	echo ' Добавлено: '.get_comment_date('F j, Y в H:i')."\n"; // дата и время комментирования
+		    	echo '<br><div class="meta media-heading ">Автор: '.get_comment_author()."\n";// имя автора коммента
+		    	if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n"; // если комментарий должен пройти проверку
+		    	echo "</div>";
+		        
+		       
+		        echo '</div>'."\n"; // закрываем див
+		    	echo '<div class="media-left">'.get_avatar($comment, 64, '', get_comment_author(), array('class' => 'media-object'))."</div>\n"; // покажем аватар с размером 64х64
+		    	comment_text()."\n"; // текст коммента
+		    	 $reply_link_args = array( // опции ссылки "ответить"
+		        	'depth' => $depth, // текущая вложенность
+		        	'reply_text' => 'Ответить', // текст
+					'login_text' => 'Вы должны быть залогинены' // текст если юзер должен залогинеться
+		        );
+		        echo get_comment_reply_link(array_merge($args, $reply_link_args)); // выводим ссылку ответить
+		    }
+		    public function end_el( &$output, $comment, $depth = 0, $args = array() ) { // конец каждого коммента
+				$output .= "</li><!-- #comment-## -->\n";
+			}
+		}
+	}
+// end comments settings
 ?>

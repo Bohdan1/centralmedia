@@ -6,7 +6,7 @@
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post(); // Start the Loop.
 		?>
-					<div class="single-news-sign "><?php the_title(); ?></div>
+					<div class="single-news-sign"><?php the_title(); ?></div>
 					<div class="text-news">
 						<?php
 							if( get_the_post_thumbnail_url() ) {
@@ -14,6 +14,9 @@
 								echo '<img src="' . $post_thumbnail . '" width="100%" alt=""> ';
 							}
 							the_content();
+							if ( comments_open() || get_comments_number() ) { 
+								comments_template(); 
+							}
 						?>
 					</div>
 		<?php

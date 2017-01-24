@@ -139,12 +139,12 @@ hr{
 
 
 #menu{
-        border-bottom: 5px solid #d82d19;
+    border-bottom: 5px solid #d82d19;
     overflow: hidden;
     position: fixed;
     z-index: 9999;
     width: 100%;
-    
+
     max-width: 2000px;
     background-color: white;
     /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */ 
@@ -161,7 +161,7 @@ hr{
     padding-right: 5px;
 }
 .header-logo{
-   margin-top: 3px;
+    margin-top: 3px;
 }
 nav{
     background-color: white;
@@ -300,7 +300,7 @@ em{
     margin-bottom: -10px;
 }
 .blogger-speach{
-        font-family: ;
+    font-family: ;
 }
 .blog-sign{
     padding-left: 30px;
@@ -357,7 +357,6 @@ em{
 
 
 .news-sign-video{
-    font-family: ;
     font-size: 20px; 
     padding-bottom: 30px;
     font-weight: bold;
@@ -947,11 +946,11 @@ background: url(img/ch2.png) top right no-repeat, url(img/ch1.png) top left no-r
                         opacity: 0.8;
                     }
 
-                    input[type="search"] {
+                    input[type            ="search"] {
                         -webkit-appearance: none;
                     }
                     body{
-                         font-family: "DroidSansRegular";
+                        font-family: "DroidSansRegular";
                     }
 
                     *+html .search {
@@ -970,19 +969,19 @@ background: url(img/ch2.png) top right no-repeat, url(img/ch1.png) top left no-r
                         border-top: 1px solid #999;
                     }
                     .search .submit {
-                        filter: alpha(opacity=50);
+                        filter: alpha(opacity =50);
                     }
                     .search .submit:hover {
-                        filter: alpha(opacity=80);
+                        filter: alpha(opacity =80);
                     }
 
 // END Сторінка 404//
 .ap-vote{
-color: red;
-border-radius: 10px;
+    color: red;
+    border-radius: 10px;
 }
 .userView{
-   margin-top: 60px;
+    margin-top: 60px;
 }
 .background-image-sideNav{
     border-radius: 50%;
@@ -1023,7 +1022,7 @@ border-radius: 10px;
 }
 #primary{
     margin-top: 30px;
-   text-align: justify;
+    text-align: justify;
 
 }
 .search-request{
@@ -1127,7 +1126,7 @@ border-radius: 10px;
     font-size: 20px;
 }
 .logged-user-photo{
-   
+
     width: 50%;
     border-radius: 50%;
 }
@@ -1217,4 +1216,33 @@ border-radius: 10px;
 
 .tag-name-back{
     background-color: #e4e4e4;
+}
+.comment-sign{
+    display: inline-block;
+    padding-top: 10px;
+    border-bottom: #e3e3e3 1px solid;
+    font-size: 20px;
+    width: 100%;
+    color:#f61c0d;
+}
+.comment-number{
+    font-weight: bold;
+
+}
+#reply-title{
+   color:#f61c0d;
+    font-size: 20px;
+     border-bottom: #e3e3e3 1px solid;
+}
+.comment-notes{
+    font-size: 14px;
+    color: grey;
+}
+.avatar {
+    border-radius: 50%;
+}
+
+.media-body{
+    font-size: 13px;
+    padding: 10px;
 }

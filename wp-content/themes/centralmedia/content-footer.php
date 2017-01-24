@@ -1,9 +1,19 @@
 <div class="row polling">
 	<!--polling-->
 	<div class="col l4 s12 m6 asking-block">
-		<h5 class="asking">ОПИТУВАННЯ</h5>
-		<div class='ajax-poll' tclass='poll-simple' style='width:450px;'></div>
-	</div>
+	<?php
+		if (function_exists('vote_poll') && !in_pollarchive()): 
+			echo '
+				<li>
+					<h2>Опитування</h2>
+					<ul>
+						<li>' . get_poll() . '</li>
+					</ul>' .
+					display_polls_archive_link() .
+			'</li>';
+		endif;
+	?>
+</div>
 	<!--partners news-->
 	<div class="col l4 s12 m6 news-partners-block">
 		<h5 class="partners-news center"><a href="<?php echo get_post_type_archive_link('partner-news'); ?>">НОВИНИ ПАРТНЕРІВ</a></h5>
