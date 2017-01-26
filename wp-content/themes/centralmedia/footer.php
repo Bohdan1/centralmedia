@@ -50,9 +50,6 @@
 		}
 	</script>
   
-  <!--Ajax Poll Script-->
-  <script type="text/javascript" src="<?php bloginfo('template_url') ?>/Ajax_Poll/ajax-poll.php"></script>
-  <!-- end Ajax Poll Script -->
 	<?php wp_footer(); ?>
   <script>
      $(document).ready(function(){
