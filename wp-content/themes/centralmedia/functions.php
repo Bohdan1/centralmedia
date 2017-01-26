@@ -2,24 +2,24 @@
 add_theme_support( 'post-thumbnails' ); // adds capabilities to create thumbnails for posts
 
 function register_styles() { // adds files with styles
-	wp_enqueue_style( 'materialize.min', get_template_directory_uri() . '/css/materialize.min.css' );
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
-	wp_enqueue_style( 'font-awesome.min', get_template_directory_uri() . '/css/font-awesome.min.css' );
-	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
-	wp_enqueue_style( 'media', get_template_directory_uri() . '/css/media.css' );
-wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
+    wp_enqueue_style( 'materialize.min', get_template_directory_uri() . '/css/materialize.min.css' );
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
+    wp_enqueue_style( 'font-awesome.min', get_template_directory_uri() . '/css/font-awesome.min.css' );
+    wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
+    wp_enqueue_style( 'media', get_template_directory_uri() . '/css/media.css' );
+    wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
 }
 add_action( 'wp_enqueue_scripts', 'register_styles' );
 
 function register_scripts() { // adds files with script
-	//wp_deregister_script('jquery');
-	wp_enqueue_script( 'jquery-2.1.1.min', get_template_directory_uri() . '/js/jquery-2.1.1.min.js');
-	wp_enqueue_script( 'materialize.min', get_template_directory_uri() . '/js/materialize.min.js');
-	wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/wow.min.js');
-	wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
-wp_enqueue_script( 'd97a6585c2', get_template_directory_uri() . '/js/d97a6585c2.js'); // https://use.fontawesome.com/d97a6585c2.js
-// wp_enqueue_script( 'ajax-poll', get_template_directory_uri() . '/Ajax_Poll/ajax-poll.php'); - підключається в футері
+    //wp_deregister_script('jquery');
+    wp_enqueue_script( 'jquery-2.1.1.min', get_template_directory_uri() . '/js/jquery-2.1.1.min.js');
+    wp_enqueue_script( 'materialize.min', get_template_directory_uri() . '/js/materialize.min.js');
+    wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/wow.min.js');
+    wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
+    wp_enqueue_script( 'd97a6585c2', get_template_directory_uri() . '/js/d97a6585c2.js'); // https://use.fontawesome.com/d97a6585c2.js
+    // wp_enqueue_script( 'ajax-poll', get_template_directory_uri() . '/Ajax_Poll/ajax-poll.php'); - підключається в футері
 }
 add_action( 'wp_enqueue_scripts', 'register_scripts' );
 
@@ -38,32 +38,74 @@ function short_desc_post($charlength) {		// function for display short content f
 	}
 }
 
+function custom_post_permalink() {
+    $post_type = get_post_type();
+    $post_link = get_permalink();
+    global $post;
+    if ( $post_type == 'video' ) {
+        $post_link = get_post_meta( $post->ID, 'video_url', true );
+    }
+    else if ( $post_type == 'partner-news' ) {
+        $post_link = get_post_meta( $post->ID, 'partner_news_url', true );
+    }
+    return $post_link;
+}
+
 
 //settings for display archive posts
-	function my_pre_get_posts( $query ) {
-		// if ( ! is_admin() && $query->is_main_query() ) {
-			$queried_object = get_queried_object();
-		if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'news' && $query->is_main_query() ) { // якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
-			$query->set( 'posts_per_page', 10 );
-		}
-		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'articles' && $query->is_main_query() ) {
-			$query->set( 'posts_per_page', 12 );
-		}
-		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'blogs' && $query->is_main_query() ) {
-			$query->set( 'posts_per_page', 6 );
-		}
-		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'video' && $query->is_main_query() ) {
-			$query->set( 'posts_per_page', 12 );
-		}
-		else if ( !is_admin() && $query->is_archive && $queried_object->query_var == 'partner-news' && $query->is_main_query() ) {
-			$query->set( 'posts_per_page', 15 );
-		}
-		else if ( !is_admin() && $query->is_search && $query->is_main_query() ) {
-			$query->set( 'posts_per_page', 10 );
-		}
-	}
-	add_action( 'pre_get_posts', 'my_pre_get_posts' );
+    function my_pre_get_posts( $query ) {
+        if ( !is_admin() && $query->is_main_query() ) {
+            $queried_object = get_queried_object();
+            if ( $query->is_archive ) {
+                if ( $queried_object->query_var == 'news' ) { // якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
+                    $query->set( 'posts_per_page', 10 );
+                }
+                else if ( $queried_object->query_var == 'articles' ) {
+                    $query->set( 'posts_per_page', 12 );
+                }
+                else if ( $queried_object->query_var == 'blogs' ) {
+                    $query->set( 'posts_per_page', 6 );
+                }
+                else if ( $queried_object->query_var == 'video' ) {
+                    $query->set( 'posts_per_page', 12 );
+                }
+                else if ( $queried_object->query_var == 'partner-news' ) {
+                    $query->set( 'posts_per_page', 15 );
+                }
+            }
+            else if ( $query->is_search ) {
+                $query->set( 'posts_per_page', 10 );
+            }
+        }
+    }
+    add_action( 'pre_get_posts', 'my_pre_get_posts' );
 // end settings for display archive posts
+
+
+// tag and author settings
+    function my_pre_get_tags( $query ) {
+        if ( !is_admin() && $query->is_archive ) {
+        	if ( $query->is_tag || $query->is_author ) {
+	            $query->set( 'post_type', array('news', 'articles', 'blogs', 'partner-news', 'video') );
+	        }
+        }
+    }
+    add_action( 'pre_get_posts', 'my_pre_get_tags' );
+
+    function author_posts_count( $author_id ) {		//counting the number of posts
+    	$published_posts = array();
+		$published_posts[] = count_user_posts( $author_id, 'news', true );
+		$published_posts[] = count_user_posts( $author_id, 'articles', true );
+		$published_posts[] = count_user_posts( $author_id, 'blogs', true );
+		$published_posts[] = count_user_posts( $author_id, 'partner-news', true );
+		$published_posts[] = count_user_posts( $author_id, 'video', true );
+		$posts_count = 0;
+		for ($i = 0; $i < count($published_posts); $i++) {
+			$posts_count += $published_posts[$i];
+		}
+		return $posts_count;
+    }
+// end and author tag settings
 
 
 // pagination settings
@@ -376,14 +418,15 @@ function short_desc_post($charlength) {		// function for display short content f
 	} 
 //end algorithm declension of nouns after numerals
 
-## Видалення віджетів з Консоли 
-add_action('wp_dashboard_setup', 'clear_wp_dash' );
-function clear_wp_dash(){
-	$dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
-	$dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
-	unset($dash_side['dashboard_primary']);       //Блог WordPress
-	unset($dash_side['dashboard_secondary']);     //Інші новини WordPress
-}
+//delete widgets from console
+    function clear_wp_dash() {
+        $dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
+        $dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
+        unset($dash_side['dashboard_primary']);        //Блог WordPress
+        unset($dash_side['dashboard_secondary']);    //Інші новини WordPress
+    }
+    add_action('wp_dashboard_setup', 'clear_wp_dash' );
+//end delete widgets from console
 		
 
 // comments settings

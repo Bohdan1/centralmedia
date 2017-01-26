@@ -40,35 +40,39 @@
 				);
 			$myposts = get_posts( $args );
 
-			foreach( $myposts as $post ){
-				setup_postdata($post);
-				$author_id = get_the_author_meta('ID');
-//if ( has_wp_user_avatar($author_id) ) { //blog displayed in homepage only if blogger has avatar
+			foreach( $myposts as $post ) {
+				setup_postdata( $post );
+				$author_id = get_the_author_meta( 'ID' );
+				//if ( has_wp_user_avatar($author_id) ) { //blog displayed in homepage only if blogger has avatar
 				?>
 				<div class="blog-block row">
 					<div class="blogger-photo col l3 m2 s3 center" >
-						<a href="#" > <img class="blogger-photo-min" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="bloger_avatar"></a>
+						<a href="<?php echo get_author_posts_url( $author_id ); ?>" >
+							<img class="blogger-photo-min" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="bloger_avatar">
+						</a>
 					</div> 
 					<div class="blogger-article col l9 m10 s9">
-						<a href="#" ><div class="blogger-name">
-							<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
-						</div></a>
+						<a href="<?php echo get_author_posts_url( $author_id ); ?>" >
+							<div class="blogger-name">
+								<?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ); ?>
+							</div>
+						</a>
 						<div class="blogger-speach">
 							<a href="<?php the_permalink(); ?>" class="blog-short-desc" >
 								<?php
-short_desc_post(100);	// display short content (100 symbols)
-?>
-</a>
-</div>
-</div>
-</div>
-<?php
-//} // end if
-} // end foreach
-wp_reset_postdata();
-?>
-</div>
-</div>
+									short_desc_post(100);	// display short content (100 symbols)
+								?>
+							</a>
+						</div>
+					</div>
+				</div>
+				<?php
+				//} // end if
+				} // end foreach
+				wp_reset_postdata();
+				?>
+		</div>
+	</div>
 </div>
 
 <!--news-->
