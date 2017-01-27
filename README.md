@@ -147,3 +147,6 @@ ver. 0.60
     - content-home.php
     - footer.php
   - видалив папку Ajax_Poll
+
+ver. 0.61
+  - додав пропущений коміт
