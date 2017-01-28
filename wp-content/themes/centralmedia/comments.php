@@ -45,11 +45,20 @@
 			);
 		$args = array( // опции формы комментирования
 			'fields' => apply_filters('comment_form_default_fields', $fields), // заменяем стандартные поля на поля из массива выше ($fields)
-			'comment_field' => '<div class="form-group"><label for="comment">Коментар:</label><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" required></textarea></div>', // разметка поля для комментирования
-			'must_log_in' => '<p class="must-log-in">Ви повинні бути зареєстрованими. '.wp_login_url(apply_filters('the_permalink',get_permalink())).'</p>', // текст "Вы должны быть зарегистрированы!"
-			'logged_in_as' => '<p class="logged-in-as">'.sprintf(__( 'Ви зайшли як <a href="%1$s">%2$s</a>'), admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink',get_permalink()))).'</p>', // разметка "Вы вошли как"
-			'comment_notes_before' => '<p class="comment-notes">Ваш email не буде публікуватися*</p>', // Текст до формы
-			
+			'comment_field' => '
+				<div class="form-group">
+					<label for="comment">Коментар:</label>
+					<textarea class="form-control" id="comment" name="comment" cols="45" rows="8" required></textarea>
+				</div>', // разметка поля для комментирования
+			'must_log_in' => '
+				<p class="must-log-in">
+					<a href="'. wp_login_url() .'"> Ви повинні бути авторизовані. </a>
+				</p>', // текст "Вы должны быть зарегистрированы!"
+			'logged_in_as' => '
+				<p class="logged-in-as">'.
+					sprintf(__( 'Ви зайшли як <a href="%1$s">%2$s</a>'), admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink',get_permalink()))).'
+				</p>', // разметка "Вы вошли как"
+			'comment_notes_before' => '<p class="comment-notes">Ваш email не буде публікуватися*</p>', // Текст до формы	
 			'id_form' => 'commentform', // атрибут id формы
 			'id_submit' => 'submit', // атрибут id кнопки отправить
 			'title_reply' => 'Залишити коментар:', // заголовок формы

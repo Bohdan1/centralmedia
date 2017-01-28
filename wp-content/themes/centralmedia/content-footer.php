@@ -2,15 +2,11 @@
 	<!--polling-->
 	<div class="col l4 s12 m6 asking-block">
 	<?php
-		if (function_exists('vote_poll') && !in_pollarchive()): 
+		if ( function_exists('vote_poll') && !in_pollarchive() ) : 
 			echo '
-				<li>
-					<h2>Опитування</h2>
-					<ul>
-						<li>' . get_poll() . '</li>
-					</ul>' .
-					display_polls_archive_link() .
-			'</li>';
+				<ul>
+					<li>' . get_poll() . '</li>
+				</ul>';
 		endif;
 	?>
 </div>

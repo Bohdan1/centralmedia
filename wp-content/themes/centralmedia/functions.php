@@ -141,8 +141,12 @@ function custom_post_permalink() {
 				<a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
 					<i class="material-icons">&#xE14C;</i>
 				</a>
-				<form class="login-form center" name="form" action="<?php $home_url = get_home_url(); echo wp_login_url( $home_url ); ?>" method="post">
-					<div id="">
+				<?php 
+						$Path=$_SERVER['REQUEST_URI'];
+						$current_page= get_home_url() . $Path;
+				?>
+				<form class="login-form center" name="form" action="<?php echo wp_login_url( $current_page ); ?>" method="post">
+					<div>
 						<input type="text" name="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" id="login" placeholder="Логін" required/>
 						<input type="password" name="pwd" id="password" placeholder="Пароль" required/>
 						<button type="submit" id="submit" name="submit" class="waves-effect  waves-red btn-flat"><span class="enter-button-styles">Вхід</span></button>
@@ -176,28 +180,30 @@ function custom_post_permalink() {
 								<img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( get_the_author_meta('ID') ); ?>" alt="bloger_avatar">
 							</div>
 							<div class="col l7 s12 m12  ">
-							<div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
-							<div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
-							
-							<?php
-							global $user_ID;
-							if( $user_ID ) :
-								if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
-							
-							<?php
-							else :
-								endif;
-							endif;
-							?>
-							
-						</div>
+								<div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
+								<div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
+								<?php
+									global $user_ID;
+									if( $user_ID ) :
+										if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
+									
+									<?php
+									else :
+										endif;
+									endif;
+								?>
+							</div>
 						</div>
 						<div class="center logged-user-tools-padding">
-						<span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </span>
-						<span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a> </span>
+							<span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </span>
+							<span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a> </span>
 						</div>
 						<div class="submit" style="float:right; padding-bottom:10px;">
-							<a href="<?php $home_url = get_home_url(); echo wp_logout_url( $home_url ); ?>" class="modal-action waves-effect waves-red accent-4 btn-flat">
+							<?php 
+								$Path=$_SERVER['REQUEST_URI'];
+								$current_page= get_home_url() . $Path;
+							?>
+							<a href="<?php echo wp_logout_url( $current_page );	?>" class="modal-action waves-effect waves-red accent-4 btn-flat">
 								<i class="material-icons">Вийти</i>
 							</a>
 						</div>
@@ -376,6 +382,7 @@ function custom_post_permalink() {
 		$restricted = array(
 			__('Dashboard'),
 			__('Posts'),
+			__('Pages'),
 		);
 		end ($menu);
 		while (prev($menu)){
@@ -390,8 +397,8 @@ function custom_post_permalink() {
 
 //custom login form
 	function my_custom_login_logo(){
-	echo '<style type="text/css">
-		h1 a { background-image:url('.get_bloginfo('template_directory').'/img/logo/login-logo.png) !important;}
+		echo '<style type="text/css">
+			h1 a { background-image:url('.get_bloginfo('template_directory').'/img/logo/login-logo.png) !important;}
 		</style>';
 	}
 	add_action('login_head', 'my_custom_login_logo');
@@ -447,7 +454,7 @@ function custom_post_permalink() {
 		    	echo ' '.get_comment_author_url(); // url автора коммента
 		    	echo ' Добавлено: '.get_comment_date('F j, Y в H:i')."\n"; // дата и время комментирования
 		    	echo '<br><div class="meta media-heading ">Автор: '.get_comment_author()."\n";// имя автора коммента
-		    	if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n"; // если комментарий должен пройти проверку
+		    	if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш коментар буде опублікований після провірки модератором.</em>'."\n"; // если комментарий должен пройти проверку
 		    	echo "</div>";
 		        
 		       
@@ -456,8 +463,8 @@ function custom_post_permalink() {
 		    	comment_text()."\n"; // текст коммента
 		    	 $reply_link_args = array( // опции ссылки "ответить"
 		        	'depth' => $depth, // текущая вложенность
-		        	'reply_text' => 'Ответить', // текст
-					'login_text' => 'Вы должны быть залогинены' // текст если юзер должен залогинеться
+		        	'reply_text' => 'Відповісти', // текст
+					'login_text' => 'Авторизуйтесь щоб відповісти' // текст если юзер должен залогинеться
 		        );
 		        echo get_comment_reply_link(array_merge($args, $reply_link_args)); // выводим ссылку ответить
 		    }
@@ -467,4 +474,5 @@ function custom_post_permalink() {
 		}
 	}
 // end comments settings
+
 ?>

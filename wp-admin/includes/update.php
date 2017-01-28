@@ -263,7 +263,9 @@ function update_nag() {
 			$cur->current
 		);
 	}
-	echo "<div class='update-nag'>$msg</div>";
+	if ( is_admin() && current_user_can('administrator') ) { // deletes the message about the new version of WordPress for all users except Administrator
+		echo "<div class='update-nag'>$msg</div>";
+	}
 }
 
 // Called directly from dashboard
@@ -617,7 +619,9 @@ function maintenance_nag() {
 	else
 		$msg = __('An automated WordPress update has failed to complete! Please notify the site administrator.');
 
-	echo "<div class='update-nag'>$msg</div>";
+	if ( is_admin() && current_user_can('administrator') ) { // deletes the message about the new version of WordPress for all users except Administrator
+		echo "<div class='update-nag'>$msg</div>";
+	}
 }
 
 /**

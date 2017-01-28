@@ -549,6 +549,7 @@ do_action( 'edit_form_top', $post ); ?>
 <?php if ( post_type_supports($post_type, 'title') ) { ?>
 <div id="titlediv">
 <div id="titlewrap">
+	<div> Заголовок </div>
 	<?php
 	/**
 	 * Filters the title field placeholder text.
