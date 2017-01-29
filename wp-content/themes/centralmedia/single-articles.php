@@ -5,6 +5,9 @@
 			while ( have_posts() ) : the_post();
 		?>
 				<div class="single-state-sign "><?php the_title(); ?></div>
+                <div style="text-align:right; margin-right:25px;">
+                     <?php the_time('j F Y, G:i'); ?>
+                </div>
 		    	<div class="text-state">
 		            <img width="100%" src="<?php the_post_thumbnail_url(); ?>" alt="альтернативный текст">
 		            <p class="single-state-font">

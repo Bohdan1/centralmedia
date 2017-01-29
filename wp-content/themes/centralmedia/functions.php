@@ -162,7 +162,6 @@ function custom_post_permalink() {
 	<? else: ?>
 	<div id="modal1" class="modal">
 		<div class="modal-content">
-			<h4 class="center logged-user-sign">Ваш профіль</h4>
 			<a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
 				<i class="material-icons">&#xE14C;</i>
 			</a>
@@ -180,8 +179,12 @@ function custom_post_permalink() {
 								<img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( get_the_author_meta('ID') ); ?>" alt="bloger_avatar">
 							</div>
 							<div class="col l7 s12 m12  ">
+								<h4 class="center logged-user-sign">Ваш профіль</h4>
 								<div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
 								<div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
+								<div>
+									<?php echo get_the_author_meta('description'); ?>
+								</div>
 								<?php
 									global $user_ID;
 									if( $user_ID ) :

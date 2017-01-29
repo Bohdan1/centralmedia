@@ -15,6 +15,11 @@
 					</div>
 				</div>
 				<div class="single-blogs-sign "><?php the_title(); ?></div>
+				
+				<div style="margin: 0 0 0 25px;">
+					<?php the_time('j F Y, G:i'); ?>
+				</div>
+
 				<div class="text-blog-single">
 					<?php the_content(); ?>
 				</div>

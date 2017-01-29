@@ -106,7 +106,17 @@
 			.menu-font{
 				font-size: 35px;
 			}
-		}	
+		}
+		
+		
+		@media (min-width: 979px) { 
+			.comment-list .children { /* для коментарів */
+				padding: 0;
+				margin-left: 74px;
+				padding-bottom: 15px;
+			}
+		}
+
 	</style>
 </head>
 

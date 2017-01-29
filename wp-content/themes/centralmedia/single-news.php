@@ -7,11 +7,13 @@
 				while ( have_posts() ) : the_post(); // Start the Loop.
 		?>
 					<div class="single-news-sign"><?php the_title(); ?></div>
+					<div style="text-align:right; margin: 10px 25px 0 0;">
+						<?php the_time('j F Y, G:i'); ?>
+					</div>
 					<div class="text-news">
 						<?php
 							if( get_the_post_thumbnail_url() ) {
-								$post_thumbnail = get_the_post_thumbnail_url();
-								echo '<img src="' . $post_thumbnail . '" width="100%" alt=""> ';
+								echo '<img src="' . get_the_post_thumbnail_url() . '" width="100%" alt=""> ';
 							}
 							the_content();
 							if ( comments_open() || get_comments_number() ) { 
