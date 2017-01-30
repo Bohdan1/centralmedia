@@ -6,7 +6,11 @@
 		?>
 				<div class="single-state-sign "><?php the_title(); ?></div>
                 <div style="text-align:right; margin-right:25px;">
-                     <?php the_time('j F Y, G:i'); ?>
+                     <?php
+                        the_time('j F Y, G:i');
+                        setPostViews( get_the_ID() );
+                        echo '<div> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</div>'; 
+                    ?>
                 </div>
 		    	<div class="text-state">
 		            <img width="100%" src="<?php the_post_thumbnail_url(); ?>" alt="альтернативный текст">

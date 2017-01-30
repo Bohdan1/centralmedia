@@ -17,7 +17,7 @@
 		?>
 					<div style="text-align:center;">
 						<a href="<?php the_permalink(); ?>">
-							<img src="<?php the_post_thumbnail_url();?>" style="width:90%; max-height:400px; margin:0 auto;">
+							<img src="<?php the_post_thumbnail_url();?>" style="width:90%; max-height:350px; margin:0 auto;">
 							<div style="text-align:center; font-size:2.5em;"> <?php the_title(); ?> </div>
 						</a>
 					</div>
@@ -185,7 +185,7 @@
 		$myposts = get_posts( $args );
 		foreach( $myposts as $post ){
 			setup_postdata($post);
-			?>
+		?>
 			<div class="row video-padding">
 				<div class="youtube-top-video col l4 s6">
 					<a href="#" >
@@ -219,7 +219,7 @@
 				);
 				$firstArticle = false;
 				$myposts = get_posts( $args );
-				foreach( $myposts as $post ){
+				foreach( $myposts as $post ) {
 					setup_postdata($post);
 					if ($firstArticle == false) {
 						?>
@@ -236,7 +236,7 @@
 						</div>
 						<?php
 					} /* end if */
-					else{
+					else {
 						?>
 						<div class="row other-state">
 							<div class="col s12 m12 l12">
@@ -259,4 +259,42 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+
+<div class="row content" style="text-align:center;">
+	<h3> Топ новин: </h3>
+	<ul>
+		<?php
+			$month = date('m');
+			$year = date('Y');
+
+			$args = array(
+				'post_type' => 'news',
+				'numberposts' => 5,
+				'publish' => true,
+				'meta_key' => 'post_views_count',
+				'year' => $year,
+				'monthnum' => $month,
+				'orderby' => 'meta_value_num'
+				//'order' => 'DESC'
+			);
+			//$myposts = get_posts( 'post_type=news&numberposts=5&meta_key=post_views_count&orderby=meta_value_num&year=' . $year . '&monthnum=' . $month );
+			$myposts = get_posts( $args );
+			foreach( $myposts as $post ) {
+				setup_postdata( $post );
+				//$month = date('m');
+				//$year = date('Y');
+				//query_posts('post_type=post&posts_per_page=5&orderby=comment_count&order=DESC&year=' . $year . '&monthnum=' . $month);  
+		    	//while ( have_posts() ) : the_post(); ?>
+				<li>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark" class="hover-link">
+						<?php the_title(); ?>
+					</a>
+				</li>
+		<?php
+			} //end foreach
+			wp_reset_postdata();
+		?>
+	</ul>
 </div>

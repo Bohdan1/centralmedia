@@ -31,7 +31,7 @@ register_sidebar();
 function short_desc_post($charlength) {		// function for display short content for posts
 	$excerpt = get_the_excerpt();
 	if ( mb_strlen( $excerpt ) > $charlength ) {
-		$subex = mb_substr( $excerpt, 0, $charlength);
+		$subex = mb_substr( $excerpt, 0, $charlength );
 		echo $subex . '...';
 	} else {
 		echo $subex;
@@ -100,7 +100,7 @@ function custom_post_permalink() {
 		$published_posts[] = count_user_posts( $author_id, 'partner-news', true );
 		$published_posts[] = count_user_posts( $author_id, 'video', true );
 		$posts_count = 0;
-		for ($i = 0; $i < count($published_posts); $i++) {
+		for ( $i = 0; $i < count( $published_posts ); $i++ ) {
 			$posts_count += $published_posts[$i];
 		}
 		return $posts_count;
@@ -110,7 +110,7 @@ function custom_post_permalink() {
 
 // pagination settings
 	// delete H2 from pagination template
-	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+	add_filter( 'navigation_markup_template', 'my_navigation_template', 10, 2 );
 	function my_navigation_template( $template, $class ) {
 	/*
 	Вид базового шаблону:
@@ -147,7 +147,7 @@ function custom_post_permalink() {
 				?>
 				<form class="login-form center" name="form" action="<?php echo wp_login_url( $current_page ); ?>" method="post">
 					<div>
-						<input type="text" name="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" id="login" placeholder="Логін" required/>
+						<input type="text" name="log" value="<?php echo wp_specialchars( stripslashes( $user_login ), 1 ) ?>" id="login" placeholder="Логін" required/>
 						<input type="password" name="pwd" id="password" placeholder="Пароль" required/>
 						<button type="submit" id="submit" name="submit" class="waves-effect  waves-red btn-flat"><span class="enter-button-styles">Вхід</span></button>
 						<a href="<?php bloginfo('url') ?>/registration.php" class="waves-effect center  waves-red btn-flat">Зареєструватися</a>
@@ -173,7 +173,7 @@ function custom_post_permalink() {
 								<?php
 									global $current_user;
 									get_currentuserinfo();
-									setup_postdata($post);
+									setup_postdata( $post );
 									// $current_user = wp_get_current_user();
 								?>
 								<img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( get_the_author_meta('ID') ); ?>" alt="bloger_avatar">
@@ -183,7 +183,7 @@ function custom_post_permalink() {
 								<div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
 								<div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
 								<div>
-									<?php echo get_the_author_meta('description'); ?>
+									<?php echo get_the_author_meta( 'description' ); ?>
 								</div>
 								<?php
 									global $user_ID;
@@ -240,22 +240,22 @@ function custom_post_permalink() {
 
 					<li>
 						<label for="email">Email <strong>*</strong></label>
-						<input type="text" name="email" value="' . ( isset( $_POST['email']) ? $email : null ) . '" required>
+						<input type="text" name="email" value="' . ( isset( $_POST['email'] ) ? $email : null ) . '" required>
 					</li>
 
 					<li>
 						<label for="website">Веб-сайт</label>
-						<input type="text" name="website" value="' . ( isset( $_POST['website']) ? $website : null ) . '">
+						<input type="text" name="website" value="' . ( isset( $_POST['website'] ) ? $website : null ) . '">
 					</li>
 
 					<li>
 						<label for="firstname">Ім\'я</label>
-						<input type="text" name="fname" value="' . ( isset( $_POST['fname']) ? $first_name : null ) . '">
+						<input type="text" name="fname" value="' . ( isset( $_POST['fname'] ) ? $first_name : null ) . '">
 					</li>
 
 					<li>
 						<label for="website">Прізвище</label>
-						<input type="text" name="lname" value="' . ( isset( $_POST['lname']) ? $last_name : null ) . '">
+						<input type="text" name="lname" value="' . ( isset( $_POST['lname'] ) ? $last_name : null ) . '">
 					</li>
 
 					<li>
@@ -279,7 +279,7 @@ function custom_post_permalink() {
 		';
 	}
 
-	function registration_validation( $username, $password, $email, $website, $first_name, $last_name, $bio )  {
+	function registration_validation( $username, $password, $email, $website, $first_name, $last_name, $bio ) {
 		global $reg_errors;
 		$reg_errors = new WP_Error;
 		if ( empty( $username ) || empty( $password ) || empty( $email ) ) {
@@ -380,28 +380,28 @@ function custom_post_permalink() {
 // end capabilityes
 
 //hide not used fields
-	function remove_menus(){
+	function remove_menus() {
 		global $menu;
 		$restricted = array(
 			__('Dashboard'),
 			__('Posts'),
 			__('Pages'),
 		);
-		end ($menu);
-		while (prev($menu)){
+		end ( $menu );
+		while ( prev($menu) ) {
 			$value = explode(' ', $menu[key($menu)][0]);
-			if( in_array( ($value[0] != NULL ? $value[0] : "") , $restricted ) ){
-				unset($menu[key($menu)]);
+			if( in_array( ($value[0] != NULL ? $value[0] : "" ) , $restricted ) ) {
+				unset( $menu[key($menu)] );
 			}
 		}
 	}
-	add_action('admin_menu', 'remove_menus');
+	add_action( 'admin_menu', 'remove_menus' );
 //end hide not used fields
 
 //custom login form
 	function my_custom_login_logo(){
 		echo '<style type="text/css">
-			h1 a { background-image:url('.get_bloginfo('template_directory').'/img/logo/login-logo.png) !important;}
+			h1 a { background-image:url('.get_bloginfo( 'template_directory' ).'/img/logo/login-logo.png) !important;}
 		</style>';
 	}
 	add_action('login_head', 'my_custom_login_logo');
@@ -409,14 +409,14 @@ function custom_post_permalink() {
 
 
 //algorithm declension of nouns after numerals 
-	function getNumEnding($number, $endingArray) { 
+	function getNumEnding( $number, $endingArray ) { 
 		$number = $number % 100; 
-		if ($number>=11 && $number<=19) { 
+		if ( $number>=11 && $number<=19 ) { 
 			$ending=$endingArray[2]; 
 		} 
 		else { 
 			$i = $number % 10; 
-			switch ($i) { 
+			switch ( $i ) { 
 				case (1): $ending = $endingArray[0]; break; 
 				case (2): 
 				case (3): 
@@ -432,24 +432,24 @@ function custom_post_permalink() {
     function clear_wp_dash() {
         $dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
         $dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
-        unset($dash_side['dashboard_primary']);        //Блог WordPress
-        unset($dash_side['dashboard_secondary']);    //Інші новини WordPress
+        unset( $dash_side['dashboard_primary'] );        //Блог WordPress
+        unset( $dash_side['dashboard_secondary'] );    //Інші новини WordPress
     }
     add_action('wp_dashboard_setup', 'clear_wp_dash' );
 //end delete widgets from console
 		
 
 // comments settings
-	if (!class_exists('clean_comments_constructor')) { // если класс уже есть в дочерней теме - нам не надо его определять
+	if (!class_exists( 'clean_comments_constructor') ) { // если класс уже есть в дочерней теме - нам не надо его определять
 		class clean_comments_constructor extends Walker_Comment { // класс, который собирает всю структуру комментов
-			public function start_lvl( &$output, $depth = 0, $args = array()) { // что выводим перед дочерними комментариями
+			public function start_lvl( &$output, $depth = 0, $args = array() ) { // что выводим перед дочерними комментариями
 				$output .= '<ul class="children">' . "\n";
 			}
-			public function end_lvl( &$output, $depth = 0, $args = array()) { // что выводим после дочерних комментариев
+			public function end_lvl( &$output, $depth = 0, $args = array() ) { // что выводим после дочерних комментариев
 				$output .= "</ul><!-- .children -->\n";
 			}
 		    protected function comment( $comment, $depth, $args ) { // разметка каждого комментария, без закрывающего </li>!
-		    	$classes = implode(' ', get_comment_class()).($comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : ''); // берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
+		    	$classes = implode(' ', get_comment_class()).( $comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : '' ); // берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
 		        echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n"; // родительский тэг комментария с классами выше и уникальным якорным id
 		        echo '<div class="media-body">';
 		    	 
@@ -462,14 +462,14 @@ function custom_post_permalink() {
 		        
 		       
 		        echo '</div>'."\n"; // закрываем див
-		    	echo '<div class="media-left">'.get_avatar($comment, 64, '', get_comment_author(), array('class' => 'media-object'))."</div>\n"; // покажем аватар с размером 64х64
+		    	echo '<div class="media-left">'.get_avatar( $comment, 64, '', get_comment_author(), array('class' => 'media-object') )."</div>\n"; // покажем аватар с размером 64х64
 		    	comment_text()."\n"; // текст коммента
 		    	 $reply_link_args = array( // опции ссылки "ответить"
 		        	'depth' => $depth, // текущая вложенность
 		        	'reply_text' => 'Відповісти', // текст
 					'login_text' => 'Авторизуйтесь щоб відповісти' // текст если юзер должен залогинеться
 		        );
-		        echo get_comment_reply_link(array_merge($args, $reply_link_args)); // выводим ссылку ответить
+		        echo get_comment_reply_link( array_merge($args, $reply_link_args) ); // выводим ссылку ответить
 		    }
 		    public function end_el( &$output, $comment, $depth = 0, $args = array() ) { // конец каждого коммента
 				$output .= "</li><!-- #comment-## -->\n";
@@ -478,4 +478,73 @@ function custom_post_permalink() {
 	}
 // end comments settings
 
+
+// number of views
+	function getPostViews( $postID ) {
+	    $count_key = 'post_views_count';
+	    $count = get_post_meta( $postID, $count_key, true );
+	    if( $count=='' ) {
+	        delete_post_meta( $postID, $count_key );
+	        add_post_meta( $postID, $count_key, '0' );
+	        return "0";
+	    }
+	    return $count;
+	}
+
+	/*
+	function setPostViews( $postID ) {
+		if ( isset( $_COOKIE['viewed_page'] ) ) {
+	        foreach ( $_COOKIE['viewed_page'] as $n => $nid ) {
+		        $n = (int)$n;
+		        $nid = (int)$nid;
+		        if( $nid == $id ) {
+		            echo '<script> alert("Новину вже дивилися"); </script>';
+		        }
+	    		else {
+	        		mysql_query("UPDATE news SET view = $view WHERE id = $id");
+	        		ob_start();
+	        		return(setcookie("viewed_page[$id]", "$id", time() + 3600 * 24 * 7));
+	        		ob_end_flush();
+	       		}
+			}
+		}
+		else { 
+	       mysql_query("UPDATE news SET view = $view WHERE id = $id"); 
+	       ob_start();
+	       return(setcookie("[$id]", "$id", time() + 3600 * 24 * 7));
+	       ob_end_flush();
+		}
+		return true
+	}
+	*/
+	function setPostViews( $postID ) {
+    	setcookie( 'viewed_page', $postID );
+    	$count_key = 'post_views_count';
+	    $count = get_post_meta( $postID, $count_key, true );
+	    if($count == '') {
+	        $count = 0;
+	        delete_post_meta( $postID, $count_key );
+	        add_post_meta( $postID, $count_key, '0' );
+	    }
+	    else {
+	        $count++;
+	        update_post_meta( $postID, $count_key, $count );
+	    }
+	}
+
+	/*
+	add_filter( 'manage_posts_columns', 'posts_column_views' );
+	add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+
+	function posts_column_views( $defaults ) {
+	    $defaults['post_views'] = __('Перегляди');
+	    return $defaults;
+	}
+	function posts_custom_column_views( $column_name, $id ) {
+	        if( $column_name === 'post_views' ) {
+	        echo getPostViews( get_the_ID() );
+	    }
+	}
+	*/
+// end number of views
 ?>

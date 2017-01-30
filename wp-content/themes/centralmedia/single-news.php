@@ -8,7 +8,11 @@
 		?>
 					<div class="single-news-sign"><?php the_title(); ?></div>
 					<div style="text-align:right; margin: 10px 25px 0 0;">
-						<?php the_time('j F Y, G:i'); ?>
+						<?php 
+							the_time('j F Y, G:i');
+							setPostViews( get_the_ID() );
+							echo '<div> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</div>'; 
+						?>
 					</div>
 					<div class="text-news">
 						<?php

@@ -17,7 +17,11 @@
 				<div class="single-blogs-sign "><?php the_title(); ?></div>
 				
 				<div style="margin: 0 0 0 25px;">
-					<?php the_time('j F Y, G:i'); ?>
+					<?php 
+						the_time('j F Y, G:i');
+						setPostViews( get_the_ID() );
+						echo '<div> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</div>'; 
+					?>
 				</div>
 
 				<div class="text-blog-single">
