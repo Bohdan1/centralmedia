@@ -283,10 +283,7 @@
 			$myposts = get_posts( $args );
 			foreach( $myposts as $post ) {
 				setup_postdata( $post );
-				//$month = date('m');
-				//$year = date('Y');
-				//query_posts('post_type=post&posts_per_page=5&orderby=comment_count&order=DESC&year=' . $year . '&monthnum=' . $month);  
-		    	//while ( have_posts() ) : the_post(); ?>
+		?>
 				<li>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark" class="hover-link">
 						<?php the_title(); ?>

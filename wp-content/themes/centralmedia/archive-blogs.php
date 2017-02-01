@@ -42,67 +42,17 @@
 
 		<div class="col l3 s12 m6">
 			<div class="top10-bloggers-sign">ТОП-10 БЛОГЕРІВ:</div>
+			<?php if (function_exists('top_authors')) top_authors(10); ?>
+			
+			<!--
 			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">1.</div>
-			<a href="#">
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			</a>
-			<a href="#"><div class="top10-blogger-name">Ім'я<br> Прізвище</div></a>
+				<div class="top10-blogger-number">1.</div>
+				<a href="#">
+					<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
+				</a>
+				<a href="#"><div class="top10-blogger-name">Ім'я<br> Прізвище</div></a>
 			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">2.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">3.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">4.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">5.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">6.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">7.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">8.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">9.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
-
-			<div class="top10-blogger-list col l12 m12 s12">
-			<div class="top10-blogger-number">10.</div>
-			<img class="blogger-crop-photo top10-blogger-photo-pos" src="http://2.gravatar.com/avatar/8342d4357eedbfac498710e3f5b908d2?s=96&d=mm&r=g" alt="user" width="10%">
-			<div class="top10-blogger-name">Ім'я<br> Прізвище</div>
-			</div>
+			-->
 		</div>
 	</div>
 	<br>
