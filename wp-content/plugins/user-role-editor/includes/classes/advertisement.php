@@ -63,13 +63,6 @@ class URE_Advertisement {
      */
     public function display() {
 ?>
-    <div id="ure-sidebar" class="ure_table_cell" >
-<?php
-        foreach ($this->slots as $slot) {
-            echo $slot . "\n";
-        }
-?>
-    </div>     
         <?php
     }
 

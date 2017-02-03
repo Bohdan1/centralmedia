@@ -1,0 +1,607 @@
+# Translation of Plugins - Video Thumbnails - Development (trunk) in Ukrainian
+# This file is distributed under the same license as the Plugins - Video Thumbnails - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-12-03 07:36:25+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Plugins - Video Thumbnails - Development (trunk)\n"
+
+#. Author URI of the plugin/theme
+msgid "http://sutherlandboswell.com"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sutherland Boswell"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Automatically retrieve video thumbnails for your posts and display them in your theme. Supports YouTube, Vimeo, Facebook, Vine, Justin.tv, Twitch, Dailymotion, Metacafe, VK, Blip, Google Drive, Funny or Die, CollegeHumor, MPORA, Wistia, Youku, and Rutube."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://refactored.co/plugins/video-thumbnails"
+msgstr ""
+
+#: video-thumbnails.php:574
+msgid "Existing"
+msgstr ""
+
+#: video-thumbnails.php:573
+msgid "New Thumbnails"
+msgstr ""
+
+#: video-thumbnails.php:572
+msgid "Scanned"
+msgstr ""
+
+#: video-thumbnails.php:557
+msgid "Scan Now"
+msgstr ""
+
+#: video-thumbnails.php:548
+msgid "Use this tool to scan all of your posts for Video Thumbnails."
+msgstr ""
+
+#: video-thumbnails.php:546
+msgid "Bulk Video Thumbnail Generator"
+msgstr ""
+
+#: video-thumbnails.php:397
+msgid "Error uploading image data:"
+msgstr ""
+
+#: video-thumbnails.php:384
+msgid "Unsupported MIME type:"
+msgstr ""
+
+#: video-thumbnails.php:366
+msgid "Error retrieving a thumbnail from the URL <a href=\"%1$s\">%1$s</a> using <code>wp_remote_get()</code><br />If opening that URL in your web browser returns anything else than an error page, the problem may be related to your web server and might be something your host administrator can solve."
+msgstr ""
+
+#: video-thumbnails.php:193
+msgid "If you are still unable to resolve the problem, <a href=\"http://wordpress.org/support/plugin/video-thumbnails\">start a thread</a> with a <strong>good descriptive</strong> title (\"Error\" or \"No thumbnails\" is a <strong>bad</strong> title) and be sure to include the results of your testing as well. Also be sure to include the <strong>name of your theme</strong>, any <strong>video plugins</strong> you're using, and any other details you can think of."
+msgstr ""
+
+#: video-thumbnails.php:192
+msgid "Search the <a href=\"http://wordpress.org/support/plugin/video-thumbnails\">support threads</a> to see if anyone has had the same issue."
+msgstr ""
+
+#: video-thumbnails.php:191
+msgid "Try posting a video from other sources to help narrow down the problem."
+msgstr ""
+
+#: video-thumbnails.php:190
+msgid "Go to the <a href=\"%s\">Debugging page</a> and click \"Test Image Downloading\" to test your server's ability to save an image from a video source."
+msgstr ""
+
+#: video-thumbnails.php:189
+msgid "Copy and paste your embed code into the \"Test Markup for Video\" section of the <a href=\"%1$s\">Debugging page</a>. If this doesn't find the thumbnail, you'll want to be sure to include the embed code you scanned when you request support. If it does find a thumbnail, please double check that you have the Custom Field set correctly in the <a href=\"%2$s\">settings page</a> if you are using a a plugin or theme that stores videos in a special location."
+msgstr ""
+
+#: video-thumbnails.php:188
+msgid "If you are using a a plugin or theme that stores videos in a special location other than the main post content area, be sure you've entered the correct custom field on the <a href=\"%s\">settings page</a>. If you don't know the name of the field your video is being saved in, please contact the developer of that theme or plugin."
+msgstr ""
+
+#: video-thumbnails.php:187
+msgid "Ensure you have saved any changes to your post."
+msgstr ""
+
+#: video-thumbnails.php:185
+msgid "Fixing \"No video thumbnail for this post\""
+msgstr ""
+
+#: video-thumbnails.php:175
+msgid "A video thumbnail will be found for this post when it is published."
+msgstr ""
+
+#: video-thumbnails.php:169
+msgid "Troubleshoot"
+msgstr ""
+
+#: video-thumbnails.php:169
+msgid "Search Again"
+msgstr ""
+
+#: video-thumbnails.php:168 video-thumbnails.php:476
+msgid "No video thumbnail for this post."
+msgstr ""
+
+#: video-thumbnails.php:166 video-thumbnails.php:173
+msgid "Reset Video Thumbnail"
+msgstr ""
+
+#: video-thumbnails.php:154
+msgid "Troubleshooting Video Thumbnails"
+msgstr ""
+
+#: video-thumbnails.php:128
+msgid "Error:"
+msgstr ""
+
+#: video-thumbnails.php:127
+msgid "Existing thumbnail:"
+msgstr ""
+
+#: video-thumbnails.php:126
+msgid "New thumbnail:"
+msgstr ""
+
+#: video-thumbnails.php:125
+msgid "No thumbnail"
+msgstr ""
+
+#: video-thumbnails.php:124
+msgid "Scanning %1$s of %2$s"
+msgstr ""
+
+#: video-thumbnails.php:123
+msgid "%d posts in queue"
+msgstr ""
+
+#: video-thumbnails.php:122
+msgid "1 post in queue"
+msgstr ""
+
+#: video-thumbnails.php:121
+msgid "Scanned %d posts"
+msgstr ""
+
+#: video-thumbnails.php:120
+msgid "Scanned 1 post"
+msgstr ""
+
+#: video-thumbnails.php:119
+msgid "Done!"
+msgstr ""
+
+#: video-thumbnails.php:118
+msgid "Paused Scanning"
+msgstr ""
+
+#: video-thumbnails.php:117
+msgid "Resumed Scanning"
+msgstr ""
+
+#: video-thumbnails.php:116
+msgid "Started Scanning"
+msgstr ""
+
+#: video-thumbnails.php:103
+msgid "Bulk Video Thumbs"
+msgstr ""
+
+#: video-thumbnails.php:103
+msgid "Bulk Video Thumbnails"
+msgstr ""
+
+#: php/providers/class-youtube-thumbnails.php:82
+msgid "Flash Embed SD"
+msgstr ""
+
+#: php/providers/class-youtube-thumbnails.php:76
+msgid "iFrame Embed SD"
+msgstr ""
+
+#: php/providers/class-youtube-thumbnails.php:70
+msgid "Flash Embed HD"
+msgstr ""
+
+#: php/providers/class-youtube-thumbnails.php:64
+msgid "iFrame Embed HD"
+msgstr ""
+
+#: php/providers/class-yahooscreen-thumbnails.php:50
+msgid "Error retrieving video information for <a href=\"http:%1$s\">http:%1$s</a>. Check to be sure this is a valid Yahoo Screen URL."
+msgstr ""
+
+#: php/providers/class-wistia-thumbnails.php:91
+msgid "JavaScript Embed"
+msgstr ""
+
+#: php/providers/class-vine-thumbnails.php:69
+msgid "iFrame Embed/Video URL"
+msgstr ""
+
+#: php/providers/class-vimeo-thumbnails.php:122
+msgid "Channel URL"
+msgstr ""
+
+#: php/providers/class-video-thumbnails-provider.php:102
+msgid "Error retrieving video information from the URL <a href=\"%1$s\">%1$s</a> using <code>wp_remote_get()</code><br />If opening that URL in your web browser returns anything else than an error page, the problem may be related to your web server and might be something your host administrator can solve."
+msgstr ""
+
+#: php/providers/class-tudou-thumbnails.php:67
+msgid "Unable to retrieve thumbnail for Tudou video with an ID of %s"
+msgstr ""
+
+#: php/providers/class-ted-thumbnails.php:67
+msgid "Custom Language"
+msgstr ""
+
+#: php/providers/class-kaltura-thumbnails.php:68
+msgid "Auto Embed"
+msgstr ""
+
+#: php/providers/class-googledrive-thumbnails.php:104
+msgid "Flash Embed (YouTube player)"
+msgstr ""
+
+#: php/providers/class-googledrive-thumbnails.php:92
+msgid "iFrame Embed (Apps account)"
+msgstr ""
+
+#: php/providers/class-facebook-thumbnails.php:83
+msgid "FBML Embed"
+msgstr ""
+
+#: php/providers/class-dailymotion-thumbnails.php:69
+#: php/providers/class-facebook-thumbnails.php:71
+#: php/providers/class-funnyordie-thumbnails.php:68
+#: php/providers/class-googledrive-thumbnails.php:98
+#: php/providers/class-metacafe-thumbnails.php:63
+#: php/providers/class-mpora-thumbnails.php:54
+#: php/providers/class-twitch-thumbnails.php:69
+#: php/providers/class-vimeo-thumbnails.php:116
+#: php/providers/class-youku-thumbnails.php:69
+msgid "Flash Embed"
+msgstr ""
+
+#: php/providers/class-blip-thumbnails.php:71
+#: php/providers/class-collegehumor-thumbnails.php:61
+#: php/providers/class-dailymotion-thumbnails.php:63
+#: php/providers/class-facebook-thumbnails.php:77
+#: php/providers/class-funnyordie-thumbnails.php:62
+#: php/providers/class-googledrive-thumbnails.php:86
+#: php/providers/class-livestream-thumbnails.php:54
+#: php/providers/class-mpora-thumbnails.php:60
+#: php/providers/class-rutube-thumbnails.php:71
+#: php/providers/class-sapo-thumbnails.php:71
+#: php/providers/class-ted-thumbnails.php:61
+#: php/providers/class-tudou-thumbnails.php:85
+#: php/providers/class-vimeo-thumbnails.php:110
+#: php/providers/class-vk-thumbnails.php:71
+#: php/providers/class-wistia-thumbnails.php:85
+#: php/providers/class-yahooscreen-thumbnails.php:69
+#: php/providers/class-youku-thumbnails.php:63
+msgid "iFrame Embed"
+msgstr ""
+
+#: php/providers/class-blip-thumbnails.php:65
+#: php/providers/class-collegehumor-thumbnails.php:67
+#: php/providers/class-rutube-thumbnails.php:65
+#: php/providers/class-twitch-thumbnails.php:63
+#: php/providers/class-youku-thumbnails.php:75
+msgid "Video URL"
+msgstr "Посилання відео"
+
+#: php/providers/class-blip-thumbnails.php:50
+msgid "Error retrieving video information for <a href=\"%1$s\">%1$s</a>. Check to be sure this is a valid Blip video URL."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:722
+msgid "Go Pro"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:721
+msgid "Support video thumbnails and unlock additional features"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:678
+msgid "Video Providers"
+msgstr "Відео-постачальники"
+
+#: php/class-video-thumbnails-settings.php:674
+msgid "Your theme does not support post thumbnails, you'll need to make modifications or switch to a different theme. <a href=\"http://codex.wordpress.org/Post_Thumbnails\">More info</a>"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:674
+msgid "Your theme supports post thumbnails."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:673
+msgid "Post Thumbnails"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:668
+msgid "PHP Version"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:663
+msgid "Video Thumbnails Settings Version"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:658
+msgid "Video Thumbnails Version"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:653
+msgid "WordPress Version"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:639
+msgid "Installation Information"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:627
+msgid "Delete Test Images"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:626
+msgid "Download Test Image"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:623
+msgid "Also be sure to test that you can manually upload an image to your site. If you're unable to upload images, you may need to <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">change file permissions</a>."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:621
+msgid "This test checks for issues with the process of saving a remote thumbnail to your local media library."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:617
+msgid "Test Saving to Media Library"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:606
+msgid "Scan For Thumbnail"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:602
+msgid "Copy and paste an embed code below to see if a video is detected."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:598
+msgid "Test Markup for Video"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:584
+msgid "Waiting..."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:576
+msgid "This test automatically searches a sample for every type of video supported and compares it to the expected value. Sometimes tests may fail due to API rate limits."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:572
+#: php/class-video-thumbnails-settings.php:578
+msgid "Test Video Providers"
+msgstr "Тест відео-постачальники"
+
+#: php/class-video-thumbnails-settings.php:570
+#: php/class-video-thumbnails-settings.php:596
+#: php/class-video-thumbnails-settings.php:615
+#: php/class-video-thumbnails-settings.php:637
+msgid "Hide"
+msgstr "Приховати"
+
+#: php/class-video-thumbnails-settings.php:570
+#: php/class-video-thumbnails-settings.php:596
+#: php/class-video-thumbnails-settings.php:615
+#: php/class-video-thumbnails-settings.php:637
+msgid "Show"
+msgstr "Показати"
+
+#: php/class-video-thumbnails-settings.php:566
+msgid "Use these tests to help diagnose any problems. Please include results when requesting support."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:555
+msgid "Clear Video Thumbnails"
+msgstr "Очистити мініатюри для відео"
+
+#: php/class-video-thumbnails-settings.php:553
+msgid "This will clear the video thumbnail field for all posts and delete any video thumbnail attachments. Note: This only works for attachments added using version 2.0 or later."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:551
+msgid "Clear all Video Thumbnails"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:549
+msgid "Scan Past Posts"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:547
+msgid "Scan all of your past posts for video thumbnails. Be sure to save any settings before running the scan."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:545
+msgid "Scan All Posts"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:517
+msgid "For more detailed instructions, check out the page for <a href=\"http://wordpress.org/extend/plugins/video-thumbnails/\">Video Thumbnails on the official plugin directory</a>."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:515
+msgid "If your theme supports post thumbnails, just leave \"Save Thumbnails to Media Library\" and \"Automatically Set Featured Image\" enabled, then select what post types you'd like scanned for videos."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:513
+msgid "Getting started"
+msgstr "Починаємо"
+
+#: php/class-video-thumbnails-settings.php:506
+msgid "Support"
+msgstr "Підтримка"
+
+#: php/class-video-thumbnails-settings.php:505
+msgid "Debugging"
+msgstr "Налагодження"
+
+#: php/class-video-thumbnails-settings.php:504
+msgid "Mass Actions"
+msgstr "Масові заходи"
+
+#: php/class-video-thumbnails-settings.php:503
+msgid "Providers"
+msgstr "Постачальники"
+
+#: php/class-video-thumbnails-settings.php:502
+msgid "General"
+msgstr "Загальне"
+
+#: php/class-video-thumbnails-settings.php:491 video-thumbnails.php:540
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:418
+msgid "These options configure where the plugin will search for videos and what to do with thumbnails once found."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:388
+msgid "Enter the name of the custom field where your embed code or video URL is stored."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:388
+msgid "Automatically Detect"
+msgstr "Автоматично виявляти"
+
+#: php/class-video-thumbnails-settings.php:387
+msgid "Custom Field (optional)"
+msgstr "Користувацькі поля (необов'язково)"
+
+#: php/class-video-thumbnails-settings.php:382
+msgid "Post Types"
+msgstr "Типи публікацій"
+
+#: php/class-video-thumbnails-settings.php:374
+msgid "Check this option to automatically set video thumbnails as the featured image (requires saving to media library)"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:373
+msgid "Automatically Set Featured Image"
+msgstr "Автоматично задавати атрибути зображенням"
+
+#: php/class-video-thumbnails-settings.php:369
+msgid "Checking this option will download video thumbnails to your server"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:368
+msgid "Save Thumbnails to Media Library"
+msgstr "Зберегти мініатюри в бібліотеці мультимедіа"
+
+#: php/class-video-thumbnails-settings.php:362
+msgid "General Settings"
+msgstr "Загальні налаштування"
+
+#: php/class-video-thumbnails-settings.php:351
+msgid "Thumbnail found! Image should appear below."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:348
+msgid "Thumbnail URL:"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:347
+msgid "Thumbnail found, but it may not exist on the source server. If opening the URL below in your web browser returns an error, the source is providing an invalid URL."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:343
+msgid "Thumbnail found, but there was an error retrieving the URL."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:337
+#: php/class-video-thumbnails-settings.php:344
+#: php/providers/class-video-thumbnails-provider.php:102
+#: video-thumbnails.php:366
+msgid "Error Details:"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:334
+msgid "No thumbnail found"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:292
+#: php/class-video-thumbnails-settings.php:351
+msgid "View full size"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:291
+msgid "View in Media Library"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:290
+msgid "Attachment created"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:264
+msgid "View Image"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:258
+msgid "Passed"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:243
+#: php/class-video-thumbnails-settings.php:260
+msgid "Failed"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:230
+msgid "Result"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:229
+msgid "Pass/Fail"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:228
+msgid "Name"
+msgstr "Ім’я"
+
+#: php/class-video-thumbnails-settings.php:202
+msgid "<strong>Error</strong>: Could not verify nonce."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:200
+msgid "1 custom field cleared"
+msgid_plural "%s custom fields cleared"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: php/class-video-thumbnails-settings.php:197
+#: php/class-video-thumbnails-settings.php:315
+msgid "1 attachment deleted"
+msgid_plural "%s attachments deleted"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: php/class-video-thumbnails-settings.php:144
+msgid "Are you sure you want to clear all video thumbnails? This cannot be undone."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:143
+msgid "AJAX Error:"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:142
+msgid "Retest"
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:141 video-thumbnails.php:115
+#: video-thumbnails.php:451
+msgid "Working..."
+msgstr ""
+
+#: php/class-video-thumbnails-settings.php:140
+msgid "We were unable to find a video in the custom fields of your most recently updated post."
+msgstr ""
+
+#. #-#-#-#-#  tmp-video-thumbnails.pot (Video Thumbnails 2.12.3)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: php/class-video-thumbnails-settings.php:128
+msgid "Video Thumbnails"
+msgstr "Відеомініатюри"
+
+#: php/class-video-thumbnails-settings.php:127
+#: php/class-video-thumbnails-settings.php:498
+msgid "Video Thumbnails Options"
+msgstr "Налаштування відеомініатюр"

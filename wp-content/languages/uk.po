@@ -66,7 +66,7 @@ msgstr "Буквено-цифровий ідентифікатор типу за
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-post-types-controller.php:225
 msgid "Human-readable labels for the post type for various contexts."
-msgstr "Людино-читабельні позначки для типу запису для різних контекстів."
+msgstr "Людино-читабельні теги для типу запису для різних контекстів."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-post-types-controller.php:219
 msgid "Whether or not the post type should have children."
@@ -1167,7 +1167,7 @@ msgstr "Пароль для запису, якщо він захищений п�
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php:256
 msgid "Human-readable labels for the taxonomy for various contexts."
-msgstr "Людиночитаючі позначки таксономії для різних контекстів."
+msgstr "Людиночитаючі теги таксономії для різних контекстів."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php:250
 msgid "Whether or not the taxonomy should have children."
@@ -2924,7 +2924,7 @@ msgstr "На деяких системах префікс назви вашої 
 
 #: wp-includes/widgets/class-wp-widget-tag-cloud.php:135
 msgid "The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget."
-msgstr "Хмаринка позначок не буде відображатися, так як немає таксономій, які підтримують віджет хмаринки позначок."
+msgstr "Хмаринка тегів не буде відображатися, так як немає таксономій, які підтримують віджет хмаринки тегів."
 
 #: wp-includes/user.php:2129
 msgid "Could not save password reset key to database."
@@ -2941,7 +2941,7 @@ msgstr "Гарне ім’я (Nicename) не може бути довшим 50-�
 
 #: wp-includes/taxonomy.php:513
 msgid "Tags list"
-msgstr "Список позначок"
+msgstr "Список тегів"
 
 #: wp-includes/taxonomy.php:513
 msgid "Categories list"
@@ -2953,7 +2953,7 @@ msgstr "<strong>ПОМИЛКА</strong>: Невірне ім’я користу
 
 #: wp-includes/taxonomy.php:512
 msgid "Tags list navigation"
-msgstr "Навігація по списку позначок"
+msgstr "Навігація по списку тегів"
 
 #: wp-includes/taxonomy.php:512
 msgid "Categories list navigation"
@@ -3648,7 +3648,7 @@ msgstr "Оновлення невдале: %s"
 
 #: wp-includes/taxonomy.php:511
 msgid "No tags"
-msgstr "Немає позначок"
+msgstr "Немає тегів"
 
 #. translators: %s: shortcode tag
 #: wp-includes/shortcodes.php:320
@@ -3812,7 +3812,7 @@ msgstr "Додати меню"
 
 #: wp-includes/class-wp-customize-nav-menus.php:559
 msgid "This panel is used for managing navigation menus for content you have already published on your site. You can create menus and add items for existing content such as pages, posts, categories, tags, formats, or custom links."
-msgstr "Ця панель використовується для керування меню навігації по вмісту, який ви вже оприлюднили на свому сайті. Ви можете створити меню та додати пункти для існуючого вмісту, такого як сторінки, записи, категорії, позначки, формати, чи користувацькі посилання."
+msgstr "Ця панель використовується для керування меню навігації по вмісту, який ви вже оприлюднили на свому сайті. Ви можете створити меню та додати пункти для існуючого вмісту, такого як сторінки, записи, категорії, теги, формати, чи користувацькі посилання."
 
 #. translators: 1: item name, 2: item position, 3: parent item name
 #: wp-includes/class-wp-customize-nav-menus.php:470
@@ -5792,7 +5792,7 @@ msgstr "Вхід, RSS, і посилання WordPress.org."
 
 #: wp-includes/widgets/class-wp-widget-tag-cloud.php:27
 msgid "A cloud of your most used tags."
-msgstr "Хмаринка ваших найуживаніших позначок."
+msgstr "Хмаринка ваших найуживаніших тегів."
 
 #: wp-includes/widgets/class-wp-nav-menu-widget.php:27
 msgid "Add a custom menu to your sidebar."
@@ -6055,7 +6055,7 @@ msgstr "Сесія закінчилась"
 
 #: wp-includes/taxonomy.php:510
 msgid "No tags found."
-msgstr "Позначок не знайдено."
+msgstr "Тегів не знайдено."
 
 #: wp-includes/widgets/class-wp-widget-meta.php:71
 msgctxt "meta widget link text"
@@ -7135,7 +7135,7 @@ msgstr "Tag"
 #: wp-includes/taxonomy.php:495
 msgctxt "taxonomy general name"
 msgid "Tags"
-msgstr "Позначки"
+msgstr "Теги"
 
 #. translators: 1: wp_enqueue_scripts, 2: admin_enqueue_scripts, 3:
 #. login_enqueue_scripts
@@ -7588,7 +7588,7 @@ msgstr "Ви шукали <strong>&#8216;%2$s&#8217;</strong> в архівах 
 
 #: wp-includes/taxonomy.php:509
 msgid "Choose from the most used tags"
-msgstr "Оберіть з-поміж найуживаніших позначок"
+msgstr "Оберіть з-поміж найуживаніших тегів"
 
 #: wp-includes/taxonomy.php:505
 msgid "Add New Category"
@@ -7626,19 +7626,19 @@ msgstr "Категорія"
 
 #: wp-includes/taxonomy.php:505
 msgid "Add New Tag"
-msgstr "Додати нову позначку"
+msgstr "Додати новий тег"
 
 #: wp-includes/taxonomy.php:499
 msgid "All Tags"
-msgstr "Всі позначки"
+msgstr "Всі теги"
 
 #: wp-includes/taxonomy.php:498
 msgid "Popular Tags"
-msgstr "Популярні позначки"
+msgstr "Популярні теги"
 
 #: wp-includes/taxonomy.php:497
 msgid "Search Tags"
-msgstr "Шукати позначки"
+msgstr "Шукати теги"
 
 #: wp-signup.php:760
 msgid "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
@@ -7816,7 +7816,7 @@ msgstr ""
 
 #: wp-includes/class-wp-xmlrpc-server.php:3008
 msgid "Sorry, you must be able to edit posts on this site in order to view tags."
-msgstr "На жаль, ви мусите мати змогу редагувати записи на цьому сайті, щоби переглядати позначки."
+msgstr "На жаль, ви мусите мати змогу редагувати записи на цьому сайті, щоби переглядати теги."
 
 #: wp-includes/ms-functions.php:986
 msgid "The site is already active."
@@ -9657,7 +9657,7 @@ msgstr "Увійти"
 
 #: wp-includes/widgets/class-wp-widget-tag-cloud.php:30
 msgid "Tag Cloud"
-msgstr "Хмаринка позначок"
+msgstr "Хмаринка тегів"
 
 #: wp-includes/comment.php:241
 msgid "Unapproved"
@@ -10091,7 +10091,7 @@ msgstr "Коментарі <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 
 #: wp-includes/category-template.php:1107
 msgid "Tags: "
-msgstr "Позначки:"
+msgstr "Теги:"
 
 #: wp-includes/class-wp-user.php:717
 msgid "Usage of user levels by plugins and themes is deprecated. Use roles and capabilities instead."
@@ -10099,7 +10099,7 @@ msgstr "Використання рівнів користувачів плаг�
 
 #: wp-includes/taxonomy.php:507
 msgid "Separate tags with commas"
-msgstr "Розділяйте позначки комами"
+msgstr "Розділяйте теги комами"
 
 #: wp-includes/class-wp-customize-manager.php:3784
 #: wp-includes/customize/class-wp-customize-color-control.php:54
@@ -10500,11 +10500,11 @@ msgstr "Новий запис"
 
 #: wp-includes/widgets/class-wp-widget-tag-cloud.php:49
 msgid "Tags"
-msgstr "Позначки"
+msgstr "Теги"
 
 #: wp-includes/taxonomy.php:508
 msgid "Add or remove tags"
-msgstr "Додати чи видалити позначки"
+msgstr "Додати чи видалити теги"
 
 #: wp-includes/admin-bar.php:473
 msgid "Plugins"

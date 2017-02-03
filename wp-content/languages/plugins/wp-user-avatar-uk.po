@@ -1,0 +1,491 @@
+# Translation of Plugins - WP User Avatar - Development (trunk) in Ukrainian
+# This file is distributed under the same license as the Plugins - WP User Avatar - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-04-12 17:20:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Plugins - WP User Avatar - Development (trunk)\n"
+
+#. Author URI of the plugin/theme
+msgid "http://www.flippercode.com/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "flippercode"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Use any image from your WordPress Media Library as a custom user avatar. Add your own Default Avatar."
+msgstr "Використовуйте будь-яке зображення з вашої WordPress мультимедіа-бібліотеки. Додати свій власний аватар за замовчуванням."
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/wp-user-avatar/"
+msgstr ""
+
+#: includes/wpua-options-page.php:198
+msgid "For users without a custom avatar of their own, you can either display a generic logo or a generated one based on their e-mail address."
+msgstr "Для користувачів без власного аватару, ви можете відображати загальне лого, або згенероване на основі їх e-mail адреси."
+
+#: includes/wpua-options-page.php:183
+msgid "X &#8212; Even more mature than above"
+msgstr "X &#8212; Тільки для дорослих"
+
+#: includes/wpua-options-page.php:182
+msgid "R &#8212; Intended for adult audiences above 17"
+msgstr "R &#8212; Для дорослих, 17+, або обов’язковий нагляд дорослих"
+
+#: includes/wpua-options-page.php:181
+msgid "PG &#8212; Possibly offensive, usually for audiences 13 and above"
+msgstr "PG &#8212; Можливий образливий вміст, для аудиторії 13+, рекомендується нагляд батьків"
+
+#: includes/wpua-options-page.php:180
+msgid "G &#8212; Suitable for all audiences"
+msgstr "G &#8212; Підходить для всіх аудиторій"
+
+#: includes/wpua-options-page.php:174 includes/wpua-options-page.php:177
+msgid "Maximum Rating"
+msgstr "Максимальний рейтинг"
+
+#: includes/wpua-options-page.php:168
+msgid "Show Avatars"
+msgstr "Показати Аватари"
+
+#: includes/wpua-options-page.php:162 includes/wpua-options-page.php:165
+msgid "Avatar Display"
+msgstr "Відображення аватару"
+
+#: includes/wpua-options-page.php:146
+msgid "Crop avatars to exact dimensions"
+msgstr "Обрізати аватари для точних вимірювань"
+
+#: includes/wpua-options-page.php:142
+msgid "Height"
+msgstr "Висота"
+
+#: includes/wpua-options-page.php:140
+msgid "Width"
+msgstr "Ширина"
+
+#: includes/wpua-options-page.php:136
+msgid "Resize avatars on upload"
+msgstr "Зміна розміру аватари завантаження"
+
+#: includes/wpua-options-page.php:130
+msgid "Allow users to edit avatars"
+msgstr "Дозволити користувачам редагувати аватари"
+
+#: includes/wpua-options-page.php:123
+msgid "%s exceeds the maximum upload size for this site."
+msgstr "%s перевищує максимальний розмір завантаження для цього сайту"
+
+#: includes/wpua-options-page.php:115 includes/wpua-options-page.php:120
+msgid "(only for Contributors & Subscribers)"
+msgstr "(тільки для блогерів та підписників)"
+
+#: includes/wpua-options-page.php:115 includes/wpua-options-page.php:120
+msgid "Upload Size Limit"
+msgstr "Максимальний розмір"
+
+#: includes/wpua-options-page.php:93
+msgid "Disable Gravatar and use only local avatars"
+msgstr "Відключити Gravatar і використовувати тільки локальні аватари"
+
+#: includes/wpua-options-page.php:87
+msgid "Allow Contributors & Subscribers to upload avatars"
+msgstr "Дозволити блогерам і підписникам завантажувати аватари"
+
+#: includes/wpua-options-page.php:81
+msgid "Add avatar button to Visual Editor"
+msgstr "Додати кнопку аватару в візуальному редакторі"
+
+#: includes/wpua-media-page.php:110
+msgid "Search"
+msgstr "Шукати"
+
+#: includes/wpua-media-page.php:102
+msgid "Media attachment permanently deleted."
+msgid_plural "%d media attachments permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: includes/wpua-media-page.php:95
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Результати пошуку для &#8220;%s&#8221;"
+
+#: includes/wpua-media-page.php:74
+msgid "Error in deleting."
+msgstr "Помилка при видаленні."
+
+#: includes/wpua-media-page.php:71
+msgid "You are not allowed to delete this post."
+msgstr "Ви не можете видалити цей пост."
+
+#: includes/wpua-media-page.php:39
+msgid "You do not have permission to upload files."
+msgstr "У вас немає дозволу на завантаження файлів."
+
+#: includes/wpua-functions.php:90 includes/wpua-functions.php:96
+#: includes/wpua-functions.php:155
+msgid "Image"
+msgstr "Зображення"
+
+#: includes/tinymce/window.php:195 includes/tinymce/window.php:196
+#: includes/tinymce/window.php:197
+msgid "wp_user_avatar_upload"
+msgstr ""
+
+#: includes/tinymce/window.php:191 includes/tinymce/window.php:201
+msgid "Insert into Post"
+msgstr "Вставити в допис"
+
+#: includes/tinymce/window.php:186
+msgid "Caption"
+msgstr "Підпис"
+
+#: includes/tinymce/window.php:186 includes/tinymce/window.php:187
+msgid "wp_user_avatar_caption"
+msgstr ""
+
+#: includes/tinymce/window.php:182
+msgid "Open link in a new window"
+msgstr "Відкрити посилання в новому вікні"
+
+#: includes/tinymce/window.php:181 includes/tinymce/window.php:182
+msgid "wp_user_avatar_target"
+msgstr ""
+
+#: includes/tinymce/window.php:176
+msgid "URL"
+msgstr "Посилання"
+
+#: includes/tinymce/window.php:176 includes/tinymce/window.php:177
+msgid "wp_user_avatar_link_external"
+msgstr ""
+
+#: includes/tinymce/window.php:175
+msgid "wp_user_avatar_link_external_section"
+msgstr ""
+
+#: includes/tinymce/window.php:171
+msgid "Custom URL"
+msgstr "Користувацький URL"
+
+#: includes/tinymce/window.php:170
+msgid "Attachment Page"
+msgstr "Сторінка додатку"
+
+#: includes/tinymce/window.php:169
+msgid "Image File"
+msgstr "Файл зображення"
+
+#: includes/tinymce/window.php:166
+msgid "Link To"
+msgstr "Посилання на"
+
+#: includes/tinymce/window.php:166 includes/tinymce/window.php:167
+msgid "wp_user_avatar_link"
+msgstr ""
+
+#: includes/tinymce/window.php:161
+msgid "Right"
+msgstr "Праворуч"
+
+#: includes/tinymce/window.php:160
+msgid "Left"
+msgstr "Ліворуч"
+
+#: includes/tinymce/window.php:159
+msgid "Center"
+msgstr "Посередині"
+
+#: includes/tinymce/window.php:156
+msgid "Alignment"
+msgstr "Вирівнювання"
+
+#: includes/tinymce/window.php:156 includes/tinymce/window.php:157
+msgid "wp_user_avatar_align"
+msgstr ""
+
+#: includes/tinymce/window.php:151 includes/tinymce/window.php:152
+msgid "wp_user_avatar_size_number"
+msgstr ""
+
+#: includes/tinymce/window.php:150
+msgid "wp_user_avatar_size_number_section"
+msgstr ""
+
+#: includes/tinymce/window.php:146
+msgid "Custom"
+msgstr "Користувацький"
+
+#: includes/tinymce/window.php:144
+msgid "Medium"
+msgstr "Середній"
+
+#: includes/tinymce/window.php:143
+msgid "Large"
+msgstr "Великий"
+
+#: includes/tinymce/window.php:139 includes/tinymce/window.php:151
+msgid "Size"
+msgstr "Розмір"
+
+#: includes/tinymce/window.php:139 includes/tinymce/window.php:140
+#: includes/tinymce/window.php:152 includes/tinymce/window.php:187
+msgid "wp_user_avatar_size"
+msgstr ""
+
+#: includes/tinymce/window.php:129
+msgid "User Name"
+msgstr "Ім'я користувача"
+
+#: includes/tinymce/window.php:129 includes/tinymce/window.php:130
+msgid "wp_user_avatar_user"
+msgstr ""
+
+#: includes/class-wp-user-avatar.php:234
+msgid "Unable to create directory %s. Is its parent directory writable by the server?"
+msgstr "Неможливо створити каталог % S. Чи є його батьківський каталог доступний для запису на сервері?"
+
+#: includes/class-wp-user-avatar.php:230 includes/class-wp-user-avatar.php:256
+msgid "Memory exceeded. Please try another smaller file."
+msgstr "Пам'ять перевищена. Будь ласка, спробуйте інший файл меншого розміру."
+
+#: includes/class-wp-user-avatar.php:226
+msgid "This file is not an image. Please try another."
+msgstr "Файл не є зображенням. Будь ласка, спробуйте інший."
+
+#: includes/class-wp-user-avatar.php:199
+msgid "Edit Image"
+msgstr "Редагування зображення"
+
+#: includes/class-wp-user-avatar.php:197
+msgid "Remove Image"
+msgstr "Видалити зображення"
+
+#: includes/class-wp-user-avatar.php:194 includes/tinymce/window.php:145
+msgid "Thumbnail"
+msgstr "Мініатюра"
+
+#: includes/class-wp-user-avatar.php:190 includes/tinymce/window.php:142
+msgid "Original Size"
+msgstr "Оригінальний розмір"
+
+#: includes/class-wp-user-avatar.php:184
+msgid "<code>jpg jpeg png gif</code>"
+msgstr ""
+
+#: includes/class-wp-user-avatar.php:184
+msgid "Allowed Files"
+msgstr "Дозволені файли"
+
+#: includes/class-wp-user-avatar.php:183 includes/wpua-options-page.php:125
+msgid "Maximum upload file size: %d%s."
+msgstr "Максимальний розмір файлу: %d%s."
+
+#: includes/class-wp-user-avatar.php:180 includes/tinymce/window.php:124
+#: includes/tinymce/window.php:196
+msgid "Upload"
+msgstr "Завантажити"
+
+#: includes/class-wp-user-avatar-widget.php:81
+msgid "Automatically add paragraphs"
+msgstr "Автоматично додавати абзаци"
+
+#: includes/class-wp-user-avatar-widget.php:76
+msgid "Description:"
+msgstr "Опис:"
+
+#: includes/class-wp-user-avatar-widget.php:72
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: includes/class-wp-user-avatar-widget.php:15 includes/tinymce/window.php:197
+msgid "[avatar_upload]"
+msgstr ""
+
+#: includes/class-wp-user-avatar-widget.php:15
+msgid "Insert"
+msgstr "Вставити"
+
+#: includes/class-wp-user-avatar-subscriber.php:99
+msgid "You do not have sufficient permissions to access this page."
+msgstr "У вас немає достатніх прав для доступу до цієї сторінки."
+
+#: includes/class-wp-user-avatar-shortcode.php:236
+msgid "Update Profile"
+msgstr "Оновити обліковий запис"
+
+#: includes/class-wp-user-avatar-shortcode.php:212
+msgid "Profile updated."
+msgstr "Профіль оновлений."
+
+#: includes/class-wp-user-avatar-list-table.php:396
+msgid "View"
+msgstr "Подивитися"
+
+#: includes/class-wp-user-avatar-list-table.php:396
+msgid "View &#8220;%s&#8221;"
+msgstr "Переглянути &#8220;%s&#8221;"
+
+#: includes/class-wp-user-avatar-list-table.php:387
+msgid "Trash"
+msgstr "Корзина"
+
+#: includes/class-wp-user-avatar-list-table.php:385
+msgid "Restore"
+msgstr "Відновити"
+
+#: includes/class-wp-user-avatar-list-table.php:381
+msgid "Edit"
+msgstr "Редагувати"
+
+#: includes/class-wp-user-avatar-list-table.php:323
+msgid "Y/m/d"
+msgstr ""
+
+#: includes/class-wp-user-avatar-list-table.php:321
+msgid "%s ago"
+msgstr "%s назад"
+
+#: includes/class-wp-user-avatar-list-table.php:319
+msgid "%s from now"
+msgstr "%s від тепер"
+
+#: includes/class-wp-user-avatar-list-table.php:313
+msgid "Unpublished"
+msgstr "Неопублікований"
+
+#: includes/class-wp-user-avatar-list-table.php:268
+#: includes/class-wp-user-avatar-list-table.php:283
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Редагувати &#8220;%s&#8221;"
+
+#: includes/class-wp-user-avatar-list-table.php:253
+msgid "Select %s"
+msgstr "Вибрати %s"
+
+#: includes/class-wp-user-avatar-list-table.php:186
+msgctxt "column name"
+msgid "Date"
+msgstr "Дата"
+
+#: includes/class-wp-user-avatar-list-table.php:185
+msgctxt "column name"
+msgid "Uploaded to"
+msgstr "Завантажено до"
+
+#: includes/class-wp-user-avatar-list-table.php:184
+msgid "Author"
+msgstr "Автор"
+
+#: includes/class-wp-user-avatar-list-table.php:183
+msgctxt "column name"
+msgid "File"
+msgstr "Файл"
+
+#: includes/class-wp-user-avatar-list-table.php:171
+msgid "No media attachments found."
+msgstr "Медіа-вкладення не знайдено."
+
+#: includes/class-wp-user-avatar-list-table.php:142
+#: includes/class-wp-user-avatar-list-table.php:391
+msgid "Delete Permanently"
+msgstr "Видалити назавжди"
+
+#: includes/class-wp-user-avatar-list-table.php:131
+msgctxt "uploaded files"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: includes/class-wp-user-avatar-admin.php:324
+#: includes/class-wp-user-avatar-admin.php:378 includes/tinymce/window.php:123
+#: includes/wpua-functions.php:79 includes/wpua-functions.php:88
+#: includes/wpua-functions.php:93 includes/wpua-functions.php:152
+msgid "Avatar"
+msgstr "Аватар"
+
+#: includes/class-wp-user-avatar-admin.php:312
+msgid "Support Forums"
+msgstr "Форуми підтримки"
+
+#: includes/class-wp-user-avatar-admin.php:268
+#: includes/class-wp-user-avatar.php:202
+msgid "Undo"
+msgstr "Скасувати"
+
+#: includes/class-wp-user-avatar-admin.php:268
+msgid "Remove"
+msgstr "Видалити"
+
+#: includes/class-wp-user-avatar-admin.php:267
+#: includes/class-wp-user-avatar-admin.php:381
+#: includes/wpua-options-page.php:194 includes/wpua-options-page.php:197
+msgid "Default Avatar"
+msgstr "Аватар за замовчуванням"
+
+#: includes/class-wp-user-avatar-admin.php:267
+#: includes/class-wp-user-avatar.php:176
+msgid "Choose Image"
+msgstr "Виберіть зображення"
+
+#: includes/class-wp-user-avatar-admin.php:235
+msgid "Retro (Generated)"
+msgstr "Ретро (Сформовано)"
+
+#: includes/class-wp-user-avatar-admin.php:234
+msgid "MonsterID (Generated)"
+msgstr "MonsterID (Сформовано)"
+
+#: includes/class-wp-user-avatar-admin.php:233
+msgid "Wavatar (Generated)"
+msgstr "Wavatar (Сформовано)"
+
+#: includes/class-wp-user-avatar-admin.php:232
+msgid "Identicon (Generated)"
+msgstr "Identicon (Сформовано)"
+
+#: includes/class-wp-user-avatar-admin.php:231
+msgid "Gravatar Logo"
+msgstr "Логотип Gravatar"
+
+#: includes/class-wp-user-avatar-admin.php:230
+msgid "Blank"
+msgstr "Порожній"
+
+#: includes/class-wp-user-avatar-admin.php:229
+msgid "Mystery Man"
+msgstr ""
+
+#: includes/class-wp-user-avatar-admin.php:115
+msgid "Library"
+msgstr "Бібліотека"
+
+#: includes/class-wp-user-avatar-admin.php:114
+#: includes/class-wp-user-avatar-admin.php:298
+#: includes/wpua-options-page.php:73
+msgid "Settings"
+msgstr "Налаштування"
+
+#: includes/class-wp-user-avatar-admin.php:113
+#: includes/class-wp-user-avatar-admin.php:148 includes/wpua-media-page.php:93
+msgid "Avatars"
+msgstr "Аватари"
+
+#. #-#-#-#-#  tmp-wp-user-avatar.pot (WP User Avatar 2.0.8)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/class-wp-user-avatar-admin.php:113
+#: includes/class-wp-user-avatar-admin.php:266
+#: includes/class-wp-user-avatar-widget.php:16 includes/tinymce/window.php:21
+#: includes/wpua-options-page.php:43
+msgid "WP User Avatar"
+msgstr "Аватари користувачів"

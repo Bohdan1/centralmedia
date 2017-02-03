@@ -494,7 +494,7 @@ function custom_post_permalink() {
     //Варіант з врахуванням усіх переглянутих постів
     function setPostViews( $postID ) {
         if( $_COOKIE['viewed_page'] != $postID ) {
-            setcookie( 'viewed_page', $postID );
+            setcookie( 'viewed_page', $postID, time()+1800 );
             $count_key = 'post_views_count';
             $count = get_post_meta( $postID, $count_key, true );
             if( $count == '' ) {

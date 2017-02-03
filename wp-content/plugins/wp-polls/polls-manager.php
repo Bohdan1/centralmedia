@@ -477,10 +477,12 @@ switch($mode) {
                 <th><?php _e('Total Polls\' Answers:', 'wp-polls'); ?></th>
                 <td><?php echo number_format_i18n($total_ans); ?></td>
             </tr>
-            <tr>
+            <!--
+			<tr>
                 <th><?php _e('Total Votes Cast:', 'wp-polls'); ?></th>
                 <td><?php echo number_format_i18n($total_votes); ?></td>
             </tr>
+			-->
             <tr class="alternate">
                 <th><?php _e('Total Voters:', 'wp-polls'); ?></th>
                 <td><?php echo number_format_i18n($total_voters); ?></td>

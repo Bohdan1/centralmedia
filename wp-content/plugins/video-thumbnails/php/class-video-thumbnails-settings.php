@@ -716,12 +716,14 @@ class Video_Thumbnails_Settings {
 
 	public static function settings_footer() {
 		?>
+		<!--
 		<div style="width: 250px; margin: 20px 0; padding: 0 20px; background: #fff; border: 1px solid #dfdfdf; text-align: center;">
 			<div>
 				<p><?php _e( 'Support video thumbnails and unlock additional features', 'video-thumbnails' ); ?></p>
 				<p><a href="https://refactored.co/plugins/video-thumbnails" class="button button-primary button-large"><?php _e( 'Go Pro', 'video-thumbnails' ); ?></a></p>
 			</div>
 		</div>
+		-->
 		<?php
 	}
 
