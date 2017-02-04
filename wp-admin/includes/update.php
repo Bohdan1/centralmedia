@@ -263,9 +263,11 @@ function update_nag() {
 			$cur->current
 		);
 	}
+	/*
 	if ( is_admin() && current_user_can('administrator') ) { // deletes the message about the new version of WordPress for all users except Administrator
 		echo "<div class='update-nag'>$msg</div>";
 	}
+	*/
 }
 
 // Called directly from dashboard
@@ -300,7 +302,7 @@ function update_right_now_message() {
 
 	$msg .= sprintf( '<span id="wp-version">' . $content . '</span>', get_bloginfo( 'version', 'display' ), $theme_name );
 
-	echo "<p id='wp-version-message'>$msg</p>";
+	//echo "<p id='wp-version-message'>$msg</p>";
 }
 
 /**
@@ -619,9 +621,11 @@ function maintenance_nag() {
 	else
 		$msg = __('An automated WordPress update has failed to complete! Please notify the site administrator.');
 
+	/*
 	if ( is_admin() && current_user_can('administrator') ) { // deletes the message about the new version of WordPress for all users except Administrator
 		echo "<div class='update-nag'>$msg</div>";
 	}
+	*/
 }
 
 /**

@@ -269,11 +269,114 @@
     }
 
 
+    function register_cpt_streams() {
+        $labels = array( 
+            'name' => _x( 'Стріми', 'stream' ),
+            'singular_name' => _x( 'Стрім', 'stream' ),
+            'add_new' => _x( 'Додати стрім', 'stream' ),
+            'add_new_item' => _x( 'Додати новий стрім', 'stream' ),
+            'edit_item' => _x( 'Редагувати стрім', 'stream' ),
+            'new_item' => _x( 'Новий стрім', 'stream' ),
+            'view_item' => _x( 'Переглянути', 'stream' ),
+            'search_items' => _x( 'Пошук', 'stream' ),
+            'not_found' => _x( 'Стрім не знайдено', 'stream' ),
+            'not_found_in_trash' => _x( 'Стрім в корзині не знайдено', 'stream' ),
+            'parent_item_colon' => _x( 'Батьківський елемент', 'stream' ),
+            'all_items' => _x( 'Всі стріми', 'stream' ),
+            'name_admin_bar' => _x( 'Стрім', 'stream'),    //назва в адмін барі (тулбарі)
+        );
+        $args = array( 
+            'labels' => $labels,
+            'description' => 'Стріми',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'menu_position' => 9,
+            'menu_icon' => 'dashicons-video-alt3',
+            'capability_type' => 'stream',    //автоматично створює потрібні повноваження
+            'capabilities' => array(
+                'edit_post' => 'edit_stream',
+                'read_post' => 'read_stream',
+                'delete_post' => 'delete_stream',
+                'edit_posts' => 'edit_streams',
+                'edit_others_posts' => 'edit_other_streams',  //дозволяє редагувати записи, які належать іншим авторам
+                'publish_posts' => 'publish_streams',
+                'read_private_posts' => 'read_private_streams',
+            ),
+            'map_meta_cap' => true,
+            'hierarchical' => true,
+            'supports' => array( 'title', 'thumbnail', 'revisions' ), //  'author', 'comments', 
+            'taxonomies' => array( 'post_tag' ),
+            'has_archive' => true,
+            'rewrite' => true,
+            'query_var' => true,
+            'can_export' => true
+            //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+        );
+        register_post_type( 'streams', $args );
+    }
+
+
+    function register_cpt_folks_control() {
+        $labels = array( 
+            'name' => _x( 'Народний контроль', 'folks_control' ),
+            'singular_name' => _x( 'Народний контроль', 'folks_control' ),
+            'add_new' => _x( 'Додати народний контроль', 'folks_control' ),
+            'add_new_item' => _x( 'Додати новий народний контроль', 'folks_control' ),
+            'edit_item' => _x( 'Редагувати народний контроль', 'folks_control' ),
+            'new_item' => _x( 'Новий народний контроль', 'folks_control' ),
+            'view_item' => _x( 'Переглянути', 'folks_control' ),
+            'search_items' => _x( 'Пошук', 'folks_control' ),
+            'not_found' => _x( 'Народний контроль не знайдено', 'folks_control' ),
+            'not_found_in_trash' => _x( 'Народних контролей в корзині не знайдено', 'folks_control' ),
+            'parent_item_colon' => _x( 'Батьківський елемент', 'folks_control' ),
+            'all_items' => _x( 'Всі народні контролі', 'folks_control' ),
+            'name_admin_bar' => _x( 'Народний контроль', 'folks_control'),    //назва в адмін барі (тулбарі)
+        );
+        $args = array( 
+            'labels' => $labels,
+            'description' => 'Народний контроль',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'menu_position' => 10,
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            'capability_type' => 'folk_control',    //автоматично створює потрібні повноваження
+            'capabilities' => array(
+                'edit_post' => 'edit_folk_control',
+                'read_post' => 'read_folk_control',
+                'delete_post' => 'delete_folk_control',
+                'edit_posts' => 'edit_folks_control',
+                'edit_others_posts' => 'edit_other_folks_control',  //дозволяє редагувати записи, які належать іншим авторам
+                'publish_posts' => 'publish_folks_control',
+                'read_private_posts' => 'read_private_folks_control',
+            ),
+            'map_meta_cap' => true,
+            'hierarchical' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
+            'taxonomies' => array( 'post_tag' ),
+            'has_archive' => true,
+            'rewrite' => true,
+            'query_var' => true,
+            'can_export' => true
+            //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+        );
+        register_post_type( 'folks_control', $args );
+    }
+
     add_action( 'init', 'register_cpt_news' );
     add_action( 'init', 'register_cpt_articles' );
     add_action( 'init', 'register_cpt_blogs' );
     add_action( 'init', 'register_cpt_partner_news' );
     add_action( 'init', 'register_cpt_video' );
+    add_action( 'init', 'register_cpt_folks_control' );
+    add_action( 'init', 'register_cpt_streams' );
 // end register custom posts types
 
 
@@ -316,6 +419,7 @@
     });
 
 
+
     add_action( 'add_meta_boxes', function() {
         add_meta_box(
             'partner_news_info',
@@ -348,6 +452,44 @@
         if ( $_POST && wp_verify_nonce( $_POST['partner_news_nonce'], __FILE__ ) ) {
             if ( isset($_POST['partner_news_url']) ) {
                 update_post_meta( $post->ID, 'partner_news_url', $_POST['partner_news_url'] );
+            }
+        }
+    });
+
+
+
+    add_action( 'add_meta_boxes', function() {
+        add_meta_box(
+            'streams_info',
+            'Посилання на стрім:',
+            'streams_info_cb',
+            'streams',
+            'normal',
+            'high'
+        );
+    });
+
+    function streams_info_cb() {
+        global $post;
+        $url = get_post_meta( $post->ID, 'stream_url', true );
+
+        //unique identifier, name of hidden field
+        wp_nonce_field( __FILE__, 'stream_nonce' );
+    ?>
+        <label for"stream_url">URL: </label>
+        <input type="text" name="stream_url" id="stream_url" class="widefat" value="<?php echo $url; ?>" />
+    <?php
+    }
+    add_action('save_post', function() {
+        global $post;
+        if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+
+        //security check - nonce
+        //verify this came from the our screen and with proper authorization,
+        //because save_post can be triggered at other times
+        if ( $_POST && wp_verify_nonce( $_POST['stream_nonce'], __FILE__ ) ) {
+            if ( isset($_POST['stream_url']) ) {
+                update_post_meta( $post->ID, 'stream_url', $_POST['stream_url'] );
             }
         }
     });

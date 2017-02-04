@@ -834,15 +834,15 @@ msgstr ""
 #: polls-templates.php:109 polls-templates.php:124 wp-polls.php:1726
 #: wp-polls.php:1739
 msgid "Vote"
-msgstr ""
+msgstr "Проголосувати"
 
 #: polls-templates.php:109 wp-polls.php:1727
 msgid "View Results Of This Poll"
-msgstr ""
+msgstr "Переглянути результати цього опитування"
 
 #: polls-templates.php:109 wp-polls.php:1727
 msgid "View Results"
-msgstr ""
+msgstr "Переглянути результати"
 
 #: polls-templates.php:115 polls-templates.php:118 wp-polls.php:1732
 #: wp-polls.php:1733

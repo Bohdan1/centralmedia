@@ -383,7 +383,7 @@ function custom_post_permalink() {
     function remove_menus() {
         global $menu;
         $restricted = array(
-            __('Dashboard'),
+            //__('Dashboard'),
             __('Posts'),
             __('Pages'),
         );

@@ -1804,8 +1804,8 @@ function polls_activate() {
     '<ul class="wp-polls-ul">');
     add_option('poll_template_votebody', '<li><input type="%POLL_CHECKBOX_RADIO%" id="poll-answer-%POLL_ANSWER_ID%" name="poll_%POLL_ID%" value="%POLL_ANSWER_ID%" /> <label for="poll-answer-%POLL_ANSWER_ID%">%POLL_ANSWER%</label></li>');
     add_option('poll_template_votefooter', '</ul>'.
-    '<p style="text-align: center;"><input type="button" name="vote" value="   '.__('Vote', 'wp-polls').'   " class="Buttons" onclick="poll_vote(%POLL_ID%);" /></p>'.
-    '<p style="text-align: center;"><a href="#ViewPollResults" onclick="poll_result(%POLL_ID%); return false;" title="'.__('View Results Of This Poll', 'wp-polls').'">'.__('View Results', 'wp-polls').'</a></p>'.
+    '<p style="text-align: center;"><input type="button" name="vote" value="   '.__('Проголосувати', 'wp-polls').'   " class="Buttons" onclick="poll_vote(%POLL_ID%);" /></p>'.
+    '<p style="text-align: center;"><a href="#ViewPollResults" onclick="poll_result(%POLL_ID%); return false;" title="'.__('Подивитися результати цього опитування', 'wp-polls').'">'.__('Подивитися результати', 'wp-polls').'</a></p>'.
     '</div>');
     add_option('poll_template_resultheader', '<p style="text-align: center;"><strong>%POLL_QUESTION%</strong></p>'.
     '<div id="polls-%POLL_ID%-ans" class="wp-polls-ans">'.

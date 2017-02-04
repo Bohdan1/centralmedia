@@ -165,72 +165,77 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 				echo "\n\t<a href='{$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
 			}
 		}
+		
+		// hide subsidiaries tabs for dashboard
+		if ( $item[0] != 'Майстерня' ) {
+			if ( ! empty( $submenu_items ) ) {
+				echo "\n\t<ul class='wp-submenu wp-submenu-wrap'>";
+				echo "<li class='wp-submenu-head' aria-hidden='true'>{$item[0]}</li>";
 
-		if ( ! empty( $submenu_items ) ) {
-			echo "\n\t<ul class='wp-submenu wp-submenu-wrap'>";
-			echo "<li class='wp-submenu-head' aria-hidden='true'>{$item[0]}</li>";
+				$first = true;
 
-			$first = true;
+				// 0 = menu_title, 1 = capability, 2 = menu_slug, 3 = page_title, 4 = classes
+				foreach ( $submenu_items as $sub_key => $sub_item ) {
+					if ( ! current_user_can( $sub_item[1] ) )
+						continue;
 
-			// 0 = menu_title, 1 = capability, 2 = menu_slug, 3 = page_title, 4 = classes
-			foreach ( $submenu_items as $sub_key => $sub_item ) {
-				if ( ! current_user_can( $sub_item[1] ) )
-					continue;
+					$class = array();
+					if ( $first ) {
+						$class[] = 'wp-first-item';
+						$first = false;
+					}
 
-				$class = array();
-				if ( $first ) {
-					$class[] = 'wp-first-item';
-					$first = false;
-				}
+					$menu_file = $item[2];
 
-				$menu_file = $item[2];
+					if ( false !== ( $pos = strpos( $menu_file, '?' ) ) )
+						$menu_file = substr( $menu_file, 0, $pos );
 
-				if ( false !== ( $pos = strpos( $menu_file, '?' ) ) )
-					$menu_file = substr( $menu_file, 0, $pos );
+					// Handle current for post_type=post|page|foo pages, which won't match $self.
+					$self_type = ! empty( $typenow ) ? $self . '?post_type=' . $typenow : 'nothing';
 
-				// Handle current for post_type=post|page|foo pages, which won't match $self.
-				$self_type = ! empty( $typenow ) ? $self . '?post_type=' . $typenow : 'nothing';
-
-				if ( isset( $submenu_file ) ) {
-					if ( $submenu_file == $sub_item[2] )
+					if ( isset( $submenu_file ) ) {
+						if ( $submenu_file == $sub_item[2] )
+							$class[] = 'current';
+					// If plugin_page is set the parent must either match the current page or not physically exist.
+					// This allows plugin pages with the same hook to exist under different parents.
+					} elseif (
+						( ! isset( $plugin_page ) && $self == $sub_item[2] ) ||
+						( isset( $plugin_page ) && $plugin_page == $sub_item[2] && ( $item[2] == $self_type || $item[2] == $self || file_exists($menu_file) === false ) )
+					) {
 						$class[] = 'current';
-				// If plugin_page is set the parent must either match the current page or not physically exist.
-				// This allows plugin pages with the same hook to exist under different parents.
-				} elseif (
-					( ! isset( $plugin_page ) && $self == $sub_item[2] ) ||
-					( isset( $plugin_page ) && $plugin_page == $sub_item[2] && ( $item[2] == $self_type || $item[2] == $self || file_exists($menu_file) === false ) )
-				) {
-					$class[] = 'current';
+					}
+
+					if ( ! empty( $sub_item[4] ) ) {
+						$class[] = esc_attr( $sub_item[4] );
+					}
+
+					$class = $class ? ' class="' . join( ' ', $class ) . '"' : '';
+
+					$menu_hook = get_plugin_page_hook($sub_item[2], $item[2]);
+					$sub_file = $sub_item[2];
+					if ( false !== ( $pos = strpos( $sub_file, '?' ) ) )
+						$sub_file = substr($sub_file, 0, $pos);
+
+					$title = wptexturize($sub_item[0]);
+
+					if ( ! empty( $menu_hook ) || ( ( 'index.php' != $sub_item[2] ) && file_exists( WP_PLUGIN_DIR . "/$sub_file" ) && ! file_exists( ABSPATH . "/wp-admin/$sub_file" ) ) ) {
+						// If admin.php is the current page or if the parent exists as a file in the plugins or admin dir
+						if ( ( ! $admin_is_parent && file_exists( WP_PLUGIN_DIR . "/$menu_file" ) && ! is_dir( WP_PLUGIN_DIR . "/{$item[2]}" ) ) || file_exists( $menu_file ) )
+							$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), $item[2] );
+						else
+							$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), 'admin.php' );
+
+						$sub_item_url = esc_url( $sub_item_url );
+						echo "<li$class><a href='$sub_item_url'$class>$title</a></li>";
+					} else {
+						echo "<li$class><a href='{$sub_item[2]}'$class>$title</a></li>";
+					}
 				}
-
-				if ( ! empty( $sub_item[4] ) ) {
-					$class[] = esc_attr( $sub_item[4] );
-				}
-
-				$class = $class ? ' class="' . join( ' ', $class ) . '"' : '';
-
-				$menu_hook = get_plugin_page_hook($sub_item[2], $item[2]);
-				$sub_file = $sub_item[2];
-				if ( false !== ( $pos = strpos( $sub_file, '?' ) ) )
-					$sub_file = substr($sub_file, 0, $pos);
-
-				$title = wptexturize($sub_item[0]);
-
-				if ( ! empty( $menu_hook ) || ( ( 'index.php' != $sub_item[2] ) && file_exists( WP_PLUGIN_DIR . "/$sub_file" ) && ! file_exists( ABSPATH . "/wp-admin/$sub_file" ) ) ) {
-					// If admin.php is the current page or if the parent exists as a file in the plugins or admin dir
-					if ( ( ! $admin_is_parent && file_exists( WP_PLUGIN_DIR . "/$menu_file" ) && ! is_dir( WP_PLUGIN_DIR . "/{$item[2]}" ) ) || file_exists( $menu_file ) )
-						$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), $item[2] );
-					else
-						$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), 'admin.php' );
-
-					$sub_item_url = esc_url( $sub_item_url );
-					echo "<li$class><a href='$sub_item_url'$class>$title</a></li>";
-				} else {
-					echo "<li$class><a href='{$sub_item[2]}'$class>$title</a></li>";
-				}
+				echo "</ul>";
 			}
-			echo "</ul>";
 		}
+		
+		
 		echo "</li>";
 	}
 
