@@ -46,13 +46,63 @@ function custom_post_permalink() {
     $post_type = get_post_type();
     $post_link = get_permalink();
     global $post;
+    /*
     if ( $post_type == 'video' ) {
         $post_link = get_post_meta( $post->ID, 'video_url', true );
     }
-    else if ( $post_type == 'partner-news' ) {
+    */
+    if ( $post_type == 'partner-news' ) {
         $post_link = get_post_meta( $post->ID, 'partner_news_url', true );
     }
     return $post_link;
+}
+
+//show news on homepage
+function show_news_for_homepage() {
+    global $date;
+    if( $date != get_the_time('j F Y') ) {
+        $date = get_the_time('j F Y');
+        echo '<div class="next-day-news">' .  $date . '</div>';
+    }
+    echo '
+        <div class="news-block">
+            <div class="news-main-img">
+                <img class="news-main-img-width-cm" src="' . get_template_directory_uri() . '/img/logo/CMedia.svg">
+            </div>
+            <div class="news-main-title hover-link">
+                <div class="news-time">' .
+                    get_the_time('G:i') . '
+                </div>
+                <a href="'. get_the_permalink() .'" class="black-text">' .
+                    get_the_title() . '
+                </a>
+            </div>
+        </div>';
+}
+
+//show popular video on homepage
+function show_popular_video() {
+                            //style="min-height:260px;"
+    echo '
+        <div class="col l4 s12 m4" style="min-height:260px;">
+            <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="popular-video-block">
+                <div class="button-position-popular-video-content-box">
+                    <a href="' . get_the_permalink() . '" >
+                        <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип">
+                    </a>
+                </div>
+                <div class="mask">
+                    <div class="popular-video-content-box">
+                        <div class="popular-video-tag"><a href="#">Ринок</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-video-description hover-link">
+                <a href="'. get_the_permalink() .'" class="black-text">' . 
+                    get_the_title() . '
+                </a>
+            </div>
+        </div>';
 }
 
 
@@ -512,26 +562,6 @@ function custom_post_permalink() {
             }
         }
     }
-
-    /*
-    function setPostViews( $postID ) {    //Варіант з врахуванням останнього переглянутого посту
-        session_start();
-        if( $_SESSION['viewed_page'] != $postID ) {
-            $_SESSION['viewed_page'] = $postID;
-            $count_key = 'post_views_count';
-            $count = get_post_meta( $postID, $count_key, true );
-            if( $count == '' ) {
-                $count = 0;
-                delete_post_meta( $postID, $count_key );
-                add_post_meta( $postID, $count_key, '0' );
-            }
-            else {
-                $count++;
-                update_post_meta( $postID, $count_key, $count );
-            }
-        }
-    }
-    */
 //end number of views
 
 //top users
@@ -551,13 +581,13 @@ function custom_post_permalink() {
         $i = 0;
         foreach( $top_users as $key => $value ) {
             $i++;
-            if ( $i <= $number ) {
+            if( $i <= $number ) {
                 $user = get_userdata($key);
                 $author_posts_url = get_author_posts_url($key);
                 $first_name = $user->first_name;
                 $last_name = $user->last_name;
                 echo '<a href="' . get_author_posts_url( $user->ID ) . '">';
-                    if ( $first_name && $last_name) {
+                    if( $first_name && $last_name) {
                         echo '<li>' . $first_name . $last_name . '</li>';
                     }
                     else {
@@ -568,4 +598,35 @@ function custom_post_permalink() {
         }
     }
 //end top users
+
+
+//get news using ajax
+    function true_loadmore_scripts() {
+        wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
+        wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
+    }
+    add_action( 'wp_enqueue_scripts', 'true_loadmore_scripts' );
+
+
+    function true_load_posts(){
+        $args = unserialize(stripslashes($_POST['query']));
+        $args['paged'] = $_POST['page'] + 1; // следующая страница
+        $args['post_status'] = 'publish';
+        $q = new WP_Query($args);
+        if( $q->have_posts() ):
+            while($q->have_posts()): $q->the_post();
+                /*
+                 * Со строчки 13 по 27 идет HTML шаблон поста, максимально приближенный к теме TwentyTen.
+                 * Для своей темы вы конечно же можете использовать другой код HTML.
+                 */
+                show_news_for_homepage();
+            endwhile;
+        endif;
+        wp_reset_postdata();
+        die();
+    }
+     
+    add_action('wp_ajax_loadmore', 'true_load_posts');
+    add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+//end get news using ajax
 ?>

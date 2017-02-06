@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		<?php bloginfo('name'); ?>
-	</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<style>
-		/*Iphone 5*/
-		@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    <title>
+        <?php bloginfo('name'); ?>
+    </title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <?php wp_head(); ?>
+    
+    <style>
+    /*Iphone 5*/
+    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 
-		}
-
-		/*tablet*/
-		@media screen and (min-width: 768px) and (max-width: 1024px) {
-			.slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
+    }
+@media only screen and (min-width: 601px){
+.row .col.m4 {
+    width: 33.3333333333% !important;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+}
+    /*tablet*/
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
 {
 
-	transform: skewX(0deg);
+  transform: skewX(0deg);
+}
+.title-tag-all-video {
+margin: 5px;
+    position: absolute;
+    bottom: 200px;
+    font-size: 25px;
+    color: white;
+    padding: 2px;
+    left: 15px;
+    text-align: left;
+    background-color: rgba(255, 0, 0, 0.8);
+  
+}
+.main-news-content-box{
+  height: 530px;
+}
+.title-tag{
+  font-size: 17px;
+  margin-left: -5px;
 }
 .footer-logo {
     width: 25%;
@@ -44,6 +72,7 @@
     color: white;
     padding-bottom: 20px;
     text-align: center;
+
 }
 .madeby {
     position: absolute;
@@ -74,19 +103,19 @@
     font-size: 11px;
 }
 .logo-text{
-	position: relative;
-	display: inline-block;
-	top: -24px;
-	left: 0px;
-	font-size: 25px;
-	text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  top: -24px;
+  left: 0px;
+  font-size: 25px;
+  text-transform: uppercase;
 }
 .social-menu-top {
     top: 15px;
-    right: 0%;
+    right: %;
     z-index: 999;
     position: absolute;
-}	
+} 
 
 .menu-list {
     float: right;
@@ -94,16 +123,41 @@
     padding: 10px 10px 10px 20px;
     margin-right: 0px; 
 }
-		}
-		/* mobile */
-		@media screen and (max-width: 668px) {
+
+    }
+    /* mobile */
+    @media screen and (max-width: 668px) {
 
 .slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
 {
 
-	transform: skewX(0deg);
+  transform: skewX(0deg);
+}
+.one-video-post-name {
+    font-size: 34px;
+    font-weight: bold;
+}
+.previous-blog-time-all-blogs{
+    width: 100px;
+}
+.top-five-video-width{
+    width: 100% !important;
+  }
+  .all-blog-content-title {
+    position: relative;
+    top: -40px;
+    left: -33px;
 }
 
+.fix-mob-article{
+  margin-left: 0px !important;
+}
+.box-title-time{
+    margin-left: 10px;
+  }
+.box-title-small{
+  margin-left: 10px;
+}
 .social-menu-top-header-one {
     top: -100px;
     right: 1px;
@@ -165,7 +219,7 @@
        margin-left: 0px;
    }
  .full-width-mob{
- 	padding: 0 !important;
+  padding: 0 !important;
  }
  .second-article-block {
    margin-top: 10px;
@@ -192,7 +246,7 @@
 }
 .previous-blog-box {
     position: relative;
-    margin: 0px;
+    margin-bottom: 5px;
     padding: 20px;
     border: 2px solid lightgrey;
 }
@@ -219,6 +273,7 @@
     top: -10px;
     font-size: 18px;
     font-weight: bold;
+    padding-bottom: 5px;
 }
 .third-block-with-line {
     padding-right: 0px;
@@ -296,66 +351,110 @@
     text-align: justify;
 }
 
-			.box-title {
+      .box-title {
+        margin-left: 10px;
     padding-bottom: 10px;
     font-size: 20px;
     color: white;
 }
 
+.social-menu-top{
+  margin-top: 5px;
+}
 
 
 
-			.content-box {
+      .content-box {
     padding-left: 10px;
     top: 19%;
     width: 100%;
 }
-			.video-container{
-				margin-top: 30px;
-			}
+      .content-box-all-video {
+    position: relative;
+    padding-left: 10px;
+    bottom: 130px;
+    width: 100%;
+}
 
-			.right-block-video{
-				max-width: 100%;		
-			}
-			.right-block-second{
-				max-width: 100%;	
-				max-height: 180px;	
-			}
-			.social-menu-bottom {
+      .video-container{
+        margin-top: 30px;
+      }
+
+      .right-block-video{
+        max-width: 100%;    
+      }
+      .right-block-second{
+        max-width: 100%;  
+        max-height: 180px;  
+      }
+      .social-menu-bottom {
     bottom: 8%;
     position: absolute;
     right: 5%;
     z-index: 55;
 }
+      .social-menu-bottom-all-video {
+    bottom: 20px;
+    position: absolute;
+    right: 5%;
+    z-index: 55;
+}
 
-		}	
-	</style>
-	<?php wp_head(); ?>
+.header-logo {
+    width: 70px;
+}
+
+.second-slider-box-title {
+    font-size: 50px;
+}
+
+.second-slider-box-title-small{
+    font-size: 40px;
+}
+
+.second-slider-content{
+  bottom: -20%;
+}
+.sign-line-korespond{
+  font-size: 15px;
+}
+
+.button-share{
+  font-size: 17px;
+}
+.previous-blog-name-all-blogs{
+    font-size: 20px;
+}
+    } 
+  </style>
+
 </head>
 <body>
-<div class="header-one">
-		<nav>
-			<div class="header-one-bg">
-				<a href="#"><img class="header-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
-				<div class="logo-text hide-on-med-and-down">центральне медіа</div>
-				<ul id="nav-mobile" class="hide-on-small-only ">
-					<li><a class="hover-link" href="#">ВІДЕО</a></li>
-					<li><a class="hover-link" href="#">СТАТТІ</a></li>
-					<li><a class="hover-link" href="#">БЛОГИ</a></li>
-				</ul>
-				<div class="social-menu-top-header-one">
-					<div class="menu-list"><a href="#" ><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип"></a></div>
-					<div class="menu-list"><a href="#"><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
 
-				</div>
-				<div class="social-header-one">
-					<div class="menu-list"><a href="#" ><img  class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
-					</div>
-					<div class="menu-list"><a href="#" ><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
-					</div>
-					<div class="menu-list"><a href="#"><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+    <nav id="header-second">
+    <div class="social-menu-top">
+  <div class="menu-list"><a href="#" data-activates="slide-out" class="button-collapse"><img class="social-logo-head" src="<?php bloginfo('template_url') ?>/img/menu-head.svg" alt="Логотип"></a></div>
+                <div class="menu-list"><a href="#modal1"   > <img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип"></a></div>
+                <div class="menu-list"><a href="#modal2"><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
+            </div>
+            <div class="social-menu-bottom-second-header hide-on-med-and-down">
+                    <div class="menu-list"><a href="#" ><img  class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
+                    </div>
+
+                    <div class="menu-list"><a href="#" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
+                    </div>
+
+                    <div class="menu-list"><a href="#"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
+                    </div>
+                </div>
+
+            <div class="second-header-bg">
+                <a href="#"><img class="header-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
+                <div class="logo-text hide-on-small-only hover-link">центральне медіа</div>
+                <ul id="nav-mobile ggg" class="hide-on-med-and-down">
+                    <li><a class="hover-link" href="#">ВІДЕО</a></li>
+                    <li><a class="hover-link" href="#">СТАТТІ</a></li>
+                    <li><a class="hover-link" href="#">БЛОГИ</a></li>
+                </ul>
+            </div>
+        </nav>

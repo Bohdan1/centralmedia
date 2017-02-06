@@ -1,656 +1,565 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		<?php bloginfo('name'); ?>
-	</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <?php wp_head(); ?>
-    
-	<style>
-    /*Iphone 5*/
-    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+<title>
+<?php bloginfo('name'); ?>
+</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<?php wp_head(); ?>
 
-    }
+<style>
+/*Iphone 5*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 
-    /*tablet*/
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      .slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
+}
+@media only screen and (min-width: 601px){
+.row .col.m4 {
+width: 33.3333333333% !important;
+margin-left: auto;
+left: auto;
+right: auto;
+}
+}
+/*tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
 {
 
-  transform: skewX(0deg);
+transform: skewX(0deg);
+}
+.previous-blog-name {
+position: relative;
+top: -7px;
+font-size: 25px;
+font-weight: bold;
+left: -2px;
+display: inline-block;
+}
+.title-tag-all-video {
+margin: 5px;
+position: absolute;
+bottom: 200px;
+font-size: 25px;
+color: white;
+padding: 2px;
+left: 15px;
+text-align: left;
+background-color: rgba(255, 0, 0, 0.8);
+
 }
 .main-news-content-box{
-  height: 530px;
+height: 530px;
 }
 .title-tag{
-  font-size: 17px;
-  margin-left: -5px;
+font-size: 17px;
+margin-left: -5px;
 }
 .footer-logo {
-    width: 25%;
-    margin-top: 10px;
-    margin-left: 0px;
-    float: left; 
-    padding-right: 0px;
+width: 25%;
+margin-top: 10px;
+margin-left: 0px;
+float: left; 
+padding-right: 0px;
 }
 .footer-menu {
-    text-align: center;
-    margin-left: 0px;
-    margin-top: 33px;
-    font-size: 20px;
+text-align: center;
+margin-left: 0px;
+margin-top: 33px;
+font-size: 20px;
 }
 .social-menu-footer {
-    text-align: center;
-    padding-top: 15px;
-    margin-left: 0px; 
+text-align: center;
+padding-top: 15px;
+margin-left: 0px; 
 }
 .social-text-footer {
-    margin-top: 10px;
-    margin-left: 0px; 
-    color: white;
-    padding-bottom: 20px;
-    text-align: center;
+margin-top: 10px;
+margin-left: 0px; 
+color: white;
+padding-bottom: 20px;
+text-align: center;
 
 }
 .madeby {
-    position: absolute;
-    font-size: 18px;
-    color: white;
-    bottom: 0px;
-    padding-top: 0px;
-    left: 33%;
-    text-align: center;
+position: absolute;
+font-size: 18px;
+color: white;
+bottom: 0px;
+padding-top: 0px;
+left: 33%;
+text-align: center;
 }
 .footer-about {
-    padding-top: 0px;
-    color: white;
-    text-align: justify;
+padding-top: 0px;
+color: white;
+text-align: justify;
 }
 .main-article-content-box {
-    position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
-    bottom: 10px;
+position: absolute;
+padding-left: 10px;
+padding-right: 10px;
+bottom: 10px;
 }
 .box-title {
-    font-size: 18px;
+font-size: 18px;
 }
 .box-title-small {
-    padding-bottom: 10px;
-    color: white;
-    font-size: 11px;
+padding-bottom: 10px;
+color: white;
+font-size: 11px;
 }
 .logo-text{
-  position: relative;
-  display: inline-block;
-  top: -24px;
-  left: 0px;
-  font-size: 25px;
-  text-transform: uppercase;
+position: relative;
+display: inline-block;
+top: -24px;
+left: 0px;
+font-size: 25px;
+text-transform: uppercase;
 }
 .social-menu-top {
-    top: 15px;
-    right: %;
-    z-index: 999;
-    position: absolute;
+top: 15px;
+right: %;
+z-index: 999;
+position: absolute;
 } 
 
 .menu-list {
-    float: right;
-    display: inline-block;
-    padding: 10px 10px 10px 20px;
-    margin-right: 0px; 
+float: right;
+display: inline-block;
+padding: 10px 10px 10px 20px;
+margin-right: 0px; 
 }
-    }
-    /* mobile */
-    @media screen and (max-width: 668px) {
+
+}
+/* mobile */
+@media screen and (max-width: 668px) {
 
 .slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
 {
 
-  transform: skewX(0deg);
+transform: skewX(0deg);
 }
-
+.one-blog-sign-title {
+position: absolute;
+top: 12px;
+left: 123px;
+font-size: 26px;
+font-weight: bold;
+display: inline-block;
+}
+.one-video-post-name {
+font-size: 35px;
+font-weight: bold;
+}
+.previous-blog-time-all-blogs{
+width: 100px;
+}
+.top-five-video-width{
+width: 100% !important;
+}
+.all-blog-content-title {
+position: relative;
+top: -40px;
+left: -33px;
+}
 
 .fix-mob-article{
-  margin-left: 0px !important;
+margin-left: 0px !important;
 }
 .box-title-time{
-    margin-left: 10px;
-  }
+margin-left: 10px;
+}
 .box-title-small{
-  margin-left: 10px;
+margin-left: 10px;
 }
 .social-menu-top-header-one {
-    top: -100px;
-    right: 1px;
-    z-index: 999;
-    position: relative;
+top: -100px;
+right: 1px;
+z-index: 999;
+position: relative;
 }
 .social-header-one {
-    position: absolute;
-    top: 35px;
-    float: right;
-    width: 100%;
+position: absolute;
+top: 35px;
+float: right;
+width: 100%;
 }
 .slider-bloger-name {
-    text-align: center;
-    margin-right: 1%;
-    margin-left: 1%;
-    font-size: 10px;
-    
+text-align: center;
+margin-right: 1%;
+margin-left: 1%;
+font-size: 10px;
+
 }
 .slider-bloger-thema-main {
-    margin-top: 5.5px;
-    margin-left: 1%;
-    margin-right: 1%;
-    font-size: 12px;
+margin-top: 5.5px;
+margin-left: 1%;
+margin-right: 1%;
+font-size: 12px;
 }
 .slider-bloger-name-main {
-    margin-top: 3px;
-    text-align: center;
-    margin-right: 1%;
-    margin-left: 2%;
-    font-size: 10px;
+margin-top: 3px;
+text-align: center;
+margin-right: 1%;
+margin-left: 2%;
+font-size: 10px;
 }
 .slider-bloger-thema {
-    margin-top: 8px;
-    margin-left: 1%;
-    margin-right: 1%;
-    color: #9E9E9E;
-    font-weight: bold;
-    font-size: 12px;
+margin-top: 8px;
+margin-left: 1%;
+margin-right: 1%;
+color: #9E9E9E;
+font-weight: bold;
+font-size: 12px;
 }
 .blog-element-tag {
-   
-    position: absolute;
-    background-color: #9E9E9E;
-    padding: 0px;
-    width: 40px;
-    font-size: 10px;
-    right: 0px;
-    top: 1px;
-    z-index: 99;
-    color: white;
+
+position: absolute;
+background-color: #9E9E9E;
+padding: 0px;
+width: 40px;
+font-size: 10px;
+right: 0px;
+top: 1px;
+z-index: 99;
+color: white;
 }
 .small-sign-line {
-    
-    padding-left: 10px;
-    padding-right: 10px;
+
+padding-left: 10px;
+padding-right: 10px;
 }
 .main-article-block {
-       margin-left: 0px;
-   }
- .full-width-mob{
-  padding: 0 !important;
- }
- .second-article-block {
-   margin-top: 10px;
-    margin-left: 0px;
-    
+margin-left: 0px;
+}
+.full-width-mob{
+padding: 0 !important;
+}
+.second-article-block {
+margin-top: 10px;
+margin-left: 0px;
+
 }
 .second-block-with-line {
-    padding-right: 0px;
-    padding-top: 0px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
+padding-right: 0px;
+padding-top: 0px;
+width: 100%;
+display: flex;
+position: relative;
+align-items: center;
 }
 .big-sign-line {
-    font-size: 25px;
-    padding-right: 5px;
-    padding-left: 5px; 
+font-size: 25px;
+padding-right: 5px;
+padding-left: 5px; 
 }
 .news-main-title {
 
-    font-size: 16px;
-    display: inline-block;
+font-size: 16px;
+display: inline-block;
 }
 .previous-blog-box {
-    position: relative;
-    margin-bottom: 5px;
-    padding: 20px;
-    border: 2px solid lightgrey;
+position: relative;
+margin-bottom: 5px;
+padding: 20px;
+border: 2px solid lightgrey;
 }
 .previous-blog-img-width {
-    width: 81px;
+width: 81px;
 }
 .previous-blog-name {
-    position: relative;
-    top: -41px;
-    font-size: 19px;
-    font-weight: bold;
-    left: 11px;
-    display: inline-block;
+position: relative;
+top: -41px;
+font-size: 19px;
+font-weight: bold;
+left: 11px;
+display: inline-block;
 }
 .previous-blog-time {
-    position: relative;
-    width: 75px;
-    right: -96px;
-    top: -40px;
-    left: auto;
+position: relative;
+width: 75px;
+right: -96px;
+top: -40px;
+left: auto;
 }
 .previous-blog-title {
-    position: relative;
-    top: -10px;
-    font-size: 18px;
-    font-weight: bold;
-    padding-bottom: 5px;
+position: relative;
+top: -10px;
+font-size: 18px;
+font-weight: bold;
+padding-bottom: 5px;
 }
 .third-block-with-line {
-    padding-right: 0px;
-    padding-top: 0px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
+padding-right: 0px;
+padding-top: 0px;
+width: 100%;
+display: flex;
+position: relative;
+align-items: center;
 }
 .four-block-with-line {
-    padding-left: 20px;
-    padding-right: 0px;
-    padding-top: 0px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
+padding-left: 20px;
+padding-right: 0px;
+padding-top: 0px;
+width: 100%;
+display: flex;
+position: relative;
+align-items: center;
 }
 .third-article-block {
-   
-    margin-top: 10px;
-    margin-left: 0px;
- 
+
+margin-top: 10px;
+margin-left: 0px;
+
 }
 .five-block-with-line {
-    margin-top: 0px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
+margin-top: 0px;
+width: 100%;
+display: flex;
+position: relative;
+align-items: center;
 }
 .main-news-content-box {
-    height: 350px;
-    margin-top: 10px;
-    overflow: hidden;
-    overflow-y: scroll;
+height: 350px;
+margin-top: 10px;
+overflow: hidden;
+overflow-y: scroll;
 }
 .footer-logo {
-    width: 50%;
-    margin-top: 10px;
-    margin-left: 0px;
-    float: inherit; 
-    padding-right: 0px;
+width: 50%;
+margin-top: 10px;
+margin-left: 0px;
+float: inherit; 
+padding-right: 0px;
 }
 .footer-menu {
-    text-align: center;
-    margin-left: 0px;
-    margin-top: 33px;
-    font-size: 20px;
+text-align: center;
+margin-left: 0px;
+margin-top: 33px;
+font-size: 20px;
 }
 .social-menu-footer {
-    text-align: center;
-    padding-top: 15px;
-    margin-left: 0px; 
+text-align: center;
+padding-top: 15px;
+margin-left: 0px; 
 }
 .social-text-footer {
-    margin-top: 10px;
-    margin-left: 0px; 
-    color: white;
-    padding-bottom: 20px;
-    text-align: justify;
+margin-top: 10px;
+margin-left: 0px; 
+color: white;
+padding-bottom: 20px;
+text-align: justify;
 }
 .madeby {
-    position: absolute;
-    font-size: 18px;
-    color: white;
-    bottom: 0px;
-    padding-top: 0px;
-    
-    text-align: center;
+position: absolute;
+font-size: 18px;
+color: white;
+bottom: 0px;
+padding-top: 0px;
+
+text-align: center;
 }
 .footer-about {
-    padding-top: 0px;
-    color: white;
-    text-align: justify;
+padding-top: 0px;
+color: white;
+text-align: justify;
 }
 
-      .box-title {
-        margin-left: 10px;
-    padding-bottom: 10px;
-    font-size: 20px;
-    color: white;
+.box-title {
+margin-left: 10px;
+padding-bottom: 10px;
+font-size: 20px;
+color: white;
 }
 
 .social-menu-top{
-  margin-top: 5px;
+margin-top: 5px;
 }
 
 
 
-      .content-box {
-    padding-left: 10px;
-    top: 19%;
-    width: 100%;
+.content-box {
+padding-left: 10px;
+top: 19%;
+width: 100%;
 }
-      .video-container{
-        margin-top: 30px;
-      }
+.content-box-all-video {
+position: relative;
+padding-left: 10px;
+bottom: 130px;
+width: 100%;
+}
 
-      .right-block-video{
-        max-width: 100%;    
-      }
-      .right-block-second{
-        max-width: 100%;  
-        max-height: 180px;  
-      }
-      .social-menu-bottom {
-    bottom: 8%;
-    position: absolute;
-    right: 5%;
-    z-index: 55;
+.video-container{
+margin-top: 30px;
+}
+
+.right-block-video{
+max-width: 100%;    
+}
+.right-block-second{
+max-width: 100%;  
+max-height: 180px;  
+}
+.social-menu-bottom {
+bottom: 8%;
+position: absolute;
+right: 5%;
+z-index: 55;
+}
+.social-menu-bottom-all-video {
+bottom: 20px;
+position: absolute;
+right: 5%;
+z-index: 55;
 }
 
 .header-logo {
-    width: 70px;
+width: 70px;
 }
 
 .second-slider-box-title {
-    font-size: 50px;
+font-size: 50px;
 }
 
 .second-slider-box-title-small{
-    font-size: 40px;
+font-size: 40px;
 }
 
 .second-slider-content{
-  bottom: -20%;
+bottom: -20%;
 }
 .sign-line-korespond{
-  font-size: 15px;
+font-size: 15px;
 }
 
 .button-share{
-  font-size: 17px;
+font-size: 17px;
 }
-    } 
-  </style>
+.previous-blog-name-all-blogs{
+font-size: 20px;
+}
+} 
+</style>
 
 </head>
 <body>
 <!--SideNav Structure-->
-  <ul id="slide-out" class="side-nav">
-    <?php
-      if (is_user_logged_in() ) {
-    ?>
-        <li>
-          <div class="userView black-text center">
-            <div class="if-not-login">
-              <div class="center">
-                <?php global $current_user;  get_currentuserinfo(); echo get_avatar( $current_user->user_email, '96' );  ?>
-              </div>
-              <?php
-                if ($current_user->user_firstname) {
-                  echo '
-                    <a href="#!name">
-                      <span class="black-text name">' .
-                        $current_user->user_firstname . ' ' . $current_user->user_lastname .'
-                      </span>
-                    </a>
-                  ';
-                }
-                if ($current_user->user_email) {
-                  echo '
-                    <a href="#!email">
-                      <span class="black-text email">' .
-                        $current_user->user_email . '
-                      </span>
-                    </a>';
-                }
+<ul id="slide-out" class="side-nav">
+<?php
+if (is_user_logged_in() ) {
+?>
+<li>
+<div class="userView black-text center">
+<div class="if-not-login">
+<div class="center">
+  <?php global $current_user;  get_currentuserinfo(); echo get_avatar( $current_user->user_email, '96' );  ?>
+</div>
+<?php
+  if ($current_user->user_firstname) {
+    echo '
+      <a href="#!name">
+        <span class="black-text name">' .
+          $current_user->user_firstname . ' ' . $current_user->user_lastname .'
+        </span>
+      </a>
+    ';
+  }
+  if ($current_user->user_email) {
+    echo '
+      <a href="#!email">
+        <span class="black-text email">' .
+          $current_user->user_email . '
+        </span>
+      </a>';
+  }
 
-                global $user_ID;
-                if( $user_ID ) :
-                  if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
-                  <div> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
-              <?php
-                  else :
-                  endif;
-                endif;
-              ?>
-              <a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
-            </div>
-          </div>
-        </li>
-    <?php
-      }
-    ?>
-   
-    <li><a href="<?php echo get_home_url(); ?>">Головна</a></li>
-    <li><a href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
-    <li><a href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
-    <li><a href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
-    <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
-  </ul>
-  <!-- end SideNav Structure-->
+  global $user_ID;
+  if( $user_ID ) :
+    if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
+    <div> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
+<?php
+    else :
+    endif;
+  endif;
+?>
+<a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
+</div>
+</div>
+</li>
+<?php
+}
+?>
 
-  
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-   <!-- Modal Structure -->
+<li><a href="<?php echo get_home_url(); ?>">Головна</a></li>
+<li><a href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
+<li><a href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
+<li><a href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
+<li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
+</ul>
+<!-- end SideNav Structure-->
 
 
-
-  <div id="modal2" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-    </div>
-  </div>
-  <!-- Modal Structure -->
-
-
-	<div class="header">
-
-	<div class="social-menu-top hide-on-large-only">
-  <div class="menu-list"><a href="#" data-activates="slide-out" class="button-collapse"><img class="social-logo-head" src="<?php bloginfo('template_url') ?>/img/menu-head.svg" alt="Логотип"></a></div>
-				<div class="menu-list"><a href="#modal1"   > <img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип"></a></div>
-				<div class="menu-list"><a href="#modal2"><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
-
-
-			</div>
-		<nav>
-			<div class="nav-shadow">
-				<a href="#"><img class="header-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
-				<div class="logo-text hide-on-small-only hover-link">центральне медіа</div>
-				<ul id="nav-mobile" class="hide-on-med-and-down">
-					<li><a class="hover-link" href="#">ВІДЕО</a></li>
-					<li><a class="hover-link" href="#">СТАТТІ</a></li>
-					<li><a class="hover-link" href="#">БЛОГИ</a></li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-
-	<div class="row home-content">
-		<div id="disable-mat-padding" class="col l9 s12 left-block">
-			<div class="left-block-content">
-				<div class="button-position  hide-on-small-only">
-					<a href="#" ><img class="play-button button-hover center" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-				</div>
-				<div class="content-box">
-					<div class="title-tag"><a href="#">Політика</a></div>
-					<div class="box-title hover-link">Під Києвом сплюндрували Биковнянський меморіал</div>
-					<div class="box-title-small hover-link">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</div>
-					<div class="box-title-time hover-link">28.06.2016</div>
-				</div>
-				<div class="social-menu-bottom hide-on-large-only ">
-					<div class="menu-list"><a href="#" ><img  class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
-					</div>
-
-					<div class="menu-list"><a href="#"><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
-					</div>
-
-					<div class="menu-list"><a href="#" ><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-
-		<div class="col l3 s12 right-block hide-on-med-and-down">
-			<div class="social-menu-top ">
-				<div class="menu-list"><a href="#modal1" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип"></a></div>
-				<div class="menu-list"><a href="#modal2"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
-			</div>
-			<div class="video-container">
-
-
-				<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
-
-				<div class="right-block-second ">
-					<div class="right-block-second-tag ">
-						<a href="#">АТО</a>
-					</div>
-					<div class="right-block-second-sign hover-link">
-						Під Києвом сплюндрували Биковнянський меморіал
-					</div>
-				</div>
+<div id="modal1" class="modal">
+<div class="modal-content">
+<h4>Modal Header</h4>
+<p>A bunch of text</p>
+</div>
+<div class="modal-footer">
+<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+</div>
+</div>
+<!-- Modal Structure -->
 
 
 
-				<div class="social-menu-bottom hide-on-med-and-down">
-					<div class="menu-list"><a href="#" ><img  class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
-					</div>
+<div id="modal2" class="modal modal-fixed-footer">
+<div class="modal-content">
+<h4>Modal Header</h4>
+<p>A bunch of text</p>
+</div>
+<div class="modal-footer">
+<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+</div>
+</div>
+<!-- Modal Structure -->
 
-					<div class="menu-list"><a href="#" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
-					</div>
 
-					<div class="menu-list"><a href="#"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<section class="center slider">
-	<div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-      <div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-    <div class="slider-box slider-box-remake-main">
-      <div class="slider-element">
-      <div class="blog-element-tag">ТОП БЛОГ</div>
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name-main">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema-main">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-      <div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-      <div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-      <div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-      <div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-      <div class="slider-box slider-box-remake">
-      <div class="slider-element">
-      		<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-      	<div class="">
-      	<div class="slider-bloger-name">Олег Стефанюк</div>
-      	<div class="slider-bloger-thema">Під Києвом сплюндрували Биковнянський меморіал</div>
-      	</div>
-      </div>
-    </div>
-  </section>
- <script>
- if(window.matchMedia('(max-width: 768px)').matches)
+
+<script>
+if(window.matchMedia('(max-width: 768px)').matches)
 {
 
-	 $(document).on('ready', function() {
-      
-      $(".center").slick({
-        dots: false,
-        infinite: true,
-        centerMode: false,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      });
-     
-    });
-    }
-else{
-    $(document).on('ready', function() {
-      
-      $(".center").slick({
-        dots: false,
-        infinite: true,
-        centerMode: false,
-        slidesToShow: 5,
-        slidesToScroll: 2
-      });
-     
-    });
-}
-  </script>
+$(document).on('ready', function() {
 
-  <script>
-  	
-  	
-  </script>
+$(".center").slick({
+dots: false,
+infinite: true,
+centerMode: false,
+slidesToShow: 3,
+slidesToScroll: 1
+});
+
+});
+}
+else{
+$(document).on('ready', function() {
+
+$(".center").slick({
+dots: false,
+infinite: true,
+centerMode: false,
+slidesToShow: 5,
+slidesToScroll: 2
+});
+
+});
+}
+</script>
+
+<script>
+
+
+</script>

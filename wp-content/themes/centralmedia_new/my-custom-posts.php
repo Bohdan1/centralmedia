@@ -207,7 +207,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'comments', 'revisions' ), // 'author',
+            'supports' => array( 'title', 'thumbnail', 'revisions' ), // 'author', 'comments',
             'taxonomies' => array( 'post_tag' ),
             'has_archive' => true,
             'rewrite' => true,
