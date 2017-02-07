@@ -505,18 +505,20 @@ function show_popular_video() {
             protected function comment( $comment, $depth, $args ) { //разметка каждого комментария, без закрывающего </li>!
                 $classes = implode(' ', get_comment_class()).( $comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : '' ); //берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
                 echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n"; //родительский тэг комментария с классами выше и уникальным якорным id
+                echo '<div class="header-comment"><div class="header-comment"><div class="media-left">'.get_avatar( $comment, 64, '', get_comment_author(), array('class' => 'media-object') )."</div>\n"; //покажем аватар с размером 64х64
                 echo '<div class="media-body">';
                  
                 //echo ' '.get_comment_author_email(); //email автора коммента, плохой тон выводить почту
                 echo ' '.get_comment_author_url(); //url автора коммента
-                echo ' Добавлено: '.get_comment_date('F j, Y в H:i')."\n"; //дата и время комментирования
+               
                 echo '<br><div class="meta media-heading ">Автор: '.get_comment_author()."\n";//имя автора коммента
                 if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш коментар буде опублікований після провірки модератором.</em>'."\n"; //если комментарий должен пройти проверку
-                echo "</div>";
+                 echo ' <br>Добавлено: '.get_comment_date('F j, Y в H:i')."\n"; //дата и время комментирования
+                echo '</div> </div> ';
                 
                
                 echo '</div>'."\n"; //закрываем див
-                echo '<div class="media-left">'.get_avatar( $comment, 64, '', get_comment_author(), array('class' => 'media-object') )."</div>\n"; //покажем аватар с размером 64х64
+                
                 comment_text()."\n"; //текст коммента
                  $reply_link_args = array( //опции ссылки "ответить"
                     'depth' => $depth, //текущая вложенность

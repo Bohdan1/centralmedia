@@ -8,16 +8,6 @@ Version: 1.0
 */
 
 
-/* font-family: "DroidSansRegular"; */
-@font-face {
-    font-family: "DroidSansRegular";
-    src: url("/wp-content/themes/centralmedia_old/fonts/DroidSansRegular/DroidSansRegular.eot");
-    src: url("/wp-content/themes/centralmedia_old/fonts/DroidSansRegular/DroidSansRegular.eot?#iefix")format("embedded-opentype"),
-    url("/wp-content/themes/centralmedia_old/fonts/DroidSansRegular/DroidSansRegular.woff") format("woff"),
-    url("/wp-content/themes/centralmedia_old/fonts/DroidSansRegular/DroidSansRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
 .header-height{
     height: 65px;
 }

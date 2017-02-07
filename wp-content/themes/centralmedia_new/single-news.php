@@ -67,7 +67,7 @@
         <div class="block-line"></div>
     </div>
 </div>
-<div  class="comment-block">
+<div class="comment-block">
     <?php
         if ( comments_open() || get_comments_number() ) { 
             comments_template(); 
