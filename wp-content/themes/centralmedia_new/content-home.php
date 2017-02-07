@@ -136,7 +136,7 @@
 						<div class="slider-box slider-box-remake-main">
 					        <div class="slider-element">
 					            <div class="blog-element-tag" class="no-hover-blog">ТОП БЛОГ</div>
-				      			<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="Логотип">
+				      			<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="Аватар">
 				      			<div class="">
 				      				<div class="slider-bloger-name-main">
 				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
@@ -513,7 +513,7 @@
 									</a>
 								</div>
 								<div class="previous-blog-name ">
-									<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
+									<a href="' . get_the_permalink() . '" class="black-text">' .
 				      					get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
 				      				</a>
 								</div>

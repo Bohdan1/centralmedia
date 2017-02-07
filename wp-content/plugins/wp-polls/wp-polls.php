@@ -463,7 +463,7 @@ function display_pollvote($poll_id, $display_loading = true) {
         // Display Poll Voting Form
         $temp_pollvote .= "<div id=\"polls-$poll_question_id\" class=\"wp-polls\">\n";
         $temp_pollvote .= "\t<form id=\"polls_form_$poll_question_id\" class=\"wp-polls-form\" action=\"".esc_attr($_SERVER['SCRIPT_NAME'])."\" method=\"post\">\n";
-        $temp_pollvote .= "\t\t<p style=\"display: none;\"><input type=\"hidden\" id=\"poll_{$poll_question_id}_nonce\" name=\"wp-polls-nonce\" value=\"".wp_create_nonce('poll_'.$poll_question_id.'-nonce')."\" /></p>\n";
+        $temp_pollvote .= "\t\t<span style=\"display: none;\"><input type=\"hidden\" id=\"poll_{$poll_question_id}_nonce\" name=\"wp-polls-nonce\" value=\"".wp_create_nonce('poll_'.$poll_question_id.'-nonce')."\" /></span>\n";
         $temp_pollvote .= "\t\t<p style=\"display: none;\"><input type=\"hidden\" name=\"poll_id\" value=\"$poll_question_id\" /></p>\n";
         if($poll_multiple_ans > 0) {
             $temp_pollvote .= "\t\t<p style=\"display: none;\"><input type=\"hidden\" id=\"poll_multiple_ans_$poll_question_id\" name=\"poll_multiple_ans_$poll_question_id\" value=\"$poll_multiple_ans\" /></p>\n";
@@ -1600,7 +1600,7 @@ function polls_page_admin_general_stats($content) {
 function polls_page_general_stats($content) {
     $stats_display = get_option('stats_display');
     if($stats_display['polls'] == 1) {
-        $content .= '<p><strong>'.__('WP-Polls', 'wp-polls').'</strong></p>'."\n";
+        $content .= '<p class="polls-title">'.__('WP-Polls', 'wp-polls').'</p>'."\n";
         $content .= '<ul>'."\n";
         $content .= '<li>'.sprintf(_n('<strong>%s</strong> poll was created.', '<strong>%s</strong> polls were created.', get_pollquestions(false), 'wp-polls'), number_format_i18n(get_pollquestions(false))).'</li>'."\n";
         $content .= '<li>'.sprintf(_n('<strong>%s</strong> polls\' answer was given.', '<strong>%s</strong> polls\' answers were given.', get_pollanswers(false), 'wp-polls'), number_format_i18n(get_pollanswers(false))).'</li>'."\n";
