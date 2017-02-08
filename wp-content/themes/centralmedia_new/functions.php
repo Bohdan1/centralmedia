@@ -8,7 +8,7 @@ function register_styles() { // adds files with styles
 	wp_enqueue_style( 'font-awesome.min', get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
 	wp_enqueue_style( 'media', get_template_directory_uri() . '/css/media.css' );
-wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
+    wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
 }
 add_action( 'wp_enqueue_scripts', 'register_styles' );
 
@@ -21,10 +21,7 @@ function register_scripts() { // adds files with script
 	wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
 	wp_enqueue_script( 'jssor.slider-22.1.9.min', get_template_directory_uri() . '/js/jssor.slider-22.1.9.min.js');
     wp_enqueue_script( 'jssor.slider-22.2.0.min', get_template_directory_uri() . '/js/jssor.slider-22.2.0.min.js');
-
-
-// https://use.fontawesome.com/d97a6585c2.js
-// wp_enqueue_script( 'ajax-poll', get_template_directory_uri() . '/Ajax_Poll/ajax-poll.php'); - підключається в футері
+    // https://use.fontawesome.com/d97a6585c2.js
 }
 add_action( 'wp_enqueue_scripts', 'register_scripts' );
 
@@ -33,13 +30,24 @@ register_nav_menu( 'menu', 'Меню сайту' ); // addition of the ability t
 register_sidebar();
 
 
-function short_desc_post($charlength) {        //function for display short content for posts
+function short_post_desc( $charlength ) {        //function for display short content for posts
     $excerpt = get_the_excerpt();
     if ( mb_strlen( $excerpt ) > $charlength ) {
         $subex = mb_substr( $excerpt, 0, $charlength );
         echo $subex . '...';
     } else {
-        echo $subex;
+        echo $excerpt;
+    }
+}
+
+function short_post_title( $charlength ) {        //function for display short title for posts
+    $excerpt = get_the_title();
+    $excerpt = trim( $excerpt );
+    if ( mb_strlen( $excerpt ) > $charlength ) {
+        $subex = mb_substr( $excerpt, 0, $charlength );
+        return $subex . '...';
+    } else {
+        return $excerpt;
     }
 }
 
@@ -61,8 +69,8 @@ function custom_post_permalink() {
 //show news on homepage
 function show_news_for_homepage() {
     global $date;
-    if( $date != get_the_time('j F Y') ) {
-        $date = get_the_time('j F Y');
+    if( $date != get_the_time('j F Y l') ) {
+        $date = get_the_time('j F Y l');
         echo '<div class="next-day-news">' .  $date . '</div>';
     }
     echo '
@@ -75,7 +83,7 @@ function show_news_for_homepage() {
                     get_the_time('G:i') . '
                 </div>
                 <a href="'. get_the_permalink() .'" class="black-text">' .
-                    get_the_title() . '
+                   short_post_title(75) . '
                 </a>
             </div>
         </div>';
@@ -83,30 +91,28 @@ function show_news_for_homepage() {
 
 //show popular video on homepage
 function show_popular_video() {
-                            //style="min-height:260px;"
+                                              //style="min-height:260px;"
     echo '
-
         <div class="col l4 s12 m4 video-devider" style="min-height:260px;">
-
             <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="popular-video-block">
-             <div class="mask">
-                <div class="button-position-popular-video-content-box">
-                    <a href="' . get_the_permalink() . '" >
-                        <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип">
-                    </a>
-                </div>
-                <div class="popular-video-description hover-link">
-                <a href="'. get_the_permalink() .'" >' . 
-                    get_the_title() . '
-                </a>
-            </div>
-               
+                <div class="mask">
+                    <div class="button-position-popular-video-content-box">
+                        <a href="' . get_the_permalink() . '" >
+                            <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип">
+                        </a>
+                    </div>
+                    <div class="popular-video-description hover-link">
+                        <a href="'. get_the_permalink() .'" >' . 
+                            short_post_title(75) . '
+                        </a>
+                    </div>
                     <div class="popular-video-content-box">
-                        <div class="popular-video-tag"><a href="#" class="no-hover-blog">Ринок</a></div>
+                        <div class="popular-video-tag">
+                            <a href="#" class="no-hover-blog">Ринок</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>';
 }
 
@@ -508,23 +514,20 @@ function show_popular_video() {
                 $output .= "</ul><!-- .children -->\n";
             }
             protected function comment( $comment, $depth, $args ) { //разметка каждого комментария, без закрывающего </li>!
-                $classes = implode(' ', get_comment_class()).( $comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : '' ); //берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
-                echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n"; //родительский тэг комментария с классами выше и уникальным якорным id
-                echo '<div class="header-comment"><div class="header-comment"><div class="media-left">'.get_avatar( $comment, 64, '', get_comment_author(), array('class' => 'media-object') )."</div>\n"; //покажем аватар с размером 64х64
+                $classes = implode( ' ', get_comment_class() ) . ( $comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : '' ); //берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
+                echo '<li id="comment-' . get_comment_ID() . '" class="' . $classes . ' media">'."\n"; //родительский тэг комментария с классами выше и уникальным якорным id
+                echo '<div class="header-comment"><div class="header-comment"><div class="media-left">' . get_avatar( $comment, 64, '', get_comment_author(), array('class' => 'media-object') ) . "</div>\n"; //покажем аватар с размером 64х64
                 echo '<div class="media-body">';
                  
                 //echo ' '.get_comment_author_email(); //email автора коммента, плохой тон выводить почту
-                echo ' '.get_comment_author_url(); //url автора коммента
+                echo ' ' . get_comment_author_url(); //url автора коммента
                
-                echo '<br><div class="meta media-heading ">Автор: '.get_comment_author()."\n";//имя автора коммента
-                if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш коментар буде опублікований після провірки модератором.</em>'."\n"; //если комментарий должен пройти проверку
-                 echo ' <br>Додано: '.get_comment_date('F j, Y в H:i')."\n"; //дата и время комментирования
-                echo '</div> </div> ';
-                
-               
-                echo '</div>'."\n"; //закрываем див
-                
-                comment_text()."\n"; //текст коммента
+                echo '<br><div class="meta media-heading ">Автор: ' . get_comment_author() . "\n";//имя автора коммента
+                if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш коментар буде опублікований після провірки модератором.</em>' . "\n"; //если комментарий должен пройти проверку
+                 echo ' <br>Додано: ' . get_comment_date('j F Y в H:i') . "\n"; //дата и время комментирования
+                echo '</div> </div>';
+                echo '</div>' . "\n"; //закрываем див
+                comment_text() . "\n"; //текст коммента
                  $reply_link_args = array( //опции ссылки "ответить"
                     'depth' => $depth, //текущая вложенность
                     'reply_text' => 'Відповісти', //текст
@@ -622,10 +625,6 @@ function show_popular_video() {
         $q = new WP_Query($args);
         if( $q->have_posts() ):
             while($q->have_posts()): $q->the_post();
-                /*
-                 * Со строчки 13 по 27 идет HTML шаблон поста, максимально приближенный к теме TwentyTen.
-                 * Для своей темы вы конечно же можете использовать другой код HTML.
-                 */
                 show_news_for_homepage();
             endwhile;
         endif;
@@ -636,4 +635,91 @@ function show_popular_video() {
     add_action('wp_ajax_loadmore', 'true_load_posts');
     add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
 //end get news using ajax
+
+
+//ajax like for posts
+    if( wp_doing_ajax() ) {
+        add_action('wp_ajax_nopriv_post-like', 'post_like');
+        add_action('wp_ajax_post-like', 'post_like');
+    }
+
+    wp_enqueue_script('like_post', get_template_directory_uri().'/js/post-like.js', array('jquery'), '1.0', true );
+    wp_localize_script('like_post', 'ajax_var', array(
+        'url' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('ajax-nonce')
+    ));
+
+    function post_like() {
+        // Check for nonce security
+        $nonce = $_POST['nonce'];
+        if ( ! wp_verify_nonce( $nonce, 'ajax-nonce' ) )
+            die ( 'Busted!' );
+        if( isset( $_POST['post_like'] ) ) {
+            // Retrieve user IP address
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $post_id = $_POST['post_id'];
+            // Get voters'IPs for the current post
+            $meta_IP = get_post_meta( $post_id, "voted_IP" );
+            $voted_IP = $meta_IP[0];
+            if(!is_array( $voted_IP) )
+                $voted_IP = array();
+            // Get votes count for the current post
+            $meta_count = get_post_meta( $post_id, "votes_count", true );
+            // Use has already voted ?
+            if(!hasAlreadyVoted( $post_id) ) {
+                $voted_IP[$ip] = time();
+                // Save IP and increase votes count
+                update_post_meta( $post_id, "voted_IP", $voted_IP );
+                update_post_meta( $post_id, "votes_count", ++$meta_count );
+                // Display count (ie jQuery return value)
+                echo $meta_count;
+            }
+            else
+                echo "already";
+        }
+        exit;
+    }
+
+    function hasAlreadyVoted( $post_id ) {
+        global $timebeforerevote;
+        $timebeforerevote = 0; // = 2 hours - через скільки користувач зможе проголосувати ще раз
+        
+        // Retrieve post votes IPs
+        $meta_IP = get_post_meta( $post_id, "voted_IP" );
+        $voted_IP = $meta_IP[0];
+        if(!is_array($voted_IP))
+            $voted_IP = array();
+        // Retrieve current user IP
+        $ip = $_SERVER['REMOTE_ADDR'];
+        // If user has already voted
+        if( in_array( $ip, array_keys( $voted_IP ) ) ) {
+            $time = $voted_IP[$ip];
+            $now = time();
+            // Compare between current time and vote time
+            if( round( ($now - $time) / 60 ) > $timebeforerevote )
+                return false;
+            return true;
+        }
+        return false;
+    }
+
+    function getPostLikeLink( $post_id ) {
+        $vote_count = get_post_meta( $post_id, "votes_count", true );
+        if( $vote_count == '' ) {
+            $vote_count = 0;
+        }
+        $output = '<p class="post-like">';
+        if( hasAlreadyVoted( $post_id ) ) {
+            $output .= ' <span title="Ви вже проголосували" class="like alreadyvoted">Ви вже проголосували </span>';
+        }
+        else {
+            $output .=
+                '<a href="#" data-post_id="'.$post_id.'" class="black-text">
+                    <span title="Подобається"class="qtip like">Подобається</span>
+                </a>';
+            }
+        $output .= '<span class="likes-count">(Всього '.$vote_count.' вподобань)</span></p>';
+        return $output;
+    }
+//end ajax like for posts
 ?>

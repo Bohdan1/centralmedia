@@ -68,7 +68,7 @@
 									</a>
 									<div class="state-other-text">
 										<?php
-											short_desc_post(120);	// display short content (120 symbols)
+											short_post_desc(120);	// display short content (120 symbols)
 										?>
 									</div>
 								</div>

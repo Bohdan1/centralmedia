@@ -98,9 +98,9 @@
 				      					</a>
 				      				</div>
 				      				<div class="slider-bloger-thema-main">
-				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">';
-				      						short_desc_post(60);
-				      					echo '</a>
+				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
+											short_post_title(60) . '
+										</a>
 				      				</div>
 				      			</div>
 					        </div>
@@ -119,15 +119,14 @@
 										</a>
 									</div>
 									<div class="slider-bloger-thema">
-										<a href="' . get_the_permalink() . '" class="black-text">';
-											short_desc_post(60);
-										echo '</a>
+										<a href="' . get_the_permalink() . '" class="black-text">' .
+											short_post_title(60) . '
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>';
 				}
-
 			} //end while
 		} //end if
 		else {
@@ -233,11 +232,11 @@
 											<a href="#" class="no-hover-blog">Родина</a>
 										</div>
 										<div class="box-title fix-mob-article ">
-											<a href="' . get_the_permalink() .'">' . get_the_title() . '</a>
+											<a href="' . get_the_permalink() .'">' . short_post_title(75) . '</a>
 										</div>
 										<div class="box-title-small fix-mob-article ">
 											<a href="' . get_the_permalink() .'">';
-												echo short_desc_post(90) . '
+												echo short_post_desc(90) . '
 											</a>
 										</div>
 										<div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
@@ -459,7 +458,6 @@
 				while ( $query->have_posts() ) {
 					$query->the_post();
 					$author_id = get_the_author_meta( 'ID' );
-
 					echo '
 						<div class="col l4 s12 m6">
 							<div class="previous-blog-box">
@@ -480,7 +478,7 @@
 								<div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
 								<div class="previous-blog-title ">
 									<a href="' . get_the_permalink() . '" class="black-text">' .
-										get_the_title() .'
+										short_post_title(55) . '
 									</a>
 								</div>
 								<div class="previous-blog-tag">

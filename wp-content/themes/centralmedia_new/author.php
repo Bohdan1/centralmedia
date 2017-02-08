@@ -111,7 +111,7 @@
 			<div class="top10-same-blogger-states-list-text">
 				
 					<?php
-						short_desc_post(100);		// display short content (100 symbols)
+						short_post_desc(100);		// display short content (100 symbols)
 					?>
 				
 			</div>

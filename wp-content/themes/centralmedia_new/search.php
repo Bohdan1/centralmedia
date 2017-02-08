@@ -48,7 +48,7 @@
 								</div>
 								<a href="<?php the_permalink(); ?>">
 									<p>
-										<?php short_desc_post(350); ?>
+										<?php short_post_desc(350); ?>
 									</p>
 								</a>
 							</div>

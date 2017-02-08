@@ -1,0 +1,500 @@
+# Translation of Plugins - Rating System - Stable Readme (latest release) in Ukrainian
+# This file is distributed under the same license as the Plugins - Rating System - Stable Readme (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-01-29 11:08:25+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Plugins - Rating System - Stable Readme (latest release)\n"
+
+#. Short description.
+msgid "The simple way to add like and dislike buttons for your posts, pages, comments and custom post type."
+msgstr ""
+
+#. Name.
+msgid "Rating System"
+msgstr "Система рейтингу"
+
+#. Screenshot description.
+msgid "Translation"
+msgstr "Переклад"
+
+#. Screenshot description.
+msgid "Documentation"
+msgstr "Документація"
+
+#. Found in description list item.
+msgid "Anonymous voting tracked by IP address &amp; cookie. &#10004;"
+msgstr "Анонімне голосування відслідковуватиметься за IP адресою &amp; cookie. &#10004;"
+
+#. Found in description list item.
+msgid "<a href=\"https://github.com/AlexAlexandru/rating-system\">Github</a>"
+msgstr "<a href=\"https://github.com/AlexAlexandru/rating-system\">Github</a>"
+
+#. Found in description header.
+msgid "Shortcode parameters for [rating-system-top-posts]:"
+msgstr "Параметри шорткоду для [rating-system-top-posts]:"
+
+#. Screenshot description.
+msgid "Shortcodes"
+msgstr "Короткі коди"
+
+#. Screenshot description.
+msgid "Edit box for likes &amp; dislike"
+msgstr "Вікно редагування для лайків &amp; дизлайків"
+
+#. Found in faq paragraph.
+msgid "<strong>For WordPress post, pages, bbPress  and buddyPress use [rating-system-posts] or [rating-system-posts-disable-dislike].</strong>"
+msgstr "<strong>Для WordPress post, pages, bbPress і BuddyPress використовується [rating-system-posts] або [rating-system-posts-disable-dislike]</strong>"
+
+#. Found in faq paragraph.
+msgid "<strong>Answer:</strong> Yes."
+msgstr "<strong>Відповідь:</strong> Так."
+
+#. Found in faq paragraph.
+msgid "<strong>Question: Can I disable the dislike button?</strong>"
+msgstr "<strong>Питання: Чи можу я відключити кнопку не подобається?</strong>"
+
+#. Found in faq paragraph.
+msgid "<strong>Answer:</strong> Yes.You will have to check Custom post type single or index from the plugin option panel(Display buttons on:)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "<strong>Question: Can I add like or dislike to WooCommerce products?</strong>"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "<strong>Answer:</strong> Yes.You will have to turn on bbPress support from the plugin option panel and on Display buttons on: check Custom post type single.(check the screenshots tab to see our plugin in action)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "<strong>Question: Does this plugin support bbPress?</strong>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Choose the zip and upload"
+msgstr ""
+
+#. Found in installation list item.
+msgid "After you download the plugin go to Plugins -&gt; Add New -&gt; Upload Plugin"
+msgstr ""
+
+#. Found in description header.
+msgid "<strong>Translation</strong>"
+msgstr ""
+
+#. Found in description header.
+msgid "<strong>How to use</strong>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Avaible in Arabic.Translation provided by <a href=\"https://www.dev-ide.net/wordpress/plugins/plugin-rating-system-for-wordpress.html\">dev-ide.net</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Display top 10 posts from multiple categories with content and no counter: [rating-system-top-posts display_counter=\"no\" display_content=\"yes\" number=\"10\" category_slugs=\"cats,dogs,planes\"]"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Display top 10 posts from multiple categories: [rating-system-top-posts number=\"10\" category_slugs=\"cats,dogs,planes\"]"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Display top 5 posts from category with slug cats: [rating-system-top-posts number=\"5\" category_slugs=\"cats\"]"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Display top 5 posts without link to original post: [rating-system-top-posts number=\"5\" link_to_post=\"no\"]"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Display top 5 posts: [rating-system-top-posts number=\"5\"]"
+msgstr ""
+
+#. Found in description header.
+msgid "Example:"
+msgstr "Приклад:"
+
+#. Found in description paragraph.
+msgid "category_slugs = only display posts from certain categories (type categories slugs here)(default empty)"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "link_to_post = make the title of the post a link to original post (type yes or no)(default yes)"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "display_content = display the content for each post (type yes or no)(default no)"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "display_counter = display the number of likes after the title (type yes or no)(default yes)"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "number = the number of posts to be dislayed (type a number here)(default 5)"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Use [rating-system-top-posts] to display all posts ordered by their likes."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Use [rating-system-comments-disable-dislike] to show only the like button for commens (USE ONLY FOR STANDARD WORDPRESS COMMENTS)."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Use [rating-system-comments] to show like &amp; dislike for comments (USE ONLY FOR STANDARD WORDPRESS COMMENTS)."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Use [rating-system-posts-disable-dislike counter=\"yes\"] to show only the like button for a page, post,bbPress,buddyPress etc (DO NOT USE FOR COMMENTS)."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Use [rating-system-posts counter=\"yes\"] to show  like &amp; dislike for a page, post,bbPress,buddyPress etc (DO NOT USE FOR COMMENTS)."
+msgstr ""
+
+#. Found in description list item.
+msgid "If you like this plugin consider making a <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=VVGFFVJSFVZ7S\">donation</a> or Rate us &#9733;&#9733;&#9733;&#9733;&#9733;"
+msgstr ""
+
+#. Found in description list item.
+msgid "If you finds bugs or need support go to the support tab."
+msgstr ""
+
+#. Found in description list item.
+msgid "Check the screenshots tab we have a lot of cool features."
+msgstr ""
+
+#. Found in description list item.
+msgid "Shortcode [rating-system-posts-disable-dislike](Displays only the like button, the above also applies here). &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Shortcode [rating-system-posts](You must have turned on like or dislike for posts and pages and if you want you can disable display buttons on). &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Free Widget to show your most liked posts. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Option to disable the dislike button. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "No external connections to another server. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "No ads. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "No backlink. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Support for posts, pages, comments. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Integration with MyCred. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Support for buddyPress. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Support for Epoch. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Support for bbPress. &#10004;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Support for custom post type(WooCommerce etc). &#10004;"
+msgstr ""
+
+#. Screenshot description.
+msgid "WooCommerce support"
+msgstr ""
+
+#. Screenshot description.
+msgid "bbPress support"
+msgstr ""
+
+#. Screenshot description.
+msgid "Likes and dislike buttons and the widget on the wordpress site"
+msgstr ""
+
+#. Screenshot description.
+msgid "Custom columns in 'All posts' with likes and dislikes for each post"
+msgstr ""
+
+#. Screenshot description.
+msgid "Comment buttons"
+msgstr ""
+
+#. Screenshot description.
+msgid "Most liked posts widget"
+msgstr ""
+
+#. Screenshot description.
+msgid "Settings for posts-pages"
+msgstr ""
+
+#. Screenshot description.
+msgid "Settings for comments"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed mirror bugs."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed fatal error on some case sensitive hosts."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed some options."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed ReduxFramework."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed custom text when voting."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed ip and cookie tracking."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed comments rating errors."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed the statistics dashbord widget."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Replaced the text in columns with icons."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed comments not being sorted by the number of likes.(Thanks to Steven Kohlmeyer)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed javascript files didn't load in rare cases."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed fatal error on activating the plugin."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added counter args to shortcodes for posts &amp; pages."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added box for easy editing individual likes &amp; dislikes."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added message to let the user know that he has to be logged in to vote."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added documentation in plugin."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added support for cookie tracking."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "First release."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Wordpress 4.1 compatibility"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix wrong text being displayed when Redux Framework is being required"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added plugin icon"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix option panel not working"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix posts being added to widget area above the limit of the widget display"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix posts being added to widget area with 0 likes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix upload"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix options panel not working.Huge thanks to <a href=\"https://wordpress.org/support/profile/azzepis\">AzzePis</a> for letting me test on his/her website."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix widgets not working after 1.5 update."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added option to exclude sticky posts from most liked widget."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix rendering on password protected posts."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed .temp file."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed error handling from fatal error to warning."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated the .pot file."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix translation not working."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix buttons not showing.Huge thanks to <a href=\"https://profiles.wordpress.org/gkarapalidis\">gkarapalidis </a> for letting me test on his website."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix options from posts affected by options from comments."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix undefined variable."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Minor performance improvement."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved mobile experience."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix english typos."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix unable to save settings.Huge thanks to <a href=\"https://wordpress.org/support/profile/aekae\">aekae</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added the shortcode [rating-system](You must have turned on like or dislike for posts and pages)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix fatal error."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added a way to disable the like button from function."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix error when voting."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Epoch Support.(Settings for comments -&gt; Enable Epoch Support)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added auto delete post at a given number of dislikes."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved Epoch support."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added buddyPress activity support."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved bbPress support."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added MyCred integration."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed fatal error on PHP 5.3."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved myCred integration."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added shortcode for comments."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed fatal error on PHP 5.2.4."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Arabic translation provided by <a href=\"https://www.dev-ide.net/wordpress/plugins/plugin-rating-system-for-wordpress.html\">dev-ide.net</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added [rating-system-top-posts]."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added [rating-system-comments-disable-dislike] to show only the like button for comments."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added [rating-system-posts-disable-dislike] to show only the like button."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed [rating-system-comments] shortcode only showing the like button."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed [rating-system-posts] shortcode only showing the like button."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed Custom text being displayed when cancelling vote."
+msgstr ""
