@@ -1,26 +1,6 @@
 <?php get_header(); ?>
 <!-- second block home page -->
-<div class="header">
 
-<div class="social-menu-top hide-on-large-only">
-<div class="menu-list"><a href="#" data-activates="slide-out" class="button-collapse"><img class="social-logo-head" src="<?php bloginfo('template_url') ?>/img/menu-head.svg" alt="Логотип"></a></div>
-<div class="menu-list"><a href="#modal1"   > <img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип"></a></div>
-<div class="menu-list"><a href="#modal2"><img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
-
-
-</div>
-<nav>
-<div class="nav-shadow">
-<a href="#"><img class="header-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
-<div class="logo-text hide-on-small-only "><a href="#">центральне медіа</a></div>
-<ul id="nav-mobile" class="hide-on-med-and-down">
-<li><a class="" href="#">ВІДЕО</a></li>
-<li><a class="" href="#">СТАТТІ</a></li>
-<li><a class="" href="#">БЛОГИ</a></li>
-</ul>
-</div>
-</nav>
-</div>
 
 <div class="row home-content">
 <div id="disable-mat-padding" class="col l9 s12 left-block">

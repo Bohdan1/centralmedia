@@ -1,6 +1,6 @@
-<?php get_header("second"); ?>
+<?php get_header(); ?>
 
-
+<div class="header-margin-blog">
 <div class="row">
     <div class="col l9 s12 m6">
         <div class="one-video-post">
@@ -75,6 +75,7 @@
         </div> 
 
     </div>
+</div>
 </div>
 
 <div style="margin-bottom: 0px;" class="row">

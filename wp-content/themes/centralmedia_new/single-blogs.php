@@ -1,5 +1,5 @@
-<?php get_header("second"); ?>
-
+<?php get_header(); ?>
+<div class="header-margin-blog">
 
 <div class="row">
     <div class="col l8 s12 m8">
@@ -86,6 +86,7 @@
         </div>
 
     </div>
+</div>
 </div>
 
 <div style="margin-bottom: 0px;" class="row">

@@ -20,6 +20,7 @@ function register_scripts() { // adds files with script
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.js');
 	wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
 	wp_enqueue_script( 'jssor.slider-22.1.9.min', get_template_directory_uri() . '/js/jssor.slider-22.1.9.min.js');
+    wp_enqueue_script( 'jssor.slider-22.2.0.min', get_template_directory_uri() . '/js/jssor.slider-22.2.0.min.js');
 
 
 // https://use.fontawesome.com/d97a6585c2.js
@@ -84,24 +85,28 @@ function show_news_for_homepage() {
 function show_popular_video() {
                             //style="min-height:260px;"
     echo '
-        <div class="col l4 s12 m4" style="min-height:260px;">
+
+        <div class="col l4 s12 m4 video-devider" style="min-height:260px;">
+
             <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="popular-video-block">
+             <div class="mask">
                 <div class="button-position-popular-video-content-box">
                     <a href="' . get_the_permalink() . '" >
                         <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип">
                     </a>
                 </div>
-                <div class="mask">
-                    <div class="popular-video-content-box">
-                        <div class="popular-video-tag"><a href="#">Ринок</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="popular-video-description hover-link">
-                <a href="'. get_the_permalink() .'" class="black-text">' . 
+                <div class="popular-video-description hover-link">
+                <a href="'. get_the_permalink() .'" >' . 
                     get_the_title() . '
                 </a>
             </div>
+               
+                    <div class="popular-video-content-box">
+                        <div class="popular-video-tag"><a href="#" class="no-hover-blog">Ринок</a></div>
+                    </div>
+                </div>
+            </div>
+            
         </div>';
 }
 
@@ -189,9 +194,9 @@ function show_popular_video() {
 //login form settings
     function author_log() {
         if ( !is_user_logged_in() ): ?>
-        <div id="modal1" class="modal">
+        <div id="modal-login" class="modal">
             <div class="modal-content">
-                <h4 class="center ">Авторизація</h4>
+                <h4 class=" ">Авторизація</h4>
                 <a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
                     <i class="material-icons">&#xE14C;</i>
                 </a>
@@ -199,14 +204,14 @@ function show_popular_video() {
                         $Path=$_SERVER['REQUEST_URI'];
                         $current_page= get_home_url() . $Path;
                 ?>
-                <form class="login-form center" name="form" action="<?php echo wp_login_url( $current_page ); ?>" method="post">
+                <form class="login-form " name="form" action="<?php echo wp_login_url( $current_page ); ?>" method="post">
                     <div>
                         <input type="text" name="log" value="<?php echo wp_specialchars( stripslashes( $user_login ), 1 ) ?>" id="login" placeholder="Логін" required/>
                         <input type="password" name="pwd" id="password" placeholder="Пароль" required/>
                         <button type="submit" id="submit" name="submit" class="waves-effect  waves-red btn-flat"><span class="enter-button-styles">Вхід</span></button>
-                        <a href="<?php bloginfo('url') ?>/registration.php" class="waves-effect center  waves-red btn-flat">Зареєструватися</a>
+                        <a href="<?php bloginfo('url') ?>/registration.php" class="waves-effect black-text  waves-red btn-flat">Зареєструватися</a>
                         <div>
-                            <a href="<?php bloginfo('url') ?>/wp-login.php?action=lostpassword" id="forgot" class="waves-effect waves-red btn-flat">Забули пароль?</a>
+                            <a href="<?php bloginfo('url') ?>/wp-login.php?action=lostpassword" id="forgot" class="  black-text waves-effect waves-red btn-flat">Забули пароль?</a>
                         </div>
                     </div>
                 </form>
@@ -214,10 +219,10 @@ function show_popular_video() {
             </div>
         </div>
     <? else: ?>
-    <div id="modal1" class="modal">
+    <div id="modal-login" class="modal">
         <div class="modal-content">
-            <a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
-                <i class="material-icons">&#xE14C;</i>
+            <a href="#!" class="modal-action modal-close waves-effect  waves-red accent-4 btn-flat black-text">
+                <i class="material-icons black-text">&#xE14C;</i>
             </a>
             <div id="popup_name" class="popup_block">
                 <div id="loginForm" action="" method="post">
@@ -251,9 +256,9 @@ function show_popular_video() {
                                 ?>
                             </div>
                         </div>
-                        <div class="center logged-user-tools-padding">
-                            <span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </span>
-                            <span class="looged-user-tools"> <a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a> </span>
+                        <div class=" logged-user-tools-padding">
+                            <span class="looged-user-tool"> <a class="black-text" href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </span>
+                            <span class="looged-user-tools"> <a class="black-text" href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a> </span>
                         </div>
                         <div class="submit" style="float:right; padding-bottom:10px;">
                             <?php 
@@ -261,7 +266,7 @@ function show_popular_video() {
                                 $current_page= get_home_url() . $Path;
                             ?>
                             <a href="<?php echo wp_logout_url( $current_page );    ?>" class="modal-action waves-effect waves-red accent-4 btn-flat">
-                                <i class="material-icons">Вийти</i>
+                                <i class="material-icons black-text">Вийти</i>
                             </a>
                         </div>
                     </div>
@@ -513,7 +518,7 @@ function show_popular_video() {
                
                 echo '<br><div class="meta media-heading ">Автор: '.get_comment_author()."\n";//имя автора коммента
                 if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш коментар буде опублікований після провірки модератором.</em>'."\n"; //если комментарий должен пройти проверку
-                 echo ' <br>Добавлено: '.get_comment_date('F j, Y в H:i')."\n"; //дата и время комментирования
+                 echo ' <br>Додано: '.get_comment_date('F j, Y в H:i')."\n"; //дата и время комментирования
                 echo '</div> </div> ';
                 
                

@@ -1,4 +1,4 @@
-<?php get_header("second"); ?>
+<?php get_header(); ?>
 
 <div class="row">
     <div class="col l8 s12 m8">

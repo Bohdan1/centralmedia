@@ -1,6 +1,5 @@
-<?php get_header("second"); ?>
-
-
+<?php get_header(); ?>
+<div class="header-margin-blog">
 <div class="row all-blogs-margin">
     <div class="col l9 s12 m6">
         <div class="previous-blog-box">
@@ -123,7 +122,7 @@
         </div>
     </div>
 </div>
-
+</div>
 
 <div class="row blogger-list">
     <div class="col l2 blogger-list-pad">

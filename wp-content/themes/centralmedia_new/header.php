@@ -141,6 +141,10 @@ margin-right: 0px;
 
 transform: skewX(0deg);
 }
+.technology-width{
+  margin-top: -20px;
+  width: 30px;
+}
 .one-blog-sign-title {
 position: absolute;
 top: 12px;
@@ -446,15 +450,61 @@ font-size: 20px;
 
 </head>
 <body>
+<div class="header">
+<div class="social-menu-top hide-on-med-and-down">
+      <div class="menu-list">
+        <a class="modal-trigger" href="#modal-login" >
+          <img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип">
+        </a>
+      </div>
+      <div class="menu-list">
+        <a href="#modal2">
+          <img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип">
+        </a>
+      </div>
+    </div>
+  <div class="social-menu-top hide-on-large-only">
+    <div class="menu-list">
+      <a href="#" data-activates="slide-out" class="button-collapse">
+        <img class="social-logo-head" src="<?php bloginfo('template_url') ?>/img/menu-head.svg" alt="Логотип">
+      </a>
+    </div>
+    <div class="menu-list">
+      <a href="#modal-login">
+        <img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/man.svg" alt="Логотип">
+      </a>
+    </div>
+    <div class="menu-list">
+      <a href="#modal2">
+        <img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип">
+      </a>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-shadow">
+      <a href="<?php echo get_home_url(); ?>">
+        <img class="header-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип">
+      </a>
+      <div class="logo-text hide-on-small-only ">
+        <a href="<?php echo get_home_url(); ?>">центральне медіа</a>
+      </div>
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+        <li><a class="" href="<?php echo get_post_type_archive_link('video'); ?>">ВІДЕО</a></li>
+        <li><a class="" href="<?php echo get_post_type_archive_link('articles'); ?>">СТАТТІ</a></li>
+        <li><a class="" href="<?php echo get_post_type_archive_link('blogs'); ?>">БЛОГИ</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 <!--SideNav Structure-->
 <ul id="slide-out" class="side-nav">
 <?php
 if (is_user_logged_in() ) {
 ?>
 <li>
-<div class="userView black-text center">
+<div class="userView black-text ">
 <div class="if-not-login">
-<div class="center">
+<div class="black-text">
   <?php global $current_user;  get_currentuserinfo(); echo get_avatar( $current_user->user_email, '96' );  ?>
 </div>
 <?php
@@ -479,13 +529,13 @@ if (is_user_logged_in() ) {
   global $user_ID;
   if( $user_ID ) :
     if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
-    <div> <a href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
+    <div> <a class="black-text" href="<?php bloginfo('url') ?>/wp-admin/index.php">Адміністрування</a> </div>
 <?php
     else :
     endif;
   endif;
 ?>
-<a href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
+<a class="black-text" href="<?php bloginfo('url') ?>/wp-admin/profile.php" title="изменить">Редагувати</a>
 </div>
 </div>
 </li>
@@ -493,37 +543,36 @@ if (is_user_logged_in() ) {
 }
 ?>
 
-<li><a href="<?php echo get_home_url(); ?>">Головна</a></li>
-<li><a href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
-<li><a href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
-<li><a href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
-<li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
+<li><a class="black-text" href="<?php echo get_home_url(); ?>">Головна</a></li>
+<li><a class="black-text" href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
+<li><a class="black-text" href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
+<li><a class="black-text" href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
+<li><a class="black-text" href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
 </ul>
 <!-- end SideNav Structure-->
 
 
-<div id="modal1" class="modal">
-<div class="modal-content">
-<h4>Modal Header</h4>
-<p>A bunch of text</p>
-</div>
-<div class="modal-footer">
-<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-</div>
-</div>
+
+
+<?php author_log(); ?>
+
+
 <!-- Modal Structure -->
 
 
 
-<div id="modal2" class="modal modal-fixed-footer">
-<div class="modal-content">
-<h4>Modal Header</h4>
-<p>A bunch of text</p>
-</div>
-<div class="modal-footer">
-<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-</div>
-</div>
+ <!-- Modal Structure -->
+  <div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>ПОШУК</h4>
+      <form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+  <input class="search-button" type="search" placeholder="Пошук..." required name="s">
+</form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat black-text">ЗАКРИТИ</a>
+    </div>
+  </div>
 <!-- Modal Structure -->
 
 
@@ -559,7 +608,3 @@ slidesToScroll: 2
 }
 </script>
 
-<script>
-
-
-</script>
