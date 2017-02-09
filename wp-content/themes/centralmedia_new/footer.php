@@ -179,6 +179,43 @@ $(".button-collapse").sideNav();
     </script>
 
     <script type="text/javascript">jssor_2_slider_init();</script>
+<script type="text/javascript">
+  jssor_3_slider_init = function() {
 
+    var jssor_3_options = {
+      $AutoPlay: true,
+      $SlideDuration: 1500,
+      $SlideEasing: $Jease$.$OutQuint,
+      $ArrowNavigatorOptions: {
+        $Class: $JssorArrowNavigator$
+      },
+      $BulletNavigatorOptions: {
+        $Class: $JssorBulletNavigator$
+      }
+    };
+
+    var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
+
+    /*responsive code begin*/
+    /*you can remove responsive code if you don't want the slider scales while window resizing*/
+    function ScaleSlider() {
+      var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
+      if (refSize) {
+        refSize = Math.min(refSize, 1920);
+        jssor_3_slider.$ScaleWidth(refSize);
+      }
+      else {
+        window.setTimeout(ScaleSlider, 30);
+      }
+    }
+    ScaleSlider();
+    $Jssor$.$AddEvent(window, "load", ScaleSlider);
+    $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+    $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+    /*responsive code end*/
+  };
+
+</script>
+<script type="text/javascript">jssor_3_slider_init();</script>
 </body>
 </html>

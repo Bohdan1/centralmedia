@@ -487,58 +487,92 @@
 		<a href="#" ><img class="advertisment-img" src="<?php bloginfo('template_url') ?>/img/sponsors-wide.jpg" alt="Логотип"></a>
 	</div>
 </div>
-
 <div class="five-block-with-line hide-on-med-and-down">
-	<div class="big-sign-line">НОВИНИ <span>ПАРТНЕРІВ</span></div>
+	<div class="big-sign-line">КУЛЬТУРНІ <span>ПОДІЇ</span></div>
 	<div class="block-line"></div>
 	<div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
 </div>
 
 <div class="five-block-with-line hide-on-large-only">
-	<div class="big-sign-line">НОВИНИ <span>ПАРТНЕРІВ</span></div>
+	<div class="big-sign-line">КУЛЬТУРНІ <span>ПОДІЇ</span></div>
 	<div class="block-line"></div>
 
 </div>
 
 <div class="row">
 
-	<div class="col l6 s12 m6 devider">
-		<div class="partner-news-block">
-			<?php 
-				$args = array(
-	                'post_type' => 'partner-news',
-	                'posts_per_page' => 6,
-	                'publish' => true,
-	                'orderby' => 'date',
-	                'order' => 'DESC'
-	            );
-	            $query = new WP_Query( $args );
-				if( $query->have_posts() ) {
-					while ( $query->have_posts() ) {
-						$query->the_post();
-						echo '
-							<div class="partner-news-block-content">
-								<div class="news-main-title ">
-									<a href="' . get_post_meta( $post->ID, 'partner_news_url', true ) . '" class="black-text" target="_blank">' .
-										get_the_title() . '
-									</a>
-								</div>
-							</div>';
-					} //end while
-				} //end if
-				else {
-					echo 'Блогів не знайдено';
-				}
-				wp_reset_postdata();
-			?>
-		</div>
-	</div>
+
+
+<div class="col l7 m12 s12">
+		<div id="jssor_3"  style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+				<!-- Loading Screen -->
+				<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+					<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+					<div style="position:absolute;display:block;background:url('<?php bloginfo('template_url') ?>/img/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+				</div>
+				<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:800px;overflow:hidden;">
+					<div>
+						<img data-u="image" class="second-slider-img" src="<?php bloginfo('template_url') ?>/img/1.jpg" />
+
+						<div class="mask">
+							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 983</span></div>
+							<div class="second-slider-content">
+								<br>
+								<div class="second-slider-title-tag"><a href="#" class="no-hover-blog">АТО</a></div>
+								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+								<div class="second-slider-box-title-small  "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
+								<div class="second-slider-box-title-time ">28.06.2016</div>
+								<br>	
+							</div>
+						</div>
+					</div>
+					<div>
+						<img data-u="image" class="second-slider-img"  src="http://life.pravda.com.ua/images/doc/f/2/f2a6d8d----------------------.---------street-art-fest-2011--.jpg" />
+						<div class="mask">
+							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 465</span></div>
+							<div class="second-slider-content">
+								<br>
+								<div class="second-slider-title-tag"><a href="#" class="no-hover-blog">Актуальні новини</a></div>
+								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+								<div class="second-slider-box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
+								<div class="second-slider-box-title-time ">28.06.2016</div>
+								<br>	
+							</div>
+						</div>
+					</div>
+					<div>
+						<img data-u="image" src="http://life.pravda.com.ua/images/doc/9/4/94acb54---------.-------------------.--------------------------------------------------------------2000-.jpg" />
+						<div class="mask">
+							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 49858</span></div>
+							<div class="second-slider-content">
+								<br>
+								<div class="second-slider-title-tag "><a href="#" class="no-hover-blog">Новини</a></div>
+								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+								<div class="second-slider-box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
+								<div class="second-slider-box-title-time ">28.06.2016</div>
+								<br>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Arrow Navigator -->
+				<span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+				<span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+			</div>
+   
+
+</div>
+
+
+
+
+
 	<div class="five-block-with-line hide-on-large-only">
 		<div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
 		<div class="block-line"></div>
 
 	</div>
-	<div class="col l6 s12 m6 ">
+	<div class="col l5 s12 m6 ">
 		<?php
 		if ( function_exists('vote_poll') && !in_pollarchive() ) : 
 			echo '
@@ -549,6 +583,4 @@
 		?>
 	</div>
 </div>
-
-
 
