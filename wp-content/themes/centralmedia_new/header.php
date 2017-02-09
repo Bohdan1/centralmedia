@@ -145,6 +145,12 @@ transform: skewX(0deg);
   margin-top: -20px;
   width: 30px;
 }
+.button-position-main-video {
+    margin-top: 50px;
+    width: 150%;
+    left: 0%;
+    position: absolute;
+}
 .one-blog-sign-title {
 position: absolute;
 top: 12px;

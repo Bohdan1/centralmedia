@@ -362,32 +362,55 @@
 
 
 <div class="row">
-	<div class="col l5 s12 m4">
+	<div class="col l5 s12 m6">
 		<div id="meteoprog_informer_standart" data-params="boy:Lviv:300x250:white:72x75" ><a href="https://www.meteoprog.ua/ua/">погода</a><br /><a href="https://www.meteoprog.ua/ua/weather/Lviv/">Погода в  Львові </a><br /></div><script src="https://www.meteoprog.ua/ua/weather/informer/standart.js"></script>
-
 </div>
 
 
-<div class="col l7 m8">
+<div class="col l7 s12 m6 narod-korespond">
+<div class="col l12">
 	<div class="block-with-line">
-		<a href="#" class="button-share-pad"><div class="big-sign-line btn button-share">ПОДІЛИТИСЯ НОВИНОЮ</div></a>
+		<a href="#" class="button-share-pad"><div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div></a>
 		<div class="block-line"></div>
 		<div class="small-sign-line"> <div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div></div><img data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
 	</div>
+	</div>
 
 	
-	 <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
+	 <div id="jssor_2" >
 <!--Loading Screen -->
-        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position:absolute;display:block;background:url('<?php bloginfo('template_url') ?>/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        <div id="slider-option" data-u="loading" >
+            <div id="slider-option2" ></div>
+            <div id="slider-option3" ></div>
         </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
-           <div class="user-news-block row">
-			<div class="user-video col l5">
+        <div data-u="slides" class="slider-option4" >
+           <div class="user-news-block">
+			<div class=" col l12 m7 " style="width: 50% !important;">
 				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
 			</div>
-			<div class="user-news-conten col l7">
+			<div class="col l12 m4" style="width: 50% !important;">
+				<div class="user-video-name">Yura Romaniv</div>
+				<div class="user-video-date">28.06.1995</div>
+				<div class="user-video-time">18:52</div>
+				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
+			</div>
+		</div>
+		  <div class="user-news-block ">
+			<div class=" col l12 m7 " style="width: 50% !important;">
+				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+			</div>
+			<div class="col l12 m4" style="width: 50% !important;">
+				<div class="user-video-name">Yura Romaniv</div>
+				<div class="user-video-date">28.06.1995</div>
+				<div class="user-video-time">18:52</div>
+				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
+			</div>
+		</div>
+		  <div class="user-news-block ">
+			<div class=" col l12 m7 " style="width: 50% !important;">
+				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+			</div>
+			<div class="col l12 m4" style="width: 50% !important;">
 				<div class="user-video-name">Yura Romaniv</div>
 				<div class="user-video-date">28.06.1995</div>
 				<div class="user-video-time">18:52</div>
@@ -395,43 +418,7 @@
 			</div>
 		</div>
             
-            <div class="user-news-block row">
-			<div class="user-video col l5">
-				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-			</div>
-			<div class="user-news-conten col l7">
-				<div class="user-video-name">Yura Romaniv</div>
-				<div class="user-video-date">28.06.1995</div>
-				<div class="user-video-time">18:52</div>
-				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-			</div>
-		</div>
-           <div class="user-news-block row">
-			<div class="user-video col l5">
-				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-			</div>
-			<div class="user-news-conten col l7">
-				<div class="user-video-name">Yura Romaniv</div>
-				<div class="user-video-date">28.06.1995</div>
-				<div class="user-video-time">18:52</div>
-				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-			</div>
-		</div>
-            <div class="user-news-block row">
-			<div class="user-video col l5">
-				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-			</div>
-			<div class="user-news-conten col l7">
-				<div class="user-video-name">Yura Romaniv</div>
-				<div class="user-video-date">28.06.1995</div>
-				<div class="user-video-time">18:52</div>
-				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-			</div>
-		</div>
         </div>
-        <!-- Arrow Navigator -->
-        <!-- <span data-u="arrowleft" class="jssora08l" style="top:8px;left:8px;width:50px;height:50px;background: url('/img/a08.png') no-repeat;" data-autocenter="1"></span>
-        <span data-u="arrowright" class="jssora08r" style="bottom:8px;right:8px;width:50px;height:50px;background: url('img/a08.png') no-repeat;" data-autocenter="1"></span> -->
     </div>
 
 </div>

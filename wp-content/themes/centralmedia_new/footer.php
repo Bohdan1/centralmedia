@@ -179,5 +179,6 @@ $(".button-collapse").sideNav();
     </script>
 
     <script type="text/javascript">jssor_2_slider_init();</script>
+
 </body>
 </html>

@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 <!-- second block home page -->
-
-
 <div class="row home-content">
 <div id="disable-mat-padding" class="col l9 s12 left-block">
 <div class="left-block-content">
@@ -84,8 +82,13 @@
 <div class="row">
 <div class="full-width-mob col l8 s12 m7 ">
 <div class="col l12 s12 m12 full-width-mob ">
+
 <div  class="second-article-block-all-video">
+
 <div class="mask">
+<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-main-video" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
 <div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
 <div class="main-article-content-box">
 
@@ -99,101 +102,79 @@
 </div>
 
 <div class="col l6 s12 m6 ">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block-width">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька раз Під Києвом сплюндрували Биковнянський меморіал декілька раз
-</a>
-</div>
-<div class="box-title-time fix-mob-article">28.06.2016</div>
-</div>
+	<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
 
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="col l6 s12 m6 ">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block-width">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька раз Під Києвом сплюндрували Биковнянський меморіал декілька раз
-</a>
-</div>
-<div class="box-title-time fix-mob-article">28.06.2016</div>
-</div>
+	<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
 
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
 </div>
 </div>
 
 <div class="col l4 s12 m5 ">
 <div class="all-video-last-side-video">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block-side">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька раз Під Києвом сплюндрували Биковнянський меморіал декілька раз
-</a>
-</div>
-<div class="box-title-time fix-mob-article">28.06.2016</div>
-</div>
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block-side">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька раз Під Києвом сплюндрували Биковнянський меморіал декілька раз
-</a>
-</div>
-<div class="box-title-time fix-mob-article">28.06.2016</div>
-</div>
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block-side">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька раз Під Києвом сплюндрували Биковнянський меморіал декілька раз
-</a>
-</div>
-<div class="box-title-time fix-mob-article">28.06.2016</div>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
 
 </div>
 
@@ -210,94 +191,84 @@
 <div class="popular-video">
 <div class="row">
 <div class="col l3 s12 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 
@@ -392,220 +363,196 @@
 <div class="popular-video">
 <div class="row">
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 <div class="col l3 s12 m4 top-five-video-width">
-<div style="background-image: url(http://img.pravda.com/images/doc/0/6/062c9d5-485-tusk_485x299.jpg);" class="popular-video-block">
-<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-<div  class="button-position-popular-video-content-box">
-<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-</div>
-<div class="mask">
-<div class="popular-video-content-box">
-<div class="popular-video-tag"><a href="#" class="no-hover-blog">Війна</a></div>
-</div>
-</div>
-</div>
-<div class="popular-video-description ">
-<a href="#" class="black-text">
-Під Києвом сплюндрували Биковнянський меморіал декілька
-</a>
-</div>
+<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
+		<div class="mask">
+			<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+			<div  class="button-position-popular-video-content-box-main">
+				<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="main-article-content-box">
+
+				<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
+				<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 

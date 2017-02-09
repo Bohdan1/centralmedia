@@ -6,9 +6,9 @@ Author: Platform-IT
 Author URI: http://platform-it.com/
 Version: 0.4
 */
-// div, span, ul, li, p, a, img{
-// outline: 1px solid red;
-//  }
+/*div, span, ul, li, p, a, img{
+ outline: 1px solid red;
+  }*/
 
 html{
 width: 100%;
@@ -233,6 +233,13 @@ position: relative;
 left: -10%;
 top: -50px;
 }
+.button-position-main-video{
+margin-top: 50px;	
+width: 150%;
+left: 120%;
+position: absolute;
+
+}
 .content-box{
 padding-left: 20px;
 position: absolute;
@@ -284,9 +291,15 @@ left: 15px;
 text-align: left;
 background-color: rgba(255, 0, 0, 0.8);
 }
+
 .box-title{
 padding-bottom: 10px;
 font-size: 24px;
+color: white;
+}
+.box-title-video-page{
+padding-bottom: 10px;
+font-size: 14px;
 color: white;
 }
 .box-title-small{
@@ -824,6 +837,8 @@ color: black;
 width: 100%;
 display: flex;
 position: relative;
+z-index: 99;
+background-color: white;
 align-items: center;
 padding-top: 10px;
 padding-bottom: 0px;
@@ -895,7 +910,7 @@ background-position: center;
 position: relative;
 margin-top: 20px;
 
-height: 500px;
+height: 540px;
 width: 100%;
 background-image: url('img/3.jpg');
 background-size: cover;
@@ -1111,6 +1126,22 @@ cursor: pointer;
 z-index: 2;
 left: 37%;
 top: 1%;
+}
+.button-position-popular-video-content-box-width-main{
+width: 100px;
+position: absolute;
+cursor: pointer;
+z-index: 2;
+left: center;
+top: 1%;
+}
+.button-position-popular-video-content-box-main{
+	width: 100px;
+position: absolute;
+cursor: pointer;
+z-index: 2;
+left: 30%;
+top: 16%;
 }
 .video-devider{
 	border-bottom: 1px solid black;
@@ -1390,7 +1421,7 @@ padding-left: 0px;
 }
 .user-video-width{
 margin-top: 10px;
-width: 100%;
+width: 100% !important;
 }
 .user-video{
 padding-left: 20px;
@@ -1407,8 +1438,9 @@ font-size: 20px;
 font-size: 20px;
 }
 .user-news-block{
-height: 250px;
-width: 100%;
+	top: 50px !important;
+height: 250px !important;
+width: 100% !important;
 }
 .user-news-title{
 font-size: 20px;
@@ -1786,5 +1818,30 @@ margin-top: 0px;
        .jssora08r.jssora08rds { background-position: -65px -35px; opacity: .3; pointer-events: none; } */
 
 #jssor_2{
+	position:relative;margin:0 auto;height:300px;visibility:hidden;
+	width: auto !important;
 	margin: 0 !important;
+}
+
+#jssor_2  div[style]{
+	width: 100% !important ;
+} 
+
+#slider-option{
+	width: 100% !important; position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);
+}
+#slider-option2{
+	position:absolute;display:block;background:url('<?php bloginfo('template_url') ?>/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;
+	position:absolute;display:block;background:url('<?php bloginfo('template_url') ?>/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;
+	}
+#slider-option3{
+filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;
+
+}
+.slider-option4{
+	cursor:default;position:relative;top:0px;left:0px;width:100%;height:300px;
+}
+
+.narod-korespond{
+	margin-top: -20px;
 }
