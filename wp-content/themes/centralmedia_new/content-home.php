@@ -64,77 +64,11 @@
 	</div>
 </div>
 
+<?php
+	//slider for blogers
+	get_template_part('template-parts/slider', 'blogers');
+?>
 
-<section class="center slider">
-	<?php
-		$popular_blogs_days = 21;
-		$args = array(
-			'post_type' => 'blogs',
-			'posts_per_page' => 8,
-			'publish' => true,
-			'date_query' => array(
-				'after' => $popular_blogs_days . ' days ago',
-			),
-			'meta_key' => 'post_views_count',
-			'orderby' => 'meta_value_num'
-		);
-		$query = new WP_Query( $args );
-
-		if( $query->have_posts() ) {
-			$i = 0;
-			while ( $query->have_posts() ) {
-				$query->the_post();
-				$author_id = get_the_author_meta( 'ID' );
-				if( $i == 0 ) {
-					echo '
-						<div class="slider-box slider-box-remake-main">
-					        <div class="slider-element">
-					            <div class="blog-element-tag" class="no-hover-blog">ТОП БЛОГ</div>
-				      			<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="Аватар">
-				      			<div class="">
-				      				<div class="slider-bloger-name-main">
-				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
-				      						get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
-				      					</a>
-				      				</div>
-				      				<div class="slider-bloger-thema-main">
-				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
-											short_post_title(60) . '
-										</a>
-				      				</div>
-				      			</div>
-					        </div>
-					    </div>';
-					$i++;
-				}
-				else {
-					echo '
-						<div class="slider-box slider-box-remake">
-							<div class="slider-element">
-								<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="аватар">
-								<div class="">
-									<div class="slider-bloger-name">
-										<a href="' . get_the_permalink() . '" class="black-text">' .
-											get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
-										</a>
-									</div>
-									<div class="slider-bloger-thema">
-										<a href="' . get_the_permalink() . '" class="black-text">' .
-											short_post_title(60) . '
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>';
-				}
-			} //end while
-		} //end if
-		else {
-			echo 'Блогів не знайдено';
-		}
-		wp_reset_postdata();
-	?>
-</section>
 <!-- second block home page -->
 <div class="block-with-line hide-on-small-only">
 	<div class="big-sign-line">ТОП <span>СТАТТІ</span></div>
@@ -156,49 +90,25 @@
 					<div style="position:absolute;display:block;background:url('<?php bloginfo('template_url') ?>/img/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
 				</div>
 				<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:800px;overflow:hidden;">
-					<div>
-						<img data-u="image" class="second-slider-img" src="<?php bloginfo('template_url') ?>/img/1.jpg" />
-
-						<div class="mask">
-							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 983</span></div>
-							<div class="second-slider-content">
-								<br>
-								<div class="second-slider-title-tag"><a href="#" class="no-hover-blog">АТО</a></div>
-								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="second-slider-box-title-small  "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="second-slider-box-title-time ">28.06.2016</div>
-								<br>	
-							</div>
-						</div>
-					</div>
-					<div>
-						<img data-u="image" class="second-slider-img"  src="http://life.pravda.com.ua/images/doc/f/2/f2a6d8d----------------------.---------street-art-fest-2011--.jpg" />
-						<div class="mask">
-							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 465</span></div>
-							<div class="second-slider-content">
-								<br>
-								<div class="second-slider-title-tag"><a href="#" class="no-hover-blog">Актуальні новини</a></div>
-								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="second-slider-box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="second-slider-box-title-time ">28.06.2016</div>
-								<br>	
-							</div>
-						</div>
-					</div>
-					<div>
-						<img data-u="image" src="http://life.pravda.com.ua/images/doc/9/4/94acb54---------.-------------------.--------------------------------------------------------------2000-.jpg" />
-						<div class="mask">
-							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 49858</span></div>
-							<div class="second-slider-content">
-								<br>
-								<div class="second-slider-title-tag "><a href="#" class="no-hover-blog">Новини</a></div>
-								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="second-slider-box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="second-slider-box-title-time ">28.06.2016</div>
-								<br>	
-							</div>
-						</div>
-					</div>
+					<?php
+						$args = array(
+							'post_type' => 'articles',
+							'posts_per_page' => 3,
+							'publish' => true,
+							'orderby' => 'date',
+							'order' => 'DESC'
+						);
+						global $latest_articles;		//variable to prevent duplicate articles
+						$latest_articles = array();
+						$query = new WP_Query( $args );
+						if( $query->have_posts() ) {
+							while ( $query->have_posts() ) {
+								$query->the_post();
+								show_latest_articles();
+								$latest_articles[] = get_the_ID();
+							}
+						}
+					?>
 				</div>
 				<!-- Arrow Navigator -->
 				<span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
@@ -207,43 +117,51 @@
 		</div>
 
 		
-		<?php 
+		<?php
+			global $latest_articles;
+			$popular_days_article = 21;
 			$args = array(
 				'post_type' => 'articles',
 				'posts_per_page' => 2,
 				'publish' => true,
-				'orderby' => 'date',
-				'order' => 'DESC'
+				'date_query' => array(
+					'after' => $popular_days_article . ' days ago',
+				),
+				'post__not_in' => $latest_articles, //displays all articles, other than those
+				'meta_key' => 'post_views_count',
+				'orderby' => 'meta_value_num'
+				//'order' => 'DESC'
 			);
 			$query = new WP_Query( $args );
+			$articles_count = 0;
 			if( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();
-					echo '
-						<div class="col l6 s12 m6">
-							<div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
-								<div class="mask">
-									<div class="view-count">
-										<img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
-										<span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
-									</div>
-									<div class="main-article-content-box">
-										<div class="title-tag">
-											<a href="#" class="no-hover-blog">Родина</a>
-										</div>
-										<div class="box-title fix-mob-article ">
-											<a href="' . get_the_permalink() .'">' . short_post_title(75) . '</a>
-										</div>
-										<div class="box-title-small fix-mob-article ">
-											<a href="' . get_the_permalink() .'">';
-												echo short_post_desc(90) . '
-											</a>
-										</div>
-										<div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
-									</div>
-								</div>
-							</div>
-						</div>';
+					$articles_count++;
+					show_popular_article();
+				}
+			}
+			//якщо немає або недостатньо публікованих статтей за останні $popular_days_article
+			if( $articles_count < 2) {
+				global $latest_articles;
+				$args = array(
+					'post_type' => 'articles',
+					'posts_per_page' => 2 - $articles_count,
+					'publish' => true,
+					'date_query' => array(
+						'before' => $popular_days_article . ' days ago',
+					),
+					'post__not_in' => $latest_articles, //displays all articles, other than those
+					'orderby' => 'date',
+					'order' => 'DESC'
+					);
+				$query = new WP_Query( $args );
+				if( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						show_popular_article();
+						$articles_count++;
+					}
 				}
 			}
 
@@ -251,54 +169,11 @@
 	</div>
 
 	<div class="col l4 s12 m5 ">
-
 		<div class="main-news-content-box">
-		<?php
-			$args = array(
-				'post_type' => 'news',
-				'posts_per_page' => 10,
-				//'numberposts' => 10,
-				'publish' => true,
-				'orderby' => 'date',
-				'order' => 'DESC'
-				);
-			$query = new WP_Query( $args );
-			$date = '';
-
-			if( $query->have_posts() ) {
-				while ( $query->have_posts() ) {
-					$query->the_post();
-					show_news_for_homepage();
-				} //end while
-			} //end if
-			else {
-				echo 'Новин не знайдено';
-			}
-
-			if(  $query->max_num_pages > 1 ) { ?>
-				<script>
-					var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
-					var true_posts = '<?php echo serialize($query->query_vars); ?>';
-					var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
-					var max_pages = '<?php echo $query->max_num_pages; ?>';
-				</script>
-				<div id="true_loadmore">Більше новин</div>
-		<?php 
-			} //end if
-			wp_reset_postdata();
-		?>
-		<!-- приклад інших іконок
-		<div class="news-block">
-		<div class="news-main-img">
-		<i class="fa fa-spinner fa-spin fa-1x fa-fw "></i>
-		</div>
-		<div class="news-main-title ">
-		<div class="news-time ">15:46</div>
-		<a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a>
-		</div>
-		</div>
-		-->
-
+			<?php
+	            //show latest news
+	            get_template_part('template-parts/latest', 'news');
+	        ?>
 		</div>
 	</div>
 </div>
@@ -311,13 +186,13 @@
 	<div class="popular-video">			
 		<div class="row">
 			<?php
-			$popular_video_days = 21;
+			$popular_days_video = 21;
 			$args = array(
 				'post_type' => 'video',
 				'posts_per_page' => 6,
 				'publish' => true,
 				'date_query' => array(
-					'after' => $popular_video_days . ' days ago',
+					'after' => $popular_days_video . ' days ago',
 				),
 				'meta_key' => 'post_views_count',
 				'orderby' => 'meta_value_num'
@@ -325,7 +200,7 @@
 			);
 			$query = new WP_Query( $args );
 			$video_count = 0;
-			//якщо є відео, які публіковані за останні $popular_video_days днів
+			//якщо є відео, які публіковані за останні $popular_days_video днів
 			if( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();
@@ -333,14 +208,14 @@
 					show_popular_video();
 				}
 			}
-			//якщо немає або недостатньо публікованих відео за останні $popular_video_days
+			//якщо немає або недостатньо публікованих відео за останні $popular_days_video
 			if( $video_count < 6) {
 				$args = array(
 					'post_type' => 'video',
 					'posts_per_page' => 6 - $video_count,
 					'publish' => true,
 					'date_query' => array(
-						'before' => $popular_video_days . ' days ago',
+						'before' => $popular_days_video . ' days ago',
 						),
 					'orderby' => 'date',
 					'order' => 'DESC'
@@ -574,13 +449,9 @@
 	</div>
 	<div class="col l5 s12 m6 ">
 		<?php
-		if ( function_exists('vote_poll') && !in_pollarchive() ) : 
-			echo '
-		<ul>
-			<li>' . get_poll() . '</li>
-		</ul>';
-		endif;
-		?>
+            //show polls
+            get_template_part('template-parts/polls');
+        ?>
 	</div>
 </div>
 

@@ -34,9 +34,9 @@ function short_post_desc( $charlength ) {        //function for display short co
     $excerpt = get_the_excerpt();
     if ( mb_strlen( $excerpt ) > $charlength ) {
         $subex = mb_substr( $excerpt, 0, $charlength );
-        echo $subex . '...';
+        return $subex . '...';
     } else {
-        echo $excerpt;
+        return $excerpt;
     }
 }
 
@@ -69,7 +69,7 @@ function custom_post_permalink() {
 //show news on homepage
 function show_news_for_homepage() {
     global $date;
-    if( $date != get_the_time('j F Y l') ) {
+    if ( $date != get_the_time('j F Y l') ) {
         $date = get_the_time('j F Y l');
         echo '<div class="next-day-news">' .  $date . '</div>';
     }
@@ -89,6 +89,82 @@ function show_news_for_homepage() {
         </div>';
 }
 
+//show latest articles
+function show_latest_articles() {
+    echo '
+        <div>
+            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url() . '" />
+            <div class="mask">
+                <div class="view-count-top">
+                    <img class="count-width-top" src="' . get_template_directory_uri() . '/img/eye.svg">
+                    <span class="count-number-top">' . getPostViews( get_the_ID() ) . '</span>
+                </div>
+                <div class="second-slider-content">
+                    <br>
+                    <div class="second-slider-title-tag">';
+                        $category = get_the_category();
+                        if ( !empty( $category ) ) {
+                            $max_categories = 3;    //the maximum number of categories that need to display
+                            if ( count( $category ) < $max_categories ) {
+                                $max_categories = count( $category );
+                            }
+                            for ( $i = 0; $i < $max_categories; $i++ ) {
+                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog">' . $category[$i]->cat_name . '</a>';
+                            }
+                        }
+                        echo '
+                    </div>
+                    <div class="second-slider-box-title ">
+                        <a href="' . get_the_permalink() .'">' . short_post_title(65) . '</a>
+                    </div>
+                    <div class="second-slider-box-title-small">
+                        <a href="' . get_the_permalink() .'">' .
+                            short_post_desc(70) . '
+                        </a>
+                    </div>
+                    <div class="second-slider-box-title-time ">' . get_the_time('d.m.Y') . '</div>
+                    <br>    
+                </div>
+            </div>
+        </div>';
+}
+
+
+//show popular articles
+function show_popular_article() {
+    echo '
+        <div class="col l6 s12 m6">
+            <div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
+                <div class="mask">
+                    <div class="view-count">
+                        <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
+                        <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                    </div>
+                    <div class="main-article-content-box">
+                        <div class="title-tag">';
+                            $category = get_the_category();
+                            if ( !empty($category) ) {
+                                $category = $category[0];
+                                echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                            }
+                            echo '
+                        </div>
+                        <div class="box-title fix-mob-article ">
+                            <a href="' . get_the_permalink() .'">' . short_post_title(75) . '</a>
+                        </div>
+                        <div class="box-title-small fix-mob-article ">
+                            <a href="' . get_the_permalink() .'">' .
+                                short_post_desc(90) . '
+                            </a>
+                        </div>
+                        <div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+}
+
+
 //show popular video on homepage
 function show_popular_video() {
                                               //style="min-height:260px;"
@@ -107,14 +183,20 @@ function show_popular_video() {
                         </a>
                     </div>
                     <div class="popular-video-content-box">
-                        <div class="popular-video-tag">
-                            <a href="#" class="no-hover-blog">Ринок</a>
+                        <div class="popular-video-tag">';
+                            $category = get_the_category();
+                            if ( !empty($category) ) {
+                                $category = $category[0];
+                                echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                            }
+                            echo '
                         </div>
                     </div>
                 </div>
             </div>
         </div>';
 }
+
 
 
 //settings for display archive posts
@@ -147,6 +229,7 @@ function show_popular_video() {
 //end settings for display archive posts
 
 
+
 //tag and author settings
     function my_pre_get_tags( $query ) {
         if ( !is_admin() && $query->is_archive ) {
@@ -173,6 +256,7 @@ function show_popular_video() {
 //end and author tag settings
 
 
+
 //pagination settings
     //delete H2 from pagination template
     add_filter( 'navigation_markup_template', 'my_navigation_template', 10, 2 );
@@ -195,6 +279,7 @@ function show_popular_video() {
         'next_text' => __( '&#8250;' ),
         );
 //end pagination settings
+
 
 
 //login form settings
@@ -283,6 +368,7 @@ function show_popular_video() {
     <?php endif;
     }
 //end login form settings
+
 
 
 //registration form settings
@@ -440,9 +526,12 @@ function show_popular_video() {
 //end registration form settings
 
 
+
 //capabilityes
-    require 'my-custom-posts.php';
+    require 'template-parts/custom-posts-types.php';
 //end capabilityes
+
+
 
 //hide not used fields
     function remove_menus() {
@@ -463,6 +552,8 @@ function show_popular_video() {
     add_action( 'admin_menu', 'remove_menus' );
 //end hide not used fields
 
+
+
 //custom login form
     function my_custom_login_logo(){
         echo '<style type="text/css">
@@ -471,6 +562,7 @@ function show_popular_video() {
     }
     add_action('login_head', 'my_custom_login_logo');
 //end custom login form
+
 
 
 //algorithm declension of nouns after numerals 
@@ -493,6 +585,8 @@ function show_popular_video() {
     } 
 //end algorithm declension of nouns after numerals
 
+
+
 //delete widgets from console
     function clear_wp_dash() {
         $dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
@@ -503,6 +597,7 @@ function show_popular_video() {
     add_action('wp_dashboard_setup', 'clear_wp_dash' );
 //end delete widgets from console
         
+
 
 //comments settings
     if (!class_exists( 'clean_comments_constructor') ) { //если класс уже есть в дочерней теме - нам не надо его определять
@@ -543,6 +638,7 @@ function show_popular_video() {
 //end comments settings
 
 
+
 //number of views
     function getPostViews( $postID ) {
         $count_key = 'post_views_count';
@@ -573,6 +669,8 @@ function show_popular_video() {
         }
     }
 //end number of views
+
+
 
 //top users
     function top_authors( $number = 10 ) {
@@ -610,6 +708,7 @@ function show_popular_video() {
 //end top users
 
 
+
 //get news using ajax
     function true_loadmore_scripts() {
         wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
@@ -635,6 +734,7 @@ function show_popular_video() {
     add_action('wp_ajax_loadmore', 'true_load_posts');
     add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
 //end get news using ajax
+
 
 
 //ajax like for posts
@@ -682,7 +782,7 @@ function show_popular_video() {
 
     function hasAlreadyVoted( $post_id ) {
         global $timebeforerevote;
-        $timebeforerevote = 0; // = 2 hours - через скільки користувач зможе проголосувати ще раз
+        $timebeforerevote = 120; // = 2 hours - через скільки користувач зможе проголосувати ще раз
         
         // Retrieve post votes IPs
         $meta_IP = get_post_meta( $post_id, "voted_IP" );
@@ -718,7 +818,7 @@ function show_popular_video() {
                     <span title="Подобається"class="qtip like">Подобається</span>
                 </a>';
             }
-        $output .= '<span class="likes-count">(Всього '.$vote_count.' вподобань)</span></p>';
+        $output .= '(Всього <span class="count">'.$vote_count.'</span> вподобань)</p>';
         return $output;
     }
 //end ajax like for posts

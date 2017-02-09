@@ -1,16 +1,16 @@
-<!--header-->
-<?php get_header() ?>
+<?php 
+	//header
+	get_header();
 
-<!--second-slider-->
-<?php get_template_part('second', 'slider') ?>
+	//second-slider
+	get_template_part('second', 'slider');
 
+	//content-home
+	get_template_part('content', 'home');
 
-<!--content-home-->
-<?php get_template_part('content', 'home') ?>
+	//content-footer
+	get_template_part('content', 'footer');
 
-
-<!--content-footer-->
-<?php get_template_part('content', 'footer') ?>
-
-<!--footer-->
-<?php get_footer() ?>
+	//footer
+	get_footer();
+?>
