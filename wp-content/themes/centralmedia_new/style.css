@@ -1035,7 +1035,7 @@ footer{
 }
 #back-to-top {
 	position: fixed;
-	z-index: 9999;
+	z-index: 999;
 	display: none;
 	bottom: 100px;
 	right: 15px;
@@ -1043,7 +1043,7 @@ footer{
 }
 #people-share{
 	position: fixed;
-	z-index: 99999;
+	z-index: 999;
 
 	bottom: 40px;
 	right: 15px;
@@ -1737,3 +1737,7 @@ background: url(/img/ch2.png) top right no-repeat, url(/img/ch1.png) top left no
                     }
 
 // END Сторінка 404//
+
+.weatherWidget{
+	z-index: 9999;
+}

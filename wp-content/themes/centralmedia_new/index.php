@@ -8,9 +8,6 @@
 	//content-home
 	get_template_part('content', 'home');
 
-	//content-footer
-	get_template_part('content', 'footer');
-
 	//footer
 	get_footer();
 ?>

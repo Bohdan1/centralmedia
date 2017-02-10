@@ -10,27 +10,18 @@ function register_styles() { // adds files with styles
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
 	wp_enqueue_style( 'media', get_template_directory_uri() . '/css/media.css' );
     wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
+    wp_enqueue_style( 'default', get_template_directory_uri() . '/css/weatherWidget/default.css' );
+    wp_enqueue_style( 'climacons', get_template_directory_uri() . '/css/weatherWidget/climacons.css' );
+    wp_enqueue_style( 'component', get_template_directory_uri() . '/css/weatherWidget/component.css' );
 }
 add_action( 'wp_enqueue_scripts', 'register_styles' );
-
-function register_scripts() { // adds files with script
-	//wp_deregister_script('jquery');
-	wp_enqueue_script( 'jquery-2.1.1.min', get_template_directory_uri() . '/js/jquery-2.1.1.min.js');
-	wp_enqueue_script( 'materialize.min', get_template_directory_uri() . '/js/materialize.min.js');
-	wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/wow.min.js');
-	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.js');
-	wp_enqueue_script( 'typed.min', get_template_directory_uri() . '/js/typed.min.js');
-	wp_enqueue_script( 'jssor.slider-22.1.9.min', get_template_directory_uri() . '/js/jssor.slider-22.1.9.min.js');
-    wp_enqueue_script( 'jssor.slider-22.2.0.min', get_template_directory_uri() . '/js/jssor.slider-22.2.0.min.js');
-    // https://use.fontawesome.com/d97a6585c2.js
-}
-add_action( 'wp_enqueue_scripts', 'register_scripts' );
-
-register_nav_menu( 'menu', 'Меню сайту' ); // addition of the ability to create menus
-
-register_sidebar();
-
-
+// function register_scripts() { // adds files with script
+// 	//wp_deregister_script('jquery');
+// https://use.fontawesome.com/d97a6585c2.js
+// }
+// add_action( 'wp_enqueue_scripts', 'register_scripts' );
+// register_nav_menu( 'menu', 'Меню сайту' ); // addition of the ability to create menus
+// register_sidebar();
 function short_post_desc( $charlength ) {        //function for display short content for posts
     $excerpt = get_the_excerpt();
     if ( mb_strlen( $excerpt ) > $charlength ) {

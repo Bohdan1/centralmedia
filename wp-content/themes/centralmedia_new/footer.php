@@ -63,8 +63,30 @@
 
 
 <?php wp_footer(); ?>
-
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/slick.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/jssor.slider-22.1.9.min.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/jssor.slider-22.2.0.min.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/weatherWidget/modernizr.custom.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/weatherWidget/libraries/p5.js"></script>
+
+<script src="<?php bloginfo('template_url') ?>/js/weatherWidget/sketch.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/weatherWidget/jquery.fittext.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/weatherWidget/boxgrid.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php
   if ( is_home() ) {
@@ -249,6 +271,48 @@ slidesToScroll: 2
 });
 }
 </script>
+
+<script>
+      $(function() {
+        Boxgrid.init();
+      });
+      
+      function setDate() {
+        var fullDate, month, date, fullYear;
+        fullDate = new Date();
+        
+        function getDate() {
+          date = fullDate.getDate();
+          month = fullDate.getMonth() + 1;
+          fullYear = fullDate.getFullYear();
+        }
+        
+        function checkDate() {
+          if(month.toString().length == 1) {
+            month = '0' + month;
+          }
+          if (date.toString().length == 1) {
+            date = '0' + date;
+          }
+        }
+        getDate();
+        checkDate();
+        
+        var objRbDate1 = document.getElementById('rb-date');
+        objRbDate1.innerHTML = date + '.' + month + '.' + fullYear;
+
+        var objRbWeekDate = document.getElementsByClassName('rb-week-date');
+        for(var i=0; i<objRbWeekDate.length; i++){
+          fullDate = new Date();
+          fullDate.setDate(fullDate.getDate() +i+1);
+          getDate();
+          checkDate();
+          objRbWeekDate[i].innerHTML = date + '.' + month;
+        }
+      }
+      setDate();
+    
+    </script>
 
 </body>
 </html>

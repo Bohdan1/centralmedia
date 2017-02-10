@@ -238,7 +238,32 @@
 
 <div class="row">
 	<div class="col l5 s12 m6">
-		<div id="meteoprog_informer_standart" data-params="boy:Lviv:300x250:white:72x75" ><a href="https://www.meteoprog.ua/ua/">погода</a><br /><a href="https://www.meteoprog.ua/ua/weather/Lviv/">Погода в  Львові </a><br /></div><script src="https://www.meteoprog.ua/ua/weather/informer/standart.js"></script>
+		<div id="weatherWidget">
+				<ul id="rb-grid" class="rb-grid clearfix">
+					<li id="today-icon1" class="rb-span-2">
+						<h3>Погода у Львові</h3>
+						<span id='rb-date'></span>
+						<span id="rb-temp"></span>
+						<div class="rb-overlay">
+							<span class="rb-close">close</span>
+							<div class="rb-week">
+								<div>
+									<span class="rb-city">Львів</span>
+									<span id="today-icon2"></span>
+									<span id="fullTemp"></span>
+								</div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon1"></span><span class="rb-week-temp">19°C</span></div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon2"></span><span class="rb-week-temp">19°C</span></div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon3"></span><span class="rb-week-temp">18°C</span></div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon4"></span><span class="rb-week-temp">17°C</span></div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon5"></span><span class="rb-week-temp">19°C</span></div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon6"></span><span class="rb-week-temp">22°C</span></div>
+								<div class="rb-week-cont"><span class="rb-week-date"></span><span id="week-icon7"></span><span class="rb-week-temp">18°C</span></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 </div>
 
 
