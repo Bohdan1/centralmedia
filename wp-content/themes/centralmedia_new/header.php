@@ -470,6 +470,19 @@ font-size: 20px;
         </a>
       </div>
     </div>
+    <div class="social-menu-bottom hide-on-med-and-down">
+        <div class="menu-list">
+          <a href="#" ><img  class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
+        </div>
+
+        <div class="menu-list">
+          <a href="#" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
+        </div>
+
+        <div class="menu-list">
+          <a href="#"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
+        </div>
+      </div>
   <div class="social-menu-top hide-on-large-only">
     <div class="menu-list">
       <a href="#" data-activates="slide-out" class="button-collapse">
@@ -486,7 +499,9 @@ font-size: 20px;
         <img class="social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип">
       </a>
     </div>
+
   </div>
+
   <nav>
     <div class="nav-shadow">
       <a href="<?php echo get_home_url(); ?>">

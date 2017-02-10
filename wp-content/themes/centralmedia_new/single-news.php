@@ -2,25 +2,39 @@
 <div class="header-margin-blog">
 <div class="row">
     <div class="col l8 s12 m8">
-        <div class="one-video-post">
-            <div class="one-video-post-name">
-                <?php the_title(); ?>
-            </div>
-            <div class="box-title-time fix-mob-article one-video-post-time">
-                <?php 
-                    the_time('j F Y, G:i');
-                    setPostViews( get_the_ID() );
-                    echo '<span style="float:right"> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</span>'; 
-                ?>
-            </div>
-            <div>
-                <img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-            </div>
-            <div class="one-video-post-text">
-                <?php the_content(); ?>
-            </div>
-            <?php echo getPostLikeLink(get_the_ID()); ?>
-        </div>
+        <?php 
+            if ( have_posts() ) :
+                while ( have_posts() ) : the_post(); // Start the Loop.
+        ?>
+                    <div class="one-video-post">
+                        <div class="one-video-post-name">
+                            <?php the_title(); ?>
+                        </div>
+                        <div class="box-title-time fix-mob-article one-video-post-time">
+                            <?php 
+                                the_time('j F Y, G:i');
+                                setPostViews( get_the_ID() );
+                                echo '<span style="float:right"> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</span>'; 
+                            ?>
+                        </div>
+                        <div>
+                            <img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+                        </div>
+                        <div class="single-post-text">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php echo getPostLikeLink(get_the_ID()); ?>
+                    </div>
+        <?php
+                endwhile; // End the loop.
+                echo '<div class="clear"></div>';
+                the_posts_pagination( $pagination_args );
+                wp_reset_postdata();
+            else :
+                // If no content, include the "No posts found" template.
+                echo '<div> Новини не знайдено </div>';
+            endif;
+        ?>
     </div>
 
     <div class="col l4 m4 s12">

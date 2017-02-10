@@ -101,7 +101,7 @@ function show_latest_articles() {
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog">' . $category[$i]->cat_name . '</a>';
+                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
                             }
                         }
                         echo '
@@ -304,7 +304,7 @@ function show_popular_video() {
     <? else: ?>
     <div id="modal-login" class="modal">
         <div class="modal-content">
-            <a href="#!" class="modal-action modal-close waves-effect  waves-red accent-4 btn-flat black-text">
+            <a href="#!" class="modal-action modal-close waves-effect  waves-red accent-4 btn-flat black-text right">
                 <i class="material-icons black-text">&#xE14C;</i>
             </a>
             <div id="popup_name" class="popup_block">
@@ -321,10 +321,10 @@ function show_popular_video() {
                                 <img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( get_the_author_meta('ID') ); ?>" alt="bloger_avatar">
                             </div>
                             <div class="col l7 s12 m12  ">
-                                <h4 class="center logged-user-sign">Ваш профіль</h4>
+                                <h4 class="logged-user-sign">Ваш профіль</h4>
                                 <div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
                                 <div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
-                                <div>
+                                <div class="about-user-info">
                                     <?php echo get_the_author_meta( 'description' ); ?>
                                 </div>
                                 <?php
@@ -814,4 +814,6 @@ function show_popular_video() {
         return $output;
     }
 //end ajax like for posts
+    //turning off the admin panel for all users 
+show_admin_bar(false);
 ?>

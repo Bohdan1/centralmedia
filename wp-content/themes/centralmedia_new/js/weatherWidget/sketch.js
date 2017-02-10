@@ -87,7 +87,6 @@ function setWeatherIcon(weatherDesc) {
 	else if(weatherDesc == 'additional') {
 		return 'icon-clima-1';
 	}
-	
 }
 
 

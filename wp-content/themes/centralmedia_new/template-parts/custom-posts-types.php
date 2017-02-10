@@ -59,7 +59,7 @@
             'hierarchical' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
             'taxonomies' => array( 'post_tag', 'category' ),
-            'has_archive' => true,
+            'has_archive' => false,
             'rewrite' => true,
             'query_var' => true,
             'can_export' => true
@@ -322,19 +322,19 @@
 
     function register_cpt_folks_control() {
         $labels = array( 
-            'name' => _x( 'Народний контроль', 'folks_control' ),
-            'singular_name' => _x( 'Народний контроль', 'folks_control' ),
-            'add_new' => _x( 'Додати народний контроль', 'folks_control' ),
-            'add_new_item' => _x( 'Додати новий народний контроль', 'folks_control' ),
-            'edit_item' => _x( 'Редагувати народний контроль', 'folks_control' ),
-            'new_item' => _x( 'Новий народний контроль', 'folks_control' ),
-            'view_item' => _x( 'Переглянути', 'folks_control' ),
-            'search_items' => _x( 'Пошук', 'folks_control' ),
-            'not_found' => _x( 'Народний контроль не знайдено', 'folks_control' ),
-            'not_found_in_trash' => _x( 'Народних контролей в корзині не знайдено', 'folks_control' ),
-            'parent_item_colon' => _x( 'Батьківський елемент', 'folks_control' ),
-            'all_items' => _x( 'Всі народні контролі', 'folks_control' ),
-            'name_admin_bar' => _x( 'Народний контроль', 'folks_control'),    //назва в адмін барі (тулбарі)
+            'name' => _x( 'Народний кореспондент', 'folk_correspondent' ),
+            'singular_name' => _x( 'Народний кореспондент', 'folk_correspondent' ),
+            'add_new' => _x( 'Додати народний кореспондент', 'folk_correspondent' ),
+            'add_new_item' => _x( 'Додати новий народний кореспондент', 'folk_correspondent' ),
+            'edit_item' => _x( 'Редагувати народний кореспондент', 'folk_correspondent' ),
+            'new_item' => _x( 'Новий народний кореспондент', 'folk_correspondent' ),
+            'view_item' => _x( 'Переглянути', 'folk_correspondent' ),
+            'search_items' => _x( 'Пошук', 'folk_correspondent' ),
+            'not_found' => _x( 'Народний кореспондент не знайдено', 'folk_correspondent' ),
+            'not_found_in_trash' => _x( 'Народних кореспондентів в корзині не знайдено', 'folk_correspondent' ),
+            'parent_item_colon' => _x( 'Батьківський елемент', 'folk_correspondent' ),
+            'all_items' => _x( 'Всі народні кореспонденти', 'folk_correspondent' ),
+            'name_admin_bar' => _x( 'Народний кореспондент', 'folk_correspondent'),    //назва в адмін барі (тулбарі)
         );
         $args = array( 
             'labels' => $labels,
@@ -347,15 +347,15 @@
             'show_in_nav_menus' => true,
             'menu_position' => 10,
             'menu_icon' => 'dashicons-welcome-write-blog',
-            'capability_type' => 'folk_control',    //автоматично створює потрібні повноваження
+            'capability_type' => 'folk_correspondent',    //автоматично створює потрібні повноваження
             'capabilities' => array(
-                'edit_post' => 'edit_folk_control',
-                'read_post' => 'read_folk_control',
-                'delete_post' => 'delete_folk_control',
-                'edit_posts' => 'edit_folks_control',
-                'edit_others_posts' => 'edit_other_folks_control',  //дозволяє редагувати записи, які належать іншим авторам
-                'publish_posts' => 'publish_folks_control',
-                'read_private_posts' => 'read_private_folks_control',
+                'edit_post' => 'edit_folk_correspondent',
+                'read_post' => 'read_folk_correspondent',
+                'delete_post' => 'delete_folk_correspondent',
+                'edit_posts' => 'edit_folk_correspondents',
+                'edit_others_posts' => 'edit_other_folk_correspondent',  //дозволяє редагувати записи, які належать іншим авторам
+                'publish_posts' => 'publish_folk_correspondent',
+                'read_private_posts' => 'read_private_folk_correspondent',
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
@@ -367,16 +367,70 @@
             'can_export' => true
             //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
         );
-        register_post_type( 'folks_control', $args );
+        register_post_type( 'folk_correspondent', $args );
     }
+
+
+
+    function register_cpt_cultural_events() {
+        $labels = array( 
+            'name' => _x( 'Культурні події', 'cultural_events' ),
+            'singular_name' => _x( 'Культурні події', 'cultural_events' ),
+            'add_new' => _x( 'Додати культурну подію', 'cultural_events' ),
+            'add_new_item' => _x( 'Додати нову культурну подію ', 'cultural_events' ),
+            'edit_item' => _x( 'Редагувати культурні події', 'cultural_events' ),
+            'new_item' => _x( 'Нові культурні події', 'cultural_events' ),
+            'view_item' => _x( 'Переглянути', 'cultural_events' ),
+            'search_items' => _x( 'Пошук', 'cultural_events' ),
+            'not_found' => _x( 'Культурні події не знайдено', 'cultural_events' ),
+            'not_found_in_trash' => _x( 'Культурних подій в корзині не знайдено', 'cultural_events' ),
+            'parent_item_colon' => _x( 'Батьківський елемент', 'cultural_events' ),
+            'all_items' => _x( 'Всі культурні події', 'cultural_events' ),
+            'name_admin_bar' => _x( 'Культурні події', 'cultural_events'),    //назва в адмін барі (тулбарі)
+        );
+        $args = array( 
+            'labels' => $labels,
+            'description' => 'Культурні події',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'menu_position' => 4,
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            'capability_type' => 'cultural_event',    //автоматично створює потрібні повноваження
+            'capabilities' => array(
+                'edit_post' => 'edit_cultural_event',
+                'read_post' => 'read_cultural_event',
+                'delete_post' => 'delete_cultural_event',
+                'edit_posts' => 'edit_cultural_events',
+                'edit_others_posts' => 'edit_other_cultural_events',  //дозволяє редагувати записи, які належать іншим авторам
+                'publish_posts' => 'publish_cultural_events',
+                'read_private_posts' => 'read_private_cultural_events',
+            ),
+            'map_meta_cap' => true,
+            'hierarchical' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
+            'taxonomies' => array( 'post_tag', 'category' ),
+            'has_archive' => true,
+            'rewrite' => true,
+            'query_var' => true,
+            'can_export' => true
+            //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+        );
+        register_post_type( 'cultural_events', $args );
+    }
+
 
     add_action( 'init', 'register_cpt_news' );
     add_action( 'init', 'register_cpt_articles' );
     add_action( 'init', 'register_cpt_blogs' );
     add_action( 'init', 'register_cpt_partner_news' );
     add_action( 'init', 'register_cpt_video' );
-    add_action( 'init', 'register_cpt_folks_control' );
     add_action( 'init', 'register_cpt_streams' );
+    add_action( 'init', 'register_cpt_folks_control' );
+    add_action( 'init', 'register_cpt_cultural_events' );
 // end register custom posts types
 
 
@@ -392,7 +446,6 @@
             'high'    //Пріоритет блоку для показу вище або нижче інших блоків: high або low.
         );
     });
-
     function video_info_cb() {
         global $post;
         $url = get_post_meta( $post->ID, 'video_url', true );
@@ -430,7 +483,6 @@
             'high'
         );
     });
-
     function partner_news_info_cb() {
         global $post;
         $url = get_post_meta( $post->ID, 'partner_news_url', true );
@@ -468,7 +520,6 @@
             'high'
         );
     });
-
     function streams_info_cb() {
         global $post;
         $url = get_post_meta( $post->ID, 'stream_url', true );
@@ -490,6 +541,44 @@
         if ( $_POST && wp_verify_nonce( $_POST['stream_nonce'], __FILE__ ) ) {
             if ( isset($_POST['stream_url']) ) {
                 update_post_meta( $post->ID, 'stream_url', $_POST['stream_url'] );
+            }
+        }
+    });
+
+
+
+    add_action( 'add_meta_boxes', function() {
+        add_meta_box(
+            'event_info',
+            'Посилання на культурну подію:',
+            'events_info_cb',
+            'cultural_events',
+            'normal',
+            'high'
+        );
+    });
+    
+    function events_info_cb() {
+        global $post;
+        $url = get_post_meta( $post->ID, 'event_url', true );
+
+        //unique identifier, name of hidden field
+        wp_nonce_field( __FILE__, 'event_nonce' );
+    ?>
+        <label for"event_url">URL: </label>
+        <input type="text" name="event_url" id="event_url" class="widefat" value="<?php echo $url; ?>" />
+    <?php
+    }
+    add_action('save_post', function() {
+        global $post;
+        if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+
+        //security check - nonce
+        //verify this came from the our screen and with proper authorization,
+        //because save_post can be triggered at other times
+        if ( $_POST && wp_verify_nonce( $_POST['event_nonce'], __FILE__ ) ) {
+            if ( isset($_POST['event_url']) ) {
+                update_post_meta( $post->ID, 'event_url', $_POST['event_url'] );
             }
         }
     });

@@ -22,9 +22,9 @@
 					echo '
 						<div class="slider-box slider-box-remake-main">
 					        <div class="slider-element">
-					            <div class="blog-element-tag" class="no-hover-blog">ТОП БЛОГ</div>
+					            <div class="blog-element-tag no-hover-blog">ТОП БЛОГ</div>
 				      			<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="Аватар">
-				      			<div class="">
+				      			<div>
 				      				<div class="slider-bloger-name-main">
 				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
 				      						get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '

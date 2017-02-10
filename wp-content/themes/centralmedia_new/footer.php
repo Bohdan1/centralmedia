@@ -63,6 +63,9 @@
 
 
 <?php wp_footer(); ?>
+
+
+
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/slick.js"></script>
@@ -74,9 +77,7 @@
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/sketch.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/jquery.fittext.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/boxgrid.js"></script>
-
-
-
+<script src="<?php bloginfo('template_url') ?>/js/typed.min.js"></script>
 
 
 
@@ -135,6 +136,7 @@
 
             var jssor_2_options = {
               $AutoPlay: true,
+              $SlideDuration: 2000,
               $DragOrientation: 2,
               $PlayOrientation: 2,
               $ArrowNavigatorOptions: {

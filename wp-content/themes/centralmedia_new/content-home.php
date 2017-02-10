@@ -47,19 +47,7 @@
 				</div>
 			</div>
 
-			<div class="social-menu-bottom hide-on-med-and-down">
-				<div class="menu-list">
-					<a href="#" ><img  class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
-				</div>
-
-				<div class="menu-list">
-					<a href="#" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
-				</div>
-
-				<div class="menu-list">
-					<a href="#"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 </div>
@@ -352,17 +340,25 @@
 									<img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
 									<span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
 								</div>
+								<div class="row">
+								<div class="col l4 m5 s12">
 								<div class="previous-blog-img">
 									<a href="' . get_the_permalink() . '" >
 										<img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
 									</a>
 								</div>
+								</div>
+								<div class="col l8 m7 s12">
 								<div class="previous-blog-name ">
 									<a href="' . get_the_permalink() . '" class="black-text">' .
 				      					get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
 				      				</a>
 								</div>
 								<div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
+								</div>
+								</div>
+
+								
 								<div class="previous-blog-title ">
 									<a href="' . get_the_permalink() . '" class="black-text">' .
 										short_post_title(55) . '

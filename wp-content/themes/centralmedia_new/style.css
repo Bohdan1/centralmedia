@@ -165,23 +165,23 @@ nav ul a:hover {
 	padding-left: 0px;
 }
 .social-menu-top {
-	top: 15px;
+	top: 6px;
 	right: 20px;
 	z-index: 999999;
 	position: fixed;
 
 }
 .social-menu-bottom {
-	bottom: 45px;
+	bottom: -64px;
 	position: absolute;
-	right: 15px;
+	right: 125px;
 	z-index: 55;
 
 }
 
 .popular-video-description{
 	position: relative;
-	bottom: -140px;
+	bottom: -160px;
 	left: 5px;
 	color: white;
 	font-size: 20px;
@@ -285,8 +285,8 @@ button{
 .title-tag{
 	margin: 5px;
 	position: absolute;
-	top: -45px;
-	font-size: 25px;
+	top: -35px;
+	font-size: 18px;
 	color: white;
 	padding: 2px;
 	left: 15px;
@@ -572,22 +572,19 @@ button{
 	display: inline-block;
 }
 .previous-blog-img-width{
-	width: 100px;
+	width: 100%;
 }
 .previous-blog-name{
-	position: relative;
-	top: -45px;
+
 	font-size: 25px;
 	font-weight: bold;
-	left: 20px;
 	display: inline-block;
 }
 .previous-blog-time{
-	position: relative;
+	
 	width: 50px;
-	left: 125px;
-	top: -40px;
 }
+	
 .previous-blog-title{
 	position: relative;
 	top: -20px;
@@ -625,7 +622,7 @@ button{
 .popular-video-block{
 	position: relative;
 	margin-top: 20px;
-	height: 200px;
+	height: 220px;
 	background-size: cover;
 	background-position: center;
 }
@@ -688,11 +685,11 @@ button{
 .popular-video-tag{
 	margin: 5px;
 	position: absolute;
-	top: -100px;
+	top: -215px;
 	font-size: 18px;
 	color: white;
 	padding: 2px;
-	left: 5px;
+	left: 0px;
 	text-align: center;
 	background-color: rgba(255, 0, 0, 0.8);
 }
@@ -702,7 +699,7 @@ button{
 	cursor: pointer;
 	z-index: 2;
 	left: 37%;
-	top: 1%;
+	top: 10%;
 }
 .button-position-popular-video-content-box-width-main{
 	width: 100px;
@@ -914,7 +911,7 @@ footer{
 	padding: 5px;
 	left: 15px;
 	text-align: left;
-	background-color: rgba(255, 0, 0, 0.8);
+	/* background-color: rgba(255, 0, 0, 0.8); */
 
 }
 .second-slider-box-title{
@@ -1015,9 +1012,10 @@ footer{
 	font-size: 20px;
 }
 .user-news-block{
-	top: 50px !important;
+	top: 70px !important;
 	height: 250px !important;
 	width: 100% !important;
+	margin-left: 20px;
 }
 .user-news-title{
 	font-size: 20px;
@@ -1197,7 +1195,7 @@ a:hover{
 	font-size: 20px;
 	margin-bottom: 10px;
 }
-.one-video-post-text{
+.single-post-text{
 	margin-top: 15px;
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -1260,15 +1258,16 @@ a:hover{
 	margin-top: -10px;
 }
 #true_loadmore{
-	background: #E40E04; /* черный фон */
-	color: #FFF; /* белый цвет текста */
-	padding: 5px; /* отступы от границ 5px */
-	text-align: center; /* выравнивание текста по центру */
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px;
-	border-radius: 4px; /* закругление углов */
-	margin: 20px 0; /* отступы сверху и снизу от кнопки */
-	cursor:pointer; /* курсор мыши при наведении такой же, как при наведении на ссылку */
+	background: rgba(235, 31, 31, 0.9);
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 25px;
 }
 
 .wp-polls-form strong{
@@ -1740,4 +1739,19 @@ background: url(/img/ch2.png) top right no-repeat, url(/img/ch1.png) top left no
 
 .weatherWidget{
 	z-index: 9999;
+}
+
+.about-user-info{
+	text-align: left;
+    padding-left: 30px;
+}
+
+.article-slider-tags{
+	background-color: rgba(255, 0, 0, 0.8);
+	margin-right: 5px;
+	padding: 3px 8px 3px 8px;
+	font-size: 25px;
+}
+.single-post-text img{
+max-width: 100% !important;
 }
