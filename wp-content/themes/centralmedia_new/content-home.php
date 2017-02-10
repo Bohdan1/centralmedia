@@ -245,7 +245,7 @@
 <div class="col l7 s12 m6 narod-korespond">
 <div class="col l12">
 	<div class="block-with-line">
-		<a href="#" class="button-share-pad"><div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div></a>
+		<a href="#modal4" class="button-share-pad"><div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div></a>
 		<div class="block-line"></div>
 		<div class="small-sign-line"> <div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div></div><img data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
 	</div>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div class="header-margin-blog">
 <div class="row">
     <div class="col l8 s12 m8">
         <div class="one-video-post">
@@ -59,6 +59,7 @@
         </div> 
 
     </div>
+</div>
 </div>
 
 <div class="row">

@@ -51,10 +51,14 @@
 </footer>
 
 <div id="people-share">
+ <a href="#modal4">
   <img class="pencil" src="<?php bloginfo('template_url') ?>/img/pencil12.png" alt="Логотип">
+   </a>
 </div>
 <div id="back-to-top">
+
   <img class="arrow-up" src="<?php bloginfo('template_url') ?>/img/up-arrow.svg" alt="Логотип">
+ 
 </div>
 
 

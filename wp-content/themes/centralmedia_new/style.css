@@ -1907,9 +1907,15 @@ filter: alpha(opacity=40);
 background-color:rgba(64,64,64,0.33); 
 transition: 0.5s; 
 }
-
-
-
+.share-name, .share-surname, .share-media, .share-text{
+	text-align: left !important;	
+}
+.share-text{
+	margin-top: 20px;
+}
+.share-button{
+	margin-top: 30px;
+}
 
 //Сторінка 404//
 .comingcontainer{ height: 100%; margin: 0; padding: 0; overflow: hidden; }
