@@ -63,52 +63,12 @@
 
 
 <?php wp_footer(); ?>
-<script>
-  var limit     = $(window).height()/3,
-  $backToTop = $('#back-to-top');
 
-  $(window).scroll(function () {
-    if ( $(this).scrollTop() > limit ) {
-      $backToTop.fadeIn();
-    } else {
-      $backToTop.fadeOut();
-    }
-  });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-// scroll body to 0px on click
-$backToTop.click(function () {
-  $('body,html').animate({
-    scrollTop: 0
-  }, 1500);
-  return false;
-});
-
-</script>
-<script>
-  $(document).ready(function(){
-// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-$('.modal').modal();
-});
-</script>
-<script>
-// Initialize collapse button
-$(".button-collapse").sideNav();
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-//$('.collapsible').collapsible();
-</script>
-
-<script type="text/javascript">
-  $(document).on('ready', function() {
-    $(".center").slick({
-      dots: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 3
-    });
-
-
-  });
-</script>
+<?php
+  if ( is_home() ) {
+?>
 <script type="text/javascript">
   jssor_1_slider_init = function() {
 
@@ -146,12 +106,12 @@ $(".button-collapse").sideNav();
   };
 
 </script>
-<script type="text/javascript">jssor_1_slider_init();</script>
+
 
 <script type="text/javascript">
         jssor_2_slider_init = function() {
 
-            var jssor_1_options = {
+            var jssor_2_options = {
               $AutoPlay: true,
               $DragOrientation: 2,
               $PlayOrientation: 2,
@@ -160,7 +120,7 @@ $(".button-collapse").sideNav();
               }
             };
 
-            var jssor_1_slider = new $JssorSlider$("jssor_2", jssor_1_options);
+            var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_2_options);
 
             /*responsive code begin*/
             /*you can remove responsive code if you don't want the slider scales while window resizing*/
@@ -168,7 +128,7 @@ $(".button-collapse").sideNav();
                 var refSize = jssor_2_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
                     refSize = Math.min(refSize, 600);
-                    jssor_1_slider.$ScaleWidth(refSize);
+                    jssor_2_slider.$ScaleWidth(refSize);
                 }
                 else {
                     window.setTimeout(ScaleSlider, 30);
@@ -181,8 +141,6 @@ $(".button-collapse").sideNav();
             /*responsive code end*/
         };
     </script>
-
-    <script type="text/javascript">jssor_2_slider_init();</script>
 <script type="text/javascript">
   jssor_3_slider_init = function() {
 
@@ -218,8 +176,79 @@ $(".button-collapse").sideNav();
     $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
     /*responsive code end*/
   };
+</script>
+
+<script type="text/javascript">jssor_1_slider_init();</script>
+<script type="text/javascript">jssor_2_slider_init();</script>
+<script type="text/javascript">jssor_3_slider_init();</script>
+
+<?php
+  }//end if
+?>
+
+<script>
+  var limit     = $(window).height()/3,
+  $backToTop = $('#back-to-top');
+
+  $(window).scroll(function () {
+    if ( $(this).scrollTop() > limit ) {
+      $backToTop.fadeIn();
+    } else {
+      $backToTop.fadeOut();
+    }
+  });
+
+// scroll body to 0px on click
+$backToTop.click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 1500);
+  return false;
+});
 
 </script>
-<script type="text/javascript">jssor_3_slider_init();</script>
+<script>
+  $(document).ready(function(){
+// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+$('.modal').modal();
+});
+</script>
+<script>
+// Initialize collapse button
+$(".button-collapse").sideNav();
+// Initialize collapsible (uncomment the line below if you use the dropdown variation)
+//$('.collapsible').collapsible();
+</script>
+<script>
+if(window.matchMedia('(max-width: 768px)').matches)
+{
+
+$(document).on('ready', function() {
+
+$(".center").slick({
+dots: false,
+infinite: true,
+centerMode: false,
+slidesToShow: 3,
+slidesToScroll: 1
+});
+
+});
+}
+else{
+$(document).on('ready', function() {
+
+$(".center").slick({
+dots: false,
+infinite: true,
+centerMode: false,
+slidesToShow: 5,
+slidesToScroll: 2
+});
+
+});
+}
+</script>
+
 </body>
 </html>

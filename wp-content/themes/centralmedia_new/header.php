@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 <?php wp_head(); ?>
 
 <style>
@@ -599,34 +600,5 @@ if (is_user_logged_in() ) {
       <a href="#!" class=" modal-action modal-close waves-effect waves-green black-text btn-flat">Закрити</a>
     </div>
   </div>
-<script>
-if(window.matchMedia('(max-width: 768px)').matches)
-{
 
-$(document).on('ready', function() {
-
-$(".center").slick({
-dots: false,
-infinite: true,
-centerMode: false,
-slidesToShow: 3,
-slidesToScroll: 1
-});
-
-});
-}
-else{
-$(document).on('ready', function() {
-
-$(".center").slick({
-dots: false,
-infinite: true,
-centerMode: false,
-slidesToShow: 5,
-slidesToScroll: 2
-});
-
-});
-}
-</script>
 

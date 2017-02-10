@@ -2,7 +2,8 @@
 add_theme_support( 'post-thumbnails' ); // adds capabilities to create thumbnails for posts
 
 function register_styles() { // adds files with styles
-	wp_enqueue_style( 'materialize.min', get_template_directory_uri() . '/css/materialize.min.css' );
+	
+    wp_enqueue_style( 'slick-slider', get_template_directory_uri() . '/css/slick-slider.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'font-awesome.min', get_template_directory_uri() . '/css/font-awesome.min.css' );

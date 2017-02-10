@@ -402,7 +402,7 @@
 						</div>
 					</div>
 					<div>
-						<img data-u="image" class="second-slider-img"  src="http://life.pravda.com.ua/images/doc/f/2/f2a6d8d----------------------.---------street-art-fest-2011--.jpg" />
+						<img data-u="image" class="second-slider-img"  src="<?php bloginfo('template_url') ?>/img/2.jpg" />
 						<div class="mask">
 							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 465</span></div>
 							<div class="second-slider-content">
@@ -416,7 +416,7 @@
 						</div>
 					</div>
 					<div>
-						<img data-u="image" src="http://life.pravda.com.ua/images/doc/9/4/94acb54---------.-------------------.--------------------------------------------------------------2000-.jpg" />
+						<img data-u="image" src="<?php bloginfo('template_url') ?>/img/1.jpg" />
 						<div class="mask">
 							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 49858</span></div>
 							<div class="second-slider-content">
