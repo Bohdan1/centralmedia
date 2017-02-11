@@ -58,8 +58,8 @@ function custom_post_permalink() {
     return $post_link;
 }
 
-//show news on homepage
-function show_news_for_homepage() {
+//show latest news
+function show_short_latest_news() {
     global $date;
     if ( $date != get_the_time('j F Y l') ) {
         $date = get_the_time('j F Y l');
@@ -81,8 +81,8 @@ function show_news_for_homepage() {
         </div>';
 }
 
-//show latest articles
-function show_latest_articles() {
+//show post for slider
+function show_slider_post() { //show_big_post()
     echo '
         <div>
             <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url() . '" />
@@ -107,12 +107,7 @@ function show_latest_articles() {
                         echo '
                     </div>
                     <div class="second-slider-box-title ">
-                        <a href="' . get_the_permalink() .'">' . short_post_title(65) . '</a>
-                    </div>
-                    <div class="second-slider-box-title-small">
-                        <a href="' . get_the_permalink() .'">' .
-                            short_post_desc(70) . '
-                        </a>
+                        <a href="' . get_the_permalink() .'">' . short_post_title(120) . '</a>
                     </div>
                     <div class="second-slider-box-title-time ">' . get_the_time('d.m.Y') . '</div>
                     <br>    
@@ -122,38 +117,59 @@ function show_latest_articles() {
 }
 
 
-//show popular articles
-function show_popular_article() {
+//big template for post 
+function show_big_post() {
     echo '
-        <div class="col l6 s12 m6">
-            <div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
-                <div class="mask">
-                    <div class="view-count">
-                        <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
-                        <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+        <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="second-article-block-all-article">
+            <div class="mask">
+                <div class="view-count"><img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
+                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                </div>
+                <div class="main-article-content-box">
+                    <div class="title-tag">';
+                        $category = get_the_category();
+                        if ( !empty($category) ) {
+                            $category = $category[0];
+                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                        }
+                        echo '
                     </div>
-                    <div class="main-article-content-box">
-                        <div class="title-tag">';
-                            $category = get_the_category();
-                            if ( !empty($category) ) {
-                                $category = $category[0];
-                                echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
-                            }
-                            echo '
-                        </div>
-                        <div class="box-title fix-mob-article ">
-                            <a href="' . get_the_permalink() .'">' . short_post_title(75) . '</a>
-                        </div>
-                        <div class="box-title-small fix-mob-article ">
-                            <a href="' . get_the_permalink() .'">' .
-                                short_post_desc(90) . '
-                            </a>
-                        </div>
-                        <div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
+                    <div class="box-title fix-mob-article ">
+                        <a href="' . get_the_permalink() .'">' . short_post_title(75) . '</a>
                     </div>
+                    <div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
                 </div>
             </div>
         </div>';
+}
+
+
+//small template for post 
+function show_small_post( $height = null ) {
+    echo '
+        <div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url() . '); height:' . $height .'">
+            <div class="mask">
+                <div class="view-count">
+                    <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
+                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                </div>
+                <div class="main-article-content-box">
+                    <div class="title-tag">';
+                        $category = get_the_category();
+                        if ( !empty($category) ) {
+                            $category = $category[0];
+                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                        }
+                        echo '
+                    </div>
+                    <div class="box-title fix-mob-article ">
+                        <a href="' . get_the_permalink() .'">' . short_post_title(65) . '</a>
+                    </div>
+                    <div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
+                </div>
+            </div>
+        </div>
+    ';
 }
 
 
@@ -192,7 +208,6 @@ function show_popular_video() {
             </div>
         </div>';
 }
-
 
 
 //settings for display archive posts
@@ -720,7 +735,7 @@ function show_popular_video() {
         $q = new WP_Query($args);
         if( $q->have_posts() ):
             while($q->have_posts()): $q->the_post();
-                show_news_for_homepage();
+                show_short_latest_news();
             endwhile;
         endif;
         wp_reset_postdata();
@@ -818,6 +833,8 @@ function show_popular_video() {
         return $output;
     }
 //end ajax like for posts
-    //turning off the admin panel for all users 
+
+//turning off the admin panel for all users 
 show_admin_bar(false);
+
 ?>

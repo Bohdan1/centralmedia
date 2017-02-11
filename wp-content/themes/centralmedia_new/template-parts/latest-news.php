@@ -13,7 +13,7 @@
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			show_news_for_homepage();
+			show_short_latest_news();
 		} //end while
 	} //end if
 	else {

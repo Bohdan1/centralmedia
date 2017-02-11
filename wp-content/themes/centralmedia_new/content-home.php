@@ -95,7 +95,7 @@
 						if( $query->have_posts() ) {
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								show_latest_articles();
+								show_slider_post();
 								$latest_articles[] = get_the_ID();
 							}
 						}
@@ -150,8 +150,10 @@
 				if( $query->have_posts() ) {
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						show_popular_article();
-						$articles_count++;
+						echo '<div class="col l6 s12 m6">';
+							show_small_post();
+						echo '</div>';
+						$posts_count++;
 					}
 				}
 			}
