@@ -40,8 +40,10 @@
 			<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
 
 			<div class="right-block-second ">
+			<div class="mask">
 				<div class="right-block-second-tag ">
 					<a href="#" class="no-hover-blog">АТО</a>
+				</div>
 				</div>
 				<div class="right-block-second-sign ">
 					<a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
@@ -631,13 +633,12 @@
 
 		</div>
 		<div class="col l6 s12 m6 ">
-
+	<?php
+            //show polls
+            get_template_part('template-parts/polls');
+        ?>
 		</div>
 	</div>
 
-
-
-
-	<?php get_template_part('content', 'footer') ?>
 
 	<?php get_footer(); ?>

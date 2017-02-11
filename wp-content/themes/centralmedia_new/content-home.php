@@ -38,13 +38,16 @@
 		<div class="video-container">
 			<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
 
-			<div class="right-block-second ">
+			<div class="right-block-second">
+			<div class="mask">
 				<div class="right-block-second-tag ">
-					<a href="#">АТО</a>
+					<a href="#" class="no-hover-blog">АТО</a>
+				</div>
 				</div>
 				<div class="right-block-second-sign ">
 					<a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
 				</div>
+
 			</div>
 
 			
@@ -414,7 +417,7 @@
 							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 983</span></div>
 							<div class="second-slider-content">
 								<br>
-								<div class="second-slider-title-tag"><a href="#" class="no-hover-blog">АТО</a></div>
+								<div class="second-slider-title-tag"><a href="#" class="popular-video-tag last-home-slider no-hover-blog">АТО</a></div>
 								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
 								<div class="second-slider-box-title-small  "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
 								<div class="second-slider-box-title-time ">28.06.2016</div>
@@ -428,7 +431,7 @@
 							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 465</span></div>
 							<div class="second-slider-content">
 								<br>
-								<div class="second-slider-title-tag"><a href="#" class="no-hover-blog">Актуальні новини</a></div>
+								<div class="second-slider-title-tag"><a href="#" class="popular-video-tag last-home-slider no-hover-blog">Актуальні новини</a></div>
 								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
 								<div class="second-slider-box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
 								<div class="second-slider-box-title-time ">28.06.2016</div>
@@ -442,7 +445,7 @@
 							<div class="view-count-top"><img class="count-width-top" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number-top"> 49858</span></div>
 							<div class="second-slider-content">
 								<br>
-								<div class="second-slider-title-tag "><a href="#" class="no-hover-blog">Новини</a></div>
+								<div class="second-slider-title-tag "><a href="#" class="popular-video-tag last-home-slider no-hover-blog">Новини</a></div>
 								<div class="second-slider-box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
 								<div class="second-slider-box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
 								<div class="second-slider-box-title-time ">28.06.2016</div>

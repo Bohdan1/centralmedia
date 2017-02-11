@@ -164,6 +164,10 @@ function show_popular_video() {
         <div class="col l4 s12 m4 video-devider" style="min-height:260px;">
             <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="popular-video-block">
                 <div class="mask">
+                <div class="view-count-blog">
+                                    <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
+                                    <span class="count-number white-text">' . getPostViews( get_the_ID() ) . '</span>
+                                </div>
                     <div class="button-position-popular-video-content-box">
                         <a href="' . get_the_permalink() . '" >
                             <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип">

@@ -349,7 +349,6 @@ button{
 	right: 0px !important;
 	position: relative;
 	height: 100%;
-	padding-top: 10px;
 	max-width: 400px;	
 	max-height: 180px;	
 }
@@ -361,7 +360,6 @@ button{
 	right: 0px !important;
 	position: relative;
 	height: 100%;
-	padding-top: 10px;
 	max-width: 400px;	
 	max-height: 180px;	
 }
@@ -569,9 +567,15 @@ button{
 	border: 2px solid lightgrey; 
 }
 .previous-blog-img{
+	margin: 0 auto;	
 	display: inline-block;
 }
+.previous-blog-img-archive{
+	margin: 0 auto;	
+	display: block;
+}
 .previous-blog-img-width{
+	padding-top: 10px;
 	width: 100%;
 }
 .previous-blog-name{
@@ -1754,4 +1758,10 @@ background: url(/img/ch2.png) top right no-repeat, url(/img/ch1.png) top left no
 }
 .single-post-text img{
 max-width: 100% !important;
+}
+.last-home-slider{
+	font-size: 35px !important;
+}
+.next-day-news:nth-child(1){
+	padding-top: 0px;
 }

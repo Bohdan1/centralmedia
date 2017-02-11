@@ -1,73 +1,71 @@
 <?php get_header(); ?>
 <div class="header-margin-blog">
-<div class="row all-blogs-margin">
-    <div class="col l9 s12 m6">
-        <div class="previous-blog-box">
-            <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-            <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-            <div class="all-blog-content-title">
-                <div class="previous-blog-name-all-blogs  "><a href="#" class="black-text">Юрій Романів </a></div>
-                <div class="previous-blog-text-all-blogs "><a href="#" class="black-text">lorem bla bla bla dfdf dfd fdfsdfs dsfdfdfd s dfd d</a></div>
-                <div class="previous-blog-time-all-blogs ">28.06.2016</div>
-            </div>
-            <div class="all-blog-content">
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-story "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag-all-blogs"><a href="#" class="no-hover-blog">Блог</a></div>
-            </div>
+<div class="row ">
+    <div class="col l8 s12 m7">
+      <div class="previous-blog">
+        <?php 
+            $args = array(
+                'post_type' => 'blogs',
+                'posts_per_page' => 10,
+                'publish' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
+            $query = new WP_Query( $args );
+            if( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $author_id = get_the_author_meta( 'ID' );
+                    echo '
+                        <div class="col l12 s12 m12">
+                            <div class="previous-blog-box">
+                                <div class="view-count-blog">
+                                    <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                                </div>
+                                <div class="row">
+                                <div class="col l2 m5 s12">
+                                <div class="previous-blog-img">
+                                    <a href="' . get_the_permalink() . '" >
+                                        <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
+                                    </a>
+                                </div>
+                                </div>
+                                <div class="col l10 m7 s12">
+                                <div class="previous-blog-name ">
+                                    <a href="' . get_the_permalink() . '" class="black-text">' .
+                                        get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
+                                    </a>
+                                </div>
+                                <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
+                                </div>
+                                </div>
 
-        </div>
+                                
+                                <div class="previous-blog-title ">
+                                    <a href="' . get_the_permalink() . '" class="black-text">' .
+                                        short_post_title(55) . '
+                                    </a>
+                                </div>
+                                <div class="previous-blog-tag">
+                                    <a href="#" class="no-hover-blog">Блог</a>
+                                </div>
+                            </div>
+                        </div>';
+                } //end while
+            } //end if
+            else {
+                echo 'Блогів не знайдено';
+            }
+            wp_reset_postdata();
+        ?>
+    </div>
 
-        <div class="previous-blog-box">
-            <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-            <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-            <div class="all-blog-content-title">
-                <div class="previous-blog-name-all-blogs  "><a href="#" class="black-text">Юрій Романів </a></div>
-                <div class="previous-blog-text-all-blogs "><a href="#" class="black-text">lorem bla bla bla dfdf dfd fdfsdfs dsfdfdfd s dfd d</a></div>
-                <div class="previous-blog-time-all-blogs ">28.06.2016</div>
-            </div>
-            <div class="all-blog-content">
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-story "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag-all-blogs"><a href="#" class="no-hover-blog">Блог</a></div>
-            </div>
-
-        </div>
-        <div class="previous-blog-box">
-            <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-            <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-            <div class="all-blog-content-title">
-                <div class="previous-blog-name-all-blogs  "><a href="#" class="black-text">Юрій Романів </a></div>
-                <div class="previous-blog-text-all-blogs "><a href="#" class="black-text">lorem bla bla bla dfdf dfd fdfsdfs dsfdfdfd s dfd d</a></div>
-                <div class="previous-blog-time-all-blogs ">28.06.2016</div>
-            </div>
-            <div class="all-blog-content">
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-story "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag-all-blogs"><a href="#" class="no-hover-blog">Блог</a></div>
-            </div>
-
-        </div>
-        <div class="previous-blog-box">
-            <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-            <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-            <div class="all-blog-content-title">
-                <div class="previous-blog-name-all-blogs  "><a href="#" class="black-text">Юрій Романів </a></div>
-                <div class="previous-blog-text-all-blogs "><a href="#" class="black-text">lorem bla bla bla dfdf dfd fdfsdfs dsfdfdfd s dfd d</a></div>
-                <div class="previous-blog-time-all-blogs ">28.06.2016</div>
-            </div>
-            <div class="all-blog-content">
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-story "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag-all-blogs"><a href="#" class="no-hover-blog">Блог</a></div>
-            </div>
-
-        </div>
-
+        
 
     </div>
 
-    <div class="col l3 m6 s12">
+    <div class="col l4 m5 s12">
         <div class="third-block-with-line">
             <div class="big-sign-line-all-blogs"><span>ПОПУЛЯРНЕ</span></div>
             <div class="block-line"></div>
@@ -387,9 +385,11 @@
             <iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
 
             <div class="right-block-second ">
+                <div class="mask">
                 <div class="right-block-second-tag ">
                     <a href="#" class="no-hover-blog" >АТО</a>
                 </div>
+                  </div>
                 <div class="right-block-second-sign ">
                     <a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
                 </div>
@@ -473,11 +473,14 @@
 
     </div>
     <div class="col l6 s12 m6 ">
-
+    <?php
+            //show polls
+            get_template_part('template-parts/polls');
+        ?>
     </div>
 </div>
 
 
-<?php get_template_part('content', 'footer') ?>
+
 
 <?php get_footer(); ?>

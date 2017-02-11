@@ -33,57 +33,64 @@
             <div class="big-sign-line-one-video">ВІД <span>АВТОРА</span></div>
             <div class="block-line"></div>
         </div>
-        <div>
-            <div class="previous-blog-box">
-                <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-                <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-                <div class="previous-blog-name "><a href="#" class="black-text">Юрій<br>Романів </a></div>
-                <div class="previous-blog-time ">28.06.2016</div>
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag"><a href="#" class="no-hover-blog">Гаряче</a></div>
-            </div>
-        </div>
+             <div class="previous-blog">
+        <?php 
+            $args = array(
+                'post_type' => 'blogs',
+                'posts_per_page' => 3,
+                'publish' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
+            $query = new WP_Query( $args );
+            if( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $author_id = get_the_author_meta( 'ID' );
+                    echo '
+                        <div class="col l12 s12 m12">
+                            <div class="previous-blog-box">
+                                <div class="view-count-blog">
+                                    <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                                </div>
+                                <div class="row">
+                                <div class="col l12 m12 s12">
+                                <div class="previous-blog-img-archive">
+                                    <a href="' . get_the_permalink() . '" >
+                                        <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
+                                    </a>
+                                </div>
+                                </div>
+                                <div class="col l12 m12 s12">
+                                <div class="previous-blog-name ">
+                                    <a href="' . get_the_permalink() . '" class="black-text">' .
+                                        get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
+                                    </a>
+                                </div>
+                                <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
+                                </div>
+                                </div>
 
-        <div>
-            <div class="previous-blog-box">
-                <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-                <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-                <div class="previous-blog-name "><a href="#" class="black-text">Юрій<br>Романів </a></div>
-                <div class="previous-blog-time ">28.06.2016</div>
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag"><a href="#" class="no-hover-blog">Гаряче</a></div>
-            </div>
-        </div>
-        <div>
-            <div class="previous-blog-box">
-                <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-                <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-                <div class="previous-blog-name "><a href="#" class="black-text">Юрій<br>Романів </a></div>
-                <div class="previous-blog-time ">28.06.2016</div>
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag"><a href="#" class="no-hover-blog">Гаряче</a></div>
-            </div>
-        </div>
-        <div>
-            <div class="previous-blog-box">
-                <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-                <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-                <div class="previous-blog-name "><a href="#" class="black-text">Юрій<br>Романів </a></div>
-                <div class="previous-blog-time ">28.06.2016</div>
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag"><a href="#" class="no-hover-blog">Гаряче</a></div>
-            </div>
-        </div>
-        <div>
-            <div class="previous-blog-box">
-                <div class="view-count-blog"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye-black.svg"><span class="count-number"> 523</span></div>
-                <div class="previous-blog-img"><a href="#" ><img class="previous-blog-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-                <div class="previous-blog-name "><a href="#" class="black-text">Юрій<br>Романів </a></div>
-                <div class="previous-blog-time ">28.06.2016</div>
-                <div class="previous-blog-title "><a href="#" class="black-text">У селищі Биківня селяний сплюндрували</a></div>
-                <div class="previous-blog-tag"><a href="#" class="no-hover-blog">Гаряче</a></div>
-            </div>
-        </div>
+                                
+                                <div class="previous-blog-title ">
+                                    <a href="' . get_the_permalink() . '" class="black-text">' .
+                                        short_post_title(55) . '
+                                    </a>
+                                </div>
+                                <div class="previous-blog-tag">
+                                    <a href="#" class="no-hover-blog">Блог</a>
+                                </div>
+                            </div>
+                        </div>';
+                } //end while
+            } //end if
+            else {
+                echo 'Блогів не знайдено';
+            }
+            wp_reset_postdata();
+        ?>
+    </div>
 
     </div>
 </div>
@@ -363,6 +370,5 @@
     </div>
 </div>
 
-<?php get_template_part('content', 'footer') ?>
 
 <?php get_footer(); ?>

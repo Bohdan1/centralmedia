@@ -119,5 +119,5 @@
 		</div>
 	</div>
 </div>
-<?php get_template_part('content', 'footer') ?>
+
 <?php get_footer(); ?>
