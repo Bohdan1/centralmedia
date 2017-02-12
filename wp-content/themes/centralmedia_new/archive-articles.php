@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <!--header-->
 
-
 <div class="row home-content">
 	<div id="disable-mat-padding" class="col l9 s12 left-block">
 		<div class="left-block-content">
@@ -35,7 +34,6 @@
 			<div class="menu-list"><a href="#modal2"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
 		</div>
 		<div class="video-container">
-
 
 			<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
 
@@ -80,92 +78,54 @@
 
 	<div class="row">
 		<div class="full-width-mob col l8 s12 m7 ">
-			<div class="col l12 s12 m12">
-				<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-							<div class="box-title-time fix-mob-article">28.06.2016</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col l6 s12 m6 ">
-				<div  class="second-article-block">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-							<div class="box-title-time fix-mob-article">28.06.2016</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col l6 s12 m6 ">
-				<div  class="second-article-block">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-							<div class="box-title-time fix-mob-article">28.06.2016</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col l4 s12 m5 ">
-
-			<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-				<div class="mask">
-					<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-					<div class="main-article-content-box">
-
-						<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-						<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-						<div class="box-title-time fix-mob-article">28.06.2016</div>
-					</div>
-				</div>
-			</div>
-			<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-				<div class="mask">
-					<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-					<div class="main-article-content-box">
-
-						<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-						<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-						<div class="box-title-time fix-mob-article">28.06.2016</div>
-					</div>
-				</div>
-			</div>
-			<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-				<div class="mask">
-					<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-					<div class="main-article-content-box">
-
-						<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-						<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-						<div class="box-title-time fix-mob-article">28.06.2016</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
+			<?php
+	            $args = array(
+	                'post_type' => 'articles',
+	                'posts_per_page' => 6,
+	                //'numberposts' => 10,
+	                'publish' => true,
+	                'orderby' => 'date',
+	                'order' => 'DESC'
+	            );
+	            $query = new WP_Query( $args );
+	            $exclude_posts = array();
+	            $display_posts = 1;
+	            if ( $query->have_posts() ) {
+	                while ( $query->have_posts() ) {
+	                    $query->the_post();
+	                    $exclude_posts[] = get_the_ID();
+	                    if ( $display_posts == 1 ) {
+	                        echo '<div class="col l12 s12 m12">';
+	                            show_big_post();
+	                        echo '</div>';
+	                        $display_posts++;
+	                    }
+	                    else if ( $display_posts == 2 ) {
+	                        echo '<div class="col l6 s12 m6 ">';
+	                            show_small_post();
+	                        echo '</div>';
+	                        $display_posts++;
+	                    }
+	                    else if ( $display_posts == 3 ) {
+	                        echo '<div class="col l6 s12 m6 ">';
+	                            show_small_post();
+	                        echo '</div>
+	    </div>'; //end <div class="full-width-mob col l8 s12 m7"> 
+	                         $display_posts++;
+	                    }
+	                    
+	                    else {
+	                        echo '<div class="col l4 s12 m5 ">';
+	                            show_small_post( '260px' );
+	                        echo '</div>';
+	                    }
+	                } //end while
+	            } //end if
+	            else {
+	                echo 'Статтей не знайдено';
+	            }
+	            wp_reset_postdata();
+	        ?>
 	</div>
 	<div class="third-block-with-line">
 		<div class="big-sign-line">ПОПУЛЯРНЕ <span></span></div>
@@ -175,65 +135,57 @@
 	<div class="row">
 		<div class="popular-video-all-state-archive">
 			<div class="row">
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
+				<?php
+		            $popular_days_post = 21;
+		            $args = array(
+		                'post_type' => 'articles',
+		                'posts_per_page' => 4,
+		                'post__not_in' => $exclude_posts,
+		                'publish' => true,
+		                'date_query' => array(
+		                    'after' => $popular_days_post . ' days ago',
+		                ),
+		                'meta_key' => 'post_views_count',
+		                'orderby' => 'meta_value_num'
+		                //'order' => 'DESC'
+		            );
+		            $query = new WP_Query( $args );
+		            $posts_count = 0;
+		            //якщо є відео, які публіковані за останні $popular_days_post днів
+		            if( $query->have_posts() ) {
+		                while ( $query->have_posts() ) {
+		                    $query->the_post();
+		                    $posts_count++;
 
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		                    echo '<div class="col l3 s12 m3">';
+		                    	show_small_post();
+		                    echo '</div>';
+		                }
+		            }
+		            //якщо немає або недостатньо публікованих відео за останні $popular_days_post
+		            if( $posts_count < 4) {
+		                $args = array(
+		                    'post_type' => 'articles',
+		                    'posts_per_page' => 4 - $posts_count,
+		                    'post__not_in' => $exclude_posts,
+		                    'publish' => true,
+		                    'date_query' => array(
+		                        'before' => $popular_days_post . ' days ago',
+		                        ),
+		                    'orderby' => 'date',
+		                    'order' => 'DESC'
+		                    );
+		                $query = new WP_Query( $args );
+		                if( $query->have_posts() ) {
+		                    while ( $query->have_posts() ) {
+		                        $query->the_post();
+		                        echo '<div class="col l3 s12 m3">';
+			                    	show_small_post();
+			                    echo '</div>';
+		                    }
+		                }
+		            }
+		        ?>
 			</div>
 
 
@@ -241,84 +193,10 @@
 		</div>
 	</div>
 
-	<section class="center slider">
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake-main">
-			<div class="slider-element">
-				<div class="blog-element-tag" class="no-hover-blog">ТОП БЛОГ</div>
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name-main"><a href="#" class="no-hover-blog">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema-main"><a href="#" class="no-hover-blog">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-box slider-box-remake">
-			<div class="slider-element">
-				<img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-				<div class="">
-					<div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-					<div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
+<?php
+	//slider for blogers
+	get_template_part('template-parts/slider', 'blogers');
+?>
 
 	<div class="second-block-with-line">
 		<div class="big-sign-line">ВСІ <span>СТАТТІ</span></div>
@@ -328,235 +206,32 @@
 	<div class="row">
 		<div class="popular-video-all-state-archive">
 			<div class="row">
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
+				<?php
+					$args = array(
+						'post_type' => 'articles',
+						'posts_per_page' => 12,
+						//'post__not_in' => $exclude_posts,
+						'publish' => true,
+						'orderby' => 'date',
+						'order' => 'DESC'
+					);
+					$query = new WP_Query( $args );
+					$date = '';
 
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col l3 s12 m3">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-								<div class="box-title-small fix-mob-article "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-								<div class="box-title-time fix-mob-article">28.06.2016</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) {
+							$query->the_post();
+							echo '<div class="col l3 s12 m3">';
+								show_small_post();
+							echo '</div>';
+						} //end while
+					} //end if
+					else {
+						echo 'Новин не знайдено';
+					}
+					wp_reset_postdata();
+				?>
 			</div>
-
-
-
 		</div>
 	</div>
 	<div class="advertisment-all-article">
@@ -578,53 +253,12 @@
 	</div>
 
 	<div class="row">
-
 		<div class="col l6 s12 m6 devider">
 			<div class="main-news-content-footer">
-				<div class="next-day-news">2 лютого, 2017 <span>четвер</span></div>
-				<div class="news-block">
-					<div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-					<div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-					<div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-
-				<div class="next-day-news">3 лютого, 2017 <span>п'ятниця</span></div>
-				<div class="news-block">
-					<div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-					<div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-					<div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-					<div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-					<div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-					<div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-					<div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-					<div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-				<div class="news-block">
-					<div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-					<div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-				</div>
-
+				<?php
+	                //show latest news
+	                get_template_part('template-parts/latest', 'news');
+	            ?>
 			</div>
 		</div>
 		<div class="five-block-with-line hide-on-large-only">

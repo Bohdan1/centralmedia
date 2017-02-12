@@ -82,7 +82,7 @@ function show_short_latest_news() {
 }
 
 //show post for slider
-function show_slider_post() { //show_big_post()
+function show_slider_post() {
     echo '
         <div>
             <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url() . '" />
@@ -126,11 +126,17 @@ function show_big_post() {
                     <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                 </div>
                 <div class="main-article-content-box">
-                    <div class="title-tag">';
+                    <br>
+                    <div class="second-slider-title-tag">';
                         $category = get_the_category();
-                        if ( !empty($category) ) {
-                            $category = $category[0];
-                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                        if ( !empty( $category ) ) {
+                            $max_categories = 3;    //the maximum number of categories that need to display
+                            if ( count( $category ) < $max_categories ) {
+                                $max_categories = count( $category );
+                            }
+                            for ( $i = 0; $i < $max_categories; $i++ ) {
+                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
+                            }
                         }
                         echo '
                     </div>

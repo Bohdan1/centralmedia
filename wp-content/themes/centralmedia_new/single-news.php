@@ -18,7 +18,7 @@
                             ?>
                         </div>
                         <div>
-                            <img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+                            <img class="user-video-width" src="<?php echo get_the_post_thumbnail_url(); ?>">
                         </div>
                         <div class="single-post-text">
                             <?php the_content(); ?>
