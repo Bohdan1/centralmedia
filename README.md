@@ -1,3 +1,8 @@
+ver. 0.83
+  - написав плагін "top3-posts", для надання адміну можливості виводу потрібних постів у топі
+  - перейменував функцію show_popular_video() на show_small_video( $video_id ) з необов'язковим аргументом "$video_id" (functions.php, content-home.php)
+  - підключив слайдер культурних подій на головній (content-home.php)
+
 ver. 0.82
   - перейменував функціЇ щоб використовувати на інших сторінках: (functions.php)
     - show_news_for_homepage() на show_short_last_news()
