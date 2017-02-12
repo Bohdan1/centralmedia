@@ -164,88 +164,24 @@
         }
     ?>
 </div>
+
 <div class="row home-content">
-    <div id="disable-mat-padding" class="col l9 s12 left-block">
-        <div class="left-block-content">
-            <div class="button-position  hide-on-small-only">
-                <a href="#" ><img class="play-button button-hover center" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-            </div>
-            <div class="content-box">
-                <div class="title-tag"><a href="#" class="no-hover-blog">Політика</a></div>
-                <div class="box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                <div class="box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-                <div class="box-title-time ">28.06.2016</div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="col l3 s12 right-block hide-on-med-and-down">
-
-        <div class="video-container">
-
-
-            <iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
-
-            <div class="right-block-second ">
-                <div class="mask">
-                <div class="right-block-second-tag ">
-                    <a href="#" class="no-hover-blog" >АТО</a>
-                </div>
-                  </div>
-                <div class="right-block-second-sign ">
-                    <a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
-                </div>
-            </div>
-
-
-
-
-        </div>
-    </div>
+    <?php
+        //template for top-3 posts
+        get_template_part('template-parts/top3', 'posts');
+    ?>
 </div>
+
 <div class="advertisment-all-blogs-fix">
     <div class="advertisment-block">
         <a href="#" ><img class="advertisment-img" src="<?php bloginfo('template_url') ?>/img/sponsors-wide.jpg" alt="Логотип"></a>
     </div>
 </div>
-<div class="five-block-with-line hide-on-med-and-down">
-    <div class="big-sign-line">НОВИНИ <span></span></div>
-    <div class="block-line"></div>
-    <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
-</div>
-
-<div class="five-block-with-line hide-on-large-only">
-    <div class="big-sign-line">НОВИНИ <span>ПАРТНЕРІВ</span></div>
-    <div class="block-line"></div>
-
-</div>
-<div class="row">
-
-    <div class="col l6 s12 m6 devider">
-        <div class="main-news-content-footer">
-            <?php
-                //show latest news
-                get_template_part('template-parts/latest', 'news');
-            ?>
-        </div>
-    </div>
-    <div class="five-block-with-line hide-on-large-only">
-        <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
-        <div class="block-line"></div>
-
-    </div>
-    <div class="col l6 s12 m6 ">
-    <?php
-            //show polls
-            get_template_part('template-parts/polls');
-        ?>
-    </div>
-</div>
 
 
-
+<?php
+    //latest news and polls
+    get_template_part('content', 'footer');
+?>
 
 <?php get_footer(); ?>

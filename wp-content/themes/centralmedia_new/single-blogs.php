@@ -1,99 +1,122 @@
 <?php get_header(); ?>
+
 <div class="header-margin-blog">
-
-<div class="row">
-    <div class="col l8 s12 m8">
-        <div class="one-video-post">
-            <div class="col l12 s12 m12 "> 
-                <div class="one-blog-sign-content">
-                    <div class="one-blog-sign-img"><a href="#"><img class="one-blog-sign-img-width" src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png"></a></div>
-                    <div class="one-blog-sign-title"><a href="#" class="black-text"> Yura Romaniv</a> </div>
-                    <div class="one-blog-sign-text"> <a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал Під Києвом сплюндрували Биковнянський меморіал Під Києвом сплюндрували Биковнянський меморіал</a> </div>
-                    <div class="one-blog-sign-date"> 28.06.1995 </div>
-                </div>
-            </div>
-            <div class="one-video-post-name">Під Києвом сплюндрували Биковнянський меморіал</div>
-            <div class="box-title-time fix-mob-article one-video-post-time">
-                <?php 
-                    the_time('j F Y, G:i');
-                    setPostViews( get_the_ID() );
-                    echo '<span style="float:right"> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</span>'; 
-                ?>
-            </div>
-
-            <div><img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg"></div>
-            <div class="single-post-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-        </div>
-    </div>
-
-    <div class="col l4 m4 s12">
-        <div class="third-block-with-line">
-            <div class="big-sign-line-one-video">ВІД <span>АВТОРА</span></div>
-            <div class="block-line"></div>
-        </div>
-             <div class="previous-blog">
-        <?php 
-            $args = array(
-                'post_type' => 'blogs',
-                'posts_per_page' => 3,
-                'publish' => true,
-                'orderby' => 'date',
-                'order' => 'DESC'
-            );
-            $query = new WP_Query( $args );
-            if( $query->have_posts() ) {
-                while ( $query->have_posts() ) {
-                    $query->the_post();
-                    $author_id = get_the_author_meta( 'ID' );
-                    echo '
-                        <div class="col l12 s12 m12">
-                            <div class="previous-blog-box">
-                                <div class="view-count-blog">
-                                    <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
-                                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
-                                </div>
-                                <div class="row">
-                                <div class="col l12 m12 s12">
-                                <div class="previous-blog-img-archive">
-                                    <a href="' . get_the_permalink() . '" >
-                                        <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
-                                    </a>
-                                </div>
-                                </div>
-                                <div class="col l12 m12 s12">
-                                <div class="previous-blog-name ">
-                                    <a href="' . get_the_permalink() . '" class="black-text">' .
-                                        get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
-                                    </a>
-                                </div>
-                                <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
-                                </div>
-                                </div>
-
-                                
-                                <div class="previous-blog-title ">
-                                    <a href="' . get_the_permalink() . '" class="black-text">' .
-                                        short_post_title(55) . '
-                                    </a>
-                                </div>
-                                <div class="previous-blog-tag">
-                                    <a href="#" class="no-hover-blog">Блог</a>
+    <div class="row">
+        <div class="col l8 s12 m8">
+            <?php 
+                if ( have_posts() ) :
+                    while ( have_posts() ) : the_post(); // Start the Loop.
+                    $author_id = get_the_author_meta('ID');
+            ?>
+                        <div class="one-video-post">
+                            <div class="col l12 s12 m12 "> 
+                                <div class="one-blog-sign-content">
+                                    <div class="one-blog-sign-img">
+                                        <a href="#">
+                                            <img class="one-blog-sign-img-width" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>">
+                                        </a>
+                                    </div>
+                                    <div class="one-blog-sign-title">
+                                        <a href="#" class="black-text">
+                                        <?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
+                                        </a>
+                                    </div>
+                                    <div class="one-blog-sign-text">
+                                        <?php echo get_the_author_meta('description'); ?>
+                                    </div>
+                                    <div class="one-blog-sign-date">
+                                    <?php 
+                                        the_time('j F Y, G:i');
+                                        setPostViews( get_the_ID() );
+                                        echo '<div> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</div>'; 
+                                    ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>';
-                } //end while
-            } //end if
-            else {
-                echo 'Блогів не знайдено';
-            }
-            wp_reset_postdata();
-        ?>
-    </div>
+                            <div class="one-video-post-name">
+                                <?php the_title(); ?>
+                            </div>
+                            <div class="single-post-text">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
+            <?php
+                    endwhile; // End the loop.
+                    echo '<div class="clear"></div>';
+                    wp_reset_postdata();
+                else :
+                    // If no content, include the "No posts found" template.
+                    echo '<div> Блогів не знайдено </div>';
+                endif;
+            ?>
+        </div>
 
+        <div class="col l4 m4 s12">
+            <div class="third-block-with-line">
+                <div class="big-sign-line-one-video">ВІД <span>АВТОРА</span></div>
+                <div class="block-line"></div>
+            </div>
+                 <div class="previous-blog">
+            <?php 
+                $args = array(
+                    'post_type' => 'blogs',
+                    'posts_per_page' => 3,
+                    'publish' => true,
+                    'orderby' => 'date',
+                    'order' => 'DESC'
+                );
+                $query = new WP_Query( $args );
+                if( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        $author_id = get_the_author_meta( 'ID' );
+                        echo '
+                            <div class="col l12 s12 m12">
+                                <div class="previous-blog-box">
+                                    <div class="view-count-blog">
+                                        <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                                        <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col l12 m12 s12">
+                                    <div class="previous-blog-img-archive">
+                                        <a href="' . get_the_permalink() . '" >
+                                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="col l12 m12 s12">
+                                    <div class="previous-blog-name ">
+                                        <a href="' . get_the_permalink() . '" class="black-text">' .
+                                            get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
+                                        </a>
+                                    </div>
+                                    <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
+                                    </div>
+                                    </div>
+
+                                    
+                                    <div class="previous-blog-title ">
+                                        <a href="' . get_the_permalink() . '" class="black-text">' .
+                                            short_post_title(55) . '
+                                        </a>
+                                    </div>
+                                    <div class="previous-blog-tag">
+                                        <a href="#" class="no-hover-blog">Блог</a>
+                                    </div>
+                                </div>
+                            </div>';
+                    } //end while
+                } //end if
+                else {
+                    echo 'Блогів не знайдено';
+                }
+                wp_reset_postdata();
+            ?>
+        </div>
+
+        </div>
     </div>
-</div>
 </div>
 
 <div style="margin-bottom: 0px;" class="row">
@@ -109,81 +132,10 @@
         ?>
     </div>
     <div class="row one-news-content">
-        <section class="center slider">
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake-main">
-                <div class="slider-element">
-                    <div class="blog-element-tag" class="no-hover-blog">ТОП БЛОГ</div>
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name-main"><a href="#" class="no-hover-blog">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema-main"><a href="#" class="no-hover-blog">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-box slider-box-remake">
-                <div class="slider-element">
-                    <img src="<?php bloginfo('template_url') ?>/img/blog-slider/circle-man.png" alt="Логотип">
-                    <div class="">
-                        <div class="slider-bloger-name"><a href="#" class="black-text">Олег Стефанюк</a></div>
-                        <div class="slider-bloger-thema"><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php
+            //slider for blogers
+            get_template_part('template-parts/slider', 'blogers');
+        ?>
     </div>
 
     <div class="block-with-line hide-on-small-only">
@@ -245,73 +197,14 @@
         </div>
 
         <div class="col l4 s12 m5 ">
-
             <div class="main-news-content-box">
-                <div class="news-block">
-                    <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-                    <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-                </div>
-                <div class="news-block">
-                    <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-                    <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-                </div>
-
-                <div class="next-day-news">3 лютого, 2017 <span>п'ятниця</span></div>
-                <div class="news-block">
-                    <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-                    <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-                </div>
-                <div class="news-block">
-                    <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-                    <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-                </div>
-                <div class="news-block">
-                    <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-                    <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-                </div>
-                <div class="news-block">
-                    <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-                    <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-                </div><div class="news-block">
-                <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-                <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
+                <?php
+                    //show latest news
+                    get_template_part('template-parts/latest', 'news');
+                ?>
             </div>
-            <div class="news-block">
-                <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-                <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-            </div><div class="news-block">
-            <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-            <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
         </div>
-        <div class="news-block">
-            <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-            <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-        </div><div class="news-block">
-        <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-        <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
     </div>
-    <div class="news-block">
-        <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-        <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-    </div><div class="news-block">
-    <div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-    <div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-</div>
-<div class="news-block">
-    <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-    <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-</div><div class="news-block">
-<div class="news-main-img"><img class="news-main-img-width-cm" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg"></div>
-<div class="news-main-title "><div class="news-time">10:16</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-</div>
-<div class="news-block">
-    <div class="news-main-img"><i class="fa fa-spinner fa-spin fa-1x fa-fw "></i></div>
-    <div class="news-main-title "> <div class="news-time ">15:46</div><a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a></div>
-</div>
-
-</div>
-</div>
-</div>
 
 
 <div class="advertisment-all-blogs">
@@ -366,7 +259,10 @@
 
     </div>
     <div class="col l6 s12 m6 ">
-
+        <?php
+            //show polls
+            get_template_part('template-parts/polls');
+        ?>
     </div>
 </div>
 

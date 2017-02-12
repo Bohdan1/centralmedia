@@ -1,112 +1,8 @@
 <div class="row home-content">
-	<div id="disable-mat-padding"  style="background-image: url(<?php bloginfo('template_url') ?>/img/1.jpg);" class="col l9 s12 left-block">
 	<?php
-		$posts_id = array();
-		if ( get_option('block1_post_id') && get_option('block2_post_id') && get_option('block3_post_id') ) {
-			$posts_id[] = intval( get_option('block1_post_id') );
-			$posts_id[] = intval( get_option('block2_post_id') );
-			$posts_id[] = intval( get_option('block3_post_id') );
-		}
-
-		if ( get_post_type( $posts_id[0] ) == 'streams' ) {
-			echo '
-				<iframe class="stream-template" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
-			';
-		}
-		else if ( get_post_type( $posts_id[0] ) == 'video' ) {
-			echo '
-				<div class="left-block-content">
-			<div class="button-position  hide-on-small-only">
-				<a href="#" ><img class="play-button button-hover center" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип"></a>
-			</div>
-			<div class="content-box">
-				<div class="title-tag"><a href="#" class="no-hover-blog">Політика</a></div>
-				<div class="box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				<div class="box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-				<div class="box-title-time ">28.06.2016</div>
-			</div>
-			<div class="social-menu-bottom hide-on-large-only ">
-				<div class="menu-list"><a href="#" ><img  class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип"></a>
-				</div>
-
-				<div class="menu-list"><a href="#"><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип"></a>
-				</div>
-
-				<div class="menu-list"><a href="#" ><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип"></a>
-				</div>
-			</div>
-		</div>
-			';
-		}
-		else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
-			echo '
-				<div class="left-block-content">
-			<div class="content-box">
-				<div class="title-tag"><a href="#" class="no-hover-blog">Політика</a></div>
-				<div class="box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-				<div class="box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-				<div class="box-title-time ">28.06.2016</div>
-			</div>
-			<div class="social-menu-bottom hide-on-large-only ">
-				<div class="menu-list"><a href="#" ><img  class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип"></a>
-				</div>
-
-				<div class="menu-list"><a href="#"><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип"></a>
-				</div>
-
-				<div class="menu-list"><a href="#" ><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип"></a>
-				</div>
-			</div>
-		</div>
-			';
-		}
+		//template for top-3 posts
+		get_template_part('template-parts/top3', 'posts');
 	?>
-	</div>
-	
-	<div class="col l3 s12 right-block hide-on-med-and-down">
-			<?php
-				for ($i = 1; $i < 3; $i++) {
-					if ( get_post_type( $posts_id[$i] ) == 'streams' ) {
-						echo '
-						<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
-						';
-					}
-					else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
-						echo '
-						<div style="background-image: url(' . get_template_directory_uri() . '/img/3.jpg);" class="right-block-second ">
-
-			<div class="mask">
-			<div class="button-position-template hide-on-small-only">
-				<a href="#" ><img class="play-button-template button-hover center" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип"></a>
-			</div>
-				<div class="right-block-second-tag ">
-					<a href="#" class="no-hover-blog">АТО</a>
-				</div>
-				</div>
-				<div class="right-block-second-sign ">
-					<a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
-				</div>
-			</div>
-						';
-					}
-					else if ( get_post_type( $posts_id[$i] ) == 'news' || get_post_type( $posts_id[$i] ) == 'articles' ) {
-						echo '
-							<div style="background-image: url(' . get_template_directory_uri() . '/img/3.jpg);" class="right-block-second ">
-
-			<div class="mask">
-			<div class="right-block-second-tag ">
-					<a href="#" class="no-hover-blog">АТО</a>
-				</div>
-				</div>
-				<div class="right-block-second-sign ">
-					<a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
-				</div>
-			</div>
-						';
-					}
-				}
-			?>
-	</div>
 </div>
 
 <?php
@@ -487,41 +383,11 @@
 
 <div class="row">
 	<div class="col l7 m12 s12">
-		<div id="jssor_3"  style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
-			<!-- Loading Screen -->
-			<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-				<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-				<div style="position:absolute;display:block;background:url('<?php bloginfo('template_url') ?>/img/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-			</div>
-			<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:800px;overflow:hidden;">
-				<?php
-					$args = array(
-						'post_type' => 'cultural_events',
-						'posts_per_page' => 3,
-						'publish' => true,
-						'orderby' => 'date',
-						'order' => 'DESC'
-					);
-					$latest_articles = array();
-					$query = new WP_Query( $args );
-					if ( $query->have_posts() ) {
-						while ( $query->have_posts() ) {
-							$query->the_post($post);
-							show_slider_cultural_events($post_id = $post->ID);
-						}
-					}
-					wp_reset_postdata();
-				?>			
-			</div>
-			<!-- Arrow Navigator -->
-			<span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
-			<span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
-		</div>
+		<?php
+            //show polls
+            get_template_part('template-parts/cultural', 'events-slider');
+        ?>
 	</div>
-
-
-
-
 
 	<div class="five-block-with-line hide-on-large-only">
 		<div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
