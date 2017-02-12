@@ -1,3 +1,7 @@
+ver. 0.86
+  - зробив шаблони для різних сторінок (content-home, style.css)
+
+
 ver. 0.85
   - підключив archive-blogs.php:
     - популярне

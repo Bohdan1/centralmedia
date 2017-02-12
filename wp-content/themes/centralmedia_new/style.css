@@ -218,7 +218,6 @@ button{
 	left: 0%;
 	width: 100%;
 	height: 500px;
-	background-image: url(img/1.jpg);
 	background-size: cover;
 }
 .play-button{
@@ -235,12 +234,26 @@ button{
 	left: -10%;
 	top: -50px;
 }
+.play-button-template{
+	width: 95px;
+}
+.button-position-template {
+	margin: 0 auto;	
+	width: 10%;
+	position: relative;
+	left: -10%;
+
+}
 .button-position-main-video{
 	margin-top: 50px;	
 	width: 150%;
 	left: 120%;
 	position: absolute;
 
+}
+.stream-template{
+	width: 100%;
+	height: 100%;
 }
 .content-box{
 	padding-left: 20px;
@@ -336,20 +349,21 @@ button{
 .right-block-video{
 	position: relative;
 	right: 0px !important;
-
+	top: auto !important;
 	height: 40% !important;
-	padding-top: 10px;
-	max-width: 400px;		
+	margin-top: 50px;
+	max-width: 450px;	
+	width: 100%;	
 }
 .right-block-second{
-	background-image: url(img/3.jpg);
 	background-size: cover;
 	position: relative;
-	top: 220px;
 	right: 0px !important;
 	position: relative;
 	height: 100%;
-	max-width: 400px;	
+	width: 100%;
+	margin-top: 50px;
+	max-width: 450px;	
 	max-height: 180px;	
 }
 .right-block-second-all-video{

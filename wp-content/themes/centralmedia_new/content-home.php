@@ -1,5 +1,5 @@
 <div class="row home-content">
-	<div id="disable-mat-padding" class="col l9 s12 left-block">
+	<div id="disable-mat-padding"  style="background-image: url(<?php bloginfo('template_url') ?>/img/1.jpg);" class="col l9 s12 left-block">
 	<?php
 		$posts_id = array();
 		if ( get_option('block1_post_id') && get_option('block2_post_id') && get_option('block3_post_id') ) {
@@ -10,17 +10,54 @@
 
 		if ( get_post_type( $posts_id[0] ) == 'streams' ) {
 			echo '
-				великий шаблон для стрімів
+				<iframe class="stream-template" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
 			';
 		}
 		else if ( get_post_type( $posts_id[0] ) == 'video' ) {
 			echo '
-				великий шаблон для відео
+				<div class="left-block-content">
+			<div class="button-position  hide-on-small-only">
+				<a href="#" ><img class="play-button button-hover center" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип"></a>
+			</div>
+			<div class="content-box">
+				<div class="title-tag"><a href="#" class="no-hover-blog">Політика</a></div>
+				<div class="box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+				<div class="box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
+				<div class="box-title-time ">28.06.2016</div>
+			</div>
+			<div class="social-menu-bottom hide-on-large-only ">
+				<div class="menu-list"><a href="#" ><img  class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип"></a>
+				</div>
+
+				<div class="menu-list"><a href="#"><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип"></a>
+				</div>
+
+				<div class="menu-list"><a href="#" ><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип"></a>
+				</div>
+			</div>
+		</div>
 			';
 		}
 		else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
 			echo '
-				великий шаблон для новин і статтей
+				<div class="left-block-content">
+			<div class="content-box">
+				<div class="title-tag"><a href="#" class="no-hover-blog">Політика</a></div>
+				<div class="box-title "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
+				<div class="box-title-small "><a href="#">У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
+				<div class="box-title-time ">28.06.2016</div>
+			</div>
+			<div class="social-menu-bottom hide-on-large-only ">
+				<div class="menu-list"><a href="#" ><img  class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип"></a>
+				</div>
+
+				<div class="menu-list"><a href="#"><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип"></a>
+				</div>
+
+				<div class="menu-list"><a href="#" ><img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип"></a>
+				</div>
+			</div>
+		</div>
 			';
 		}
 	?>
@@ -31,17 +68,40 @@
 				for ($i = 1; $i < 3; $i++) {
 					if ( get_post_type( $posts_id[$i] ) == 'streams' ) {
 						echo '
-							малий шаблон для стрімів
+						<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
 						';
 					}
 					else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
 						echo '
-							малий шаблон для відео
+						<div style="background-image: url(' . get_template_directory_uri() . '/img/3.jpg);" class="right-block-second ">
+
+			<div class="mask">
+			<div class="button-position-template hide-on-small-only">
+				<a href="#" ><img class="play-button-template button-hover center" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип"></a>
+			</div>
+				<div class="right-block-second-tag ">
+					<a href="#" class="no-hover-blog">АТО</a>
+				</div>
+				</div>
+				<div class="right-block-second-sign ">
+					<a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
+				</div>
+			</div>
 						';
 					}
 					else if ( get_post_type( $posts_id[$i] ) == 'news' || get_post_type( $posts_id[$i] ) == 'articles' ) {
 						echo '
-							малий шаблон для новин і статтей
+							<div style="background-image: url(' . get_template_directory_uri() . '/img/3.jpg);" class="right-block-second ">
+
+			<div class="mask">
+			<div class="right-block-second-tag ">
+					<a href="#" class="no-hover-blog">АТО</a>
+				</div>
+				</div>
+				<div class="right-block-second-sign ">
+					<a href="#">Під Києвом сплюндрували Биковнянський меморіал</a>
+				</div>
+			</div>
 						';
 					}
 				}
