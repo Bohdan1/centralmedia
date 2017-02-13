@@ -64,16 +64,14 @@
 
 <?php wp_footer(); ?>
 
-
-
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/slick.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/jssor.slider-22.1.9.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/jssor.slider-22.2.0.min.js"></script>
+
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/modernizr.custom.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/libraries/p5.js"></script>
-
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/sketch.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/jquery.fittext.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/weatherWidget/boxgrid.js"></script>

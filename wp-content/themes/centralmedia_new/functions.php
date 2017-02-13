@@ -10,7 +10,9 @@ function register_styles() { // adds files with styles
 	wp_enqueue_style( 'media', get_template_directory_uri() . '/css/media.css' );
     wp_enqueue_style( 'google-icon-font', get_template_directory_uri() . '/css/google-icon-font.css' ); // Import Google Icon Font
     wp_enqueue_style( 'default', get_template_directory_uri() . '/css/weatherWidget/default.css' );
-    wp_enqueue_style( 'climacons', get_template_directory_uri() . '/css/weatherWidget/climacons.css' );
+    if ( is_home() ) {
+        wp_enqueue_style( 'climacons', get_template_directory_uri() . '/css/weatherWidget/climacons.css' );
+    }
     wp_enqueue_style( 'component', get_template_directory_uri() . '/css/weatherWidget/component.css' );
 }
 add_action( 'wp_enqueue_scripts', 'register_styles' );
@@ -997,6 +999,7 @@ function show_slider_cultural_events($post_id) {
         else {
             $output .=
                 '<a href="#" data-post_id="'.$post_id.'" class="black-text">
+                    <span class="vortex-p-like-comment 13  icon-thumbs-up-1"></span>
                     <span title="Подобається"class="qtip like">Подобається</span>
                 </a>';
             }

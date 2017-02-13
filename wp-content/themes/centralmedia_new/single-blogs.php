@@ -39,6 +39,7 @@
                             <div class="single-post-text">
                                 <?php the_content(); ?>
                             </div>
+                            <?php echo getPostLikeLink(get_the_ID()); ?>
                         </div>
             <?php
                     endwhile; // End the loop.
