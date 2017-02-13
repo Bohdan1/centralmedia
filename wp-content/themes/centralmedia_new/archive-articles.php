@@ -23,6 +23,8 @@
 	<div class="row">
 		<?php
 	        //slider for blogers
+			global $exclude_posts;
+			$exclude_posts = array();
 	        get_template_part('template-parts/big', 'latest-articles');
 	    ?>
 	</div>

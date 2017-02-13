@@ -1795,3 +1795,17 @@ max-width: 100% !important;
 #jssor_3{
 	width: 100% !important;
 }
+
+.top-states-small{
+	background-color: rgba(255, 0, 0, 0.8);
+    margin-right: 5px;
+    padding: 3px 8px 3px 8px;
+}
+
+.box-title-main{
+	font-size: 30px;
+}
+
+.box-title-time-main{
+	font-size: 20px;
+}

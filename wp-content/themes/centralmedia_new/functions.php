@@ -178,7 +178,7 @@ function show_small_post( $height = null, $post_id = null) {
                         $category = get_the_category( $post_id );
                         if ( !empty($category) ) {
                             $category = $category[0];
-                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog top-states-small">' . $category->cat_name . '</a>';
                         }
                         echo '
                     </div>

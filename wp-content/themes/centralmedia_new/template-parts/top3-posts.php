@@ -35,12 +35,12 @@
                         }
                         echo '
                     </div>
-					<div class="box-title ">
+					<div class="box-title box-title-main">
 						<a href="' . get_the_permalink( $posts_id[0] ) . '">' .
 							get_the_title( $posts_id[0] ) .'
 						</a>
 					</div>
-					<div class="box-title-time ">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
+					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
 				</div></div>
 
 				<div class="social-menu-bottom hide-on-large-only ">
@@ -80,12 +80,12 @@
                         }
                         echo '
 					</div>
-					<div class="box-title ">
+					<div class="box-title box-title-main">
 						<a href="' . get_the_permalink( $posts_id[0] ) . '">' .
 							get_the_title( $posts_id[0] ) .'
 						</a>
 					</div>
-					<div class="box-title-time ">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
+					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
 				</div>
 				</div>
 				

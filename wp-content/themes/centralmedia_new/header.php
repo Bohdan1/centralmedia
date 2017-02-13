@@ -549,15 +549,15 @@ font-size: 20px;
     </div>
     <div class="social-menu-bottom hide-on-med-and-down">
         <div class="menu-list">
-          <a href="#" ><img  class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
+          <a href="https://www.youtube.com/channel/UCYMgvYAKTnPfZ8FjuXLYaEQ" ><img  class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
         </div>
 
         <div class="menu-list">
-          <a href="#" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
+          <a href="https://twitter.com/CentralneMedia" ><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
         </div>
 
         <div class="menu-list">
-          <a href="#"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
+          <a href="https://www.facebook.com/centralnemedia/"><img class="button-hover social-logo" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
         </div>
       </div>
   <div class="social-menu-top hide-on-large-only">

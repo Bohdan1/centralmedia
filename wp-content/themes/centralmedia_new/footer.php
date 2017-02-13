@@ -20,14 +20,14 @@
 
           <div class="footer-menu-icons"><a href="#modal2" ><img class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/search.svg" alt="Логотип"></a></div>
 
-          <div class="footer-menu-icons"><a href="#"><img class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
+          <div class="footer-menu-icons"><a href="https://www.facebook.com/centralnemedia/"><img class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/facebook.svg" alt="Логотип"></a>
           </div>
 
 
-          <div class="footer-menu-icons"><a href="#" ><img class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
+          <div class="footer-menu-icons"><a href="https://twitter.com/CentralneMedia" ><img class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/twitter.svg" alt="Логотип"></a>
           </div>
 
-          <div class="footer-menu-icons"><a href="#" ><img  class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
+          <div class="footer-menu-icons"><a href="https://www.youtube.com/channel/UCYMgvYAKTnPfZ8FjuXLYaEQ" ><img  class="social-logo-footer" src="<?php bloginfo('template_url') ?>/img/social/youtube.svg" alt="Логотип"></a>
           </div>
         </div>
 

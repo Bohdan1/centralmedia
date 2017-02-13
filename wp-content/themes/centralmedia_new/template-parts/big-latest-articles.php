@@ -9,6 +9,7 @@
             'order' => 'DESC'
         );
         $query = new WP_Query( $args );
+        global $exclude_posts;
         $exclude_posts = array();
         $display_posts = 1;
         if ( $query->have_posts() ) {
