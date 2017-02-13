@@ -32,13 +32,3 @@
 	} //end if
 	wp_reset_postdata();
 ?>
-
-<div class="news-block">
-	<div class="news-main-img">
-		<i class="fa fa-spinner fa-spin fa-1x fa-fw "></i>
-	</div>
-	<div class="news-main-title ">
-		<div class="news-time ">15:46</div>
-		<a href="#" class="black-text">Під Києвом сплюндрували Биковнянський меморіал декілька раз</a>
-	</div>
-</div>

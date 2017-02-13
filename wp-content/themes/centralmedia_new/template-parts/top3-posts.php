@@ -1,4 +1,4 @@
-<div id="disable-mat-padding"  style="background-image: url(<?php bloginfo('template_url') ?>/img/1.jpg);" class="col l9 s12 left-block">
+<div id="disable-mat-padding" class="col l9 s12 left-block">
 <?php
 	$posts_id = array();
 	if ( get_option('block1_post_id') && get_option('block2_post_id') && get_option('block3_post_id') ) {
@@ -14,7 +14,8 @@
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'video' ) {
 		echo '
-			<div class="left-block-content">
+			<div style="background-image: url(' . get_template_directory_uri() . '/img/1.jpg);"  class="left-block-content">
+			<div class="mask">
 				<div class="button-position  hide-on-small-only">
 					<a href="' . get_the_permalink( $posts_id[0] ) . '">
 						<img class="play-button button-hover center" src="' . get_template_directory_uri( $posts_id[0] ) . '/img/play-button.svg" alt="Логотип">
@@ -29,7 +30,7 @@
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog">' . $category[$i]->cat_name . '</a>';
+                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</a>';
                             }
                         }
                         echo '
@@ -40,7 +41,7 @@
 						</a>
 					</div>
 					<div class="box-title-time ">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
-				</div>
+				</div></div>
 
 				<div class="social-menu-bottom hide-on-large-only ">
 					<div class="menu-list">
@@ -63,7 +64,8 @@
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
 		echo '
-			<div class="left-block-content">
+			<div style="background-image: url(' . get_template_directory_uri() . '/img/1.jpg);" class="left-block-content">
+			<div class="mask">
 				<div class="content-box">
 					<div class="title-tag">';
                         $category = get_the_category( $posts_id[0] );
@@ -73,7 +75,7 @@
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog">' . $category[$i]->cat_name . '</a>';
+                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</a>';
                             }
                         }
                         echo '
@@ -84,6 +86,7 @@
 						</a>
 					</div>
 					<div class="box-title-time ">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
+				</div>
 				</div>
 				
 				<div class="social-menu-bottom hide-on-large-only ">

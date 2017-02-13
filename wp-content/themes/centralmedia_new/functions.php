@@ -2,7 +2,6 @@
 add_theme_support( 'post-thumbnails' ); // adds capabilities to create thumbnails for posts
 
 function register_styles() { // adds files with styles
-	
     wp_enqueue_style( 'slick-slider', get_template_directory_uri() . '/css/slick-slider.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
@@ -66,10 +65,20 @@ function show_short_latest_news() {
         echo '<div class="next-day-news">' .  $date . '</div>';
     }
     echo '
-        <div class="news-block">
-            <div class="news-main-img">
-                <img class="news-main-img-width-cm" src="' . get_template_directory_uri() . '/img/logo/CMedia.svg">
-            </div>
+        <div class="news-block">';
+            if ( has_tag('centralmedia') ) {
+                echo '
+                <div class="news-main-img">
+                    <img class="news-main-img-width-cm" src="' . get_template_directory_uri() . '/img/logo/CMedia.svg">
+                </div>';
+            }
+            else if ( has_tag('loading') ) {
+                echo '
+                <div class="news-main-img">
+                    <i class="fa fa-spinner fa-spin fa-1x fa-fw "></i>
+                </div>';
+            }
+            echo '
             <div class="news-main-title hover-link">
                 <div class="news-time">' .
                     get_the_time('G:i') . '
@@ -274,10 +283,6 @@ function show_slider_cultural_events($post_id) {
         <div>
             <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url() . '"/>
             <div class="mask">
-                <div class="view-count-top">
-                    <img class="count-width-top" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
-                    <span class="count-number-top">' . getPostViews() . '</span>
-                </div>
                 <div class="second-slider-content">
                     <br>
                     <div class="second-slider-title-tag">';

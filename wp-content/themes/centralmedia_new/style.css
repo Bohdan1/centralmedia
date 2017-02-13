@@ -223,16 +223,12 @@ button{
 .play-button{
 	width: 120px;
 }
-.left-block-content{
-	position: relative;
-	top: 30%;
-}
+
 .button-position{
 	margin: 0 auto;	
 	width: 10%;
 	position: relative;
-	left: -10%;
-	top: -50px;
+	top: 150px;
 }
 .play-button-template{
 	width: 95px;
@@ -304,7 +300,6 @@ button{
 	padding: 2px;
 	left: 15px;
 	text-align: left;
-	background-color: rgba(255, 0, 0, 0.8);
 }
 
 .box-title{
@@ -335,10 +330,13 @@ button{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.right-block > *:nth-child(1){
+	margin-top: 60px;
+}
 
 .left-block-content{
-	position: absolute;
-	bottom: 16.7%;
+	height: 100%;
+	position: relative;
 	width: 100%;
 	background-color: rgba(0,0,0,0.9); 
 	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.9)),color-stop(100%, rgba(0,0,0,0)));  
@@ -351,7 +349,7 @@ button{
 	right: 0px !important;
 	top: auto !important;
 	height: 40% !important;
-	margin-top: 50px;
+	margin-top: 20px;
 	max-width: 450px;	
 	width: 100%;	
 }
@@ -359,10 +357,10 @@ button{
 	background-size: cover;
 	position: relative;
 	right: 0px !important;
+		margin-top: 20px;
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin-top: 50px;
 	max-width: 450px;	
 	max-height: 180px;	
 }
@@ -386,6 +384,7 @@ button{
 }
 #disable-mat-padding{
 	padding-left: 0px;
+	padding-right: 0px;
 }
 .right-block-second-sign{
 	position: absolute;
@@ -916,7 +915,7 @@ footer{
 }
 .second-slider-content{
 	position: relative;
-	bottom: -35%;
+	bottom: -48%;
 	z-index: 9999;
 }
 .second-slider-title-tag{
@@ -1778,4 +1777,10 @@ max-width: 100% !important;
 }
 .next-day-news:nth-child(1){
 	padding-top: 0px;
+}
+
+.main-slider-tags{
+	background-color: rgba(255, 0, 0, 0.8);
+    margin-right: 5px;
+    padding: 3px 8px 3px 8px;
 }
