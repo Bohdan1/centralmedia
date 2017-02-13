@@ -184,7 +184,7 @@
 
 
 <div class="row">
-	<div class="col l5 s12 m6">
+	<div class="col l5 s12 m12">
 		<div id="weatherWidget">
 			<ul id="rb-grid" class="rb-grid clearfix">
 				<li id="today-icon1" class="rb-span-2">
@@ -241,14 +241,14 @@
 		</div>
 	</div>
 
-<div class="col l7 s12 m6 narod-korespond">
-	<div class="col l12">
+<div class="col l7 s12 m6 narod-korespond hide-on-med-and-down">
+	
 		<div class="block-with-line">
 			<a href="#modal4" class="button-share-pad"><div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div></a>
 			<div class="block-line"></div>
 			<div class="small-sign-line"> <div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div></div><img data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
 		</div>
-	</div>
+	
 
 	
 	<div id="jssor_2" >
@@ -259,10 +259,10 @@
         </div>
         <div data-u="slides" class="slider-option4" >
            <div class="user-news-block">
-			<div class=" col l12 m7 " style="width: 50% !important;">
+			<div class=" col l12 m7 s12 " style="width: 50% !important;">
 				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
 			</div>
-			<div class="col l12 m4" style="width: 50% !important;">
+			<div class="col l12 m4 s12" style="width: 50% !important;">
 				<div class="user-video-name">Yura Romaniv</div>
 				<div class="user-video-date">28.06.1995</div>
 				<div class="user-video-time">18:52</div>
@@ -394,7 +394,7 @@
 		<div class="block-line"></div>
 
 	</div>
-	<div class="col l5 s12 m6 ">
+	<div class="col l5 s12 m12 ">
 		<?php
             //show polls
             get_template_part('template-parts/polls');

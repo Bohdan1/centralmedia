@@ -277,6 +277,80 @@ function show_small_video( $video_id = null ) {
             </div>';
 }
 
+function tests_show_big_video() {
+    echo '
+        <div class="col l12 s12 m12 full-width-mob ">
+            <div class="second-article-block-all-video" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
+                <div class="mask">
+                    <div class="button-position-popular-video-content-box-main">
+                        <a href="'. get_the_permalink() . '" >
+                            <img class="button-hover button-position-main-video" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Переглянути">
+                        </a>
+                    </div>
+                    <div class="view-count">
+                        <img class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
+                        <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                    </div>
+                    <div class="main-article-content-box">
+                        <div class="title-tag">';
+                            $category = get_the_category();
+                            if ( !empty( $category ) ) {
+                                $max_categories = 3;    //the maximum number of categories that need to display
+                                if ( count( $category ) < $max_categories ) {
+                                    $max_categories = count( $category );
+                                }
+                                for ( $i = 0; $i < $max_categories; $i++ ) {
+                                    echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog">' . $category[$i]->cat_name . '</a>';
+                                }
+                            }
+                            echo '
+                        </div>
+                        <div class="box-title fix-mob-article ">
+                            <a href="'. get_the_permalink() . '" >' .
+                                short_post_title(120) . '
+                            </a>
+                        </div>
+                        <div class="box-title-time fix-mob-article">' . 
+                            get_the_time('d.m.Y', $post_id) . '
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+}
+
+function tests_show_small_video() {
+    echo '
+        <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="second-article-block-all-article-side">
+            <div class="mask">
+                <div class="view-count">
+                    <img class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
+                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                </div>
+                <div class="button-position-popular-video-content-box-main">
+                    <a href="'. get_the_permalink() .'" >
+                        <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="">
+                    </a>
+                </div>
+                <div class="main-article-content-box">
+                    <div class="title-tag">';
+                        $category = get_the_category();
+                        if ( !empty($category) ) {
+                            $category = $category[0];
+                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                        }
+                        echo '
+                    </div>
+                    <div class="box-title fix-mob-article ">
+                        <a href="'. get_the_permalink() .'">' .
+                            short_post_title(70) . '
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>';
+}
+
 
 function show_slider_cultural_events($post_id) {
     echo '

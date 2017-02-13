@@ -46,6 +46,7 @@
             $args = array(
                 'post_type' => array( 'news', 'articles', 'video', 'blogs' ),
                 'posts_per_page' => 4,
+                'category__in' => $post_categories,
                 'publish' => true,
                 'date_query' => array(
                     'after' => $popular_days_post . ' days ago',
@@ -75,8 +76,9 @@
                 }
             }
             if ( $posts_count < 4 ) {
+                echo '<div>' . $test .'</div>';
                 $args = array(
-                    'post_type' => 'article',
+                    'post_type' => 'articles',
                     'posts_per_page' => 4 - $posts_count,
                     'publish' => true,
                     'post__not_in' => $posts_exclude, //displays all articles, other than those

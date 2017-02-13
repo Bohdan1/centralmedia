@@ -31,6 +31,27 @@ right: auto;
 
 transform: skewX(0deg);
 }
+.box-title {
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: white;
+}
+.social-menu-bottom {
+    bottom: -73px;
+    position: absolute;
+    right: 150px;
+    z-index: 55;
+}
+nav ul {
+    position: absolute;
+    z-index: 99;
+    transition: background-color .1s;
+    font-size: 1rem;
+    display: block;
+    margin-left: 400px;
+    margin-top: -93px;
+    cursor: pointer;
+}
 .previous-blog-name {
 position: relative;
 top: -7px;
@@ -85,12 +106,12 @@ text-align: center;
 
 }
 .madeby {
-position: absolute;
+position: relative;
 font-size: 18px;
 color: white;
 bottom: 0px;
 padding-top: 0px;
-left: 33%;
+left: 0%;
 text-align: center;
 }
 .footer-about {
@@ -133,6 +154,9 @@ display: inline-block;
 padding: 10px 10px 10px 20px;
 margin-right: 0px; 
 }
+body{
+  background-color: white;
+}
 
 }
 /* mobile */
@@ -143,15 +167,36 @@ margin-right: 0px;
 
 transform: skewX(0deg);
 }
+.box-title {
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: white;
+}
+.header-margin-blog{
+  padding-left: 0;
+  padding-top: 60px;
+}
+.previous-blog{
+  padding: 0px;
+}
+body{
+  background-color: white;
+}
 .technology-width{
-  margin-top: -20px;
   width: 30px;
+}
+.block-with-line {
+    background-color: transparent; 
+    padding-top: 0px;
 }
 .button-position-main-video {
     margin-top: 50px;
     width: 150%;
     left: 0%;
     position: absolute;
+}
+.fix-user-block-mob{
+width: 100% !important;
 }
 .one-blog-sign-title {
 position: absolute;
@@ -160,6 +205,13 @@ left: 123px;
 font-size: 26px;
 font-weight: bold;
 display: inline-block;
+}
+.user-news-block{
+  margin-left: 0px !important;
+  top: 10px !important;
+}
+#jssor_2{
+  margin-top: 10px;
 }
 .one-video-post-name {
 font-size: 35px;
@@ -279,21 +331,21 @@ padding: 20px;
 border: 2px solid lightgrey;
 }
 .previous-blog-img-width {
-width: 81px;
+width: 110px;
 }
 .previous-blog-name {
 position: relative;
-top: -41px;
+top: 0px;
 font-size: 19px;
 font-weight: bold;
-left: 11px;
+left: 0px;
 display: inline-block;
 }
 .previous-blog-time {
 position: relative;
-width: 75px;
-right: -96px;
-top: -40px;
+width: px;
+right: 0px;
+top: 0px;
 left: auto;
 }
 .previous-blog-title {
@@ -394,7 +446,7 @@ margin-top: 5px;
 
 .content-box {
 padding-left: 10px;
-top: 19%;
+bottom: 22%;
 width: 100%;
 }
 .content-box-all-video {
@@ -441,17 +493,38 @@ font-size: 40px;
 }
 
 .second-slider-content{
-bottom: -20%;
+bottom: -40%;
 }
 .sign-line-korespond{
-font-size: 15px;
+font-size: 10px;
 }
 
 .button-share{
-font-size: 17px;
+font-size: 12px;
 }
 .previous-blog-name-all-blogs{
 font-size: 20px;
+}
+#weatherWidget {
+    position: relative;
+    width: 100%;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: -30px;
+    font-size: 1em;
+    color: #333;
+}
+.rb-grid li{
+  height: 11em;
+}
+#jssor_3{
+  width: 100% !important;
+}
+.button-share-pad{
+  padding: 0;
+}
+.narod-korespond {
+    margin-top: 15px;
 }
 } 
 </style>

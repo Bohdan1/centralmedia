@@ -10,7 +10,7 @@
 </div>
 
 <div class="row">
-	<div class="col l6 s12 m6 devider">
+	<div class="col l6 s12 m12 devider">
 		<div class="main-news-content-footer">
 			<?php
                 //show latest news
@@ -23,7 +23,7 @@
 		<div class="block-line"></div>
 
 	</div>
-	<div class="col l6 s12 m6 ">
+	<div class="col l6 s12 m12 ">
 		<?php
         	//show polls
         	get_template_part('template-parts/polls');

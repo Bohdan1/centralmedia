@@ -6,9 +6,9 @@ Author: Platform-IT
 Author URI: http://platform-it.com/
 Version: 0.4
 */
-/*div, span, ul, li, p, a, img{
-outline: 1px solid red;
-}*/
+// div, span, ul, li, p, a, img{
+// outline: 1px solid red;
+// }
 
 html{
 	width: 100%;
@@ -18,6 +18,7 @@ html{
 }
 
 body{
+	  background-color: white;
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
@@ -300,11 +301,15 @@ button{
 	padding: 2px;
 	left: 15px;
 	text-align: left;
+
+}
+.home-state-tag{
+	background-color: rgba(255, 0, 0, 0.8);
 }
 
 .box-title{
 	padding-bottom: 10px;
-	font-size: 24px;
+font-size: 16px;
 	color: white;
 }
 .box-title-video-page{
@@ -331,7 +336,7 @@ button{
 	background-size: cover;
 }
 .right-block > *:nth-child(1){
-	margin-top: 60px;
+	margin-top: 70px;
 }
 
 .left-block-content{
@@ -489,7 +494,7 @@ button{
 .second-article-block{
 	position: relative;
 	margin-top: 20px;
-	height: 300px;
+	height: 250px;
 	width: 100%;
 	background-size: cover;
 	background-position: center;
@@ -648,7 +653,7 @@ button{
 	position: relative;
 	margin-top: 20px;
 
-	height: 500px;
+	height: 550px;
 	width: 100%;
 
 	background-size: cover;
@@ -910,6 +915,7 @@ footer{
 #jssor_1{
 	width: 100% !important;
 }
+
 .jssora22r{
 	right: 40px !important;
 }
@@ -1029,7 +1035,7 @@ footer{
 	font-size: 20px;
 }
 .user-news-block{
-	top: 70px !important;
+	top: 20px !important;
 	height: 250px !important;
 	width: 100% !important;
 	margin-left: 20px;
@@ -1411,6 +1417,7 @@ filter: alpha(opacity=40);
 .jssora08r.jssora08rds { background-position: -65px -35px; opacity: .3; pointer-events: none; } */
 
 #jssor_2{
+	width: 100vw;
 	position:relative;margin:0 auto;height:300px;visibility:hidden;
 	width: auto !important;
 	margin: 0 !important;

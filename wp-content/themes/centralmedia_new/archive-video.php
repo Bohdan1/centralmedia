@@ -21,200 +21,131 @@
 
 	<div class="row">
 		<div class="full-width-mob col l8 s12 m7 ">
-			<div class="col l12 s12 m12 full-width-mob ">
-				<div  class="second-article-block-all-video">
-					<div class="mask">
-						<div  class="button-position-popular-video-content-box-main">
-							<a href="#" ><img class="button-hover button-position-main-video" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-						</div>
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#" >Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							<div class="box-title-small fix-mob-article "><a href="#" >У селищі Биківня селяний сплюндрували український та польський меморіали жертв НКВС.</a></div>
-							<div class="box-title-time fix-mob-article">28.06.2016</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col l6 s12 m6 ">
-				<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div  class="button-position-popular-video-content-box-main">
-							<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-						</div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col l6 s12 m6 ">
-				<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div  class="button-position-popular-video-content-box-main">
-							<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-						</div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col l4 s12 m5 ">
-			<div class="all-video-last-side-video">
-				<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div  class="button-position-popular-video-content-box-main">
-							<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-						</div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						</div>
-					</div>
-				</div>
-				<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div  class="button-position-popular-video-content-box-main">
-							<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-						</div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						</div>
-					</div>
-				</div>
-				<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-					<div class="mask">
-						<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-						<div  class="button-position-popular-video-content-box-main">
-							<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-						</div>
-						<div class="main-article-content-box">
-
-							<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-							<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-
+			<?php
+		        $args = array(
+		            'post_type' => 'video',
+		            'posts_per_page' => 6,
+		            //'numberposts' => 10,
+		            'publish' => true,
+		            'orderby' => 'date',
+		            'order' => 'DESC'
+		        );
+		        $query = new WP_Query( $args );
+		        $exclude_posts = array();
+		        $display_posts = 1;
+		        if ( $query->have_posts() ) {
+		            while ( $query->have_posts() ) {
+		                $query->the_post();
+		                $exclude_posts[] = get_the_ID();
+		                if ( $display_posts == 1 ) {
+		                    tests_show_big_video();
+		                    $display_posts++;
+		                }
+		                else if ( $display_posts == 2 ) {
+		                    echo '
+		                    	<div class="col l6 s12 m6 ">';
+									tests_show_small_video();
+								echo '
+								</div>';
+		                    $display_posts++;
+		                }
+		                else if ( $display_posts == 3 ) {
+		                    echo '
+		                    	<div class="col l6 s12 m6 ">';
+									tests_show_small_video();
+							echo '
+								</div>
+		</div>'; //end <div class="full-width-mob col l8 s12 m7"> 
+		                     $display_posts++;
+		                }
+		                else if ( $display_posts == 4 ) {
+		                    echo '
+		                    	<div class="col l4 s12 m5 ">
+									<div class="all-video-last-side-video">';
+							tests_show_small_video();
+							$display_posts++;
+		                }
+		                else if ( $display_posts == 5 ) {
+		                	tests_show_small_video();
+							$display_posts++;
+		                }
+		                else {
+		                	tests_show_small_video();
+		                	echo '
+									</div>
+								</div>';
+							$display_posts++;
+		                }
+		            } //end while
+		        } //end if
+		        else {
+		            echo 'Відео не знайдено';
+		        }
+		        wp_reset_postdata();
+		    ?>
 	</div>
 	<div class="third-block-with-line">
-		<div class="big-sign-line">ТОП-5 <span>ВІДЕО</span></div>
+		<div class="big-sign-line">ПОПУЛЯРНІ <span>ВІДЕО</span></div>
 		<div class="block-line"></div>
 	</div>
 
 	<div class="row top-five-list">
 		<div class="popular-video">
 			<div class="row">
-				<div class="col l3 s12 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
+				<?php
+		            $popular_days_post = 21;
+		            $args = array(
+		                'post_type' => 'video',
+		                'posts_per_page' => 4,
+		                'post__not_in' => $exclude_posts,
+		                'publish' => true,
+		                'date_query' => array(
+		                    'after' => $popular_days_post . ' days ago',
+		                ),
+		                'meta_key' => 'post_views_count',
+		                'orderby' => 'meta_value_num'
+		                //'order' => 'DESC'
+		            );
+		            $query = new WP_Query( $args );
+		            $posts_count = 0;
+		            //якщо є відео, які публіковані за останні $popular_days_post днів
+		            if( $query->have_posts() ) {
+		                while ( $query->have_posts() ) {
+		                    $query->the_post();
+		                    $posts_count++;
 
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width-main" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title-video-page fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-
-
+		                    echo '<div class="col l3 s12">';
+		                    	tests_show_small_video();
+		                    echo '</div>';
+		                }
+		            }
+		            //якщо немає або недостатньо публікованих відео за останні $popular_days_post
+		            if( $posts_count < 4 ) {
+		                $args = array(
+		                    'post_type' => 'video',
+		                    'posts_per_page' => 4 - $posts_count,
+		                    'post__not_in' => $exclude_posts,
+		                    'publish' => true,
+		                    'date_query' => array(
+		                        'before' => $popular_days_post . ' days ago',
+		                        ),
+		                    'orderby' => 'date',
+		                    'order' => 'DESC'
+		                    );
+		                $query = new WP_Query( $args );
+		                if( $query->have_posts() ) {
+		                    while ( $query->have_posts() ) {
+		                        $query->the_post();
+		                        echo '<div class="col l3 s12">';
+			                    	tests_show_small_video();
+			                    echo '</div>';
+		                    }
+		                }
+		            }
+		        ?>
 			</div>
 		</div>
 	</div>
-
 
 	<?php
         //slider for blogers
@@ -229,6 +160,33 @@
 	<div class="row">
 		<div class="popular-video">
 			<div class="row">
+				<?php
+					$args = array(
+						'post_type' => 'video',
+						'posts_per_page' => 12,
+						//'post__not_in' => $exclude_posts,
+						'publish' => true,
+						'orderby' => 'date',
+						'order' => 'DESC'
+					);
+					$query = new WP_Query( $args );
+					$date = '';
+
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) {
+							$query->the_post();
+							echo '<div class="col l3 s12 m4 top-five-video-width">';
+								tests_show_small_video();
+							echo '</div>';
+						} //end while
+					} //end if
+					else {
+						echo 'Новин не знайдено';
+					}
+					wp_reset_postdata();
+				?>
+
+				<!--
 				<div class="col l3 s12 m4 top-five-video-width">
 					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
 						<div class="mask">
@@ -243,186 +201,8 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col l3 s12 m4 top-five-video-width">
-					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
-						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
-							<div  class="button-position-popular-video-content-box-main">
-								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
-							</div>
-							<div class="main-article-content-box">
-
-								<div class="title-tag"><a href="#" class="no-hover-blog">Родина</a></div>
-								<div class="box-title fix-mob-article "><a href="#">Під Києвом сплюндрували Биковнянський меморіал</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-
+				-->
 			</div>
 		</div>
 	</div>
