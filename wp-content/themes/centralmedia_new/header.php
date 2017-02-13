@@ -31,6 +31,9 @@ right: auto;
 
 transform: skewX(0deg);
 }
+.short-post-title{
+  font-size: 20px;
+}
 .box-title {
     padding-bottom: 10px;
     font-size: 15px;

@@ -2,7 +2,7 @@
 
 <div class="header-margin-blog">
     <div class="row">
-        <div class="col l8 s12 m8">
+        <div class="col l8 s12 m7">
             <?php 
                 if ( have_posts() ) :
                     while ( have_posts() ) : the_post(); // Start the Loop.
@@ -51,9 +51,9 @@
             ?>
         </div>
 
-        <div class="col l4 m4 s12">
+        <div class="col l4 m5 s12">
             <div class="third-block-with-line">
-                <div class="big-sign-line-one-video">ВІД <span>АВТОРА</span></div>
+                <div class="big-sign-line-one-video">АКТУАЛЬНЕ <span></span></div>
                 <div class="block-line"></div>
             </div>
                  <div class="previous-blog">
@@ -97,7 +97,7 @@
 
                                     
                                     <div class="previous-blog-title ">
-                                        <a href="' . get_the_permalink() . '" class="black-text">' .
+                                        <a href="' . get_the_permalink() . '" class="black-text short-post-title">' .
                                             short_post_title(55) . '
                                         </a>
                                     </div>
