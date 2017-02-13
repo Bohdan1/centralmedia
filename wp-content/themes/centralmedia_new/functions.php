@@ -48,15 +48,27 @@ function custom_post_permalink() {
     $post_type = get_post_type();
     $post_link = get_permalink();
     global $post;
-    /*
-    if ( $post_type == 'video' ) {
-        $post_link = get_post_meta( $post->ID, 'video_url', true );
+    if ( $post_type == 'cultural_events' ) {
+        $post_link = get_post_meta( $post->ID, 'event_url', true );
     }
-    */
-    if ( $post_type == 'partner-news' ) {
+    else if ( $post_type == 'partner-news' ) {
         $post_link = get_post_meta( $post->ID, 'partner_news_url', true );
     }
+    else if ( $post_type == 'streams' ) {
+        $post_link = get_post_meta( $post->ID, 'stream_url', true );
+    }
     return $post_link;
+}
+
+function display_post_type() {
+    $post_type = get_post_type();
+    if ( $post_type == 'news') return 'Новини';
+    else if ( $post_type == 'articles' ) return 'Статті';
+    else if ( $post_type == 'video' ) return 'Відео';
+    else if ( $post_type == 'blogs' ) return 'Блоги';
+    else if ( $post_type == 'cultural_events' ) return 'Культурні події';
+    else if ( $post_type == 'partner-news' ) return 'Новини партнерів';
+    else if ( $post_type == 'streams' ) return 'Стріми';
 }
 
 //show latest news
@@ -192,94 +204,9 @@ function show_small_post( $height = null, $post_id = null) {
     ';
 }
 
-/*
+
 //big template for video
-function show_big_video( $video_id = null ) {
-    echo '
-        <div id="disable-mat-padding" class="col l9 s12 left-block" style="background-image:url(' . get_the_post_thumbnail_url( $video_id ) . ')">
-        <div class="left-block-content">
-            <div class="button-position  hide-on-small-only">
-                <a href="' . get_the_permalink( $video_id ) . '">
-                    <img class="play-button button-hover center" src="' . get_stylesheet_directory_uri() . '/img/play-button.svg" alt="Переглянути">
-                </a>
-            </div>
-            <div class="content-box"><br>
-                <div class="second-slider-title-tag">';
-
-                    $category = get_the_category( $video_id );
-                    if ( !empty( $category ) ) {
-                        $max_categories = 3;    //the maximum number of categories that need to display
-                        if ( count( $category ) < $max_categories ) {
-                            $max_categories = count( $category );
-                        }
-                        for ( $i = 0; $i < $max_categories; $i++ ) {
-                            echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
-                        }
-                    }
-                    echo '
-                </div>
-                <div class="box-title ">
-                    <a href="' . get_the_permalink( $video_id ) . '">' . get_the_title( $video_id ) . '</a>
-                </div>
-                <div class="box-title-time ">' . get_the_time( 'd.m.Y', $video_id ) . '</div>
-            </div>
-            
-            <!--
-            <div class="social-menu-bottom hide-on-large-only ">
-                <div class="menu-list">
-                    <a href="#" ><img  class="social-logo" src="<?php bloginfo("template_url") ?>/img/social/youtube.svg" alt="Логотип"></a>
-                </div>
-                <div class="menu-list">
-                    <a href="#"><img class="social-logo" src="<?php bloginfo("template_url") ?>/img/social/facebook.svg" alt="Логотип"></a>
-                </div>
-                <div class="menu-list">
-                    <a href="#" ><img class="social-logo" src="<?php bloginfo("template_url") ?>/img/social/twitter.svg" alt="Логотип"></a>
-                </div>
-            </div>
-            -->
-        </div>
-    </div>';
-}
-*/
-
-//small template for video
-function show_small_video( $video_id = null ) {
-    if ( $video_id == null ) {
-        $video_id = get_the_ID();
-    }
-    echo '
-            <div style="background-image: url(' . get_the_post_thumbnail_url( $video_id ) . ');" class="popular-video-block">
-                <div class="mask">
-                    <div class="view-count-blog">
-                        <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
-                        <span class="count-number white-text">' . getPostViews( $video_id ) . '</span>
-                    </div>
-                    <div class="button-position-popular-video-content-box">
-                        <a href="' . get_the_permalink( $video_id ) . '" >
-                            <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Логотип">
-                        </a>
-                    </div>
-                    <div class="popular-video-description hover-link">
-                        <a href="'. get_the_permalink( $video_id ) .'" >' . 
-                            //short_post_title(75) . '
-                            get_the_title( $video_id ) . '
-                        </a>
-                    </div>
-                    <div class="popular-video-content-box">
-                        <div class="popular-video-tag">';
-                            $category = get_the_category( $video_id );
-                            if ( !empty($category) ) {
-                                $category = $category[0];
-                                echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
-                            }
-                            echo '
-                        </div>
-                    </div>
-                </div>
-            </div>';
-}
-
-function tests_show_big_video() {
+function show_big_video() {
     echo '
         <div class="col l12 s12 m12 full-width-mob ">
             <div class="second-article-block-all-video" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
@@ -294,7 +221,8 @@ function tests_show_big_video() {
                         <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                     </div>
                     <div class="main-article-content-box">
-                        <div class="title-tag">';
+                        <br>
+                        <div class="second-slider-title-tag">';
                             $category = get_the_category();
                             if ( !empty( $category ) ) {
                                 $max_categories = 3;    //the maximum number of categories that need to display
@@ -302,7 +230,7 @@ function tests_show_big_video() {
                                     $max_categories = count( $category );
                                 }
                                 for ( $i = 0; $i < $max_categories; $i++ ) {
-                                    echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog">' . $category[$i]->cat_name . '</a>';
+                                    echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
                                 }
                             }
                             echo '
@@ -321,7 +249,8 @@ function tests_show_big_video() {
         </div>';
 }
 
-function tests_show_small_video() {
+//small template for video
+function show_small_video() {
     echo '
         <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="second-article-block-all-article-side">
             <div class="mask">
@@ -339,7 +268,7 @@ function tests_show_small_video() {
                         $category = get_the_category();
                         if ( !empty($category) ) {
                             $category = $category[0];
-                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog top-states-small">' . $category->cat_name . '</a>';
                         }
                         echo '
                     </div>
@@ -354,6 +283,7 @@ function tests_show_small_video() {
 }
 
 
+//template for cultural events slider
 function show_slider_cultural_events($post_id) {
     echo '
         <div>
@@ -381,6 +311,21 @@ function show_slider_cultural_events($post_id) {
                     <br>    
                 </div>
             </div>
+        </div>';
+}
+
+function show_no_img_post() {
+    echo '
+        <div class="tag-content">
+            <div class="tag-title">
+                <a href="' . custom_post_permalink() . '" class="black-text" >' . short_post_title(80) . '</a>
+            </div>
+            <div class="tag-description">
+                <a href="' . custom_post_permalink() . '" class="black-text" >' .
+                    short_post_desc( 150 ) . '
+                </a>
+            </div>
+            <div class="tag-date">' . get_the_time('j F Y, G:i') . ' — ' . display_post_type() . '</div>
         </div>';
 }
 

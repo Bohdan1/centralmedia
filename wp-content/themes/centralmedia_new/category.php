@@ -1,58 +1,60 @@
-<?php
-/**
- * The template for displaying Category pages
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<?php if ( have_posts() ) : ?>
-
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
-
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .archive-header -->
-
+<div class="header-margin-tag">
+	<div class="row">
+		<div class="col l8"> 
+			<div class="tag-name"><?php single_cat_title(); ?></div>
+			<div class="tag-name-description">Матеріали за темою</div>
 			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
+				$cat_id = get_cat_ID( single_cat_title('', 0) ); //ID required category
 
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-
-					endwhile;
-					// Previous/next page navigation.
-					twentyfourteen_paging_nav();
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
+				$args = array(
+                    'post_type' => array('news', 'articles', 'video', 'blogs', 'cultural_events', 'partner-news' , 'streams'),
+                    'cat' => $cat_id,
+                    'posts_per_page' => 10,
+                    'publish' => true,
+                    'orderby' => 'date'
+                    //'order' => 'DESC'
+                );
+                $query = new WP_Query( $args );
+                if( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        show_no_img_post();
+                    }
+                }
+				else {
+					echo '<div> Публікацій за даною категорією не знайдено </div>';
+				}
 			?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
+		</div>
 
-<?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();
+		<div class="col l4">
+			<div class="block-with-line hide-on-small-only">
+				<div class="big-sign-line">ТОП <span>СТАТТІ</span></div>
+				<div class="block-line"></div>
+			</div>
+				<?php 
+				$args = array(
+					'post_type' => 'articles',
+					'posts_per_page' => 4,
+					'publish' => true,
+					'orderby' => 'date',
+					'order' => 'DESC'
+				);
+				$query = new WP_Query( $args );
+				if( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						echo '<div class="col l12 s12 m12">';
+							show_small_post();
+						echo '</div>';
+					}
+				}
+
+			?>
+		</div>
+	</div>
+</div>
+
+<?php get_footer(); ?>

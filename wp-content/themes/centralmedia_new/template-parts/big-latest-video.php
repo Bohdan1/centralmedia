@@ -18,13 +18,13 @@
 	                $query->the_post();
 	                $exclude_posts[] = get_the_ID();
 	                if ( $display_posts == 1 ) {
-	                    tests_show_big_video();
+	                    show_big_video();
 	                    $display_posts++;
 	                }
 	                else if ( $display_posts == 2 ) {
 	                    echo '
 	                    	<div class="col l6 s12 m6 ">';
-								tests_show_small_video();
+								show_small_video();
 							echo '
 							</div>';
 	                    $display_posts++;
@@ -32,7 +32,7 @@
 	                else if ( $display_posts == 3 ) {
 	                    echo '
 	                    	<div class="col l6 s12 m6 ">';
-								tests_show_small_video();
+								show_small_video();
 						echo '
 							</div>
 	</div>'; //end <div class="full-width-mob col l8 s12 m7"> 
@@ -42,15 +42,15 @@
 	                    echo '
 	                    	<div class="col l4 s12 m5 ">
 								<div class="all-video-last-side-video">';
-						tests_show_small_video();
+						show_small_video();
 						$display_posts++;
 	                }
 	                else if ( $display_posts == 5 ) {
-	                	tests_show_small_video();
+	                	show_small_video();
 						$display_posts++;
 	                }
 	                else {
-	                	tests_show_small_video();
+	                	show_small_video();
 	                	echo '
 								</div>
 							</div>';

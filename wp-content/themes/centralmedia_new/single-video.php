@@ -62,7 +62,7 @@
                     while ( $query->have_posts() ) {
                         $query->the_post();
                         $posts_count++;
-                        tests_show_small_video();
+                        show_small_video();
                     }
                 }
                 //якщо немає або недостатньо публікованих відео за останні $popular_days_post
@@ -81,7 +81,7 @@
                     if( $query->have_posts() ) {
                         while ( $query->have_posts() ) {
                             $query->the_post();
-                            tests_show_small_video();
+                            show_small_video();
                         }
                     }
                 }

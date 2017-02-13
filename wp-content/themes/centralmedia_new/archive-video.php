@@ -57,7 +57,7 @@
 		                    $posts_count++;
 
 		                    echo '<div class="col l3 s12">';
-		                    	tests_show_small_video();
+		                    	show_small_video();
 		                    echo '</div>';
 		                }
 		            }
@@ -79,7 +79,7 @@
 		                    while ( $query->have_posts() ) {
 		                        $query->the_post();
 		                        echo '<div class="col l3 s12">';
-			                    	tests_show_small_video();
+			                    	show_small_video();
 			                    echo '</div>';
 		                    }
 		                }
@@ -118,7 +118,7 @@
 						while ( $query->have_posts() ) {
 							$query->the_post();
 							echo '<div class="col l3 s12 m4 top-five-video-width">';
-								tests_show_small_video();
+								show_small_video();
 							echo '</div>';
 						} //end while
 					} //end if
