@@ -22,7 +22,7 @@
 </div>
 
 <div class="row">
-	<div class="full-width-mob col l8 s12 m7 ">
+	<div class="full-width-mob col l8 s12 m8 ">
 		<div class="col l12 s12 m12 full-width-mob ">
 			<div id="jssor_1"  style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
 				<!-- Loading Screen -->
@@ -111,7 +111,7 @@
 		?>
 	</div>
 
-	<div class="col l4 s12 m5 ">
+	<div class="col l4 s12 m4 ">
 		<div class="main-news-content-box">
 			<?php
 	            //show latest news
@@ -148,7 +148,7 @@
 					while ( $query->have_posts() ) {
 						$query->the_post();
 						$video_count++;
-						echo '<div class="col l4 s12 m4 video-devider" style="min-height:260px;">';
+						echo '<div class="col l4 s12 m6 video-devider" style="min-height:260px;">';
 							show_small_video();
 						echo '</div>';
 					}
@@ -169,7 +169,7 @@
 					if( $query->have_posts() ) {
 						while ( $query->have_posts() ) {
 							$query->the_post();
-							echo '<div class="col l4 s12 m4 video-devider" style="min-height:260px;">';
+							echo '<div class="col l4 s12 m6 video-devider" style="min-height:260px;">';
 								show_small_video();
 							echo '</div>';
 							$video_count++;
@@ -327,14 +327,14 @@
 									<span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
 								</div>
 								<div class="row">
-								<div class="col l4 m5 s12">
+								<div class="col l4 m6 s12">
 								<div class="previous-blog-img">
 									<a href="' . get_the_permalink() . '" >
 										<img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
 									</a>
 								</div>
 								</div>
-								<div class="col l8 m7 s12">
+								<div class="col l8 m6 s12">
 								<div class="previous-blog-name ">
 									<a href="' . get_the_permalink() . '" class="black-text">' .
 				      					get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '

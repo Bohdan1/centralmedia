@@ -56,7 +56,7 @@
 		                    $query->the_post();
 		                    $posts_count++;
 
-		                    echo '<div class="col l3 s12">';
+		                    echo '<div class="col l3 s12 m6">';
 		                    	show_small_video();
 		                    echo '</div>';
 		                }
@@ -78,7 +78,7 @@
 		                if( $query->have_posts() ) {
 		                    while ( $query->have_posts() ) {
 		                        $query->the_post();
-		                        echo '<div class="col l3 s12">';
+		                        echo '<div class="col l3 s12 m6">';
 			                    	show_small_video();
 			                    echo '</div>';
 		                    }
