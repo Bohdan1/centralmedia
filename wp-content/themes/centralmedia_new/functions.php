@@ -48,7 +48,10 @@ function custom_post_permalink() {
     $post_type = get_post_type();
     $post_link = get_permalink();
     global $post;
-    if ( $post_type == 'cultural_events' ) {
+    if ( $post_type == 'video' ) {
+        $post_link = get_post_meta( $post->ID, 'video_url', true );
+    }
+    else if ( $post_type == 'cultural_events' ) {
         $post_link = get_post_meta( $post->ID, 'event_url', true );
     }
     else if ( $post_type == 'partner-news' ) {
@@ -76,7 +79,7 @@ function show_short_latest_news() {
     global $date;
     if ( $date != get_the_time('j F Y l') ) {
         $date = get_the_time('j F Y l');
-        echo '<div class="next-day-news">' .  $date . '</div>';
+        echo '<div class="next-day-news">' . $date . '</div>';
     }
     echo '
         <div class="news-block">';
@@ -959,7 +962,19 @@ function show_no_img_post() {
 show_admin_bar(false);
 
 
-
+//true url for youtube iframe
+function youtube_iframe_url( $url ) {
+    // get all symbols afther 'watch?v='
+    $true_url= explode( "watch?v=", $url );
+    $true_url = $true_url[1];
+    if ( stripos( $true_url, "&", true) ) {
+        // get all symbols before '&'
+        $true_url= explode( "&", $true_url );
+        $true_url = $true_url[0];
+    }
+    $true_url = trim( $true_url );
+    return $true_url;
+}
 
 
 ?>

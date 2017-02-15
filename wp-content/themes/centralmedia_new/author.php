@@ -1,75 +1,70 @@
 <?php get_header(); ?>
+
 <div class="header-margin-blog">
 	<div class="row">
 		<div class="col l8 s12 m6"> 
+			<?php 
+				$author_id = get_the_author_meta('ID');
+				$posts_count = author_posts_count( $author_id );
+				$slovo = getNumEnding( $posts_count, array('запис', 'записи', 'записів') );
+			?>
 			<div class="row">
 				<div class="col l2 m12 s12"> 
 					<div class="author-img-block">
-						<a href="#" ><img class="author-img" src="https://blogimg.pravda.com/images/doc/e/e/eedd9-golovan112.jpg" alt="Логотип"></a>
+						<img class="author-img" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="Логотип">
 					</div>
 				</div>
 				<div class="col l10 s12 m12"> 
-
 					<div class="blogger-name">
-						Ігор Головань
+						<?php
+							echo get_the_author_meta('first_name') . ' ' . 
+							get_the_author_meta('last_name') . ' (' . $posts_count . ' ' . $slovo . ')';
+						?>
 					</div>
-					<div class="blogger-description">Адвокат, керуючий партнер Адвокатського об'єднання "Головань і партнери"
+					<div class="blogger-description">
+						<?php echo get_the_author_meta('description'); ?>
 					</div>
 				</div>
 			</div>
 			<div class="block-with-line hide-on-small-only">
-				<div class="block-line"></div><div class="big-sign-line">Усі записи <span>автора</span></div><div class="block-line"></div>
+				<div class="block-line"></div>
+				<div class="big-sign-line">
+					Усі записи <span>автора</span>
+				</div>
+				<div class="block-line"></div>
 			</div>
+			
+
+			<?php 
+				$args = array(
+					'post_type' => 'blogs',
+					'author' => $author_id,
+					'posts_per_page' => 10,
+					'publish' => true,
+					'orderby' => 'date',
+					'order' => 'DESC'
+				);
+				$query = new WP_Query( $args );
+				if( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						echo show_no_img_post();
+					} //end while
+				} //end if
+				else {
+					echo 'Блогів не знайдено';
+				}
+				wp_reset_postdata();
+			?>
+			<!--
 			<div class="tag-content">
 				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
 				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
 				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
 			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
+			-->
+			
+
 		</div>
 		<div class="col l4 s12 m6">
 			<div class="block-with-line hide-on-small-only">

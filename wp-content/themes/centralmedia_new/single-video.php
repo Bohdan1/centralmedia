@@ -19,7 +19,7 @@
                                 ?>
                             </div>
                             <div>
-                                <iframe class="center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" style="width: 100%; height: 500px"></iframe>
+                                <iframe class="center" src="https://www.youtube.com/embed/<?php echo youtube_iframe_url( custom_post_permalink() ); ?>" frameborder="0" style="width: 100%; height: 500px"></iframe>
                             </div>
                             <div class="single-post-text">
                                 <?php the_content(); ?>
@@ -35,18 +35,19 @@
                     echo '<div> Відео не знайдено </div>';
                 endif;
             ?>
-    </div>
-
-    <div class="col l4 m4 s12">
-        <div class="third-block-with-line">
-            <div class="big-sign-line-one-video">ТОП-<span>ВІДЕО</span></div>
-            <div class="block-line"></div>
         </div>
-        <?php
+
+        <div class="col l4 m4 s12">
+            <div class="third-block-with-line">
+                <div class="big-sign-line-one-video">ПОПУЛЯРНІ-<span>ВІДЕО</span></div>
+                <div class="block-line"></div>
+            </div>
+            <?php
                 $popular_days_post = 21;
+                $need_posts = 4;
                 $args = array(
                     'post_type' => 'video',
-                    'posts_per_page' => 4,
+                    'posts_per_page' => $need_posts,
                     'publish' => true,
                     'date_query' => array(
                         'after' => $popular_days_post . ' days ago',
@@ -66,10 +67,10 @@
                     }
                 }
                 //якщо немає або недостатньо публікованих відео за останні $popular_days_post
-                if( $posts_count < 4) {
+                if( $posts_count < $need_posts) {
                     $args = array(
-                        'post_type' => 'news',
-                        'posts_per_page' => 4 - $posts_count,
+                        'post_type' => 'video',
+                        'posts_per_page' => $need_posts - $posts_count,
                         'publish' => true,
                         'date_query' => array(
                             'before' => $popular_days_post . ' days ago',
@@ -86,8 +87,8 @@
                     }
                 }
             ?>
+        </div>
     </div>
-</div>
 </div>
 
 <div style="margin-bottom: 0px;" class="row">
