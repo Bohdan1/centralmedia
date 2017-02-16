@@ -364,11 +364,12 @@
 		?>
 	</div>
 </div>
-<div class="advertisment">
-	<div class="advertisment-block">
-		<a href="#" ><img class="advertisment-img" src="<?php bloginfo('template_url') ?>/img/sponsors-wide.jpg" alt="Логотип"></a>
-	</div>
-</div>
+
+<?php
+    //show advertising block
+    get_template_part('template-parts/advertising', 'block-1');
+?>
+
 <div class="five-block-with-line hide-on-med-and-down">
 	<div class="big-sign-line">КУЛЬТУРНІ <span>ПОДІЇ</span></div>
 	<div class="block-line"></div>

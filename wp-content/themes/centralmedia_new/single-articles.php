@@ -142,9 +142,10 @@
 
 
 <div class="advertisment-all-blogs">
-    <div class="advertisment-block">
-        <a href="#" ><img class="advertisment-img" src="<?php bloginfo('template_url') ?>/img/sponsors-wide.jpg" alt="Логотип"></a>
-    </div>
+    <?php
+        //show advertising block
+        get_template_part('template-parts/advertising', 'block-1');
+    ?>
 </div>
 
 <?php

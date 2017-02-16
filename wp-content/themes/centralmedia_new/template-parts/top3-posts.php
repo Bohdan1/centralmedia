@@ -1,20 +1,37 @@
 <div id="disable-mat-padding" class="col l9 s12 left-block">
 <?php
 	$posts_id = array();
-	if ( get_option('block1_post_id') && get_option('block2_post_id') && get_option('block3_post_id') ) {
+	if ( get_post( get_option('block1_post_id') ) && get_post( get_option('block2_post_id') ) && get_post( get_option('block3_post_id') ) ) {
 		$posts_id[] = intval( get_option('block1_post_id') );
 		$posts_id[] = intval( get_option('block2_post_id') );
 		$posts_id[] = intval( get_option('block3_post_id') );
 	}
+	else {
+		$args = array(
+			'post_type' => array ('news', 'articles', 'video'),
+			'posts_per_page' => 3,
+			'publish' => true,
+			'orderby' => 'date',
+			'order' => 'DESC'
+		);
+		$query = new WP_Query( $args );
+		if( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				$posts_id[] = get_the_ID();
+			} //end while
+		} //end if
+	}
+
 
 	if ( get_post_type( $posts_id[0] ) == 'streams' ) {
 		echo '
-			<iframe class="stream-template" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
+			<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '" frameborder="0" ></iframe>
 		';
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'video' ) {
 		echo '
-			<div style="background-image: url(' . get_template_directory_uri() . '/img/1.jpg);"  class="left-block-content">
+			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0] ) . ');"  class="left-block-content">
 			<div class="mask">
 				<div class="button-position  hide-on-small-only">
 					<a href="' . get_the_permalink( $posts_id[0] ) . '">
@@ -65,9 +82,7 @@
 	else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
 		echo '
 		<a class="mask-link" href="' . get_the_permalink( $posts_id[0] ) . '">
-			<div style="background-image: url(' . get_template_directory_uri() . '/img/1.jpg); background-size:cover;" class="left-block-content">
-
-			
+			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0] ) . '); background-size:cover;" class="left-block-content">
 			<div class="mask">
 			
 				<div class="content-box">
@@ -90,12 +105,9 @@
 						
 					</div>
 					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
-
-				</div>
-						
+				</div>	
 				</div>
 				</a>
-			
 				<div class="social-menu-bottom hide-on-large-only ">
 					<div class="menu-list">
 						<a href="#" >
@@ -123,7 +135,7 @@
 			for ($i = 1; $i < 3; $i++) {
 				if ( get_post_type( $posts_id[$i] ) == 'streams' ) {
 					echo '
-						<iframe class="right-block-video center" src="https://www.youtube.com/embed/MJ_aWV_-DF8" frameborder="0" ></iframe>
+						<iframe class="right-block-video center" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[$i], 'stream_url', true ) ) . '" frameborder="0" ></iframe>
 					';
 				}
 				else if ( get_post_type( $posts_id[$i] ) == 'video' ) {

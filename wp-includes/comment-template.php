@@ -1633,7 +1633,8 @@ function get_comment_reply_link( $args = array(), $comment = null, $post = null 
 
 	if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) {
 		$link = sprintf( '<a rel="nofollow" class="comment-reply-login" href="%s">%s</a>',
-			esc_url( wp_login_url( get_permalink() ) ),
+			//esc_url( wp_login_url( get_permalink() ) ),
+			'#modal-login',
 			$args['login_text']
 		);
 	} else {
@@ -1722,9 +1723,11 @@ function get_post_reply_link($args = array(), $post = null) {
 
 	if ( get_option('comment_registration') && ! is_user_logged_in() ) {
 		$link = sprintf( '<a rel="nofollow" class="comment-reply-login" href="%s">%s</a>',
-			wp_login_url( get_permalink() ),
+			//wp_login_url( get_permalink() ),
+			'#modal-login',
 			$args['login_text']
 		);
+		$link = 'href="#modal-login"';
 	} else {
 		$onclick = sprintf( 'return addComment.moveForm( "%1$s-%2$s", "0", "%3$s", "%2$s" )',
 			$args['add_below'], $post->ID, $args['respond_id']

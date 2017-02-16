@@ -390,6 +390,8 @@ if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_c
 	<td><input type="text" name="nickname" id="nickname" value="<?php echo esc_attr($profileuser->nickname) ?>" class="regular-text" /></td>
 </tr>
 
+<?php
+/*
 <tr class="user-display-name-wrap">
 	<th><label for="display_name"><?php _e('Display name publicly as') ?></label></th>
 	<td>
@@ -426,6 +428,8 @@ if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_c
 	</td>
 </tr>
 </table>
+*/
+?>
 
 <h2><?php _e( 'Contact Info' ); ?></h2>
 

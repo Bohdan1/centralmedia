@@ -132,11 +132,14 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="advertisment-all-article">
-		<div class="advertisment-block">
-			<a href="#" ><img class="advertisment-img" src="<?php bloginfo('template_url') ?>/img/sponsors-wide.jpg" alt="Логотип"></a>
-		</div>
+		<?php
+	        //show advertising block
+	        get_template_part('template-parts/advertising', 'block-1');
+	    ?>
 	</div>
+	
 
 	<?php
         //latest news and polls
