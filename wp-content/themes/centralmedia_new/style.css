@@ -253,6 +253,7 @@ button{
 	height: 100%;
 }
 .content-box{
+	z-index: 2;
 	padding-left: 20px;
 	position: absolute;
 	bottom: 20px;
@@ -296,6 +297,7 @@ button{
 	margin: 5px;
 	position: absolute;
 	top: -35px;
+	z-index: 99;
 	font-size: 18px;
 	color: white;
 	padding: 2px;
@@ -484,17 +486,27 @@ font-size: 16px;
 	top:0;
 	left:0;
 }
+.mask-link{
+	height:100%;
+	position:absolute;
+	z-index: 0;
+	width:100%;
+	top:0;
+	left:0;
+}
 .main-article-content-box{
 	position: absolute;
 	padding-left: 20px;
 	padding-right: 20px;
 	bottom: 10px;
 }
-
+.author-img-width{
+	max-width: 100%
+}
 .second-article-block{
 	position: relative;
 	margin-top: 20px;
-	height: 250px;
+	height: 350px;
 	width: 100%;
 	background-size: cover;
 	background-position: center;
@@ -1080,7 +1092,7 @@ footer{
 }
 #people-share{
 	position: fixed;
-	z-index: 999;
+	z-index: 9999;
 
 	bottom: 40px;
 	right: 15px;
@@ -1806,8 +1818,14 @@ max-width: 100% !important;
 	background-color: rgba(255, 0, 0, 0.8);
     margin-right: 5px;
     padding: 3px 8px 3px 8px;
+    position: relative;
+    z-index: 9;
 }
-
+input::-moz-placeholder { color: rgba(255, 0, 0, 0.8); }
+input::-webkit-input-placeholder { color: rgba(255, 0, 0, 0.8); }
+label{
+	color: rgba(255, 0, 0, 0.8);
+}
 #jssor_3{
 	width: 100% !important;
 }
@@ -1819,6 +1837,8 @@ max-width: 100% !important;
 }
 
 .box-title-main{
+	position: relative;
+	z-index: 9;
 	font-size: 30px;
 }
 

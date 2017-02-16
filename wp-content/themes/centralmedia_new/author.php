@@ -11,7 +11,7 @@
 			<div class="row">
 				<div class="col l2 m12 s12"> 
 					<div class="author-img-block">
-						<img class="author-img" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="Логотип">
+						<img class="author-img-width" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="Логотип">
 					</div>
 				</div>
 				<div class="col l10 s12 m12"> 

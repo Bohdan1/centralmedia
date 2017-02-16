@@ -38,7 +38,7 @@
                 
                 else {
                     echo '<div class="col l4 s12 m5 ">';
-                        show_small_post( '260px' );
+                        show_small_post( '293.5px' );
                     echo '</div>';
                 }
             } //end while

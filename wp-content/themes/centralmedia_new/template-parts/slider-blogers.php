@@ -21,6 +21,7 @@
 				if( $i == 0 ) {
 					echo '
 						<div class="slider-box slider-box-remake-main">
+						<a href="' . get_the_permalink() . '" class="no-hover-blog">
 					        <div class="slider-element">
 					            <div class="blog-element-tag no-hover-blog">ТОП БЛОГ</div>
 				      			<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="Аватар">
@@ -37,12 +38,15 @@
 				      				</div>
 				      			</div>
 					        </div>
+
+										</a>
 					    </div>';
 					$i++;
 				}
 				else {
 					echo '
 						<div class="slider-box slider-box-remake">
+						<a href="' . get_the_permalink() . '" class="black-text">
 							<div class="slider-element">
 								<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="аватар">
 								<div class="">
@@ -58,6 +62,8 @@
 									</div>
 								</div>
 							</div>
+							</a>
+
 						</div>';
 				}
 			} //end while
