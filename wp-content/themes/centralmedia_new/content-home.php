@@ -241,61 +241,61 @@
 		</div>
 	</div>
 
-<div class="col l7 s12 m6 narod-korespond hide-on-med-and-down">
-	
+	<div class="col l7 s12 m6 narod-korespond hide-on-med-and-down">
 		<div class="block-with-line">
-			<a href="#modal4" class="button-share-pad"><div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div></a>
+			<a href="#modal4" class="button-share-pad">
+				<div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div>
+			</a>
 			<div class="block-line"></div>
-			<div class="small-sign-line"> <div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div></div><img data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
+			<div class="small-sign-line">
+				<div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div>
+			</div>
+			<img data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
 		</div>
 	
-
-	
-	<div id="jssor_2" >
-	<!--Loading Screen -->
-        <div id="slider-option" data-u="loading" >
-            <div id="slider-option2" ></div>
-            <div id="slider-option3" ></div>
-        </div>
-        <div data-u="slides" class="slider-option4" >
-           <div class="user-news-block">
-			<div class=" col l12 m7 s12 " style="width: 50% !important;">
-				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-			</div>
-			<div class="col l12 m4 s12" style="width: 50% !important;">
-				<div class="user-video-name">Yura Romaniv</div>
-				<div class="user-video-date">28.06.1995</div>
-				<div class="user-video-time">18:52</div>
-				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-			</div>
-		</div>
-		  <div class="user-news-block ">
-			<div class=" col l12 m7 " style="width: 50% !important;">
-				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-			</div>
-			<div class="col l12 m4" style="width: 50% !important;">
-				<div class="user-video-name">Yura Romaniv</div>
-				<div class="user-video-date">28.06.1995</div>
-				<div class="user-video-time">18:52</div>
-				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-			</div>
-		</div>
-		  <div class="user-news-block ">
-			<div class=" col l12 m7 " style="width: 50% !important;">
-				<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-			</div>
-			<div class="col l12 m4" style="width: 50% !important;">
-				<div class="user-video-name">Yura Romaniv</div>
-				<div class="user-video-date">28.06.1995</div>
-				<div class="user-video-time">18:52</div>
-				<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-			</div>
-		</div>
-            
-        </div>
-    </div>
-
-</div>
+		<div id="jssor_2" >
+		<!--Loading Screen -->
+	        <div id="slider-option" data-u="loading" >
+	            <div id="slider-option2"></div>
+	            <div id="slider-option3"></div>
+	        </div>
+	        <div data-u="slides" class="slider-option4" >
+	        	<div class="user-news-block">
+					<div class=" col l12 m7 s12 " style="width: 50% !important;">
+						<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+					</div>
+					<div class="col l12 m4 s12" style="width: 50% !important;">
+						<div class="user-video-name">Yura Romaniv</div>
+						<div class="user-video-date">28.06.1995</div>
+						<div class="user-video-time">18:52</div>
+						<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
+					</div>
+				</div>
+			 	<div class="user-news-block ">
+					<div class=" col l12 m7 " style="width: 50% !important;">
+						<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+					</div>
+					<div class="col l12 m4" style="width: 50% !important;">
+						<div class="user-video-name">Yura Romaniv</div>
+						<div class="user-video-date">28.06.1995</div>
+						<div class="user-video-time">18:52</div>
+						<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
+					</div>
+				</div>
+				<div class="user-news-block ">
+					<div class=" col l12 m7 " style="width: 50% !important;">
+						<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
+					</div>
+					<div class="col l12 m4" style="width: 50% !important;">
+						<div class="user-video-name">Yura Romaniv</div>
+						<div class="user-video-date">28.06.1995</div>
+						<div class="user-video-time">18:52</div>
+						<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	</div>
 </div>
 
 
@@ -318,43 +318,10 @@
 			if( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();
-					$author_id = get_the_author_meta( 'ID' );
-					echo '
-						<div class="col l4 s12 m6">
-							<div class="previous-blog-box">
-								<div class="view-count-blog">
-									<img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
-									<span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
-								</div>
-								<div class="row">
-								<div class="col l4 m6 s12">
-								<div class="previous-blog-img">
-									<a href="' . get_the_permalink() . '" >
-										<img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
-									</a>
-								</div>
-								</div>
-								<div class="col l8 m6 s12">
-								<div class="previous-blog-name ">
-									<a href="' . get_the_permalink() . '" class="black-text">' .
-				      					get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
-				      				</a>
-								</div>
-								<div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
-								</div>
-								</div>
-
-								
-								<div class="previous-blog-title ">
-									<a href="' . get_the_permalink() . '" class="black-text">' .
-										short_post_title(55) . '
-									</a>
-								</div>
-								<div class="previous-blog-tag">
-									<a href="#" class="no-hover-blog">Блог</a>
-								</div>
-							</div>
-						</div>';
+					//$author_id = get_the_author_meta( 'ID' );
+					echo '<div class="col l4 s12 m6">';
+            			show_homepage_blog();
+					echo '</div>';
 				} //end while
 			} //end if
 			else {

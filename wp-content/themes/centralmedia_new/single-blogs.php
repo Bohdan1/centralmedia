@@ -13,7 +13,7 @@
                                 <div class="one-blog-sign-content">
                                     <div class="one-blog-sign-img">
                                         <a href="#">
-                                            <img class="one-blog-sign-img-width" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>">
+                                            <img class="one-blog-sign-img-width" src="<?php echo get_wp_user_avatar_src( $author_id, 'thumbnail' ); ?>">
                                         </a>
                                     </div>
                                     <div class="one-blog-sign-title">
@@ -82,7 +82,7 @@
                                     <div class="col l12 m12 s12">
                                     <div class="previous-blog-img-archive">
                                         <a href="' . get_the_permalink() . '" >
-                                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
+                                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'medium' ) .'">
                                         </a>
                                     </div>
                                     </div>

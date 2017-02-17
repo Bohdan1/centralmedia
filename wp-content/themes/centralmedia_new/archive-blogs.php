@@ -15,46 +15,9 @@
                 if( $query->have_posts() ) {
                     while ( $query->have_posts() ) {
                         $query->the_post();
-                        $author_id = get_the_author_meta( 'ID' );
-                        echo '
-                            <div class="col l12 s12 m12">
-                                <div class="previous-blog-box">
-                                    <div class="view-count-blog">
-                                        <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
-                                        <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col l2 m5 s12">
-                                            <div class="previous-blog-img">
-                                                <a href="' . get_the_permalink() . '" >
-                                                    <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id ) .'">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col l10 m7 s12">
-                                            <div class="previous-blog-name ">
-                                                <a href="' . get_author_posts_url($author_id) . '" class="black-text">' .
-                                                    get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
-                                                </a>
-                                            </div>
-                                            <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
-                                        </div>
-                                    </div>`
-                                    <div class="previous-blog-title ">
-                                        <a href="' . get_the_permalink() . '" class="black-text">' .
-                                            short_post_title(55) . '
-                                        </a>
-                                    </div>
-                                    <div class="previous-blog-tag">';
-                                        $category = get_the_category( $post_id );
-                                        if ( !empty($category) ) {
-                                            $category = $category[0];
-                                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
-                                        }
-                                        echo '
-                                    </div>
-                                </div>
-                            </div>';
+                        echo '<div class="col l12 s12 m12">';
+                            show_archive_blog();
+                        echo '</div>';
                     } //end while
                 } //end if
                 else {

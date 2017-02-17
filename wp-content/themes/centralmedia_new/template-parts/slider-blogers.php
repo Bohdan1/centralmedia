@@ -24,7 +24,7 @@
 						<a href="' . get_the_permalink() . '" class="no-hover-blog">
 					        <div class="slider-element">
 					            <div class="blog-element-tag no-hover-blog">ТОП БЛОГ</div>
-				      			<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="Аватар">
+				      			<img src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) . '" alt="Аватар">
 				      			<div>
 				      				<div class="slider-bloger-name-main">
 				      					<a href="' . get_the_permalink() . '" class="no-hover-blog">' .
@@ -48,7 +48,7 @@
 						<div class="slider-box slider-box-remake">
 						<a href="' . get_the_permalink() . '" class="black-text">
 							<div class="slider-element">
-								<img src="' . get_wp_user_avatar_src( $author_id ) . '" alt="аватар">
+								<img src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) . '" alt="Аватар">
 								<div class="">
 									<div class="slider-bloger-name">
 										<a href="' . get_the_permalink() . '" class="black-text">' .

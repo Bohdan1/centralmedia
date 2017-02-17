@@ -411,9 +411,9 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
-            'taxonomies' => array( 'post_tag', 'category' ),
-            'has_archive' => true,
+            'supports' => array( 'title', 'thumbnail' ), //'editor', 'author', 'comments', 'revisions'
+            //'taxonomies' => array( 'post_tag', 'category' ),
+            'has_archive' => false,
             'rewrite' => true,
             'query_var' => true,
             'can_export' => true
@@ -548,22 +548,55 @@
 
 
     add_action( 'add_meta_boxes', function() {
+       add_meta_box(
+            'event_info1',
+            'Дата проведення:',
+            'events_date_cb',
+            'cultural_events',
+            'normal',
+            'high'
+        );
         add_meta_box(
-            'event_info',
+            'event_info2',
             'Посилання на культурну подію:',
-            'events_info_cb',
+            'events_url_cb',
             'cultural_events',
             'normal',
             'high'
         );
     });
     
-    function events_info_cb() {
+
+    function events_date_cb() {
+        global $post;
+        $url = get_post_meta( $post->ID, 'event_date', true );
+
+        //unique identifier, name of hidden field
+        wp_nonce_field( __FILE__, 'event_date_nonce' );
+        //<label for"event_date">Дата проведення: </label>
+    ?>
+        <input type="text" name="event_date" id="event_date" class="widefat" value="<?php echo get_post_meta($post->ID, 'event_date', true);  ?>" />
+    <?php
+    }
+    add_action('save_post', function() {
+        global $post;
+        if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+        //security check - nonce
+        //verify this came from the our screen and with proper authorization,
+        //because save_post can be triggered at other times
+        if ( $_POST && wp_verify_nonce( $_POST['event_date_nonce'], __FILE__ ) ) {
+            if ( isset($_POST['event_date']) ) {
+                update_post_meta( $post->ID, 'event_date', $_POST['event_date'] );
+            }
+        }
+    });
+
+    function events_url_cb() {
         global $post;
         $url = get_post_meta( $post->ID, 'event_url', true );
 
         //unique identifier, name of hidden field
-        wp_nonce_field( __FILE__, 'event_nonce' );
+        wp_nonce_field( __FILE__, 'event_url_nonce' );
     ?>
         <label for"event_url">URL: </label>
         <input type="text" name="event_url" id="event_url" class="widefat" value="<?php echo $url; ?>" />
@@ -572,11 +605,10 @@
     add_action('save_post', function() {
         global $post;
         if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
-
         //security check - nonce
         //verify this came from the our screen and with proper authorization,
         //because save_post can be triggered at other times
-        if ( $_POST && wp_verify_nonce( $_POST['event_nonce'], __FILE__ ) ) {
+        if ( $_POST && wp_verify_nonce( $_POST['event_url_nonce'], __FILE__ ) ) {
             if ( isset($_POST['event_url']) ) {
                 update_post_meta( $post->ID, 'event_url', $_POST['event_url'] );
             }

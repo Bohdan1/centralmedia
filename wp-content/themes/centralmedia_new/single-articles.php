@@ -7,7 +7,7 @@
         	$post_categories = array();
             if ( have_posts() ) :
                 while ( have_posts() ) : the_post(); // Start the Loop.
-					foreach( get_the_category() as $category ){ 
+					foreach ( get_the_category() as $category ) { 
 						$post_categories[] = $category->cat_ID;
 					}
         ?>
@@ -21,12 +21,12 @@
                             ?>
 			            </div>
 			            <div>
-			            	<img class="user-video-width" src="<?php echo get_the_post_thumbnail_url(); ?>">
+			            	<img class="user-video-width" src="<?php echo get_the_post_thumbnail_url( '', 'large' ); ?>">
 			            </div>
 			            <div class="single-post-text">
 			            	<?php the_content(); ?>
 			            </div>
-			            <?php echo getPostLikeLink(get_the_ID()); ?>
+			            <?php echo getPostLikeLink( get_the_ID() ); ?>
 			        </div>
 		<?php
 				endwhile; // End the loop.
@@ -59,7 +59,7 @@
             $posts_exclude = array();
             
             //якщо є публікації з такими категоріями, які публіковані за останні $popular_days_post днів
-            if( $query->have_posts() ) {
+            if ( $query->have_posts() && !empty( $post_categories) ) {
                 while ( $query->have_posts() ) {
                     $query->the_post();
                     if ( get_post_type( get_the_ID() ) == 'news' || get_post_type( get_the_ID() ) == 'articles' ) {
@@ -69,7 +69,7 @@
                         show_small_video();
                     }
                     else if ( get_post_type(get_the_ID() ) == 'blogs' ) {
-                        show_small_post();
+                        show_homepage_blog();
                     }
                     $posts_count++;
                     $posts_exclude[] = get_the_ID();

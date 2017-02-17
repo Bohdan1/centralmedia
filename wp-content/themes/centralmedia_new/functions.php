@@ -111,7 +111,7 @@ function show_short_latest_news() {
 function show_slider_post() {
     echo '
         <div>
-            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url() . '" />
+            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url( '', 'large' ) . '" />
             <div class="mask">
                 <div class="view-count-top">
                     <img class="count-width-top" src="' . get_template_directory_uri() . '/img/eye.svg">
@@ -146,7 +146,7 @@ function show_slider_post() {
 //big template for post 
 function show_big_post() {
     echo '
-        <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="second-article-block-all-article">
+        <div style="background-image: url(' . get_the_post_thumbnail_url( '', 'large' ) . ');" class="second-article-block-all-article">
             <div class="mask">
                 <div class="view-count"><img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
                     <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
@@ -182,7 +182,7 @@ function show_small_post( $height = null, $post_id = null) {
         $post_id = get_the_ID();
     }
     echo '
-        <div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url( $post_id ) . '); height:' . $height .'">
+        <div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url( $post_id, 'medium' ) . '); height:' . $height .'">
             <div class="mask">
                 <div class="view-count">
                     <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
@@ -212,7 +212,7 @@ function show_small_post( $height = null, $post_id = null) {
 function show_big_video() {
     echo '
         <div class="col l12 s12 m12 full-width-mob ">
-            <div class="second-article-block-all-video" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
+            <div class="second-article-block-all-video" style="background-image: url(' . get_the_post_thumbnail_url( '', 'large' ) . ');">
             <div class="button-position-popular-video-content-box-main-top-slide">
                         <a href="'. get_the_permalink() . '" >
                             <img class="button-hover button-position-main-video-top-slide" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Переглянути">
@@ -256,7 +256,7 @@ function show_big_video() {
 //small template for video
 function show_small_video() {
     echo '
-        <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="second-article-block-all-article-side">
+        <div style="background-image: url(' . get_the_post_thumbnail_url( '', 'medium' ) . ');" class="second-article-block-all-article-side">
             <div class="mask">
                <div class="button-position-popular-video-content-box-main">
                     <a href="'. get_the_permalink() .'" >
@@ -289,10 +289,10 @@ function show_small_video() {
 
 
 //template for cultural events slider
-function show_slider_cultural_events($post_id) {
+function show_slider_cultural_event( $post_id ) {
     echo '
         <div>
-            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url() . '"/>
+            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url( '', 'large' ) . '"/>
             <div class="mask">
                 <div class="second-slider-content">
                     <br>
@@ -310,15 +310,99 @@ function show_slider_cultural_events($post_id) {
                         echo '
                     </div>
                     <div class="second-slider-box-title ">
-                        <a href="' . get_post_meta( $post_id, 'event_url', true ) . '">' . get_the_title() . '</a>
+                        <a href="' . get_post_meta( $post_id, 'event_url', true ) . '" target="_blank">' . get_the_title() . '</a>
                     </div>
-                    <div class="second-slider-box-title-time ">' . get_the_time('d.m.Y') . '</div>
+                    <div class="second-slider-box-title-time ">' . get_post_meta( $post_id, 'event_date', true ) . '</div>
                     <br>    
                 </div>
             </div>
         </div>';
 }
 
+
+function show_homepage_blog() {
+    $author_id = get_the_author_meta( 'ID' );
+    echo '
+        <div class="previous-blog-box">
+            <div class="view-count-blog">
+                <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+            </div>
+            <div class="row">
+                <div class="col l4 m6 s12">
+                    <div class="previous-blog-img">
+                        <a href="' . get_the_permalink() . '" >
+                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
+                        </a>
+                    </div>
+                </div>
+                <div class="col l8 m6 s12">
+                    <div class="previous-blog-name ">
+                        <a href="' . get_the_permalink() . '" class="black-text">' .
+                            get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
+                        </a>
+                    </div>
+                    <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
+                </div>
+            </div>
+            <div class="previous-blog-title ">
+                <a href="' . get_the_permalink() . '" class="black-text">' .
+                    short_post_title(55) . '
+                </a>
+            </div>
+            <div class="previous-blog-tag">';
+                $category = get_the_category( $post_id );
+                if ( !empty($category) ) {
+                    $category = $category[0];
+                    echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                }
+                echo '
+            </div>
+        </div>';
+}
+
+function show_archive_blog() {
+    $author_id = get_the_author_meta( 'ID' );
+    echo '
+        <div class="previous-blog-box">
+            <div class="view-count-blog">
+                <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+            </div>
+            <div class="row">
+                <div class="col l2 m5 s12">
+                    <div class="previous-blog-img">
+                        <a href="' . get_the_permalink() . '" >
+                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
+                        </a>
+                    </div>
+                </div>
+                <div class="col l10 m7 s12">
+                    <div class="previous-blog-name ">
+                        <a href="' . get_author_posts_url( $author_id ) . '" class="black-text">' .
+                            get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
+                        </a>
+                    </div>
+                    <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
+                </div>
+            </div>`
+            <div class="previous-blog-title ">
+                <a href="' . get_the_permalink() . '" class="black-text">' .
+                    short_post_title(55) . '
+                </a>
+            </div>
+            <div class="previous-blog-tag">';
+                $category = get_the_category( $post_id );
+                if ( !empty($category) ) {
+                    $category = $category[0];
+                    echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                }
+                echo '
+            </div>
+        </div>';
+}
+
+//template for posts on tag.php, category.php, search.php, author.php
 function show_no_img_post() {
     echo '
         <div class="tag-content">
@@ -423,13 +507,13 @@ function show_no_img_post() {
         if ( !is_user_logged_in() ): ?>
         <div id="modal-login" class="modal">
             <div class="modal-content">
-                <h4 class=" ">Авторизація</h4>
+                <h4>Авторизація</h4>
                 <a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
                     <i class="material-icons">&#xE14C;</i>
                 </a>
                 <?php 
-                        $Path=$_SERVER['REQUEST_URI'];
-                        $current_page= get_home_url() . $Path;
+                    $Path=$_SERVER['REQUEST_URI'];
+                    $current_page= get_home_url() . $Path;
                 ?>
                 <form class="login-form " name="form" action="<?php echo wp_login_url( $current_page ); ?>" method="post">
                     <div>
@@ -462,20 +546,19 @@ function show_no_img_post() {
                                     setup_postdata( $post );
                                     //$current_user = wp_get_current_user();
                                 ?>
-                                <img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( get_the_author_meta('ID') ); ?>" alt="bloger_avatar">
+                                <img class="logged-user-photo" src="<?php echo get_wp_user_avatar_src( $current_user->ID ); ?>" alt="bloger_avatar">
                             </div>
                             <div class="col l7 s12 m12  ">
                                 <h4 class="logged-user-sign">Ваш профіль</h4>
                                 <div class="logged-user-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></div>
                                 <div class="logged-user-login"><?php echo 'Логін: ' . $current_user->user_login; ?></div>
                                 <div class="about-user-info">
-                                    <?php echo get_the_author_meta( 'description' ); ?>
+                                    <?php echo get_the_author_meta( 'description', $current_user->ID ); ?>
                                 </div>
                                 <?php
                                     global $user_ID;
                                     if( $user_ID ) :
                                         if( current_user_can('level_2') or current_user_can('level_10') ) : ?>
-                                    
                                     <?php
                                     else :
                                         endif;

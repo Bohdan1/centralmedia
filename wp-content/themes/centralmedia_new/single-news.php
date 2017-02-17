@@ -19,7 +19,7 @@
                                 ?>
                             </div>
                             <div>
-                                <img class="user-video-width" src="<?php echo get_the_post_thumbnail_url(); ?>">
+                                <img class="user-video-width" src="<?php echo get_the_post_thumbnail_url( '', 'large' ); ?>">
                             </div>
                             <div class="single-post-text">
                                 <?php the_content(); ?>

@@ -11,7 +11,7 @@
 			<div class="row">
 				<div class="col l2 m12 s12"> 
 					<div class="author-img-block">
-						<img class="author-img-width" src="<?php echo get_wp_user_avatar_src( $author_id ); ?>" alt="Логотип">
+						<img class="author-img-width" src="<?php echo get_wp_user_avatar_src( $author_id, 'thumbnail' ); ?>" alt="Логотип">
 					</div>
 				</div>
 				<div class="col l10 s12 m12"> 
@@ -34,7 +34,6 @@
 				<div class="block-line"></div>
 			</div>
 			
-
 			<?php 
 				$args = array(
 					'post_type' => 'blogs',
@@ -56,15 +55,6 @@
 				}
 				wp_reset_postdata();
 			?>
-			<!--
-			<div class="tag-content">
-				<div class="tag-title"><a href="#" class="black-text" >Данилюк: у меморандумі МВФ немає підвищення пенсійного віку</a></div>
-				<div class="tag-description"><a href="#" class="black-text" >Меморандум співробітництва України з Міжнародним валютним фондом не передбачає підвищення пенсійного віку в рамках пенсійної реформи</a></div>
-				<div class="tag-date">6 ЛЮТОГО 2017, 16:02 — СТАТТІ</div>
-			</div>
-			-->
-			
-
 		</div>
 		<div class="col l4 s12 m6">
 			<div class="block-with-line hide-on-small-only">
@@ -83,31 +73,9 @@
 			if( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();
-					echo '
-					<div class="col l12 s12 m12">
-						<div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url() . ');">
-							<div class="mask">
-								<div class="view-count">
-									<img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
-									<span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
-								</div>
-								<div class="main-article-content-box">
-									<div class="title-tag">
-										<a href="#" class="no-hover-blog">Родина</a>
-									</div>
-									<div class="box-title fix-mob-article ">
-										<a href="' . get_the_permalink() .'">' . short_post_title(75) . '</a>
-									</div>
-									<div class="box-title-small fix-mob-article ">
-										<a href="' . get_the_permalink() .'">';
-											echo short_post_desc(90) . '
-										</a>
-									</div>
-									<div class="box-title-time fix-mob-article">' . get_the_time('d.m.Y') . '</div>
-								</div>
-							</div>
-						</div>
-					</div>';
+					echo '<div class="col l12 s12 m12">';
+						show_small_post();
+					echo '</div>';
 				}
 			}
 			?>

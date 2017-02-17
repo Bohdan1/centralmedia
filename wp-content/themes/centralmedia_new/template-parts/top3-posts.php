@@ -31,7 +31,7 @@
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'video' ) {
 		echo '
-			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0] ) . ');"  class="left-block-content">
+			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . ');"  class="left-block-content">
 			<div class="mask">
 				<div class="button-position  hide-on-small-only">
 					<a href="' . get_the_permalink( $posts_id[0] ) . '">
@@ -82,7 +82,7 @@
 	else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
 		echo '
 		<a class="mask-link" href="' . get_the_permalink( $posts_id[0] ) . '">
-			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0] ) . '); background-size:cover;" class="left-block-content">
+			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . '); background-size:cover;" class="left-block-content">
 			<div class="mask">
 			
 				<div class="content-box">
@@ -140,7 +140,7 @@
 				}
 				else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
 					echo '
-					<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i] ) . ');" class="right-block-second ">
+					<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
 						<div class="mask">
 							<div class="button-position-template hide-on-small-only">
 								<a href="' . get_the_permalink( $posts_id[$i] ) . '" >
@@ -165,7 +165,7 @@
 				}
 				else if ( get_post_type( $posts_id[$i] ) == 'news' || get_post_type( $posts_id[$i] ) == 'articles' ) {
 					echo '
-						<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i] ) . ');" class="right-block-second ">
+						<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
 							<div class="mask">
 								<div class="right-block-second-tag ">
 									<a href="#" class="no-hover-blog">';

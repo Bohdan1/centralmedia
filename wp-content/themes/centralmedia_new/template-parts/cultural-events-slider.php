@@ -18,7 +18,7 @@
 			if ( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post($post);
-					show_slider_cultural_events($post_id = $post->ID);
+					show_slider_cultural_event($post_id = $post->ID);
 				}
 			}
 			wp_reset_postdata();
