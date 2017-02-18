@@ -260,39 +260,37 @@
 	            <div id="slider-option3"></div>
 	        </div>
 	        <div data-u="slides" class="slider-option4" >
-	        	<div class="user-news-block">
-					<div class=" col l12 m7 s12 " style="width: 50% !important;">
-						<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-					</div>
-					<div class="col l12 m4 s12" style="width: 50% !important;">
-						<div class="user-video-name">Yura Romaniv</div>
-						<div class="user-video-date">28.06.1995</div>
-						<div class="user-video-time">18:52</div>
-						<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-					</div>
-				</div>
-			 	<div class="user-news-block ">
-					<div class=" col l12 m7 " style="width: 50% !important;">
-						<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-					</div>
-					<div class="col l12 m4" style="width: 50% !important;">
-						<div class="user-video-name">Yura Romaniv</div>
-						<div class="user-video-date">28.06.1995</div>
-						<div class="user-video-time">18:52</div>
-						<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-					</div>
-				</div>
-				<div class="user-news-block ">
-					<div class=" col l12 m7 " style="width: 50% !important;">
-						<img class="user-video-width" src="<?php bloginfo('template_url') ?>/img/1.jpg">
-					</div>
-					<div class="col l12 m4" style="width: 50% !important;">
-						<div class="user-video-name">Yura Romaniv</div>
-						<div class="user-video-date">28.06.1995</div>
-						<div class="user-video-time">18:52</div>
-						<div class="user-news-title">У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували У селищі Биківня селяний сплюндрували</div>
-					</div>
-				</div>
+	        	<?php 
+					$args = array(
+						'post_type' => 'folk_correspondent',
+						'posts_per_page' => 4,
+						'publish' => true,
+						'orderby' => 'date',
+						'order' => 'DESC'
+					);
+					$query = new WP_Query( $args );
+					if( $query->have_posts() ) {
+						while ( $query->have_posts() ) {
+							$query->the_post();
+							echo '
+					        	<div class="user-news-block">
+									<div class=" col l12 m7 s12 " style="width: 50% !important;">
+										<img class="user-video-width" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
+									</div>
+									<div class="col l12 m4 s12" style="width: 50% !important;">
+										<div class="user-video-name">' . get_post_meta( $post->ID, 'folk_correspondent_name', true ) . '</div>
+										<div class="user-video-date">' . get_the_time('j F Y') . '</div>
+										<div class="user-video-time">' . get_the_time('G:i') . '</div>
+										<div class="user-news-title">' . short_post_desc( 300 ) . '</div>
+									</div>
+								</div>';
+						} //end while
+					} //end if
+					else {
+						echo 'Народних кориспондентів не знайдено';
+					}
+					wp_reset_postdata();
+				?>
 	        </div>
 	    </div>
 	</div>

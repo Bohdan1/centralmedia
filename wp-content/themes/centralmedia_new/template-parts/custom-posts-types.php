@@ -320,25 +320,25 @@
     }
 
 
-    function register_cpt_folks_control() {
+    function register_cpt_folk_correspondent() {
         $labels = array( 
-            'name' => _x( 'Народний кореспондент', 'folk_correspondent' ),
-            'singular_name' => _x( 'Народний кореспондент', 'folk_correspondent' ),
-            'add_new' => _x( 'Додати народний кореспондент', 'folk_correspondent' ),
-            'add_new_item' => _x( 'Додати новий народний кореспондент', 'folk_correspondent' ),
-            'edit_item' => _x( 'Редагувати народний кореспондент', 'folk_correspondent' ),
-            'new_item' => _x( 'Новий народний кореспондент', 'folk_correspondent' ),
+            'name' => _x( 'Народний кориспондент', 'folk_correspondent' ),
+            'singular_name' => _x( 'Народний кориспондент', 'folk_correspondent' ),
+            'add_new' => _x( 'Додати народний кориспондент', 'folk_correspondent' ),
+            'add_new_item' => _x( 'Додати новий народний кориспондент', 'folk_correspondent' ),
+            'edit_item' => _x( 'Редагувати народний кориспондент', 'folk_correspondent' ),
+            'new_item' => _x( 'Новий народний кориспондент', 'folk_correspondent' ),
             'view_item' => _x( 'Переглянути', 'folk_correspondent' ),
             'search_items' => _x( 'Пошук', 'folk_correspondent' ),
-            'not_found' => _x( 'Народний кореспондент не знайдено', 'folk_correspondent' ),
-            'not_found_in_trash' => _x( 'Народних кореспондентів в корзині не знайдено', 'folk_correspondent' ),
+            'not_found' => _x( 'Народний кориспондент не знайдено', 'folk_correspondent' ),
+            'not_found_in_trash' => _x( 'Народних кориспондентів в корзині не знайдено', 'folk_correspondent' ),
             'parent_item_colon' => _x( 'Батьківський елемент', 'folk_correspondent' ),
-            'all_items' => _x( 'Всі народні кореспонденти', 'folk_correspondent' ),
-            'name_admin_bar' => _x( 'Народний кореспондент', 'folk_correspondent'),    //назва в адмін барі (тулбарі)
+            'all_items' => _x( 'Всі народні кориспонденти', 'folk_correspondent' ),
+            'name_admin_bar' => _x( 'Народний кориспондент', 'folk_correspondent'),    //назва в адмін барі (тулбарі)
         );
         $args = array( 
             'labels' => $labels,
-            'description' => 'Народний контроль',
+            'description' => 'Народний кориспондент',
             'public' => true,
             'publicly_queryable' => true,
             'exclude_from_search' => false,
@@ -359,8 +359,8 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
-            'taxonomies' => array( 'post_tag', 'category' ),
+            'supports' => array( 'title', 'editor', 'thumbnail' ), // 'author', 'comments', 'revisions'
+            //'taxonomies' => array( 'post_tag', 'category' ),
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -429,7 +429,7 @@
     add_action( 'init', 'register_cpt_partner_news' );
     add_action( 'init', 'register_cpt_video' );
     add_action( 'init', 'register_cpt_streams' );
-    add_action( 'init', 'register_cpt_folks_control' );
+    add_action( 'init', 'register_cpt_folk_correspondent' );
     add_action( 'init', 'register_cpt_cultural_events' );
 // end register custom posts types
 
@@ -541,6 +541,42 @@
         if ( $_POST && wp_verify_nonce( $_POST['stream_nonce'], __FILE__ ) ) {
             if ( isset($_POST['stream_url']) ) {
                 update_post_meta( $post->ID, 'stream_url', $_POST['stream_url'] );
+            }
+        }
+    });
+
+
+
+    add_action( 'add_meta_boxes', function() {
+        add_meta_box(
+            'folk_correspondent_info',
+            'Ім\'я та прізвище народного кориспондента:',
+            'folk_correspondent_info_cb',
+            'folk_correspondent',
+            'advanced',
+            'high'
+        );
+    });
+    function folk_correspondent_info_cb() {
+        global $post;
+        $name = get_post_meta( $post->ID, 'folk_correspondent_name', true );
+
+        //unique identifier, name of hidden field
+        wp_nonce_field( __FILE__, 'folk_correspondent_name_nonce' );
+    ?>
+        <input type="text" name="folk_correspondent_name" id="folk_correspondent_name" class="widefat" value="<?php echo $name; ?>" />
+    <?php
+    }
+    add_action('save_post', function() {
+        global $post;
+        if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+
+        //security check - nonce
+        //verify this came from the our screen and with proper authorization,
+        //because save_post can be triggered at other times
+        if ( $_POST && wp_verify_nonce( $_POST['folk_correspondent_name_nonce'], __FILE__ ) ) {
+            if ( isset($_POST['folk_correspondent_name']) ) {
+                update_post_meta( $post->ID, 'folk_correspondent_name', $_POST['folk_correspondent_name'] );
             }
         }
     });

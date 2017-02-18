@@ -712,19 +712,7 @@
         <div class="modal-content">
             <h4>НАРОДНИЙ КОРИСПОНДЕНТ</h4>
             <p>Поділіться своєю новиною!</p>
-            <form name="test" method="post" action="#">
-                <div class="share-name">Ім'я та прізвище:<input type="text" size="20" required></div>
-                <div class="share-name">Фото або відео:
-                    <input type="file" size="20" required accept="image/*,video/*">
-                    <code>максимальний розмір 200мб</code>
-                </div>
-                <div class="share-text">Коментар:
-                    <textarea name="comment" cols="40" rows="3" required=""></textarea>
-                </div>
-                <div class="share-button"><input class="btn-flat" type="submit" value="Відправити">
-                    <input class="btn-flat" type="reset" value="Очистити">
-                </div>
-            </form>
+            <?php echo do_shortcode( '[contact-form-7 id="388" title="Народний кориспондент"]' ); ?>
         </div>
         <div class="modal-footer">
             <a href="#!" class=" modal-action modal-close waves-effect waves-green black-text btn-flat">Закрити</a>

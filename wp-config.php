@@ -18,6 +18,11 @@
  * @package WordPress
  */
 
+
+/** Contact Form 7 Removing BR tags */
+define("WPCF7_AUTOP",false);
+
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'centralmedia');
