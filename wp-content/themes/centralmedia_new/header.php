@@ -222,6 +222,10 @@
                 margin-left: 39%;
                 top: 8%;
             }
+            .title-tag{
+                font-size: 15px;
+                margin-left: 0px;
+            }
             .button-position-popular-video-content-box-width {
                 width: 100%;
                 position: absolute;
