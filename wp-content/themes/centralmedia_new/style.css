@@ -33,8 +33,6 @@ body{
 	border: solid #fff;
 }
 
-
-
 ::-webkit-scrollbar-thumb:hover {
 	background: rgba(0, 0, 0, 0.8);
 }
@@ -222,6 +220,7 @@ button{
 	background-size: cover;
 }
 .play-button{
+	z-index: 10;
 	width: 120px;
 }
 
@@ -521,6 +520,9 @@ font-size: 16px;
 	background-size: cover;
 	background-position: center;
 }
+.hhh{
+	height: 20px !important;
+}
 .third-article-block{
 	position: relative;
 	padding-top: 10px;
@@ -617,11 +619,15 @@ font-size: 16px;
     top: 8%;
 }
 .previous-blog-img-archive{
-	margin: 0 auto;	
+	text-align: center;	
 	display: block;
 }
 .previous-blog-img-width{
-	padding-top: 10px;
+	
+	width: 100%;
+	border-radius: 50%;
+}
+.previous-blog .previous-blog-img-width{
 	width: 100%;
 }
 .previous-blog-name{
@@ -681,7 +687,7 @@ font-size: 16px;
 	position: relative;
 	margin-top: 20px;
 
-	height: 550px;
+	height: 450px;
 	width: 100%;
 
 	background-size: cover;
@@ -964,6 +970,9 @@ footer{
 	text-align: left;
 	/* background-color: rgba(255, 0, 0, 0.8); */
 
+}
+.slick-slider{
+	z-index: 10;
 }
 .second-slider-box-title{
 	padding-bottom: 10px;
@@ -1844,4 +1853,18 @@ label{
 
 .box-title-time-main{
 	font-size: 20px;
+}
+.advertisment-block{
+	max-height: 200px;
+}
+.single-post-text a{
+	color: grey !important;
+}
+.single-post-text a:hover{
+	color: red !important;
+}
+.close-btn-pos{
+	position: absolute;
+	top: 30px;
+	right: 0px;
 }

@@ -26,12 +26,13 @@
 
 	if ( get_post_type( $posts_id[0] ) == 'streams' ) {
 		echo '
-			<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '" frameborder="0" ></iframe>
+			<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '" frameborder="0" >
+			</iframe>
 		';
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'video' ) {
 		echo '
-			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . ');"  class="left-block-content">
+			<div style="background-size:cover; background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . ');"  class="left-block-content">
 			<div class="mask">
 				<div class="button-position  hide-on-small-only">
 					<a href="' . get_the_permalink( $posts_id[0] ) . '">
@@ -51,14 +52,15 @@
                             }
                         }
                         echo '
-                    </div>
+                   </div>
 					<div class="box-title box-title-main">
 						<a href="' . get_the_permalink( $posts_id[0] ) . '">' .
 							get_the_title( $posts_id[0] ) .'
 						</a>
 					</div>
 					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
-				</div></div>
+					</div>
+				</div>
 
 				<div class="social-menu-bottom hide-on-large-only ">
 					<div class="menu-list">

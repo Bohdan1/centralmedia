@@ -508,8 +508,8 @@ function show_no_img_post() {
         <div id="modal-login" class="modal">
             <div class="modal-content">
                 <h4>Авторизація</h4>
-                <a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat">
-                    <i class="material-icons">&#xE14C;</i>
+                <a href="#!" class="modal-action modal-close waves-effect waves-red accent-4 btn-flat close-btn-pos">
+                    <i class="material-icons black-text">clear</i>
                 </a>
                 <?php 
                     $Path=$_SERVER['REQUEST_URI'];
