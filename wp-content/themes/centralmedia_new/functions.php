@@ -751,13 +751,36 @@ function show_no_img_post() {
 
 
 //hide not used fields
+    function is_user_role( $role, $user_id = null ) {
+        $user = is_numeric( $user_id ) ? get_userdata( $user_id ) : wp_get_current_user();
+
+        if( ! $user )
+            return false;
+
+        return in_array( $role, (array) $user->roles );
+    }
+
+
     function remove_menus() {
         global $menu;
-        $restricted = array(
-            //__('Dashboard'),
-            __('Posts'),
-            __('Pages'),
-        );
+        $restricted = array();
+        if ( !is_user_role( 'administrator' ) || !is_user_role( 'editor' ) ) {
+            $restricted = array(
+                //__('Dashboard'),
+                __('Posts'),
+                __('Pages'),
+                __('Comments'),
+                __('Tools'),
+            );
+        }
+        else{
+            $restricted = array(
+                //__('Dashboard'),
+                __('Posts'),
+                __('Pages'),
+            );
+        }
+
         end ( $menu );
         while ( prev($menu) ) {
             $value = explode(' ', $menu[key($menu)][0]);

@@ -108,7 +108,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
-            'taxonomies' => array( 'post_tag', 'category' ),
+            'taxonomies' => array( 'category' ), //'post_tag', 
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -132,7 +132,7 @@
             'not_found_in_trash' => _x( 'Блогів в корзині не знайдено', 'blogs' ),
             'parent_item_colon' => _x( 'Батьківський елемент', 'blogs' ),
             'all_items' => _x( 'Всі блоги', 'blogs' ),
-            'name_admin_bar' => _x( 'Блог', 'blogs'),    //назва в адмін барі (тулбарі)
+            'name_admin_bar' => _x( 'Блог', 'blogs' ),    //назва в адмін барі (тулбарі)
         );
         $args = array( 
             'labels' => $labels,
@@ -158,7 +158,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
-            'taxonomies' => array( 'post_tag', 'category' ),
+            'taxonomies' => array( 'category' ), //'post_tag', 
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -208,7 +208,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'revisions' ), // 'author', 'comments',
-            'taxonomies' => array( 'post_tag', 'category' ),
+            'taxonomies' => array( 'category' ), //'post_tag', 
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -258,7 +258,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
-            'taxonomies' => array( 'post_tag', 'category' ),
+            'taxonomies' => array( 'category' ), //'post_tag',
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -309,7 +309,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'revisions' ), //  'author', 'comments', 
-            'taxonomies' => array( 'post_tag' ),
+            //'taxonomies' => array( 'post_tag' ),
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,

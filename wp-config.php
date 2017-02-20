@@ -19,8 +19,14 @@
  */
 
 
-/** Contact Form 7 Removing BR tags */
-define("WPCF7_AUTOP",false);
+/** Contact Form 7 */
+	//Removing BR tags
+	define("WPCF7_AUTOP",false);
+
+	//Removing contact form for all users except admin
+	define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+	define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
+/** end Contact Form 7 */
 
 
 // ** MySQL settings - You can get this info from your web host ** //
