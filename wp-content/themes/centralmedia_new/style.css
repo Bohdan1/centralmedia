@@ -1317,7 +1317,8 @@ a:hover{
 .must-log-in{
 	margin-top: -10px;
 }
-#true_loadmore{
+
+.button_loadmore{
 	background: rgba(235, 31, 31, 0.9);
     color: #FFF;
     padding: 10px;

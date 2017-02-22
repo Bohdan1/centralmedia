@@ -105,7 +105,7 @@
 				<?php
 					$args = array(
 						'post_type' => 'video',
-						'posts_per_page' => 12,
+						'posts_per_page' => 9,
 						//'post__not_in' => $exclude_posts,
 						'publish' => true,
 						'orderby' => 'date',
@@ -125,8 +125,19 @@
 					else {
 						echo 'Новин не знайдено';
 					}
-					wp_reset_postdata();
-				?>
+
+					if ( $query->max_num_pages > 1 ) { ?>
+	                    <script>
+	                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+	                        var true_posts = '<?php echo serialize( $query->query_vars ); ?>';
+	                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+	                        var max_pages = '<?php echo $query->max_num_pages; ?>';
+	                    </script>
+	                    <div id="video_loadmore" class="button_loadmore">Більше відео</div>
+	            <?php 
+	                } //end if
+	                wp_reset_postdata();
+	            ?>
 
 				<!--
 				<div class="col l3 s12 m4 top-five-video-width">

@@ -79,7 +79,9 @@
 				while ( $query->have_posts() ) {
 					$query->the_post();
 					$articles_count++;
-					show_popular_article();
+					echo '<div class="col l6 s12 m6">';
+						show_small_post();
+					echo '</div>';
 				}
 			}
 			//якщо немає або недостатньо публікованих статтей за останні $popular_days_article

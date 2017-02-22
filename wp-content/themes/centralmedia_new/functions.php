@@ -419,6 +419,33 @@ function show_no_img_post() {
 }
 
 
+//tag and author settings
+    function my_pre_get_tags( $query ) {
+        if ( !is_admin() && $query->is_archive ) {
+            if ( $query->is_tag || $query->is_author ) {
+                $query->set( 'post_type', array('news', 'articles', 'blogs', 'partner-news', 'video') );
+            }
+        }
+    }
+    add_action( 'pre_get_posts', 'my_pre_get_tags' );
+
+    function author_posts_count( $author_id ) {        //counting the number of posts
+        $published_posts = array();
+        $published_posts[] = count_user_posts( $author_id, 'news', true );
+        $published_posts[] = count_user_posts( $author_id, 'articles', true );
+        $published_posts[] = count_user_posts( $author_id, 'blogs', true );
+        $published_posts[] = count_user_posts( $author_id, 'partner-news', true );
+        $published_posts[] = count_user_posts( $author_id, 'video', true );
+        $posts_count = 0;
+        for ( $i = 0; $i < count( $published_posts ); $i++ ) {
+            $posts_count += $published_posts[$i];
+        }
+        return $posts_count;
+    }
+//end and author tag settings
+
+
+/*
 //settings for display archive posts
     function my_pre_get_posts( $query ) {
         if ( !is_admin() && $query->is_main_query() ) {
@@ -447,58 +474,25 @@ function show_no_img_post() {
     }
     add_action( 'pre_get_posts', 'my_pre_get_posts' );
 //end settings for display archive posts
+*/
 
-
-
-//tag and author settings
-    function my_pre_get_tags( $query ) {
-        if ( !is_admin() && $query->is_archive ) {
-            if ( $query->is_tag || $query->is_author ) {
-                $query->set( 'post_type', array('news', 'articles', 'blogs', 'partner-news', 'video') );
-            }
-        }
-    }
-    add_action( 'pre_get_posts', 'my_pre_get_tags' );
-
-    function author_posts_count( $author_id ) {        //counting the number of posts
-        $published_posts = array();
-        $published_posts[] = count_user_posts( $author_id, 'news', true );
-        $published_posts[] = count_user_posts( $author_id, 'articles', true );
-        $published_posts[] = count_user_posts( $author_id, 'blogs', true );
-        $published_posts[] = count_user_posts( $author_id, 'partner-news', true );
-        $published_posts[] = count_user_posts( $author_id, 'video', true );
-        $posts_count = 0;
-        for ( $i = 0; $i < count( $published_posts ); $i++ ) {
-            $posts_count += $published_posts[$i];
-        }
-        return $posts_count;
-    }
-//end and author tag settings
-
-
-
+/*
 //pagination settings
     //delete H2 from pagination template
     add_filter( 'navigation_markup_template', 'my_navigation_template', 10, 2 );
     function my_navigation_template( $template, $class ) {
-    /*
-    Вид базового шаблону:
-    <nav class="navigation %1$s" role="navigation">
-    <h2 class="screen-reader-text">%2$s</h2>
-    <div class="nav-links">%3$s</div>
-    </nav>
-    */
-    return '
-    <nav class="%1$s" role="navigation">
-        <div class="nav-links">%3$s</div>
-    </nav>    
-    ';
+        return '
+        <nav class="%1$s" role="navigation">
+            <div class="nav-links">%3$s</div>
+        </nav>    
+        ';
     }
     $pagination_args = array(
         'prev_text' => __( '&#8249;' ),
         'next_text' => __( '&#8250;' ),
         );
 //end pagination settings
+*/
 
 
 
@@ -956,21 +950,37 @@ function show_no_img_post() {
     }
     add_action( 'wp_enqueue_scripts', 'true_loadmore_scripts' );
 
-
-    function true_load_posts(){
-        $args = unserialize(stripslashes($_POST['query']));
+    function true_load_posts() {
+        $args = unserialize( stripslashes( $_POST['query'] ) );
         $args['paged'] = $_POST['page'] + 1; // следующая страница
         $args['post_status'] = 'publish';
-        $q = new WP_Query($args);
+        $q = new WP_Query( $args );
         if( $q->have_posts() ):
-            while($q->have_posts()): $q->the_post();
-                show_short_latest_news();
+            while( $q->have_posts() ): $q->the_post();
+                //show_short_latest_news();
+                if ( get_post_type() == "news" ) {
+                    show_short_latest_news();
+                }
+                else if ( get_post_type() == "video" ) {
+                    echo '<div class="col l3 s12 m4 top-five-video-width">';
+                        show_small_video();
+                    echo '</div>';
+                }
+                else if ( get_post_type() == "articles" ) {
+                    echo '<div class="col l3 s12 m3">';
+                        show_small_post();
+                    echo '</div>';
+                }
+                else if ( get_post_type() == "blogs" ) {
+                    echo '<div class="col l12 s12 m12">';
+                        show_archive_blog();
+                    echo '</div>';
+                }
             endwhile;
         endif;
         wp_reset_postdata();
         die();
     }
-     
     add_action('wp_ajax_loadmore', 'true_load_posts');
     add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
 //end get news using ajax
@@ -978,11 +988,10 @@ function show_no_img_post() {
 
 
 //ajax like for posts
-    if( wp_doing_ajax() ) {
+    if ( wp_doing_ajax() ) {
         add_action('wp_ajax_nopriv_post-like', 'post_like');
         add_action('wp_ajax_post-like', 'post_like');
     }
-
     wp_enqueue_script('like_post', get_template_directory_uri().'/js/post-like.js', array('jquery'), '1.0', true );
     wp_localize_script('like_post', 'ajax_var', array(
         'url' => admin_url('admin-ajax.php'),
@@ -994,7 +1003,7 @@ function show_no_img_post() {
         $nonce = $_POST['nonce'];
         if ( ! wp_verify_nonce( $nonce, 'ajax-nonce' ) )
             die ( 'Busted!' );
-        if( isset( $_POST['post_like'] ) ) {
+        if ( isset( $_POST['post_like'] ) ) {
             // Retrieve user IP address
             $ip = $_SERVER['REMOTE_ADDR'];
             $post_id = $_POST['post_id'];
@@ -1006,7 +1015,7 @@ function show_no_img_post() {
             // Get votes count for the current post
             $meta_count = get_post_meta( $post_id, "votes_count", true );
             // Use has already voted ?
-            if(!hasAlreadyVoted( $post_id) ) {
+            if ( !hasAlreadyVoted( $post_id) ) {
                 $voted_IP[$ip] = time();
                 // Save IP and increase votes count
                 update_post_meta( $post_id, "voted_IP", $voted_IP );
@@ -1063,6 +1072,7 @@ function show_no_img_post() {
         return $output;
     }
 //end ajax like for posts
+
 
 //turning off the admin panel for all users 
 show_admin_bar(false);

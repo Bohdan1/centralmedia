@@ -127,8 +127,19 @@
 					else {
 						echo 'Новин не знайдено';
 					}
-					wp_reset_postdata();
-				?>
+					
+				    if ( $query->max_num_pages > 1 ) { ?>
+	                    <script>
+	                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+	                        var true_posts = '<?php echo serialize( $query->query_vars ); ?>';
+	                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+	                        var max_pages = '<?php echo $query->max_num_pages; ?>';
+	                    </script>
+	                    <div id="articles_loadmore" class="button_loadmore">Більше статтей</div>
+	            <?php 
+	                } //end if
+	                wp_reset_postdata();
+	            ?>
 			</div>
 		</div>
 	</div>

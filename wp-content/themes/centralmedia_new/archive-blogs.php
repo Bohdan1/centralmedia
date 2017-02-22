@@ -6,7 +6,7 @@
             <?php 
                 $args = array(
                     'post_type' => 'blogs',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 8,
                     'publish' => true,
                     'orderby' => 'date',
                     'order' => 'DESC'
@@ -23,6 +23,17 @@
                 else {
                     echo 'Блогів не знайдено';
                 }
+                
+                if ( $query->max_num_pages > 1 ) { ?>
+                    <script>
+                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                        var true_posts = '<?php echo serialize( $query->query_vars ); ?>';
+                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                        var max_pages = '<?php echo $query->max_num_pages; ?>';
+                    </script>
+                    <div id="blogs_loadmore" class="button_loadmore">Більше блогів</div>
+            <?php 
+                } //end if
                 wp_reset_postdata();
             ?>
         </div>
@@ -64,7 +75,7 @@
                     'publish' => true,
                     'date_query' => array(
                         'before' => $popular_days_post . ' days ago',
-                        ),
+                    ),
                     'orderby' => 'date',
                     'order' => 'DESC'
                     );
