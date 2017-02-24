@@ -1093,4 +1093,19 @@ function youtube_iframe_url( $url ) {
 }
 
 
+//Виведення повідомлення, якщо є блоги на затвердження
+//Тільки для адмінів
+add_action( 'admin_menu', 'add_user_menu_bubble' );
+function add_user_menu_bubble() {
+	global $menu;
+	$count = wp_count_posts( 'blogs' )->pending; //На підтверджені
+	if ( $count ) {
+        foreach( $menu as $key => $value ) {
+			if( $menu[$key][2] == 'edit.php?post_type=blogs' ) {
+				$menu[$key][0] .= ' <span class="awaiting-mod"><span class="pending-count">' . $count . '</span></span>';
+				break;
+			}
+		}
+	}
+}
 ?>

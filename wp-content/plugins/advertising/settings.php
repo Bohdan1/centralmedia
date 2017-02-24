@@ -37,6 +37,6 @@
 		<input type="submit" value="Зберегти" class="button-primary" />
 	</div>
 </form>
-<img src="<?php echo get_option('block1_advertising_img'); ?>" style="max-width:2180px; max-height:320px;">
+<img src="<?php echo get_option('block1_advertising_img'); ?>" style="max-width:100%; max-height:320px;">
 
 
