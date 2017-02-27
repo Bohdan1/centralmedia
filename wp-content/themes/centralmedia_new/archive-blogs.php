@@ -31,7 +31,9 @@
                         var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
                         var max_pages = '<?php echo $query->max_num_pages; ?>';
                     </script>
-                    <div id="blogs_loadmore" class="button_loadmore">Більше блогів</div>
+                    <div class="">
+                    <div id="blogs_loadmore" class="button_loadmore col l12 m12 s12">Більше блогів</div>
+                    </div>
             <?php 
                 } //end if
                 wp_reset_postdata();
@@ -48,7 +50,7 @@
             $popular_days_post = 21;
             $args = array(
                 'post_type' => 'articles',
-                'posts_per_page' => 4,
+                'posts_per_page' => 6,
                 'publish' => true,
                 'date_query' => array(
                     'after' => $popular_days_post . ' days ago',
@@ -68,10 +70,10 @@
                 }
             }
             //якщо немає або недостатньо публікованих відео за останні $popular_days_post
-            if( $posts_count < 4) {
+            if( $posts_count < 6) {
                 $args = array(
                     'post_type' => 'articles',
-                    'posts_per_page' => 4 - $posts_count,
+                    'posts_per_page' => 6 - $posts_count,
                     'publish' => true,
                     'date_query' => array(
                         'before' => $popular_days_post . ' days ago',

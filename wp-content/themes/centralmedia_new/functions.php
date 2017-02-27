@@ -135,7 +135,7 @@ function show_slider_post() {
                     <div class="second-slider-box-title ">
                         <a href="' . get_the_permalink() .'">' . short_post_title(120) . '</a>
                     </div>
-                    <div class="second-slider-box-title-time ">' . get_the_time('d.m.Y') . '</div>
+                    <div class="second-slider-box-title-time sec-slider-date">' . get_the_time('d.m.Y') . '</div>
                     <br>    
                 </div>
             </div>
@@ -258,12 +258,12 @@ function show_small_video() {
     echo '
         <div style="background-image: url(' . get_the_post_thumbnail_url( '', 'medium' ) . ');" class="second-article-block-all-article-side">
             <div class="mask">
-               <div class="button-position-popular-video-content-box-main">
+               <div class="button-position-popular-video-content-box-main ">
                     <a href="'. get_the_permalink() .'" >
                         <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="">
                     </a>
                 </div>
-                <div class="view-count">
+                <div class="view-count ">
                     <img class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
                     <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                 </div>
@@ -277,7 +277,7 @@ function show_small_video() {
                         }
                         echo '
                     </div>
-                    <div class="box-title fix-mob-article ">
+                    <div class="right-block-second-sign-video fix-mob-article ">
                         <a href="'. get_the_permalink() .'">' .
                             short_post_title(70) . '
                         </a>
@@ -312,7 +312,7 @@ function show_slider_cultural_event( $post_id ) {
                     <div class="second-slider-box-title ">
                         <a href="' . get_post_meta( $post_id, 'event_url', true ) . '" target="_blank">' . get_the_title() . '</a>
                     </div>
-                    <div class="second-slider-box-title-time ">' . get_post_meta( $post_id, 'event_date', true ) . '</div>
+                    <div class="second-slider-box-title-time sec-slider-date">' . get_post_meta( $post_id, 'event_date', true ) . '</div>
                     <br>    
                 </div>
             </div>
@@ -587,7 +587,7 @@ function show_no_img_post() {
 //registration form settings
     function registration_form( $username, $password, $email, $website, $first_name, $last_name, $bio ) {
         echo '
-            <form class="contact_form" action="' . $_SERVER['REQUEST_URI'] . '" method="post">
+            <form class="contact_form register-word" action="' . $_SERVER['REQUEST_URI'] . '" method="post">
                 <ul>
                     <li>
                         <h2 class="center">Реєстрація</h2>
@@ -607,10 +607,6 @@ function show_no_img_post() {
                         <input type="text" name="email" value="' . ( isset( $_POST['email'] ) ? $email : null ) . '" required>
                     </li>
 
-                    <li>
-                        <label for="website">Веб-сайт</label>
-                        <input type="text" name="website" value="' . ( isset( $_POST['website'] ) ? $website : null ) . '">
-                    </li>
 
                     <li>
                         <label for="firstname">Ім\'я</label>
@@ -622,7 +618,7 @@ function show_no_img_post() {
                         <input type="text" name="lname" value="' . ( isset( $_POST['lname'] ) ? $last_name : null ) . '">
                     </li>
 
-                    <li>
+                    <li class="bio-info">
                         <label for="bio">Біографічна інформація</label>
                         <textarea name="bio">' . ( isset( $_POST['bio']) ? $bio : null ) . '</textarea>
                     </li>
@@ -1108,4 +1104,5 @@ function add_user_menu_bubble() {
 		}
 	}
 }
+
 ?>

@@ -133,7 +133,7 @@
 	                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 	                        var max_pages = '<?php echo $query->max_num_pages; ?>';
 	                    </script>
-	                    <div id="video_loadmore" class="button_loadmore">Більше відео</div>
+	                    <div id="video_loadmore" class="button_loadmore col l12 m12 s12">Більше відео</div>
 	            <?php 
 	                } //end if
 	                wp_reset_postdata();

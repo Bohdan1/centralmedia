@@ -56,16 +56,19 @@
 	color: transparent;
 	border: none;
 	outline: none;
-	background: rgba(97, 97, 97, 0.8);
+	background: rgba(97, 97, 97, 1);
+}
+.slick-prev:focus, .slick-next:focus{
+		background: rgba(97, 97, 97, 1);
 }
 .slick-prev:hover,
-.slick-prev:focus,
+
 .slick-next:hover,
-.slick-next:focus
+
 {
 	color: transparent;
 	outline: none;
-	background: rgba(97, 97, 97, 0.8);
+	background: rgba(97, 97, 97, 0.5);
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,

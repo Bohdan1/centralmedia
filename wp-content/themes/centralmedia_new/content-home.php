@@ -186,7 +186,7 @@
 
 
 <div class="row">
-	<div class="col l5 s12 m12">
+	<div class="col l4 s12 m12">
 		<div id="weatherWidget">
 			<ul id="rb-grid" class="rb-grid clearfix">
 				<li id="today-icon1" class="rb-span-2">
@@ -243,10 +243,10 @@
 		</div>
 	</div>
 
-	<div class="col l7 s12 m6 narod-korespond hide-on-med-and-down">
+	<div class="col l8 s12 m6 narod-korespond hide-on-med-and-down">
 		<div class="block-with-line">
 			<a href="#modal4" class="button-share-pad">
-				<div class="big-sign-line btn button-share">ПОДІЛИТИСЯ&#160;НОВИНОЮ</div>
+				<div class="big-sign-line btn button-share">НАДІШЛІТЬ&#160;НАМ&#160;НОВИНУ</div>
 			</a>
 			<div class="block-line"></div>
 			<div class="small-sign-line">
@@ -294,6 +294,9 @@
 					wp_reset_postdata();
 				?>
 	        </div>
+	        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora08l" style="top:8px;left:1000px !important;width:50px;height:50px;" data-autocenter="1"></span>
+        <span data-u="arrowright" class="jssora08r" style="top:240px;left:1000px;width:50px;height:50px;" data-autocenter="1"></span>
 	    </div>
 	</div>
 </div>
