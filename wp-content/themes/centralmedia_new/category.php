@@ -2,7 +2,7 @@
 
 <div class="header-margin-tag">
 	<div class="row">
-		<div class="col l8"> 
+		<div class="col l8 m7 s12"> 
 			<div class="tag-name"><?php single_cat_title(); ?></div>
 			<div class="tag-name-description">Матеріали за темою</div>
 			<?php
@@ -29,7 +29,7 @@
 			?>
 		</div>
 
-		<div class="col l4">
+		<div class="col l4 m5 s12">
 			<div class="block-with-line hide-on-small-only">
 				<div class="big-sign-line">ТОП <span>СТАТТІ</span></div>
 				<div class="block-line"></div>

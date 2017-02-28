@@ -19,7 +19,7 @@
                                 ?>
                             </div>
                             <div>
-                                <iframe class="center" src="https://www.youtube.com/embed/<?php echo youtube_iframe_url( custom_post_permalink() ); ?>" frameborder="0" style="width: 100%; height: 500px"></iframe>
+                                <iframe class="center" src="https://www.youtube.com/embed/<?php echo youtube_iframe_url( custom_post_permalink() ); ?>" style="width: 100%; height: 500px"></iframe>
                             </div>
                             <div class="single-post-text">
                                 <?php the_content(); ?>

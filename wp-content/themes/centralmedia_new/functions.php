@@ -23,6 +23,10 @@ add_action( 'wp_enqueue_scripts', 'register_styles' );
 // add_action( 'wp_enqueue_scripts', 'register_scripts' );
 // register_nav_menu( 'menu', 'Меню сайту' ); // addition of the ability to create menus
 // register_sidebar();
+
+// додаємо ще один розмір картинок 1430x550 з обрізанням для слайдера статтей
+add_image_size('1430x550', 1450, 550, true);
+
 function short_post_desc( $charlength ) {        //function for display short content for posts
     $excerpt = get_the_excerpt();
     if ( mb_strlen( $excerpt ) > $charlength ) {
@@ -86,7 +90,7 @@ function show_short_latest_news() {
             if ( has_tag('centralmedia') ) {
                 echo '
                 <div class="news-main-img">
-                    <img class="news-main-img-width-cm" src="' . get_template_directory_uri() . '/img/logo/CMedia.svg">
+                    <img alt="img" class="news-main-img-width-cm" src="' . get_template_directory_uri() . '/img/logo/CMedia.svg">
                 </div>';
             }
             else if ( has_tag('loading') ) {
@@ -111,10 +115,10 @@ function show_short_latest_news() {
 function show_slider_post() {
     echo '
         <div>
-            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url( '', 'large' ) . '" />
+            <img alt="img" data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url( '', '1430x550' ) . '" />
             <div class="mask">
                 <div class="view-count-top">
-                    <img class="count-width-top" src="' . get_template_directory_uri() . '/img/eye.svg">
+                    <img alt="img" class="count-width-top" src="' . get_template_directory_uri() . '/img/eye.svg">
                     <span class="count-number-top">' . getPostViews( get_the_ID() ) . '</span>
                 </div>
                 <div class="second-slider-content">
@@ -143,12 +147,36 @@ function show_slider_post() {
 }
 
 
+function show_blog_for_slider() {
+    echo '
+        <div class="slider-box slider-box-remake">
+            <a href="' . get_the_permalink() . '" class="black-text">
+                <div class="slider-element">
+                    <img src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) . '" alt="Аватар">
+                    <div class="">
+                        <div class="slider-bloger-name">
+                            <span class="black-text">' .
+                                get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
+                            </span>
+                        </div>
+                        <div class="slider-bloger-thema">
+                            <span class="black-text">' .
+                                short_post_title(60) . '
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>';
+}
+
+
 //big template for post 
 function show_big_post() {
     echo '
         <div style="background-image: url(' . get_the_post_thumbnail_url( '', 'large' ) . ');" class="second-article-block-all-article">
             <div class="mask">
-                <div class="view-count"><img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
+                <div class="view-count"><img alt="img" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
                     <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                 </div>
                 <div class="main-article-content-box">
@@ -185,7 +213,7 @@ function show_small_post( $height = null, $post_id = null) {
         <div class="second-article-block" style="background-image: url(' . get_the_post_thumbnail_url( $post_id, 'medium' ) . '); height:' . $height .'">
             <div class="mask">
                 <div class="view-count">
-                    <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
+                    <img alt="img" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye.svg">
                     <span class="count-number">' . getPostViews( $post_id ) . '</span>
                 </div>
                 <div class="main-article-content-box">
@@ -215,13 +243,13 @@ function show_big_video() {
             <div class="second-article-block-all-video" style="background-image: url(' . get_the_post_thumbnail_url( '', 'large' ) . ');">
             <div class="button-position-popular-video-content-box-main-top-slide">
                         <a href="'. get_the_permalink() . '" >
-                            <img class="button-hover button-position-main-video-top-slide" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Переглянути">
+                            <img alt="img" class="button-hover button-position-main-video-top-slide" src="' . get_template_directory_uri() . '/img/play-button.svg">
                         </a>
                     </div>
                 <div class="mask">
                     
                     <div class="view-count">
-                        <img class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
+                        <img alt="img" class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
                         <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                     </div>
                     <div class="main-article-content-box">
@@ -260,11 +288,11 @@ function show_small_video() {
             <div class="mask">
                <div class="button-position-popular-video-content-box-main ">
                     <a href="'. get_the_permalink() .'" >
-                        <img class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="">
+                        <img  alt="img" class="button-hover button-position-popular-video-content-box-width" src="' . get_template_directory_uri() . '/img/play-button.svg">
                     </a>
                 </div>
                 <div class="view-count ">
-                    <img class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
+                    <img alt="img" class="count-width" src="' . get_template_directory_uri() . '/img/eye.svg">
                     <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                 </div>
              
@@ -292,7 +320,7 @@ function show_small_video() {
 function show_slider_cultural_event( $post_id ) {
     echo '
         <div>
-            <img data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url( '', 'large' ) . '"/>
+            <img alt="img" data-u="image" class="second-slider-img" src="' . get_the_post_thumbnail_url( '', 'large' ) . '"/>
             <div class="mask">
                 <div class="second-slider-content">
                     <br>
@@ -325,14 +353,14 @@ function show_homepage_blog() {
     echo '
         <div class="previous-blog-box">
             <div class="view-count-blog">
-                <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                <img alt="img" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
                 <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
             </div>
             <div class="row">
                 <div class="col l4 m6 s12">
                     <div class="previous-blog-img">
                         <a href="' . get_the_permalink() . '" >
-                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
+                            <img alt="img" class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
                         </a>
                     </div>
                 </div>
@@ -347,14 +375,14 @@ function show_homepage_blog() {
             </div>
             <div class="previous-blog-title ">
                 <a href="' . get_the_permalink() . '" class="black-text">' .
-                    short_post_title(55) . '
+                    short_post_title(54) . '
                 </a>
             </div>
             <div class="previous-blog-tag">';
                 $category = get_the_category( $post_id );
                 if ( !empty($category) ) {
                     $category = $category[0];
-                    echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                    echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog top-states-small">' . $category->cat_name . '</a>';
                 }
                 echo '
             </div>
@@ -366,14 +394,14 @@ function show_archive_blog() {
     echo '
         <div class="previous-blog-box">
             <div class="view-count-blog">
-                <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                <img alt="img" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
                 <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
             </div>
             <div class="row">
                 <div class="col l2 m5 s12">
                     <div class="previous-blog-img">
                         <a href="' . get_the_permalink() . '" >
-                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
+                            <img alt="img" class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
                         </a>
                     </div>
                 </div>
@@ -395,7 +423,7 @@ function show_archive_blog() {
                 $category = get_the_category( $post_id );
                 if ( !empty($category) ) {
                     $category = $category[0];
-                    echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+                    echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog top-states-small">' . $category->cat_name . '</a>';
                 }
                 echo '
             </div>

@@ -416,14 +416,14 @@ font-size: 16px;
 }
 .right-block-second-tag{
 	margin: 5px;
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	color: white;
-	padding: 5px;
-	text-align: left;
-	background-color: rgba(255, 0, 0, 0.8);
-}
+    position: absolute;
+    top: -35px;
+    z-index: 99;
+    font-size: 18px;
+    color: white;
+    padding: 2px;
+    left: 15px;
+    text-align: left;}
 
 .blog-element-tag{
 	transform: skewX(30deg);
@@ -666,11 +666,10 @@ font-size: 16px;
 	margin-top: -10px;
 	font-size: 18px;
 	color: white;
-	padding: 2px;
+	padding: 5px;
 	left: 16px;
 	text-align: left;
-	background-color: rgba(255, 0, 0, 0.8);
-}
+	}
 
 .third-block-with-line{
 	padding-right: 20px;
@@ -2527,3 +2526,8 @@ label{
                 margin-top: 15px;
             }
         } 
+
+
+       iframe{
+    border-width: 0px;
+}

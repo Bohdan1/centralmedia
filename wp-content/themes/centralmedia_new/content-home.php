@@ -14,7 +14,7 @@
 <div class="block-with-line hide-on-small-only">
 	<div class="big-sign-line">ТОП <span>СТАТТІ</span></div>
 	<div class="block-line"></div>
-	<div class="small-sign-line">НОВИНИ<img class="line-img" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
+	<div class="small-sign-line">НОВИНИ<img alt="img" class="line-img" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
 </div>
 <div class="second-block-with-line hide-on-med-and-up">
 	<div class="big-sign-line">ТОП <span>СТАТТІ</span></div>
@@ -163,7 +163,7 @@
 						'publish' => true,
 						'date_query' => array(
 							'before' => $popular_days_video . ' days ago',
-							),
+						),
 						'orderby' => 'date',
 						'order' => 'DESC'
 						);
@@ -252,7 +252,7 @@
 			<div class="small-sign-line">
 				<div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div>
 			</div>
-			<img data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
+			<img alt="img" data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
 		</div>
 	
 		<div id="jssor_2" >
@@ -277,7 +277,7 @@
 							echo '
 					        	<div class="user-news-block">
 									<div class=" col l12 m7 s12 " style="width: 50% !important;">
-										<img class="user-video-width" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
+										<img alt="img" class="user-video-width" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
 									</div>
 									<div class="col l12 m4 s12" style="width: 50% !important;">
 										<div class="user-video-name">' . get_post_meta( $post->ID, 'folk_correspondent_name', true ) . '</div>
@@ -343,7 +343,7 @@
 <div class="five-block-with-line hide-on-med-and-down">
 	<div class="big-sign-line">КУЛЬТУРНІ <span>ПОДІЇ</span></div>
 	<div class="block-line"></div>
-	<div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
+	<div class="small-sign-line">ОПИТУВАННЯ<img alt="img" class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
 </div>
 
 <div class="five-block-with-line hide-on-large-only">
@@ -361,7 +361,7 @@
 	</div>
 
 	<div class="five-block-with-line hide-on-large-only">
-		<div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
+		<div class="small-sign-line">ОПИТУВАННЯ<img alt="img" class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
 		<div class="block-line"></div>
 
 	</div>

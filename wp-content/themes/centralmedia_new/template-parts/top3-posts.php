@@ -26,7 +26,7 @@
 
 	if ( get_post_type( $posts_id[0] ) == 'streams' ) {
 		echo '
-			<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '" frameborder="0" >
+			<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '"  >
 			</iframe>
 		';
 	}
@@ -137,7 +137,7 @@
 			for ($i = 1; $i < 3; $i++) {
 				if ( get_post_type( $posts_id[$i] ) == 'streams' ) {
 					echo '
-						<iframe class="right-block-video center" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[$i], 'stream_url', true ) ) . '" frameborder="0" ></iframe>
+						<iframe class="right-block-video center" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[$i], 'stream_url', true ) ) . '"  ></iframe>
 					';
 				}
 				else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
