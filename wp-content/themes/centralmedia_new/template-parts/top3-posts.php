@@ -32,58 +32,62 @@
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'video' ) {
 		echo '
+		
 			<div style="background-size:cover; background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . ');"  class="left-block-content">
-			<div class="mask">
-				<div class="button-position  hide-on-small-only">
-					<a href="' . get_the_permalink( $posts_id[0] ) . '">
-						<img class="play-button button-hover center" src="' . get_template_directory_uri( $posts_id[0] ) . '/img/play-button.svg" alt="Логотип">
+				<a href="' . get_the_permalink( $posts_id[0] ) . '">
+					<div class="mask">
+						<div class="button-position  hide-on-small-only">
+							<span >
+								<img class="play-button button-hover center" src="' . get_template_directory_uri( $posts_id[0] ) . '/img/play-button.svg" alt="Логотип">
+							</span>
+						</div>
+						<div class="content-box">
+							<div class="title-tag">';
+			                    $category = get_the_category( $posts_id[0] );
+			                    if ( !empty( $category ) ) {
+			                        $max_categories = 3;    //the maximum number of categories that need to display
+			                        if ( count( $category ) < $max_categories ) {
+			                            $max_categories = count( $category );
+			                        }
+			                        for ( $i = 0; $i < $max_categories; $i++ ) {
+			                            echo '<span class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</span>';
+			                        }
+			                    }
+			                    echo '
+			                </div>
+							<div class="box-title box-title-main">
+								<span class="hover-link" >' .
+									get_the_title( $posts_id[0] ) .'
+								</span>
+							</div>
+							<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '
+							</div>
+						</div>
+					</div>
+				</a>
+				
+			<div class="social-menu-bottom hide-on-large-only ">
+				<div class="menu-list">
+					<a href="#" >
+						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип">
 					</a>
 				</div>
-				<div class="content-box">
-					<div class="title-tag">';
-                        $category = get_the_category( $posts_id[0] );
-                        if ( !empty( $category ) ) {
-                            $max_categories = 3;    //the maximum number of categories that need to display
-                            if ( count( $category ) < $max_categories ) {
-                                $max_categories = count( $category );
-                            }
-                            for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</a>';
-                            }
-                        }
-                        echo '
-                   </div>
-					<div class="box-title box-title-main">
-						<a href="' . get_the_permalink( $posts_id[0] ) . '">' .
-							get_the_title( $posts_id[0] ) .'
-						</a>
-					</div>
-					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
-					</div>
+				<div class="menu-list">
+					<a href="#">
+						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип">
+					</a>
 				</div>
-
-				<div class="social-menu-bottom hide-on-large-only ">
-					<div class="menu-list">
-						<a href="#" >
-							<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип">
-						</a>
-					</div>
-					<div class="menu-list">
-						<a href="#">
-							<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип">
-						</a>
-					</div>
-					<div class="menu-list">
-						<a href="#" >
-							<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип">
-						</a>
-					</div>
+				<div class="menu-list">
+					<a href="#" >
+						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип">
+					</a>
 				</div>
-			</div>';
+			</div>
+		</div>';
 	}
 	else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
 		echo '
-		<a class="mask-link" href="' . get_the_permalink( $posts_id[0] ) . '">
+		<a href="' . get_the_permalink( $posts_id[0] ) . '">
 			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . '); background-size:cover;" class="left-block-content">
 			<div class="mask">
 			
@@ -96,15 +100,15 @@
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</a>';
+                                echo '<span  class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</span>';
                             }
                         }
                         echo '
 					</div>
 					<div class="box-title box-title-main">
-						<a href="' . get_the_permalink( $posts_id[0] ) . '">' .
+						<span class="hover-link">' .
 							get_the_title( $posts_id[0] ) .'
-						
+						</span>
 					</div>
 					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
 				</div>	
@@ -142,50 +146,57 @@
 				}
 				else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
 					echo '
-					<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
+				<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
+					<a href="' . get_the_permalink( $posts_id[$i] ) . '">
 						<div class="mask">
 							<div class="button-position-template hide-on-small-only">
-								<a href="' . get_the_permalink( $posts_id[$i] ) . '" >
+								<span  >
 									<img class="play-button-template button-hover center" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Переглянути">
-								</a>
+								</span>
 							</div>
-							<div class="right-block-second-tag ">';
+							<div class="">';
 		                        $category = get_the_category( $posts_id[$i] );
 		                        if ( !empty( $category ) ) {
 		                            $category = $category[0];
-		                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
+		                            echo '<span class="title-tag-top3 no-hover-blog top-states-small">' . $category->cat_name . '</span>';
 		                        }
 		                        echo '
 							</div>
 						</div>
 						<div class="right-block-second-sign ">
-							<a href="' . get_the_permalink( $posts_id[$i] ) . '">' .
+							<span class="hover-link">' .
 								short_post_title( 80, $posts_id[$i] ) . '
-							</a>
+							</span>
 						</div>
-					</div>';
+					</a>
+				</div>
+					';
 				}
 				else if ( get_post_type( $posts_id[$i] ) == 'news' || get_post_type( $posts_id[$i] ) == 'articles' ) {
 					echo '
+
 						<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
+						<a href="' . get_the_permalink( $posts_id[0] ) . '">
 							<div class="mask">
 								<div class="right-block-second-tag ">
-									<a href="#" class="no-hover-blog">';
+									<span class="no-hover-blog">';
 				                        $category = get_the_category( $posts_id[$i] );
 				                        if ( !empty( $category ) ) {
 				                            $category = $category[0];
 				                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
 				                        }
 				                        echo '
-									</a>
+									</span>
 								</div>
 							</div>
 							<div class="right-block-second-sign ">
-								<a href="' . get_the_permalink( $posts_id[$i] ) . '">' .
+								<span class="hover-link">' .
 									short_post_title( 80, $posts_id[$i] ) . '
-								</a>
+								</span>
 							</div>
-						</div>';
+							</a>
+						</div>
+						';
 				}
 			}
 		?>
