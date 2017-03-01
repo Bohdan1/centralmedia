@@ -59,7 +59,7 @@
             'hierarchical' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
             'taxonomies' => array( 'post_tag', 'category' ),
-            'has_archive' => false,
+            'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
             'can_export' => true

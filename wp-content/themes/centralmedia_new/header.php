@@ -92,6 +92,7 @@
                     <li><a class="" href="<?php echo get_post_type_archive_link('video'); ?>">ВІДЕО</a></li>
                     <li><a class="" href="<?php echo get_post_type_archive_link('articles'); ?>">СТАТТІ</a></li>
                     <li><a class="" href="<?php echo get_post_type_archive_link('blogs'); ?>">БЛОГИ</a></li>
+                    <li><a class="" href="<?php echo get_post_type_archive_link('news'); ?>">НОВИНИ</a></li>
                 </ul>
             </div>
         </nav>
@@ -143,11 +144,10 @@
         }
         ?>
 
-        <li><a class="black-text" href="<?php echo get_home_url(); ?>">Головна</a></li>
-        <li><a class="black-text" href="<?php echo get_post_type_archive_link('news'); ?>">Новини</a></li>
-        <li><a class="black-text" href="<?php echo get_post_type_archive_link('articles'); ?>">Статті</a></li>
-        <li><a class="black-text" href="<?php echo get_post_type_archive_link('video'); ?>">Відео</a></li>
-        <li><a class="black-text" href="<?php echo get_post_type_archive_link('blogs'); ?>">Блоги</a></li>
+        <li><a class="black-text" href="<?php echo get_post_type_archive_link('articles'); ?>">СТАТТІ</a></li>
+        <li><a class="black-text" href="<?php echo get_post_type_archive_link('video'); ?>">ВІДЕО</a></li>
+        <li><a class="black-text" href="<?php echo get_post_type_archive_link('blogs'); ?>">БЛОГИ</a></li>
+        <li><a class="black-text" href="<?php echo get_post_type_archive_link('news'); ?>">НОВИНИ</a></li>
     </ul>
     <!-- end SideNav Structure-->
 

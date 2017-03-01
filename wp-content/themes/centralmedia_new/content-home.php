@@ -150,7 +150,7 @@
 					while ( $query->have_posts() ) {
 						$query->the_post();
 						$video_count++;
-						echo '<div class="col l4 s12 m6 video-devider" style="min-height:260px;">';
+						echo '<div class="col l4 s12 m6" style="min-height:260px;">';
 							show_small_video();
 						echo '</div>';
 					}
@@ -171,7 +171,7 @@
 					if( $query->have_posts() ) {
 						while ( $query->have_posts() ) {
 							$query->the_post();
-							echo '<div class="col l4 s12 m6 video-devider" style="min-height:260px;">';
+							echo '<div class="col l4 s12 m6" style="min-height:260px;">';
 								show_small_video();
 							echo '</div>';
 							$video_count++;
@@ -252,7 +252,7 @@
 			</a>
 			<div class="block-line"></div>
 			<div class="small-sign-line">
-				<div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРИСПОНДЕНТ</span></div>
+				<div id="big-sign-line-fix" class="big-sign-line sign-line-korespond">НАРОДНИЙ <span>КОРЕСПОНДЕНТ</span></div>
 			</div>
 			<img alt="img" data-u="image" class="technology-width" src="<?php bloginfo('template_url') ?>/img/technology.svg" />
 		</div>

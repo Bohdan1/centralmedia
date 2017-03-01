@@ -9,9 +9,10 @@
             </div>
             <div class="col l6 m12 s12">
                 <div class="footer-menu">
-                    <span><a class="hover-link menu-link" href="#">ВІДЕО</a></span>
-                    <span><a class="hover-link menu-link" href="#">СТАТТІ</a></span>
-                    <span><a class="hover-link menu-link" href="#">БЛОГИ</a></span>
+                    <span><a class="hover-link menu-link" href="<?php echo get_post_type_archive_link('video'); ?>">ВІДЕО</a></span>
+                    <span><a class="hover-link menu-link" href="<?php echo get_post_type_archive_link('articles'); ?>">СТАТТІ</a></span>
+                    <span><a class="hover-link menu-link" href="<?php echo get_post_type_archive_link('blogs'); ?>">БЛОГИ</a></span>
+                    <span><a class="hover-link menu-link" href="<?php echo get_post_type_archive_link('news'); ?>">НОВИНИ</a></span>
                 </div>
                 <div class="social-menu-footer">
                     <div class="footer-menu-icons">
@@ -287,6 +288,10 @@
     }
     setDate();
 </script>
-
+<script>
+    $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+</script>
 </body>
 </html>

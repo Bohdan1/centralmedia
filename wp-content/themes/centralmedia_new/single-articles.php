@@ -13,7 +13,7 @@
         ?>
 			        <div class="one-video-post">
 			            <div class="one-video-post-name"><?php the_title(); ?></div>
-			            <div class="box-title-time fix-mob-article one-video-post-time">
+			            <div class="box-title-time fix-mob-article one-video-post-time box-title-time-main-single">
 			            	<?php 
                                 the_time('j F Y, G:i');
                                 setPostViews( get_the_ID() );

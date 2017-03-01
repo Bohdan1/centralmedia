@@ -724,7 +724,7 @@ function show_no_img_post() {
                 'description'   =>   $bio,
                 );
             $user = wp_insert_user( $userdata );
-            echo '<div class="">Реєстрація завершена. Перейдіть на <a href="' . get_site_url() . '/wp-login.php">сторінку авторизації</a>.</div>';  
+            echo '<div class="rigister-ok center">Реєстрація завершена. Перейдіть на <a class=" red-text" href="' . get_site_url() . '/wp-login.php">сторінку авторизації</a>.</div>';  
             exit;
         }
     }

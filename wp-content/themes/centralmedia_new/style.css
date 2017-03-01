@@ -251,7 +251,6 @@ height: 100%;
 }
 .content-box{
 z-index: 2;
-padding-left: 20px;
 position: absolute;
 bottom: 20px;
 width: 75%;
@@ -298,7 +297,7 @@ z-index: 99;
 font-size: 18px;
 color: white;
 padding: 2px;
-left: 15px;
+left: 20px;
 text-align: left;
 
 }
@@ -1971,41 +1970,47 @@ display: none;
 	left: 5%;
 	color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Iphone 5*/
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-
+.rigister-ok{
+	    position: relative;
+    margin-top: 40%;
+    width: 100%;
+    margin-left: 20%;
 }
+
+.box-title-time-main-single{
+	margin-left: -25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 601px){
 .row .col.m4 {
 width: 33.3333333333% !important;
@@ -2151,7 +2156,7 @@ text-transform: uppercase;
 }
 .social-menu-top {
 top: 15px;
-right: %;
+
 z-index: 999;
 position: absolute;
 } 
@@ -2165,13 +2170,31 @@ margin-right: 0px;
 body{
 background-color: white;
 }
-
+.rb-overlay{
+	height: 100vh;
+}
 }
 /* mobile */
 @media screen and (max-width: 668px) {
 .slick-slide, .slider-element img, .slider-bloger-name-main, .slider-bloger-name,.slider-bloger-thema, .blog-element-tag, .slider-bloger-thema-main
 {
 transform: skewX(0deg);
+}
+.rigister-ok{
+	    position: relative;
+    margin-top: 40%;
+    width: 100%;
+
+}
+.left-block{
+left: 0%;
+width: 100%;
+height: 400px;
+background-size: cover;
+}
+.home-content {
+    position: relative;
+    height: 500px;
 }
 .slider-box-remake:hover {
 transform: skewX(0deg);
@@ -2196,7 +2219,7 @@ top: 8%;
 }
 .title-tag{
 font-size: 15px;
-margin-left: 0px;
+margin-left: 4px;
 }
 .button-position-popular-video-content-box-width {
 width: 100%;
@@ -2273,7 +2296,7 @@ left: -33px;
 margin-left: 0px !important;
 }
 .box-title-time{
-margin-left: 10px;
+margin-left: 0px;
 }
 .box-title-small{
 margin-left: 10px;
@@ -2466,7 +2489,6 @@ color: white;
 text-align: justify;
 }
 .box-title {
-margin-left: 10px;
 padding-bottom: 10px;
 font-size: 20px;
 color: white;
@@ -2475,7 +2497,6 @@ color: white;
 margin-top: 5px;
 }
 .content-box {
-padding-left: 10px;
 bottom: 22%;
 width: 100%;
 }

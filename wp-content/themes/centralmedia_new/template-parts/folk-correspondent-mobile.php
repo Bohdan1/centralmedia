@@ -14,7 +14,7 @@
 				echo '
 					<div class="nar-kor-block">
 						<div class="nar-kor-img-mob">
-							<img alt="img" class="user-video-width" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
+							<img alt="img" class=" materialboxed center" width="100%" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
 						</div>
 						<div class="nar-kor-text-mob">' .
 							short_post_desc( 400 ) . '
