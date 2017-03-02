@@ -176,7 +176,7 @@
 					echo '
 
 						<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
-						<a href="' . get_the_permalink( $posts_id[0] ) . '">
+						<a href="' . get_the_permalink( $posts_id[$i] ) . '">
 							<div class="mask">
 								<div class="right-block-second-tag ">
 									<span class="no-hover-blog">';
