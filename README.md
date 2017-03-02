@@ -1,3 +1,12 @@
+ver. 0.99.12
+  - створив content-home-mobile
+  - top3posts - повісив ссилки на соціалки
+  - пофіксив теги
+  - забрав соціалки з top3posts
+  - поділив content-home
+  - перейменував content-home на content-home-desktop
+  - переніс content-home-desktop і content-home-mobile в template-parts
+
 ver. 0.99.11
   - створив сторінку archive-news
   - експортував БД

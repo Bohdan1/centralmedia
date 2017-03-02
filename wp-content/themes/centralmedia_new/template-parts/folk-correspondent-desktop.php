@@ -20,7 +20,7 @@
 					echo '
 					<div class="user-news-block">
 						<div class=" col l12 m7 s12 " style="width: 50% !important;">
-							<img alt="img" class="user-video-width" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
+							<img alt="img" class="user-video-width " src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
 						</div>
 						<div class="col l12 m4 s12" style="width: 50% !important;">
 							<div class="user-video-name">' . get_post_meta( $post->ID, 'folk_correspondent_name', true ) . '</div>

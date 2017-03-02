@@ -258,14 +258,8 @@
 		</div>
 		
 		<?php
-			if ( wp_is_mobile() ) {
-				//show folk correspondent for smartphones
-    			get_template_part('template-parts/folk', 'correspondent-mobile');
-			}
-			else {
-				//show folk correspondent for desctop
-    			get_template_part('template-parts/folk', 'correspondent-desktop');
-			}
+			//show folk correspondent for desctop
+			get_template_part('template-parts/folk', 'correspondent-desktop');
 		?>
 	</div>
 </div>

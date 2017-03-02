@@ -66,19 +66,19 @@
 					</div>
 				</a>
 				
-			<div class="social-menu-bottom hide-on-large-only ">
+			<div class="social-menu-bottom hide">
 				<div class="menu-list">
-					<a href="#" >
+					<a href="https://www.youtube.com/channel/UCYMgvYAKTnPfZ8FjuXLYaEQ" >
 						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип">
 					</a>
 				</div>
 				<div class="menu-list">
-					<a href="#">
+					<a href="https://www.facebook.com/centralnemedia/">
 						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип">
 					</a>
 				</div>
 				<div class="menu-list">
-					<a href="#" >
+					<a href="https://twitter.com/CentralneMedia" >
 						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип">
 					</a>
 				</div>

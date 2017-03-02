@@ -167,7 +167,7 @@ function show_slider_post() {
                                     $max_categories = count( $category );
                                 }
                                 for ( $i = 0; $i < $max_categories; $i++ ) {
-                                    echo '<span class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</span>';
+                                    echo '<span class="no-hover-blog article-slider-tags article-slider-tags-padding">' . $category[$i]->cat_name . '</span>';
                                 }
                             }
                             echo '
@@ -227,7 +227,7 @@ function show_big_post() {
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<span  class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</span>';
+                                echo '<span  class="no-hover-blog article-slider-tags article-slider-tags-padding article-slider-tags-size">' . $category[$i]->cat_name . '</span>';
                             }
                         }
                         echo '
@@ -303,7 +303,7 @@ function show_big_video() {
                                     $max_categories = count( $category );
                                 }
                                 for ( $i = 0; $i < $max_categories; $i++ ) {
-                                    echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
+                                    echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags article-slider-tags-padding">' . $category[$i]->cat_name . '</a>';
                                 }
                             }
                             echo '
@@ -376,7 +376,7 @@ function show_slider_cultural_event( $post_id ) {
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
+                                echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags article-slider-tags-padding">' . $category[$i]->cat_name . '</a>';
                             }
                         }
                         echo '
