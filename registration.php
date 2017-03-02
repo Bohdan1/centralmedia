@@ -1,21 +1,14 @@
 <?php
-    /**
-     * WordPress User Page
-     *
-     * Handles authentication, registering, resetting passwords, forgot password,
-     * and other user handling.
-     *
-     * @package WordPress
-     */
-
-    /** Make sure that the WordPress bootstrap has run before continuing. */
+   
     require( dirname(__FILE__) . '/wp-load.php' );
-
+    
+    get_header();
+    
     if ( is_user_logged_in() ) {
         wp_redirect( bloginfo('url') . '/wp-admin/profile.php' );
     }
     else {
-        get_header();
+        
         echo '<div style="height: 10px;"></div>';
     ?>
 
@@ -27,5 +20,7 @@
 
 <?php 
     }
-    get_footer(); 
+    //$footer_url = get_template_directory_uri() . '/footer.php';
+    //get_template_part( $footer_url );
+    //get_footer(); 
 ?>

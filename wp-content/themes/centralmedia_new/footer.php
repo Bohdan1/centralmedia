@@ -3,7 +3,7 @@
     <div class="footer">
         <div class="row">
             <div class="col l6 m12 s12">
-                <a href="#"><img class="footer-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
+                <a href="<?php echo get_home_url(); ?>"><img class="footer-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
                 <p class="footer-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 <div class="clear"></div>
             </div>
@@ -48,7 +48,9 @@
             </div>
         </div>
         <div class="madeby">
+        <a href="http://platform-it.com/">
             Made by PLATFORM IT-COMPANY
+            </a>
         </div>
     </div>
 </footer>

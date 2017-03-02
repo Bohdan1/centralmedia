@@ -28,8 +28,8 @@ add_action( 'wp_enqueue_scripts', 'register_styles' );
 add_image_size('1430x550', 1450, 550, true);
 
 function short_post_desc( $charlength ) {        //function for display short content for posts
-    //$excerpt = get_the_excerpt();
-    $excerpt = get_the_content();
+    //$excerpt = get_the_content();
+    $excerpt = get_the_excerpt();
     if ( mb_strlen( $excerpt ) > $charlength ) {
         $subex = mb_substr( $excerpt, 0, $charlength );
         return $subex . '...';
@@ -108,6 +108,40 @@ function show_short_latest_news() {
                 <a href="'. get_the_permalink() .'" class="black-text">' .
                    short_post_title(75) . '
                 </a>
+            </div>
+        </div>';
+}
+
+function show_latest_news() {
+    global $date;
+    if ( $date != get_the_time('j F Y l') ) {
+        $date = get_the_time('j F Y l');
+        echo '<div class="next-day-news">' . $date . '</div>';
+    }
+    $post_title = '';
+    $post_desc = '';
+        if ( wp_is_mobile() ) {
+            $post_title = short_post_title(50);
+            //$post_desc = short_post_desc(100);
+        }
+        else {
+            $post_title = short_post_title(100);
+            $post_desc = short_post_desc(250);
+        }
+    echo '
+        <div class="news-block">
+            <div class="archive-news-title">
+                <div class="news-time-archive">' .
+                    get_the_time('G:i') . '
+                </div>
+                <a href="'. get_the_permalink() .'" class="black-text">' .
+                   $post_title . '
+                </a>
+                <div class="short-news-desc hover-link">
+                    <a class=" black-text" href="'. get_the_permalink() .'"> ' .
+                        $post_desc . '
+                    </a>
+                </div>
             </div>
         </div>';
 }
@@ -672,7 +706,7 @@ function show_no_img_post() {
                         global $reg_errors;
                         if ( is_wp_error( $reg_errors ) ) {
                             foreach ( $reg_errors->get_error_messages() as $error ) {
-                                echo '<div class="registration-error"><strong>Помилка</strong>:' . $error . '<br/></div>';
+                                echo '<div class="registration-error"><strong>Помилка</strong>: ' . $error . '<br/></div>';
                             }
                         }
                     echo '</div>
@@ -724,7 +758,7 @@ function show_no_img_post() {
                 'description'   =>   $bio,
                 );
             $user = wp_insert_user( $userdata );
-            echo '<div class="rigister-ok center">Реєстрація завершена. Перейдіть на <a class=" red-text" href="' . get_site_url() . '/wp-login.php">сторінку авторизації</a>.</div>';  
+            echo '<div class="rigister-ok center">Реєстрація завершена. Перейдіть на <a class=" red-text" href="#modal-login">сторінку авторизації</a>.</div>';  
             exit;
         }
     }
@@ -997,7 +1031,7 @@ function show_no_img_post() {
             while( $q->have_posts() ): $q->the_post();
                 //show_short_latest_news();
                 if ( get_post_type() == "news" ) {
-                    show_short_latest_news();
+                    show_latest_news();
                 }
                 else if ( get_post_type() == "video" ) {
                     echo '<div class="col l3 s12 m4 top-five-video-width">';

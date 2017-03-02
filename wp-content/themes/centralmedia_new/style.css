@@ -579,6 +579,13 @@ position: relative;
 font-size: 15px;
 display: inline-block;
 }
+.archive-news-title{
+	text-align: justify;
+position: relative;
+font-size: 20px;
+font-weight: bold;
+display: inline-block;
+}
 .fa{
 color: #FD5201FF;
 font-size: 23px !important;
@@ -1908,6 +1915,10 @@ margin-top: 70px;
 margin-bottom: 20px;
 }
 
+.register-word li label{
+	font-size: 15px !important;
+}
+
 .jssora08l, .jssora08r {
 display: block;
 position: absolute;
@@ -1980,10 +1991,28 @@ display: none;
 .box-title-time-main-single{
 	margin-left: -25px;
 }
-
-
-
-
+.registration-error{
+	margin-top: 10px !important;
+}
+.short-news-desc{
+	padding-left: 30px;
+	font-size: 15px;
+	font-weight: 300;
+}
+.news-time-archive{
+	font-size: 15px;
+	display: inline-block;
+position: relative;
+top: -2px;
+}
+.tag-name-description-archive{
+padding-left: 10px;
+color: #900022;
+font-size: 25px;
+font-weight: bold;
+padding-top: 10px;
+text-transform: uppercase;
+}
 
 
 
@@ -2195,6 +2224,20 @@ background-size: cover;
 .home-content {
     position: relative;
     height: 500px;
+}
+.header-margin-tag{
+	padding-top: 70px;
+}
+
+.tag-name-description{
+	font-size: 25px;
+	padding-bottom: 20px;
+}
+.archive-news-title{
+	text-align: left;
+}
+.next-day-news{
+	padding-top: 0px;
 }
 .slider-box-remake:hover {
 transform: skewX(0deg);
