@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 28 2017 г., 12:28
--- Версия сервера: 5.5.48
--- Версия PHP: 5.6.19
+-- Час створення: Бер 02 2017 р., 14:39
+-- Версія сервера: 5.5.48
+-- Версія PHP: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `centralmedia`
+-- База даних: `centralmedia`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_commentmeta`
+-- Структура таблиці `wp_commentmeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_commentmeta`
+-- Дамп даних таблиці `wp_commentmeta`
 --
 
 INSERT INTO `wp_commentmeta` (`meta_id`, `comment_id`, `meta_key`, `meta_value`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `wp_commentmeta` (`meta_id`, `comment_id`, `meta_key`, `meta_value`)
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_comments`
+-- Структура таблиці `wp_comments`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_comments` (
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_comments`
+-- Дамп даних таблиці `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -90,7 +90,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_links`
+-- Структура таблиці `wp_links`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_links` (
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_options`
+-- Структура таблиці `wp_options`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_options` (
@@ -120,10 +120,10 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=6700 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6722 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_options`
+-- Дамп даних таблиці `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -155,7 +155,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (26, 'comment_moderation', '', 'yes'),
 (27, 'moderation_notify', '1', 'yes'),
 (28, 'permalink_structure', '/%postname%/', 'yes'),
-(29, 'rewrite_rules', 'a:217:{s:11:"^wp-json/?$";s:22:"index.php?rest_route=/";s:14:"^wp-json/(.*)?";s:33:"index.php?rest_route=/$matches[1]";s:21:"^index.php/wp-json/?$";s:22:"index.php?rest_route=/";s:24:"^index.php/wp-json/(.*)?";s:33:"index.php?rest_route=/$matches[1]";s:11:"articles/?$";s:28:"index.php?post_type=articles";s:41:"articles/feed/(feed|rdf|rss|rss2|atom)/?$";s:45:"index.php?post_type=articles&feed=$matches[1]";s:36:"articles/(feed|rdf|rss|rss2|atom)/?$";s:45:"index.php?post_type=articles&feed=$matches[1]";s:28:"articles/page/([0-9]{1,})/?$";s:46:"index.php?post_type=articles&paged=$matches[1]";s:8:"blogs/?$";s:25:"index.php?post_type=blogs";s:38:"blogs/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=blogs&feed=$matches[1]";s:33:"blogs/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=blogs&feed=$matches[1]";s:25:"blogs/page/([0-9]{1,})/?$";s:43:"index.php?post_type=blogs&paged=$matches[1]";s:15:"partner-news/?$";s:32:"index.php?post_type=partner-news";s:45:"partner-news/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?post_type=partner-news&feed=$matches[1]";s:40:"partner-news/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?post_type=partner-news&feed=$matches[1]";s:32:"partner-news/page/([0-9]{1,})/?$";s:50:"index.php?post_type=partner-news&paged=$matches[1]";s:8:"video/?$";s:25:"index.php?post_type=video";s:38:"video/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=video&feed=$matches[1]";s:33:"video/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=video&feed=$matches[1]";s:25:"video/page/([0-9]{1,})/?$";s:43:"index.php?post_type=video&paged=$matches[1]";s:10:"streams/?$";s:27:"index.php?post_type=streams";s:40:"streams/feed/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?post_type=streams&feed=$matches[1]";s:35:"streams/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?post_type=streams&feed=$matches[1]";s:27:"streams/page/([0-9]{1,})/?$";s:45:"index.php?post_type=streams&paged=$matches[1]";s:21:"folk_correspondent/?$";s:38:"index.php?post_type=folk_correspondent";s:51:"folk_correspondent/feed/(feed|rdf|rss|rss2|atom)/?$";s:55:"index.php?post_type=folk_correspondent&feed=$matches[1]";s:46:"folk_correspondent/(feed|rdf|rss|rss2|atom)/?$";s:55:"index.php?post_type=folk_correspondent&feed=$matches[1]";s:38:"folk_correspondent/page/([0-9]{1,})/?$";s:56:"index.php?post_type=folk_correspondent&paged=$matches[1]";s:18:"cultural_events/?$";s:35:"index.php?post_type=cultural_events";s:48:"cultural_events/feed/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?post_type=cultural_events&feed=$matches[1]";s:43:"cultural_events/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?post_type=cultural_events&feed=$matches[1]";s:35:"cultural_events/page/([0-9]{1,})/?$";s:53:"index.php?post_type=cultural_events&paged=$matches[1]";s:47:"category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?category_name=$matches[1]&feed=$matches[2]";s:42:"category/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?category_name=$matches[1]&feed=$matches[2]";s:23:"category/(.+?)/embed/?$";s:46:"index.php?category_name=$matches[1]&embed=true";s:35:"category/(.+?)/page/?([0-9]{1,})/?$";s:53:"index.php?category_name=$matches[1]&paged=$matches[2]";s:17:"category/(.+?)/?$";s:35:"index.php?category_name=$matches[1]";s:44:"tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?tag=$matches[1]&feed=$matches[2]";s:39:"tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?tag=$matches[1]&feed=$matches[2]";s:20:"tag/([^/]+)/embed/?$";s:36:"index.php?tag=$matches[1]&embed=true";s:32:"tag/([^/]+)/page/?([0-9]{1,})/?$";s:43:"index.php?tag=$matches[1]&paged=$matches[2]";s:14:"tag/([^/]+)/?$";s:25:"index.php?tag=$matches[1]";s:45:"type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?post_format=$matches[1]&feed=$matches[2]";s:40:"type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?post_format=$matches[1]&feed=$matches[2]";s:21:"type/([^/]+)/embed/?$";s:44:"index.php?post_format=$matches[1]&embed=true";s:33:"type/([^/]+)/page/?([0-9]{1,})/?$";s:51:"index.php?post_format=$matches[1]&paged=$matches[2]";s:15:"type/([^/]+)/?$";s:33:"index.php?post_format=$matches[1]";s:30:"news/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:40:"news/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:60:"news/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:55:"news/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:55:"news/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:36:"news/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:19:"news/(.+?)/embed/?$";s:37:"index.php?news=$matches[1]&embed=true";s:23:"news/(.+?)/trackback/?$";s:31:"index.php?news=$matches[1]&tb=1";s:31:"news/(.+?)/page/?([0-9]{1,})/?$";s:44:"index.php?news=$matches[1]&paged=$matches[2]";s:38:"news/(.+?)/comment-page-([0-9]{1,})/?$";s:44:"index.php?news=$matches[1]&cpage=$matches[2]";s:27:"news/(.+?)(?:/([0-9]+))?/?$";s:43:"index.php?news=$matches[1]&page=$matches[2]";s:34:"articles/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:44:"articles/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:64:"articles/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:59:"articles/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:59:"articles/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:40:"articles/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:23:"articles/(.+?)/embed/?$";s:41:"index.php?articles=$matches[1]&embed=true";s:27:"articles/(.+?)/trackback/?$";s:35:"index.php?articles=$matches[1]&tb=1";s:47:"articles/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?articles=$matches[1]&feed=$matches[2]";s:42:"articles/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?articles=$matches[1]&feed=$matches[2]";s:35:"articles/(.+?)/page/?([0-9]{1,})/?$";s:48:"index.php?articles=$matches[1]&paged=$matches[2]";s:42:"articles/(.+?)/comment-page-([0-9]{1,})/?$";s:48:"index.php?articles=$matches[1]&cpage=$matches[2]";s:31:"articles/(.+?)(?:/([0-9]+))?/?$";s:47:"index.php?articles=$matches[1]&page=$matches[2]";s:31:"blogs/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:41:"blogs/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:61:"blogs/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"blogs/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"blogs/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:37:"blogs/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:20:"blogs/(.+?)/embed/?$";s:38:"index.php?blogs=$matches[1]&embed=true";s:24:"blogs/(.+?)/trackback/?$";s:32:"index.php?blogs=$matches[1]&tb=1";s:44:"blogs/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?blogs=$matches[1]&feed=$matches[2]";s:39:"blogs/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?blogs=$matches[1]&feed=$matches[2]";s:32:"blogs/(.+?)/page/?([0-9]{1,})/?$";s:45:"index.php?blogs=$matches[1]&paged=$matches[2]";s:39:"blogs/(.+?)/comment-page-([0-9]{1,})/?$";s:45:"index.php?blogs=$matches[1]&cpage=$matches[2]";s:28:"blogs/(.+?)(?:/([0-9]+))?/?$";s:44:"index.php?blogs=$matches[1]&page=$matches[2]";s:38:"partner-news/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:48:"partner-news/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:68:"partner-news/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:63:"partner-news/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:63:"partner-news/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:44:"partner-news/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:27:"partner-news/(.+?)/embed/?$";s:45:"index.php?partner-news=$matches[1]&embed=true";s:31:"partner-news/(.+?)/trackback/?$";s:39:"index.php?partner-news=$matches[1]&tb=1";s:51:"partner-news/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:51:"index.php?partner-news=$matches[1]&feed=$matches[2]";s:46:"partner-news/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:51:"index.php?partner-news=$matches[1]&feed=$matches[2]";s:39:"partner-news/(.+?)/page/?([0-9]{1,})/?$";s:52:"index.php?partner-news=$matches[1]&paged=$matches[2]";s:46:"partner-news/(.+?)/comment-page-([0-9]{1,})/?$";s:52:"index.php?partner-news=$matches[1]&cpage=$matches[2]";s:35:"partner-news/(.+?)(?:/([0-9]+))?/?$";s:51:"index.php?partner-news=$matches[1]&page=$matches[2]";s:31:"video/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:41:"video/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:61:"video/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"video/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"video/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:37:"video/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:20:"video/(.+?)/embed/?$";s:38:"index.php?video=$matches[1]&embed=true";s:24:"video/(.+?)/trackback/?$";s:32:"index.php?video=$matches[1]&tb=1";s:44:"video/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?video=$matches[1]&feed=$matches[2]";s:39:"video/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?video=$matches[1]&feed=$matches[2]";s:32:"video/(.+?)/page/?([0-9]{1,})/?$";s:45:"index.php?video=$matches[1]&paged=$matches[2]";s:39:"video/(.+?)/comment-page-([0-9]{1,})/?$";s:45:"index.php?video=$matches[1]&cpage=$matches[2]";s:28:"video/(.+?)(?:/([0-9]+))?/?$";s:44:"index.php?video=$matches[1]&page=$matches[2]";s:33:"streams/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:43:"streams/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:63:"streams/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:58:"streams/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:58:"streams/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:39:"streams/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:22:"streams/(.+?)/embed/?$";s:40:"index.php?streams=$matches[1]&embed=true";s:26:"streams/(.+?)/trackback/?$";s:34:"index.php?streams=$matches[1]&tb=1";s:46:"streams/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:46:"index.php?streams=$matches[1]&feed=$matches[2]";s:41:"streams/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:46:"index.php?streams=$matches[1]&feed=$matches[2]";s:34:"streams/(.+?)/page/?([0-9]{1,})/?$";s:47:"index.php?streams=$matches[1]&paged=$matches[2]";s:41:"streams/(.+?)/comment-page-([0-9]{1,})/?$";s:47:"index.php?streams=$matches[1]&cpage=$matches[2]";s:30:"streams/(.+?)(?:/([0-9]+))?/?$";s:46:"index.php?streams=$matches[1]&page=$matches[2]";s:44:"folk_correspondent/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:54:"folk_correspondent/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:74:"folk_correspondent/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:69:"folk_correspondent/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:69:"folk_correspondent/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:50:"folk_correspondent/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:33:"folk_correspondent/(.+?)/embed/?$";s:51:"index.php?folk_correspondent=$matches[1]&embed=true";s:37:"folk_correspondent/(.+?)/trackback/?$";s:45:"index.php?folk_correspondent=$matches[1]&tb=1";s:57:"folk_correspondent/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:57:"index.php?folk_correspondent=$matches[1]&feed=$matches[2]";s:52:"folk_correspondent/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:57:"index.php?folk_correspondent=$matches[1]&feed=$matches[2]";s:45:"folk_correspondent/(.+?)/page/?([0-9]{1,})/?$";s:58:"index.php?folk_correspondent=$matches[1]&paged=$matches[2]";s:52:"folk_correspondent/(.+?)/comment-page-([0-9]{1,})/?$";s:58:"index.php?folk_correspondent=$matches[1]&cpage=$matches[2]";s:41:"folk_correspondent/(.+?)(?:/([0-9]+))?/?$";s:57:"index.php?folk_correspondent=$matches[1]&page=$matches[2]";s:41:"cultural_events/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:51:"cultural_events/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:71:"cultural_events/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:66:"cultural_events/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:66:"cultural_events/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:47:"cultural_events/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:30:"cultural_events/(.+?)/embed/?$";s:48:"index.php?cultural_events=$matches[1]&embed=true";s:34:"cultural_events/(.+?)/trackback/?$";s:42:"index.php?cultural_events=$matches[1]&tb=1";s:54:"cultural_events/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:54:"index.php?cultural_events=$matches[1]&feed=$matches[2]";s:49:"cultural_events/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:54:"index.php?cultural_events=$matches[1]&feed=$matches[2]";s:42:"cultural_events/(.+?)/page/?([0-9]{1,})/?$";s:55:"index.php?cultural_events=$matches[1]&paged=$matches[2]";s:49:"cultural_events/(.+?)/comment-page-([0-9]{1,})/?$";s:55:"index.php?cultural_events=$matches[1]&cpage=$matches[2]";s:38:"cultural_events/(.+?)(?:/([0-9]+))?/?$";s:54:"index.php?cultural_events=$matches[1]&page=$matches[2]";s:12:"robots\\.txt$";s:18:"index.php?robots=1";s:48:".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\\.php$";s:18:"index.php?feed=old";s:20:".*wp-app\\.php(/.*)?$";s:19:"index.php?error=403";s:18:".*wp-register.php$";s:23:"index.php?register=true";s:32:"feed/(feed|rdf|rss|rss2|atom)/?$";s:27:"index.php?&feed=$matches[1]";s:27:"(feed|rdf|rss|rss2|atom)/?$";s:27:"index.php?&feed=$matches[1]";s:8:"embed/?$";s:21:"index.php?&embed=true";s:20:"page/?([0-9]{1,})/?$";s:28:"index.php?&paged=$matches[1]";s:41:"comments/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?&feed=$matches[1]&withcomments=1";s:36:"comments/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?&feed=$matches[1]&withcomments=1";s:17:"comments/embed/?$";s:21:"index.php?&embed=true";s:44:"search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:40:"index.php?s=$matches[1]&feed=$matches[2]";s:39:"search/(.+)/(feed|rdf|rss|rss2|atom)/?$";s:40:"index.php?s=$matches[1]&feed=$matches[2]";s:20:"search/(.+)/embed/?$";s:34:"index.php?s=$matches[1]&embed=true";s:32:"search/(.+)/page/?([0-9]{1,})/?$";s:41:"index.php?s=$matches[1]&paged=$matches[2]";s:14:"search/(.+)/?$";s:23:"index.php?s=$matches[1]";s:47:"author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?author_name=$matches[1]&feed=$matches[2]";s:42:"author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?author_name=$matches[1]&feed=$matches[2]";s:23:"author/([^/]+)/embed/?$";s:44:"index.php?author_name=$matches[1]&embed=true";s:35:"author/([^/]+)/page/?([0-9]{1,})/?$";s:51:"index.php?author_name=$matches[1]&paged=$matches[2]";s:17:"author/([^/]+)/?$";s:33:"index.php?author_name=$matches[1]";s:69:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$";s:80:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]";s:64:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$";s:80:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]";s:45:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/embed/?$";s:74:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&embed=true";s:57:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$";s:81:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]";s:39:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$";s:63:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]";s:56:"([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$";s:64:"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]";s:51:"([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$";s:64:"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]";s:32:"([0-9]{4})/([0-9]{1,2})/embed/?$";s:58:"index.php?year=$matches[1]&monthnum=$matches[2]&embed=true";s:44:"([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$";s:65:"index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]";s:26:"([0-9]{4})/([0-9]{1,2})/?$";s:47:"index.php?year=$matches[1]&monthnum=$matches[2]";s:43:"([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?year=$matches[1]&feed=$matches[2]";s:38:"([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?year=$matches[1]&feed=$matches[2]";s:19:"([0-9]{4})/embed/?$";s:37:"index.php?year=$matches[1]&embed=true";s:31:"([0-9]{4})/page/?([0-9]{1,})/?$";s:44:"index.php?year=$matches[1]&paged=$matches[2]";s:13:"([0-9]{4})/?$";s:26:"index.php?year=$matches[1]";s:27:".?.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:37:".?.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:57:".?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:".?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:".?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:33:".?.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:16:"(.?.+?)/embed/?$";s:41:"index.php?pagename=$matches[1]&embed=true";s:20:"(.?.+?)/trackback/?$";s:35:"index.php?pagename=$matches[1]&tb=1";s:40:"(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?pagename=$matches[1]&feed=$matches[2]";s:35:"(.?.+?)/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?pagename=$matches[1]&feed=$matches[2]";s:28:"(.?.+?)/page/?([0-9]{1,})/?$";s:48:"index.php?pagename=$matches[1]&paged=$matches[2]";s:35:"(.?.+?)/comment-page-([0-9]{1,})/?$";s:48:"index.php?pagename=$matches[1]&cpage=$matches[2]";s:24:"(.?.+?)(?:/([0-9]+))?/?$";s:47:"index.php?pagename=$matches[1]&page=$matches[2]";s:27:"[^/]+/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:37:"[^/]+/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:57:"[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:"[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:"[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:33:"[^/]+/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:16:"([^/]+)/embed/?$";s:37:"index.php?name=$matches[1]&embed=true";s:20:"([^/]+)/trackback/?$";s:31:"index.php?name=$matches[1]&tb=1";s:40:"([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?name=$matches[1]&feed=$matches[2]";s:35:"([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?name=$matches[1]&feed=$matches[2]";s:28:"([^/]+)/page/?([0-9]{1,})/?$";s:44:"index.php?name=$matches[1]&paged=$matches[2]";s:35:"([^/]+)/comment-page-([0-9]{1,})/?$";s:44:"index.php?name=$matches[1]&cpage=$matches[2]";s:24:"([^/]+)(?:/([0-9]+))?/?$";s:43:"index.php?name=$matches[1]&page=$matches[2]";s:16:"[^/]+/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:26:"[^/]+/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:46:"[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:41:"[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:41:"[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:22:"[^/]+/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";}', 'yes'),
+(29, 'rewrite_rules', 'a:217:{s:11:"^wp-json/?$";s:22:"index.php?rest_route=/";s:14:"^wp-json/(.*)?";s:33:"index.php?rest_route=/$matches[1]";s:21:"^index.php/wp-json/?$";s:22:"index.php?rest_route=/";s:24:"^index.php/wp-json/(.*)?";s:33:"index.php?rest_route=/$matches[1]";s:7:"news/?$";s:24:"index.php?post_type=news";s:37:"news/feed/(feed|rdf|rss|rss2|atom)/?$";s:41:"index.php?post_type=news&feed=$matches[1]";s:32:"news/(feed|rdf|rss|rss2|atom)/?$";s:41:"index.php?post_type=news&feed=$matches[1]";s:24:"news/page/([0-9]{1,})/?$";s:42:"index.php?post_type=news&paged=$matches[1]";s:11:"articles/?$";s:28:"index.php?post_type=articles";s:41:"articles/feed/(feed|rdf|rss|rss2|atom)/?$";s:45:"index.php?post_type=articles&feed=$matches[1]";s:36:"articles/(feed|rdf|rss|rss2|atom)/?$";s:45:"index.php?post_type=articles&feed=$matches[1]";s:28:"articles/page/([0-9]{1,})/?$";s:46:"index.php?post_type=articles&paged=$matches[1]";s:8:"blogs/?$";s:25:"index.php?post_type=blogs";s:38:"blogs/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=blogs&feed=$matches[1]";s:33:"blogs/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=blogs&feed=$matches[1]";s:25:"blogs/page/([0-9]{1,})/?$";s:43:"index.php?post_type=blogs&paged=$matches[1]";s:15:"partner-news/?$";s:32:"index.php?post_type=partner-news";s:45:"partner-news/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?post_type=partner-news&feed=$matches[1]";s:40:"partner-news/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?post_type=partner-news&feed=$matches[1]";s:32:"partner-news/page/([0-9]{1,})/?$";s:50:"index.php?post_type=partner-news&paged=$matches[1]";s:8:"video/?$";s:25:"index.php?post_type=video";s:38:"video/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=video&feed=$matches[1]";s:33:"video/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?post_type=video&feed=$matches[1]";s:25:"video/page/([0-9]{1,})/?$";s:43:"index.php?post_type=video&paged=$matches[1]";s:10:"streams/?$";s:27:"index.php?post_type=streams";s:40:"streams/feed/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?post_type=streams&feed=$matches[1]";s:35:"streams/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?post_type=streams&feed=$matches[1]";s:27:"streams/page/([0-9]{1,})/?$";s:45:"index.php?post_type=streams&paged=$matches[1]";s:21:"folk_correspondent/?$";s:38:"index.php?post_type=folk_correspondent";s:51:"folk_correspondent/feed/(feed|rdf|rss|rss2|atom)/?$";s:55:"index.php?post_type=folk_correspondent&feed=$matches[1]";s:46:"folk_correspondent/(feed|rdf|rss|rss2|atom)/?$";s:55:"index.php?post_type=folk_correspondent&feed=$matches[1]";s:38:"folk_correspondent/page/([0-9]{1,})/?$";s:56:"index.php?post_type=folk_correspondent&paged=$matches[1]";s:47:"category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?category_name=$matches[1]&feed=$matches[2]";s:42:"category/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?category_name=$matches[1]&feed=$matches[2]";s:23:"category/(.+?)/embed/?$";s:46:"index.php?category_name=$matches[1]&embed=true";s:35:"category/(.+?)/page/?([0-9]{1,})/?$";s:53:"index.php?category_name=$matches[1]&paged=$matches[2]";s:17:"category/(.+?)/?$";s:35:"index.php?category_name=$matches[1]";s:44:"tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?tag=$matches[1]&feed=$matches[2]";s:39:"tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?tag=$matches[1]&feed=$matches[2]";s:20:"tag/([^/]+)/embed/?$";s:36:"index.php?tag=$matches[1]&embed=true";s:32:"tag/([^/]+)/page/?([0-9]{1,})/?$";s:43:"index.php?tag=$matches[1]&paged=$matches[2]";s:14:"tag/([^/]+)/?$";s:25:"index.php?tag=$matches[1]";s:45:"type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?post_format=$matches[1]&feed=$matches[2]";s:40:"type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?post_format=$matches[1]&feed=$matches[2]";s:21:"type/([^/]+)/embed/?$";s:44:"index.php?post_format=$matches[1]&embed=true";s:33:"type/([^/]+)/page/?([0-9]{1,})/?$";s:51:"index.php?post_format=$matches[1]&paged=$matches[2]";s:15:"type/([^/]+)/?$";s:33:"index.php?post_format=$matches[1]";s:30:"news/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:40:"news/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:60:"news/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:55:"news/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:55:"news/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:36:"news/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:19:"news/(.+?)/embed/?$";s:37:"index.php?news=$matches[1]&embed=true";s:23:"news/(.+?)/trackback/?$";s:31:"index.php?news=$matches[1]&tb=1";s:43:"news/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?news=$matches[1]&feed=$matches[2]";s:38:"news/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?news=$matches[1]&feed=$matches[2]";s:31:"news/(.+?)/page/?([0-9]{1,})/?$";s:44:"index.php?news=$matches[1]&paged=$matches[2]";s:38:"news/(.+?)/comment-page-([0-9]{1,})/?$";s:44:"index.php?news=$matches[1]&cpage=$matches[2]";s:27:"news/(.+?)(?:/([0-9]+))?/?$";s:43:"index.php?news=$matches[1]&page=$matches[2]";s:34:"articles/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:44:"articles/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:64:"articles/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:59:"articles/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:59:"articles/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:40:"articles/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:23:"articles/(.+?)/embed/?$";s:41:"index.php?articles=$matches[1]&embed=true";s:27:"articles/(.+?)/trackback/?$";s:35:"index.php?articles=$matches[1]&tb=1";s:47:"articles/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?articles=$matches[1]&feed=$matches[2]";s:42:"articles/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?articles=$matches[1]&feed=$matches[2]";s:35:"articles/(.+?)/page/?([0-9]{1,})/?$";s:48:"index.php?articles=$matches[1]&paged=$matches[2]";s:42:"articles/(.+?)/comment-page-([0-9]{1,})/?$";s:48:"index.php?articles=$matches[1]&cpage=$matches[2]";s:31:"articles/(.+?)(?:/([0-9]+))?/?$";s:47:"index.php?articles=$matches[1]&page=$matches[2]";s:31:"blogs/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:41:"blogs/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:61:"blogs/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"blogs/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"blogs/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:37:"blogs/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:20:"blogs/(.+?)/embed/?$";s:38:"index.php?blogs=$matches[1]&embed=true";s:24:"blogs/(.+?)/trackback/?$";s:32:"index.php?blogs=$matches[1]&tb=1";s:44:"blogs/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?blogs=$matches[1]&feed=$matches[2]";s:39:"blogs/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?blogs=$matches[1]&feed=$matches[2]";s:32:"blogs/(.+?)/page/?([0-9]{1,})/?$";s:45:"index.php?blogs=$matches[1]&paged=$matches[2]";s:39:"blogs/(.+?)/comment-page-([0-9]{1,})/?$";s:45:"index.php?blogs=$matches[1]&cpage=$matches[2]";s:28:"blogs/(.+?)(?:/([0-9]+))?/?$";s:44:"index.php?blogs=$matches[1]&page=$matches[2]";s:38:"partner-news/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:48:"partner-news/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:68:"partner-news/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:63:"partner-news/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:63:"partner-news/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:44:"partner-news/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:27:"partner-news/(.+?)/embed/?$";s:45:"index.php?partner-news=$matches[1]&embed=true";s:31:"partner-news/(.+?)/trackback/?$";s:39:"index.php?partner-news=$matches[1]&tb=1";s:51:"partner-news/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:51:"index.php?partner-news=$matches[1]&feed=$matches[2]";s:46:"partner-news/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:51:"index.php?partner-news=$matches[1]&feed=$matches[2]";s:39:"partner-news/(.+?)/page/?([0-9]{1,})/?$";s:52:"index.php?partner-news=$matches[1]&paged=$matches[2]";s:46:"partner-news/(.+?)/comment-page-([0-9]{1,})/?$";s:52:"index.php?partner-news=$matches[1]&cpage=$matches[2]";s:35:"partner-news/(.+?)(?:/([0-9]+))?/?$";s:51:"index.php?partner-news=$matches[1]&page=$matches[2]";s:31:"video/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:41:"video/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:61:"video/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"video/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:56:"video/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:37:"video/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:20:"video/(.+?)/embed/?$";s:38:"index.php?video=$matches[1]&embed=true";s:24:"video/(.+?)/trackback/?$";s:32:"index.php?video=$matches[1]&tb=1";s:44:"video/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?video=$matches[1]&feed=$matches[2]";s:39:"video/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:44:"index.php?video=$matches[1]&feed=$matches[2]";s:32:"video/(.+?)/page/?([0-9]{1,})/?$";s:45:"index.php?video=$matches[1]&paged=$matches[2]";s:39:"video/(.+?)/comment-page-([0-9]{1,})/?$";s:45:"index.php?video=$matches[1]&cpage=$matches[2]";s:28:"video/(.+?)(?:/([0-9]+))?/?$";s:44:"index.php?video=$matches[1]&page=$matches[2]";s:33:"streams/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:43:"streams/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:63:"streams/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:58:"streams/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:58:"streams/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:39:"streams/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:22:"streams/(.+?)/embed/?$";s:40:"index.php?streams=$matches[1]&embed=true";s:26:"streams/(.+?)/trackback/?$";s:34:"index.php?streams=$matches[1]&tb=1";s:46:"streams/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:46:"index.php?streams=$matches[1]&feed=$matches[2]";s:41:"streams/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:46:"index.php?streams=$matches[1]&feed=$matches[2]";s:34:"streams/(.+?)/page/?([0-9]{1,})/?$";s:47:"index.php?streams=$matches[1]&paged=$matches[2]";s:41:"streams/(.+?)/comment-page-([0-9]{1,})/?$";s:47:"index.php?streams=$matches[1]&cpage=$matches[2]";s:30:"streams/(.+?)(?:/([0-9]+))?/?$";s:46:"index.php?streams=$matches[1]&page=$matches[2]";s:44:"folk_correspondent/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:54:"folk_correspondent/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:74:"folk_correspondent/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:69:"folk_correspondent/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:69:"folk_correspondent/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:50:"folk_correspondent/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:33:"folk_correspondent/(.+?)/embed/?$";s:51:"index.php?folk_correspondent=$matches[1]&embed=true";s:37:"folk_correspondent/(.+?)/trackback/?$";s:45:"index.php?folk_correspondent=$matches[1]&tb=1";s:57:"folk_correspondent/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:57:"index.php?folk_correspondent=$matches[1]&feed=$matches[2]";s:52:"folk_correspondent/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:57:"index.php?folk_correspondent=$matches[1]&feed=$matches[2]";s:45:"folk_correspondent/(.+?)/page/?([0-9]{1,})/?$";s:58:"index.php?folk_correspondent=$matches[1]&paged=$matches[2]";s:52:"folk_correspondent/(.+?)/comment-page-([0-9]{1,})/?$";s:58:"index.php?folk_correspondent=$matches[1]&cpage=$matches[2]";s:41:"folk_correspondent/(.+?)(?:/([0-9]+))?/?$";s:57:"index.php?folk_correspondent=$matches[1]&page=$matches[2]";s:41:"cultural_events/.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:51:"cultural_events/.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:71:"cultural_events/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:66:"cultural_events/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:66:"cultural_events/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:47:"cultural_events/.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:30:"cultural_events/(.+?)/embed/?$";s:48:"index.php?cultural_events=$matches[1]&embed=true";s:34:"cultural_events/(.+?)/trackback/?$";s:42:"index.php?cultural_events=$matches[1]&tb=1";s:42:"cultural_events/(.+?)/page/?([0-9]{1,})/?$";s:55:"index.php?cultural_events=$matches[1]&paged=$matches[2]";s:49:"cultural_events/(.+?)/comment-page-([0-9]{1,})/?$";s:55:"index.php?cultural_events=$matches[1]&cpage=$matches[2]";s:38:"cultural_events/(.+?)(?:/([0-9]+))?/?$";s:54:"index.php?cultural_events=$matches[1]&page=$matches[2]";s:12:"robots\\.txt$";s:18:"index.php?robots=1";s:48:".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\\.php$";s:18:"index.php?feed=old";s:20:".*wp-app\\.php(/.*)?$";s:19:"index.php?error=403";s:18:".*wp-register.php$";s:23:"index.php?register=true";s:32:"feed/(feed|rdf|rss|rss2|atom)/?$";s:27:"index.php?&feed=$matches[1]";s:27:"(feed|rdf|rss|rss2|atom)/?$";s:27:"index.php?&feed=$matches[1]";s:8:"embed/?$";s:21:"index.php?&embed=true";s:20:"page/?([0-9]{1,})/?$";s:28:"index.php?&paged=$matches[1]";s:41:"comments/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?&feed=$matches[1]&withcomments=1";s:36:"comments/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?&feed=$matches[1]&withcomments=1";s:17:"comments/embed/?$";s:21:"index.php?&embed=true";s:44:"search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:40:"index.php?s=$matches[1]&feed=$matches[2]";s:39:"search/(.+)/(feed|rdf|rss|rss2|atom)/?$";s:40:"index.php?s=$matches[1]&feed=$matches[2]";s:20:"search/(.+)/embed/?$";s:34:"index.php?s=$matches[1]&embed=true";s:32:"search/(.+)/page/?([0-9]{1,})/?$";s:41:"index.php?s=$matches[1]&paged=$matches[2]";s:14:"search/(.+)/?$";s:23:"index.php?s=$matches[1]";s:47:"author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?author_name=$matches[1]&feed=$matches[2]";s:42:"author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?author_name=$matches[1]&feed=$matches[2]";s:23:"author/([^/]+)/embed/?$";s:44:"index.php?author_name=$matches[1]&embed=true";s:35:"author/([^/]+)/page/?([0-9]{1,})/?$";s:51:"index.php?author_name=$matches[1]&paged=$matches[2]";s:17:"author/([^/]+)/?$";s:33:"index.php?author_name=$matches[1]";s:69:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$";s:80:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]";s:64:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$";s:80:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]";s:45:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/embed/?$";s:74:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&embed=true";s:57:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$";s:81:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]";s:39:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$";s:63:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]";s:56:"([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$";s:64:"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]";s:51:"([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$";s:64:"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]";s:32:"([0-9]{4})/([0-9]{1,2})/embed/?$";s:58:"index.php?year=$matches[1]&monthnum=$matches[2]&embed=true";s:44:"([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$";s:65:"index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]";s:26:"([0-9]{4})/([0-9]{1,2})/?$";s:47:"index.php?year=$matches[1]&monthnum=$matches[2]";s:43:"([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?year=$matches[1]&feed=$matches[2]";s:38:"([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?year=$matches[1]&feed=$matches[2]";s:19:"([0-9]{4})/embed/?$";s:37:"index.php?year=$matches[1]&embed=true";s:31:"([0-9]{4})/page/?([0-9]{1,})/?$";s:44:"index.php?year=$matches[1]&paged=$matches[2]";s:13:"([0-9]{4})/?$";s:26:"index.php?year=$matches[1]";s:27:".?.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:37:".?.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:57:".?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:".?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:".?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:33:".?.+?/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:16:"(.?.+?)/embed/?$";s:41:"index.php?pagename=$matches[1]&embed=true";s:20:"(.?.+?)/trackback/?$";s:35:"index.php?pagename=$matches[1]&tb=1";s:40:"(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?pagename=$matches[1]&feed=$matches[2]";s:35:"(.?.+?)/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?pagename=$matches[1]&feed=$matches[2]";s:28:"(.?.+?)/page/?([0-9]{1,})/?$";s:48:"index.php?pagename=$matches[1]&paged=$matches[2]";s:35:"(.?.+?)/comment-page-([0-9]{1,})/?$";s:48:"index.php?pagename=$matches[1]&cpage=$matches[2]";s:24:"(.?.+?)(?:/([0-9]+))?/?$";s:47:"index.php?pagename=$matches[1]&page=$matches[2]";s:27:"[^/]+/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:37:"[^/]+/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:57:"[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:"[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:"[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:33:"[^/]+/attachment/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";s:16:"([^/]+)/embed/?$";s:37:"index.php?name=$matches[1]&embed=true";s:20:"([^/]+)/trackback/?$";s:31:"index.php?name=$matches[1]&tb=1";s:40:"([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?name=$matches[1]&feed=$matches[2]";s:35:"([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?name=$matches[1]&feed=$matches[2]";s:28:"([^/]+)/page/?([0-9]{1,})/?$";s:44:"index.php?name=$matches[1]&paged=$matches[2]";s:35:"([^/]+)/comment-page-([0-9]{1,})/?$";s:44:"index.php?name=$matches[1]&cpage=$matches[2]";s:24:"([^/]+)(?:/([0-9]+))?/?$";s:43:"index.php?name=$matches[1]&page=$matches[2]";s:16:"[^/]+/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:26:"[^/]+/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:46:"[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:41:"[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:41:"[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:22:"[^/]+/([^/]+)/embed/?$";s:43:"index.php?attachment=$matches[1]&embed=true";}', 'yes'),
 (30, 'hack_file', '0', 'yes'),
 (31, 'blog_charset', 'UTF-8', 'yes'),
 (32, 'moderation_keys', 'гавно', 'no'),
@@ -230,7 +230,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:6:{i:1488276332;a:1:{s:10:"polls_cron";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1488280854;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1488285173;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1488285186;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1488287459;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:6:{i:1488456332;a:1:{s:10:"polls_cron";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1488457973;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1488457986;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1488460259;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1488496854;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}s:7:"version";i:2;}', 'yes'),
 (139, 'recently_activated', 'a:1:{s:37:"user-role-editor/user-role-editor.php";i:1487613093;}', 'yes'),
 (143, 'auto_core_update_notified', 'a:4:{s:4:"type";s:7:"success";s:5:"email";s:14:"awdfaf@mail.ua";s:7:"version";s:5:"4.7.2";s:9:"timestamp";i:1485520907;}', 'no'),
 (150, 'wpcf-version', '2.2.6', 'yes');
@@ -376,16 +376,18 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (6687, '_site_transient_timeout_available_translations', '1487958561', 'no');
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
 (6688, '_site_transient_available_translations', 'a:90:{s:2:"af";a:8:{s:8:"language";s:2:"af";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-09 16:12:38";s:12:"english_name";s:9:"Afrikaans";s:11:"native_name";s:9:"Afrikaans";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/af.zip";s:3:"iso";a:2:{i:1;s:2:"af";i:2;s:3:"afr";}s:7:"strings";a:1:{s:8:"continue";s:10:"Gaan voort";}}s:3:"ary";a:8:{s:8:"language";s:3:"ary";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 19:24:17";s:12:"english_name";s:15:"Moroccan Arabic";s:11:"native_name";s:31:"العربية المغربية";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.7.1/ary.zip";s:3:"iso";a:2:{i:1;s:2:"ar";i:3;s:3:"ary";}s:7:"strings";a:1:{s:8:"continue";s:16:"المتابعة";}}s:2:"ar";a:8:{s:8:"language";s:2:"ar";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 12:56:13";s:12:"english_name";s:6:"Arabic";s:11:"native_name";s:14:"العربية";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/ar.zip";s:3:"iso";a:2:{i:1;s:2:"ar";i:2;s:3:"ara";}s:7:"strings";a:1:{s:8:"continue";s:16:"المتابعة";}}s:2:"az";a:8:{s:8:"language";s:2:"az";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-09-29 08:38:56";s:12:"english_name";s:11:"Azerbaijani";s:11:"native_name";s:16:"Azərbaycan dili";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.6.3/az.zip";s:3:"iso";a:2:{i:1;s:2:"az";i:2;s:3:"aze";}s:7:"strings";a:1:{s:8:"continue";s:5:"Davam";}}s:3:"azb";a:8:{s:8:"language";s:3:"azb";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-12-11 22:42:10";s:12:"english_name";s:17:"South Azerbaijani";s:11:"native_name";s:29:"گؤنئی آذربایجان";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.4.2/azb.zip";s:3:"iso";a:2:{i:1;s:2:"az";i:3;s:3:"azb";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"bg_BG";a:8:{s:8:"language";s:5:"bg_BG";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-07 08:41:41";s:12:"english_name";s:9:"Bulgarian";s:11:"native_name";s:18:"Български";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/bg_BG.zip";s:3:"iso";a:2:{i:1;s:2:"bg";i:2;s:3:"bul";}s:7:"strings";a:1:{s:8:"continue";s:12:"Напред";}}s:5:"bn_BD";a:8:{s:8:"language";s:5:"bn_BD";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-10-20 16:53:20";s:12:"english_name";s:7:"Bengali";s:11:"native_name";s:15:"বাংলা";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.6.3/bn_BD.zip";s:3:"iso";a:1:{i:1;s:2:"bn";}s:7:"strings";a:1:{s:8:"continue";s:23:"এগিয়ে চল.";}}s:2:"bo";a:8:{s:8:"language";s:2:"bo";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-09-05 09:44:12";s:12:"english_name";s:7:"Tibetan";s:11:"native_name";s:21:"བོད་ཡིག";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.6.3/bo.zip";s:3:"iso";a:2:{i:1;s:2:"bo";i:2;s:3:"tib";}s:7:"strings";a:1:{s:8:"continue";s:24:"མུ་མཐུད།";}}s:5:"bs_BA";a:8:{s:8:"language";s:5:"bs_BA";s:7:"version";s:5:"4.5.6";s:7:"updated";s:19:"2016-04-19 23:16:37";s:12:"english_name";s:7:"Bosnian";s:11:"native_name";s:8:"Bosanski";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.6/bs_BA.zip";s:3:"iso";a:2:{i:1;s:2:"bs";i:2;s:3:"bos";}s:7:"strings";a:1:{s:8:"continue";s:7:"Nastavi";}}s:2:"ca";a:8:{s:8:"language";s:2:"ca";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-05 11:04:39";s:12:"english_name";s:7:"Catalan";s:11:"native_name";s:7:"Català";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/ca.zip";s:3:"iso";a:2:{i:1;s:2:"ca";i:2;s:3:"cat";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continua";}}s:3:"ceb";a:8:{s:8:"language";s:3:"ceb";s:7:"version";s:5:"4.4.7";s:7:"updated";s:19:"2016-02-16 15:34:57";s:12:"english_name";s:7:"Cebuano";s:11:"native_name";s:7:"Cebuano";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.4.7/ceb.zip";s:3:"iso";a:2:{i:2;s:3:"ceb";i:3;s:3:"ceb";}s:7:"strings";a:1:{s:8:"continue";s:7:"Padayun";}}s:5:"cs_CZ";a:8:{s:8:"language";s:5:"cs_CZ";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2016-02-11 18:32:36";s:12:"english_name";s:5:"Czech";s:11:"native_name";s:12:"Čeština‎";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.4.2/cs_CZ.zip";s:3:"iso";a:2:{i:1;s:2:"cs";i:2;s:3:"ces";}s:7:"strings";a:1:{s:8:"continue";s:11:"Pokračovat";}}s:2:"cy";a:8:{s:8:"language";s:2:"cy";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-05 11:08:55";s:12:"english_name";s:5:"Welsh";s:11:"native_name";s:7:"Cymraeg";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/cy.zip";s:3:"iso";a:2:{i:1;s:2:"cy";i:2;s:3:"cym";}s:7:"strings";a:1:{s:8:"continue";s:6:"Parhau";}}s:5:"da_DK";a:8:{s:8:"language";s:5:"da_DK";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-25 23:09:09";s:12:"english_name";s:6:"Danish";s:11:"native_name";s:5:"Dansk";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/da_DK.zip";s:3:"iso";a:2:{i:1;s:2:"da";i:2;s:3:"dan";}s:7:"strings";a:1:{s:8:"continue";s:12:"Forts&#230;t";}}s:14:"de_CH_informal";a:8:{s:8:"language";s:14:"de_CH_informal";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 15:44:48";s:12:"english_name";s:30:"German (Switzerland, Informal)";s:11:"native_name";s:21:"Deutsch (Schweiz, Du)";s:7:"package";s:73:"https://downloads.wordpress.org/translation/core/4.7.1/de_CH_informal.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:6:"Weiter";}}s:12:"de_DE_formal";a:8:{s:8:"language";s:12:"de_DE_formal";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-13 16:06:01";s:12:"english_name";s:15:"German (Formal)";s:11:"native_name";s:13:"Deutsch (Sie)";s:7:"package";s:71:"https://downloads.wordpress.org/translation/core/4.7.1/de_DE_formal.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:6:"Weiter";}}s:5:"de_DE";a:8:{s:8:"language";s:5:"de_DE";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-13 16:05:23";s:12:"english_name";s:6:"German";s:11:"native_name";s:7:"Deutsch";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/de_DE.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:6:"Weiter";}}s:5:"de_CH";a:8:{s:8:"language";s:5:"de_CH";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 15:48:14";s:12:"english_name";s:20:"German (Switzerland)";s:11:"native_name";s:17:"Deutsch (Schweiz)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/de_CH.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:6:"Weiter";}}s:2:"el";a:8:{s:8:"language";s:2:"el";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-25 11:34:18";s:12:"english_name";s:5:"Greek";s:11:"native_name";s:16:"Ελληνικά";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/el.zip";s:3:"iso";a:2:{i:1;s:2:"el";i:2;s:3:"ell";}s:7:"strings";a:1:{s:8:"continue";s:16:"Συνέχεια";}}s:5:"en_CA";a:8:{s:8:"language";s:5:"en_CA";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 00:34:14";s:12:"english_name";s:16:"English (Canada)";s:11:"native_name";s:16:"English (Canada)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/en_CA.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_NZ";a:8:{s:8:"language";s:5:"en_NZ";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-15 04:56:31";s:12:"english_name";s:21:"English (New Zealand)";s:11:"native_name";s:21:"English (New Zealand)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/en_NZ.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_ZA";a:8:{s:8:"language";s:5:"en_ZA";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-05 08:11:17";s:12:"english_name";s:22:"English (South Africa)";s:11:"native_name";s:22:"English (South Africa)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/en_ZA.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_AU";a:8:{s:8:"language";s:5:"en_AU";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-03 23:03:48";s:12:"english_name";s:19:"English (Australia)";s:11:"native_name";s:19:"English (Australia)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/en_AU.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_GB";a:8:{s:8:"language";s:5:"en_GB";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-11 18:03:11";s:12:"english_name";s:12:"English (UK)";s:11:"native_name";s:12:"English (UK)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/en_GB.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:2:"eo";a:8:{s:8:"language";s:2:"eo";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-04 17:16:39";s:12:"english_name";s:9:"Esperanto";s:11:"native_name";s:9:"Esperanto";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/eo.zip";s:3:"iso";a:2:{i:1;s:2:"eo";i:2;s:3:"epo";}s:7:"strings";a:1:{s:8:"continue";s:8:"Daŭrigi";}}s:5:"es_GT";a:8:{s:8:"language";s:5:"es_GT";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-07 12:13:31";s:12:"english_name";s:19:"Spanish (Guatemala)";s:11:"native_name";s:21:"Español de Guatemala";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/es_GT.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_CO";a:8:{s:8:"language";s:5:"es_CO";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-25 22:19:36";s:12:"english_name";s:18:"Spanish (Colombia)";s:11:"native_name";s:20:"Español de Colombia";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/es_CO.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_MX";a:8:{s:8:"language";s:5:"es_MX";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-05 22:19:40";s:12:"english_name";s:16:"Spanish (Mexico)";s:11:"native_name";s:19:"Español de México";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/es_MX.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_ES";a:8:{s:8:"language";s:5:"es_ES";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-21 13:51:07";s:12:"english_name";s:15:"Spanish (Spain)";s:11:"native_name";s:8:"Español";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/es_ES.zip";s:3:"iso";a:1:{i:1;s:2:"es";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_AR";a:8:{s:8:"language";s:5:"es_AR";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-24 20:30:13";s:12:"english_name";s:19:"Spanish (Argentina)";s:11:"native_name";s:21:"Español de Argentina";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/es_AR.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_PE";a:8:{s:8:"language";s:5:"es_PE";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-09-09 09:36:22";s:12:"english_name";s:14:"Spanish (Peru)";s:11:"native_name";s:17:"Español de Perú";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.6.3/es_PE.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_CL";a:8:{s:8:"language";s:5:"es_CL";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-08-17 22:11:44";s:12:"english_name";s:15:"Spanish (Chile)";s:11:"native_name";s:17:"Español de Chile";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.6.3/es_CL.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_VE";a:8:{s:8:"language";s:5:"es_VE";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-03 12:46:56";s:12:"english_name";s:19:"Spanish (Venezuela)";s:11:"native_name";s:21:"Español de Venezuela";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/es_VE.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:2:"et";a:8:{s:8:"language";s:2:"et";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2017-01-29 17:21:14";s:12:"english_name";s:8:"Estonian";s:11:"native_name";s:5:"Eesti";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.6.3/et.zip";s:3:"iso";a:2:{i:1;s:2:"et";i:2;s:3:"est";}s:7:"strings";a:1:{s:8:"continue";s:6:"Jätka";}}s:2:"eu";a:8:{s:8:"language";s:2:"eu";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-07 18:34:12";s:12:"english_name";s:6:"Basque";s:11:"native_name";s:7:"Euskara";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/eu.zip";s:3:"iso";a:2:{i:1;s:2:"eu";i:2;s:3:"eus";}s:7:"strings";a:1:{s:8:"continue";s:8:"Jarraitu";}}s:5:"fa_IR";a:8:{s:8:"language";s:5:"fa_IR";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-06 14:20:49";s:12:"english_name";s:7:"Persian";s:11:"native_name";s:10:"فارسی";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/fa_IR.zip";s:3:"iso";a:2:{i:1;s:2:"fa";i:2;s:3:"fas";}s:7:"strings";a:1:{s:8:"continue";s:10:"ادامه";}}s:2:"fi";a:8:{s:8:"language";s:2:"fi";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 18:04:09";s:12:"english_name";s:7:"Finnish";s:11:"native_name";s:5:"Suomi";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/fi.zip";s:3:"iso";a:2:{i:1;s:2:"fi";i:2;s:3:"fin";}s:7:"strings";a:1:{s:8:"continue";s:5:"Jatka";}}s:5:"fr_CA";a:8:{s:8:"language";s:5:"fr_CA";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-10 17:48:28";s:12:"english_name";s:15:"French (Canada)";s:11:"native_name";s:19:"Français du Canada";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/fr_CA.zip";s:3:"iso";a:2:{i:1;s:2:"fr";i:2;s:3:"fra";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuer";}}s:5:"fr_FR";a:8:{s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-13 09:56:25";s:12:"english_name";s:15:"French (France)";s:11:"native_name";s:9:"Français";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/fr_FR.zip";s:3:"iso";a:1:{i:1;s:2:"fr";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuer";}}s:5:"fr_BE";a:8:{s:8:"language";s:5:"fr_BE";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-09 16:11:01";s:12:"english_name";s:16:"French (Belgium)";s:11:"native_name";s:21:"Français de Belgique";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/fr_BE.zip";s:3:"iso";a:2:{i:1;s:2:"fr";i:2;s:3:"fra";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuer";}}s:2:"gd";a:8:{s:8:"language";s:2:"gd";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-08-23 17:41:37";s:12:"english_name";s:15:"Scottish Gaelic";s:11:"native_name";s:9:"Gàidhlig";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.6.3/gd.zip";s:3:"iso";a:3:{i:1;s:2:"gd";i:2;s:3:"gla";i:3;s:3:"gla";}s:7:"strings";a:1:{s:8:"continue";s:15:"Lean air adhart";}}s:5:"gl_ES";a:8:{s:8:"language";s:5:"gl_ES";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-04 01:43:25";s:12:"english_name";s:8:"Galician";s:11:"native_name";s:6:"Galego";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/gl_ES.zip";s:3:"iso";a:2:{i:1;s:2:"gl";i:2;s:3:"glg";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:2:"gu";a:8:{s:8:"language";s:2:"gu";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-12 16:49:54";s:12:"english_name";s:8:"Gujarati";s:11:"native_name";s:21:"ગુજરાતી";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/gu.zip";s:3:"iso";a:2:{i:1;s:2:"gu";i:2;s:3:"guj";}s:7:"strings";a:1:{s:8:"continue";s:31:"ચાલુ રાખવું";}}s:3:"haz";a:8:{s:8:"language";s:3:"haz";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-12-05 00:59:09";s:12:"english_name";s:8:"Hazaragi";s:11:"native_name";s:15:"هزاره گی";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.4.2/haz.zip";s:3:"iso";a:1:{i:3;s:3:"haz";}s:7:"strings";a:1:{s:8:"continue";s:10:"ادامه";}}s:5:"he_IL";a:8:{s:8:"language";s:5:"he_IL";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-18 06:46:00";s:12:"english_name";s:6:"Hebrew";s:11:"native_name";s:16:"עִבְרִית";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/he_IL.zip";s:3:"iso";a:1:{i:1;s:2:"he";}s:7:"strings";a:1:{s:8:"continue";s:8:"המשך";}}s:5:"hi_IN";a:8:{s:8:"language";s:5:"hi_IN";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-17 12:35:49";s:12:"english_name";s:5:"Hindi";s:11:"native_name";s:18:"हिन्दी";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/hi_IN.zip";s:3:"iso";a:2:{i:1;s:2:"hi";i:2;s:3:"hin";}s:7:"strings";a:1:{s:8:"continue";s:12:"जारी";}}s:2:"hr";a:8:{s:8:"language";s:2:"hr";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-25 23:06:52";s:12:"english_name";s:8:"Croatian";s:11:"native_name";s:8:"Hrvatski";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/hr.zip";s:3:"iso";a:2:{i:1;s:2:"hr";i:2;s:3:"hrv";}s:7:"strings";a:1:{s:8:"continue";s:7:"Nastavi";}}s:5:"hu_HU";a:8:{s:8:"language";s:5:"hu_HU";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2017-01-30 13:25:31";s:12:"english_name";s:9:"Hungarian";s:11:"native_name";s:6:"Magyar";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.6.3/hu_HU.zip";s:3:"iso";a:2:{i:1;s:2:"hu";i:2;s:3:"hun";}s:7:"strings";a:1:{s:8:"continue";s:10:"Folytatás";}}s:2:"hy";a:8:{s:8:"language";s:2:"hy";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2016-02-04 07:13:54";s:12:"english_name";s:8:"Armenian";s:11:"native_name";s:14:"Հայերեն";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.4.2/hy.zip";s:3:"iso";a:2:{i:1;s:2:"hy";i:2;s:3:"hye";}s:7:"strings";a:1:{s:8:"continue";s:20:"Շարունակել";}}s:5:"id_ID";a:8:{s:8:"language";s:5:"id_ID";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-16 23:07:34";s:12:"english_name";s:10:"Indonesian";s:11:"native_name";s:16:"Bahasa Indonesia";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/id_ID.zip";s:3:"iso";a:2:{i:1;s:2:"id";i:2;s:3:"ind";}s:7:"strings";a:1:{s:8:"continue";s:9:"Lanjutkan";}}s:5:"is_IS";a:8:{s:8:"language";s:5:"is_IS";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-31 11:00:19";s:12:"english_name";s:9:"Icelandic";s:11:"native_name";s:9:"Íslenska";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/is_IS.zip";s:3:"iso";a:2:{i:1;s:2:"is";i:2;s:3:"isl";}s:7:"strings";a:1:{s:8:"continue";s:6:"Áfram";}}s:5:"it_IT";a:8:{s:8:"language";s:5:"it_IT";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-05 15:13:56";s:12:"english_name";s:7:"Italian";s:11:"native_name";s:8:"Italiano";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/it_IT.zip";s:3:"iso";a:2:{i:1;s:2:"it";i:2;s:3:"ita";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continua";}}s:2:"ja";a:8:{s:8:"language";s:2:"ja";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-05 13:03:24";s:12:"english_name";s:8:"Japanese";s:11:"native_name";s:9:"日本語";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/ja.zip";s:3:"iso";a:1:{i:1;s:2:"ja";}s:7:"strings";a:1:{s:8:"continue";s:9:"続ける";}}s:5:"ka_GE";a:8:{s:8:"language";s:5:"ka_GE";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-03 10:10:56";s:12:"english_name";s:8:"Georgian";s:11:"native_name";s:21:"ქართული";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/ka_GE.zip";s:3:"iso";a:2:{i:1;s:2:"ka";i:2;s:3:"kat";}s:7:"strings";a:1:{s:8:"continue";s:30:"გაგრძელება";}}s:5:"ko_KR";a:8:{s:8:"language";s:5:"ko_KR";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-11 11:21:27";s:12:"english_name";s:6:"Korean";s:11:"native_name";s:9:"한국어";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/ko_KR.zip";s:3:"iso";a:2:{i:1;s:2:"ko";i:2;s:3:"kor";}s:7:"strings";a:1:{s:8:"continue";s:6:"계속";}}s:5:"lt_LT";a:8:{s:8:"language";s:5:"lt_LT";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-20 09:03:56";s:12:"english_name";s:10:"Lithuanian";s:11:"native_name";s:15:"Lietuvių kalba";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/lt_LT.zip";s:3:"iso";a:2:{i:1;s:2:"lt";i:2;s:3:"lit";}s:7:"strings";a:1:{s:8:"continue";s:6:"Tęsti";}}s:2:"lv";a:8:{s:8:"language";s:2:"lv";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 06:17:03";s:12:"english_name";s:7:"Latvian";s:11:"native_name";s:16:"Latviešu valoda";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/lv.zip";s:3:"iso";a:2:{i:1;s:2:"lv";i:2;s:3:"lav";}s:7:"strings";a:1:{s:8:"continue";s:9:"Turpināt";}}s:5:"mk_MK";a:8:{s:8:"language";s:5:"mk_MK";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-23 09:02:10";s:12:"english_name";s:10:"Macedonian";s:11:"native_name";s:31:"Македонски јазик";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/mk_MK.zip";s:3:"iso";a:2:{i:1;s:2:"mk";i:2;s:3:"mkd";}s:7:"strings";a:1:{s:8:"continue";s:16:"Продолжи";}}s:2:"mr";a:8:{s:8:"language";s:2:"mr";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-11 08:51:51";s:12:"english_name";s:7:"Marathi";s:11:"native_name";s:15:"मराठी";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/mr.zip";s:3:"iso";a:2:{i:1;s:2:"mr";i:2;s:3:"mar";}s:7:"strings";a:1:{s:8:"continue";s:25:"सुरु ठेवा";}}s:5:"ms_MY";a:8:{s:8:"language";s:5:"ms_MY";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-09 14:23:37";s:12:"english_name";s:5:"Malay";s:11:"native_name";s:13:"Bahasa Melayu";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/ms_MY.zip";s:3:"iso";a:2:{i:1;s:2:"ms";i:2;s:3:"msa";}s:7:"strings";a:1:{s:8:"continue";s:8:"Teruskan";}}s:5:"my_MM";a:8:{s:8:"language";s:5:"my_MM";s:7:"version";s:6:"4.1.15";s:7:"updated";s:19:"2015-03-26 15:57:42";s:12:"english_name";s:17:"Myanmar (Burmese)";s:11:"native_name";s:15:"ဗမာစာ";s:7:"package";s:65:"https://downloads.wordpress.org/translation/core/4.1.15/my_MM.zip";s:3:"iso";a:2:{i:1;s:2:"my";i:2;s:3:"mya";}s:7:"strings";a:1:{s:8:"continue";s:54:"ဆက်လက်လုပ်ဆောင်ပါ။";}}s:5:"nb_NO";a:8:{s:8:"language";s:5:"nb_NO";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-20 09:00:07";s:12:"english_name";s:19:"Norwegian (Bokmål)";s:11:"native_name";s:13:"Norsk bokmål";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/nb_NO.zip";s:3:"iso";a:2:{i:1;s:2:"nb";i:2;s:3:"nob";}s:7:"strings";a:1:{s:8:"continue";s:8:"Fortsett";}}s:5:"nl_BE";a:8:{s:8:"language";s:5:"nl_BE";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-10 10:11:22";s:12:"english_name";s:15:"Dutch (Belgium)";s:11:"native_name";s:20:"Nederlands (België)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/nl_BE.zip";s:3:"iso";a:2:{i:1;s:2:"nl";i:2;s:3:"nld";}s:7:"strings";a:1:{s:8:"continue";s:8:"Doorgaan";}}s:5:"nl_NL";a:8:{s:8:"language";s:5:"nl_NL";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-18 11:35:18";s:12:"english_name";s:5:"Dutch";s:11:"native_name";s:10:"Nederlands";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/nl_NL.zip";s:3:"iso";a:2:{i:1;s:2:"nl";i:2;s:3:"nld";}s:7:"strings";a:1:{s:8:"continue";s:8:"Doorgaan";}}s:12:"nl_NL_formal";a:8:{s:8:"language";s:12:"nl_NL_formal";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-10-14 13:24:10";s:12:"english_name";s:14:"Dutch (Formal)";s:11:"native_name";s:20:"Nederlands (Formeel)";s:7:"package";s:71:"https://downloads.wordpress.org/translation/core/4.6.3/nl_NL_formal.zip";s:3:"iso";a:2:{i:1;s:2:"nl";i:2;s:3:"nld";}s:7:"strings";a:1:{s:8:"continue";s:8:"Doorgaan";}}s:5:"nn_NO";a:8:{s:8:"language";s:5:"nn_NO";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-21 12:56:58";s:12:"english_name";s:19:"Norwegian (Nynorsk)";s:11:"native_name";s:13:"Norsk nynorsk";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/nn_NO.zip";s:3:"iso";a:2:{i:1;s:2:"nn";i:2;s:3:"nno";}s:7:"strings";a:1:{s:8:"continue";s:9:"Hald fram";}}s:3:"oci";a:8:{s:8:"language";s:3:"oci";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-09-23 13:45:11";s:12:"english_name";s:7:"Occitan";s:11:"native_name";s:7:"Occitan";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.6.3/oci.zip";s:3:"iso";a:2:{i:1;s:2:"oc";i:2;s:3:"oci";}s:7:"strings";a:1:{s:8:"continue";s:9:"Contunhar";}}s:5:"pl_PL";a:8:{s:8:"language";s:5:"pl_PL";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-06 20:27:29";s:12:"english_name";s:6:"Polish";s:11:"native_name";s:6:"Polski";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/pl_PL.zip";s:3:"iso";a:2:{i:1;s:2:"pl";i:2;s:3:"pol";}s:7:"strings";a:1:{s:8:"continue";s:9:"Kontynuuj";}}s:2:"ps";a:8:{s:8:"language";s:2:"ps";s:7:"version";s:6:"4.1.15";s:7:"updated";s:19:"2015-03-29 22:19:48";s:12:"english_name";s:6:"Pashto";s:11:"native_name";s:8:"پښتو";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.1.15/ps.zip";s:3:"iso";a:2:{i:1;s:2:"ps";i:2;s:3:"pus";}s:7:"strings";a:1:{s:8:"continue";s:19:"دوام ورکړه";}}s:5:"pt_BR";a:8:{s:8:"language";s:5:"pt_BR";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-26 14:54:05";s:12:"english_name";s:19:"Portuguese (Brazil)";s:11:"native_name";s:20:"Português do Brasil";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/pt_BR.zip";s:3:"iso";a:2:{i:1;s:2:"pt";i:2;s:3:"por";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"pt_PT";a:8:{s:8:"language";s:5:"pt_PT";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-19 21:45:13";s:12:"english_name";s:21:"Portuguese (Portugal)";s:11:"native_name";s:10:"Português";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/pt_PT.zip";s:3:"iso";a:1:{i:1;s:2:"pt";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"ro_RO";a:8:{s:8:"language";s:5:"ro_RO";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-04 12:04:46";s:12:"english_name";s:8:"Romanian";s:11:"native_name";s:8:"Română";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/ro_RO.zip";s:3:"iso";a:2:{i:1;s:2:"ro";i:2;s:3:"ron";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuă";}}s:5:"ru_RU";a:8:{s:8:"language";s:5:"ru_RU";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-04 13:58:23";s:12:"english_name";s:7:"Russian";s:11:"native_name";s:14:"Русский";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/ru_RU.zip";s:3:"iso";a:2:{i:1;s:2:"ru";i:2;s:3:"rus";}s:7:"strings";a:1:{s:8:"continue";s:20:"Продолжить";}}s:5:"sk_SK";a:8:{s:8:"language";s:5:"sk_SK";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-09 11:05:20";s:12:"english_name";s:6:"Slovak";s:11:"native_name";s:11:"Slovenčina";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/sk_SK.zip";s:3:"iso";a:2:{i:1;s:2:"sk";i:2;s:3:"slk";}s:7:"strings";a:1:{s:8:"continue";s:12:"Pokračovať";}}s:5:"sl_SI";a:8:{s:8:"language";s:5:"sl_SI";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-22 17:51:05";s:12:"english_name";s:9:"Slovenian";s:11:"native_name";s:13:"Slovenščina";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/sl_SI.zip";s:3:"iso";a:2:{i:1;s:2:"sl";i:2;s:3:"slv";}s:7:"strings";a:1:{s:8:"continue";s:8:"Nadaljuj";}}s:2:"sq";a:8:{s:8:"language";s:2:"sq";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-25 14:04:40";s:12:"english_name";s:8:"Albanian";s:11:"native_name";s:5:"Shqip";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/sq.zip";s:3:"iso";a:2:{i:1;s:2:"sq";i:2;s:3:"sqi";}s:7:"strings";a:1:{s:8:"continue";s:6:"Vazhdo";}}s:5:"sr_RS";a:8:{s:8:"language";s:5:"sr_RS";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-04 20:17:20";s:12:"english_name";s:7:"Serbian";s:11:"native_name";s:23:"Српски језик";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/sr_RS.zip";s:3:"iso";a:2:{i:1;s:2:"sr";i:2;s:3:"srp";}s:7:"strings";a:1:{s:8:"continue";s:14:"Настави";}}s:5:"sv_SE";a:8:{s:8:"language";s:5:"sv_SE";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-03 07:14:30";s:12:"english_name";s:7:"Swedish";s:11:"native_name";s:7:"Svenska";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/sv_SE.zip";s:3:"iso";a:2:{i:1;s:2:"sv";i:2;s:3:"swe";}s:7:"strings";a:1:{s:8:"continue";s:9:"Fortsätt";}}s:3:"szl";a:8:{s:8:"language";s:3:"szl";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-09-24 19:58:14";s:12:"english_name";s:8:"Silesian";s:11:"native_name";s:17:"Ślōnskŏ gŏdka";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.6.3/szl.zip";s:3:"iso";a:1:{i:3;s:3:"szl";}s:7:"strings";a:1:{s:8:"continue";s:13:"Kōntynuować";}}s:2:"th";a:8:{s:8:"language";s:2:"th";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2016-10-12 07:04:13";s:12:"english_name";s:4:"Thai";s:11:"native_name";s:9:"ไทย";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.6.3/th.zip";s:3:"iso";a:2:{i:1;s:2:"th";i:2;s:3:"tha";}s:7:"strings";a:1:{s:8:"continue";s:15:"ต่อไป";}}s:2:"tl";a:8:{s:8:"language";s:2:"tl";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-11-27 15:51:36";s:12:"english_name";s:7:"Tagalog";s:11:"native_name";s:7:"Tagalog";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.4.2/tl.zip";s:3:"iso";a:2:{i:1;s:2:"tl";i:2;s:3:"tgl";}s:7:"strings";a:1:{s:8:"continue";s:10:"Magpatuloy";}}s:5:"tr_TR";a:8:{s:8:"language";s:5:"tr_TR";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-18 02:44:10";s:12:"english_name";s:7:"Turkish";s:11:"native_name";s:8:"Türkçe";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/tr_TR.zip";s:3:"iso";a:2:{i:1;s:2:"tr";i:2;s:3:"tur";}s:7:"strings";a:1:{s:8:"continue";s:5:"Devam";}}s:5:"ug_CN";a:8:{s:8:"language";s:5:"ug_CN";s:7:"version";s:5:"4.6.3";s:7:"updated";s:19:"2017-02-10 18:03:30";s:12:"english_name";s:6:"Uighur";s:11:"native_name";s:9:"Uyƣurqə";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.6.3/ug_CN.zip";s:3:"iso";a:2:{i:1;s:2:"ug";i:2;s:3:"uig";}s:7:"strings";a:1:{s:8:"continue";s:26:"داۋاملاشتۇرۇش";}}s:2:"uk";a:8:{s:8:"language";s:2:"uk";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-04 23:10:17";s:12:"english_name";s:9:"Ukrainian";s:11:"native_name";s:20:"Українська";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/uk.zip";s:3:"iso";a:2:{i:1;s:2:"uk";i:2;s:3:"ukr";}s:7:"strings";a:1:{s:8:"continue";s:20:"Продовжити";}}s:2:"ur";a:8:{s:8:"language";s:2:"ur";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-14 10:32:06";s:12:"english_name";s:4:"Urdu";s:11:"native_name";s:8:"اردو";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.7.1/ur.zip";s:3:"iso";a:2:{i:1;s:2:"ur";i:2;s:3:"urd";}s:7:"strings";a:1:{s:8:"continue";s:19:"جاری رکھیں";}}s:5:"uz_UZ";a:8:{s:8:"language";s:5:"uz_UZ";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-20 04:53:31";s:12:"english_name";s:5:"Uzbek";s:11:"native_name";s:11:"O‘zbekcha";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/uz_UZ.zip";s:3:"iso";a:2:{i:1;s:2:"uz";i:2;s:3:"uzb";}s:7:"strings";a:1:{s:8:"continue";s:11:"Davom etish";}}s:2:"vi";a:8:{s:8:"language";s:2:"vi";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-12-09 01:01:25";s:12:"english_name";s:10:"Vietnamese";s:11:"native_name";s:14:"Tiếng Việt";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.4.2/vi.zip";s:3:"iso";a:2:{i:1;s:2:"vi";i:2;s:3:"vie";}s:7:"strings";a:1:{s:8:"continue";s:12:"Tiếp tục";}}s:5:"zh_TW";a:8:{s:8:"language";s:5:"zh_TW";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-10 02:29:10";s:12:"english_name";s:16:"Chinese (Taiwan)";s:11:"native_name";s:12:"繁體中文";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/zh_TW.zip";s:3:"iso";a:2:{i:1;s:2:"zh";i:2;s:3:"zho";}s:7:"strings";a:1:{s:8:"continue";s:6:"繼續";}}s:5:"zh_HK";a:8:{s:8:"language";s:5:"zh_HK";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2017-01-15 03:52:36";s:12:"english_name";s:19:"Chinese (Hong Kong)";s:11:"native_name";s:16:"香港中文版  ";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/zh_HK.zip";s:3:"iso";a:2:{i:1;s:2:"zh";i:2;s:3:"zho";}s:7:"strings";a:1:{s:8:"continue";s:6:"繼續";}}s:5:"zh_CN";a:8:{s:8:"language";s:5:"zh_CN";s:7:"version";s:5:"4.7.1";s:7:"updated";s:19:"2016-12-08 04:30:37";s:12:"english_name";s:15:"Chinese (China)";s:11:"native_name";s:12:"简体中文";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.7.1/zh_CN.zip";s:3:"iso";a:2:{i:1;s:2:"zh";i:2;s:3:"zho";}s:7:"strings";a:1:{s:8:"continue";s:6:"继续";}}}', 'no'),
-(6693, '_site_transient_timeout_theme_roots', '1488272710', 'no'),
-(6694, '_site_transient_theme_roots', 'a:5:{s:16:"centralmedia_new";s:7:"/themes";s:16:"centralmedia_old";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
-(6696, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:3:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:6:"locale";s:2:"uk";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.2";s:7:"version";s:5:"4.7.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.7.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.7.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.7.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.7.2-new-bundled.zip";s:7:"partial";s:69:"https://downloads.wordpress.org/release/wordpress-4.7.2-partial-1.zip";s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.2";s:7:"version";s:5:"4.7.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:5:"4.7.1";}i:2;O:8:"stdClass":11:{s:8:"response";s:10:"autoupdate";s:8:"download";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:6:"locale";s:2:"uk";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.2";s:7:"version";s:5:"4.7.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";s:9:"new_files";s:1:"1";}}s:12:"last_checked";i:1488270919;s:15:"version_checked";s:5:"4.7.1";s:12:"translations";a:0:{}}', 'no'),
-(6697, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1488270925;s:7:"checked";a:5:{s:16:"centralmedia_new";s:3:"0.4";s:16:"centralmedia_old";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.7";s:14:"twentyfourteen";s:3:"1.9";s:13:"twentysixteen";s:3:"1.3";}s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:5:"theme";s:4:"slug";s:13:"twentysixteen";s:8:"language";s:2:"uk";s:7:"version";s:3:"1.3";s:7:"updated";s:19:"2017-01-29 00:58:00";s:7:"package";s:74:"https://downloads.wordpress.org/translation/theme/twentysixteen/1.3/uk.zip";s:10:"autoupdate";b:1;}}}', 'no'),
-(6698, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1488270922;s:8:"response";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.3";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.3.zip";s:6:"tested";s:5:"4.7.2";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}s:80:"wp-share-buttons-analytics-by-getsocial/wp-share-buttons-analytics-getsocial.php";O:8:"stdClass":8:{s:2:"id";s:5:"55065";s:4:"slug";s:39:"wp-share-buttons-analytics-by-getsocial";s:6:"plugin";s:80:"wp-share-buttons-analytics-by-getsocial/wp-share-buttons-analytics-getsocial.php";s:11:"new_version";s:3:"4.0";s:3:"url";s:70:"https://wordpress.org/plugins/wp-share-buttons-analytics-by-getsocial/";s:7:"package";s:86:"https://downloads.wordpress.org/plugin/wp-share-buttons-analytics-by-getsocial.4.0.zip";s:6:"tested";s:5:"4.7.2";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}}s:12:"translations";a:0:{}s:9:"no_update";a:8:{s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:5:"4.6.1";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/contact-form-7.4.6.1.zip";}s:22:"cyr3lat/cyr-to-lat.php";O:8:"stdClass":6:{s:2:"id";s:5:"23472";s:4:"slug";s:7:"cyr3lat";s:6:"plugin";s:22:"cyr3lat/cyr-to-lat.php";s:11:"new_version";s:3:"3.5";s:3:"url";s:38:"https://wordpress.org/plugins/cyr3lat/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/cyr3lat.3.5.zip";}s:19:"members/members.php";O:8:"stdClass":6:{s:2:"id";s:5:"10325";s:4:"slug";s:7:"members";s:6:"plugin";s:19:"members/members.php";s:11:"new_version";s:5:"1.1.3";s:3:"url";s:38:"https://wordpress.org/plugins/members/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/members.1.1.3.zip";}s:31:"rating-system/rating-system.php";O:8:"stdClass":6:{s:2:"id";s:5:"64133";s:4:"slug";s:13:"rating-system";s:6:"plugin";s:31:"rating-system/rating-system.php";s:11:"new_version";s:7:"2.7.6.1";s:3:"url";s:44:"https://wordpress.org/plugins/rating-system/";s:7:"package";s:64:"https://downloads.wordpress.org/plugin/rating-system.2.7.6.1.zip";}s:37:"tinymce-advanced/tinymce-advanced.php";O:8:"stdClass":6:{s:2:"id";s:3:"731";s:4:"slug";s:16:"tinymce-advanced";s:6:"plugin";s:37:"tinymce-advanced/tinymce-advanced.php";s:11:"new_version";s:5:"4.4.3";s:3:"url";s:47:"https://wordpress.org/plugins/tinymce-advanced/";s:7:"package";s:65:"https://downloads.wordpress.org/plugin/tinymce-advanced.4.4.3.zip";}s:37:"video-thumbnails/video-thumbnails.php";O:8:"stdClass":6:{s:2:"id";s:5:"18872";s:4:"slug";s:16:"video-thumbnails";s:6:"plugin";s:37:"video-thumbnails/video-thumbnails.php";s:11:"new_version";s:6:"2.12.3";s:3:"url";s:47:"https://wordpress.org/plugins/video-thumbnails/";s:7:"package";s:66:"https://downloads.wordpress.org/plugin/video-thumbnails.2.12.3.zip";}s:21:"wp-polls/wp-polls.php";O:8:"stdClass":6:{s:2:"id";s:3:"368";s:4:"slug";s:8:"wp-polls";s:6:"plugin";s:21:"wp-polls/wp-polls.php";s:11:"new_version";s:6:"2.73.2";s:3:"url";s:39:"https://wordpress.org/plugins/wp-polls/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/wp-polls.2.73.2.zip";}s:33:"wp-user-avatar/wp-user-avatar.php";O:8:"stdClass":6:{s:2:"id";s:5:"37680";s:4:"slug";s:14:"wp-user-avatar";s:6:"plugin";s:33:"wp-user-avatar/wp-user-avatar.php";s:11:"new_version";s:5:"2.0.8";s:3:"url";s:45:"https://wordpress.org/plugins/wp-user-avatar/";s:7:"package";s:57:"https://downloads.wordpress.org/plugin/wp-user-avatar.zip";}}}', 'no');
+(6709, '_site_transient_timeout_browser_58769e6f77965f1b81999b5fbb0b69b5', '1489055061', 'no'),
+(6710, '_site_transient_browser_58769e6f77965f1b81999b5fbb0b69b5', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"56.0.2924.87";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'no'),
+(6716, '_site_transient_timeout_theme_roots', '1488455483', 'no'),
+(6717, '_site_transient_theme_roots', 'a:5:{s:16:"centralmedia_new";s:7:"/themes";s:16:"centralmedia_old";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
+(6719, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:3:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:6:"locale";s:2:"uk";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.2";s:7:"version";s:5:"4.7.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.7.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.7.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.7.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.7.2-new-bundled.zip";s:7:"partial";s:69:"https://downloads.wordpress.org/release/wordpress-4.7.2-partial-1.zip";s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.2";s:7:"version";s:5:"4.7.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:5:"4.7.1";}i:2;O:8:"stdClass":11:{s:8:"response";s:10:"autoupdate";s:8:"download";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:6:"locale";s:2:"uk";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.2";s:7:"version";s:5:"4.7.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";s:9:"new_files";s:1:"1";}}s:12:"last_checked";i:1488453688;s:15:"version_checked";s:5:"4.7.1";s:12:"translations";a:0:{}}', 'no'),
+(6720, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1488453690;s:7:"checked";a:5:{s:16:"centralmedia_new";s:3:"0.4";s:16:"centralmedia_old";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.7";s:14:"twentyfourteen";s:3:"1.9";s:13:"twentysixteen";s:3:"1.3";}s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:5:"theme";s:4:"slug";s:13:"twentysixteen";s:8:"language";s:2:"uk";s:7:"version";s:3:"1.3";s:7:"updated";s:19:"2017-01-29 00:58:00";s:7:"package";s:74:"https://downloads.wordpress.org/translation/theme/twentysixteen/1.3/uk.zip";s:10:"autoupdate";b:1;}}}', 'no'),
+(6721, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1488453690;s:8:"response";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.3";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.3.zip";s:6:"tested";s:5:"4.7.2";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}s:80:"wp-share-buttons-analytics-by-getsocial/wp-share-buttons-analytics-getsocial.php";O:8:"stdClass":8:{s:2:"id";s:5:"55065";s:4:"slug";s:39:"wp-share-buttons-analytics-by-getsocial";s:6:"plugin";s:80:"wp-share-buttons-analytics-by-getsocial/wp-share-buttons-analytics-getsocial.php";s:11:"new_version";s:3:"4.0";s:3:"url";s:70:"https://wordpress.org/plugins/wp-share-buttons-analytics-by-getsocial/";s:7:"package";s:86:"https://downloads.wordpress.org/plugin/wp-share-buttons-analytics-by-getsocial.4.0.zip";s:6:"tested";s:5:"4.7.2";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}}s:12:"translations";a:0:{}s:9:"no_update";a:8:{s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:5:"4.6.1";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/contact-form-7.4.6.1.zip";}s:22:"cyr3lat/cyr-to-lat.php";O:8:"stdClass":6:{s:2:"id";s:5:"23472";s:4:"slug";s:7:"cyr3lat";s:6:"plugin";s:22:"cyr3lat/cyr-to-lat.php";s:11:"new_version";s:3:"3.5";s:3:"url";s:38:"https://wordpress.org/plugins/cyr3lat/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/cyr3lat.3.5.zip";}s:19:"members/members.php";O:8:"stdClass":6:{s:2:"id";s:5:"10325";s:4:"slug";s:7:"members";s:6:"plugin";s:19:"members/members.php";s:11:"new_version";s:5:"1.1.3";s:3:"url";s:38:"https://wordpress.org/plugins/members/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/members.1.1.3.zip";}s:31:"rating-system/rating-system.php";O:8:"stdClass":6:{s:2:"id";s:5:"64133";s:4:"slug";s:13:"rating-system";s:6:"plugin";s:31:"rating-system/rating-system.php";s:11:"new_version";s:7:"2.7.6.1";s:3:"url";s:44:"https://wordpress.org/plugins/rating-system/";s:7:"package";s:64:"https://downloads.wordpress.org/plugin/rating-system.2.7.6.1.zip";}s:37:"tinymce-advanced/tinymce-advanced.php";O:8:"stdClass":6:{s:2:"id";s:3:"731";s:4:"slug";s:16:"tinymce-advanced";s:6:"plugin";s:37:"tinymce-advanced/tinymce-advanced.php";s:11:"new_version";s:5:"4.4.3";s:3:"url";s:47:"https://wordpress.org/plugins/tinymce-advanced/";s:7:"package";s:65:"https://downloads.wordpress.org/plugin/tinymce-advanced.4.4.3.zip";}s:37:"video-thumbnails/video-thumbnails.php";O:8:"stdClass":6:{s:2:"id";s:5:"18872";s:4:"slug";s:16:"video-thumbnails";s:6:"plugin";s:37:"video-thumbnails/video-thumbnails.php";s:11:"new_version";s:6:"2.12.3";s:3:"url";s:47:"https://wordpress.org/plugins/video-thumbnails/";s:7:"package";s:66:"https://downloads.wordpress.org/plugin/video-thumbnails.2.12.3.zip";}s:21:"wp-polls/wp-polls.php";O:8:"stdClass":6:{s:2:"id";s:3:"368";s:4:"slug";s:8:"wp-polls";s:6:"plugin";s:21:"wp-polls/wp-polls.php";s:11:"new_version";s:6:"2.73.2";s:3:"url";s:39:"https://wordpress.org/plugins/wp-polls/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/wp-polls.2.73.2.zip";}s:33:"wp-user-avatar/wp-user-avatar.php";O:8:"stdClass":6:{s:2:"id";s:5:"37680";s:4:"slug";s:14:"wp-user-avatar";s:6:"plugin";s:33:"wp-user-avatar/wp-user-avatar.php";s:11:"new_version";s:5:"2.0.8";s:3:"url";s:45:"https://wordpress.org/plugins/wp-user-avatar/";s:7:"package";s:57:"https://downloads.wordpress.org/plugin/wp-user-avatar.zip";}}}', 'no');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_pollsa`
+-- Структура таблиці `wp_pollsa`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_pollsa` (
@@ -396,7 +398,7 @@ CREATE TABLE IF NOT EXISTS `wp_pollsa` (
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_pollsa`
+-- Дамп даних таблиці `wp_pollsa`
 --
 
 INSERT INTO `wp_pollsa` (`polla_aid`, `polla_qid`, `polla_answers`, `polla_votes`) VALUES
@@ -409,7 +411,7 @@ INSERT INTO `wp_pollsa` (`polla_aid`, `polla_qid`, `polla_answers`, `polla_votes
 (7, 2, 'Відповідь 2', 0),
 (8, 3, 'Відповідь 1', 0),
 (9, 3, 'Відповідь 2', 0),
-(10, 3, 'Відповідь 3', 0),
+(10, 3, 'Відповідь 3', 1),
 (11, 4, 'Відповідь 1', 0),
 (12, 4, 'Відповідь 2', 0),
 (13, 4, 'Відповідь 3', 0);
@@ -417,7 +419,7 @@ INSERT INTO `wp_pollsa` (`polla_aid`, `polla_qid`, `polla_answers`, `polla_votes
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_pollsip`
+-- Структура таблиці `wp_pollsip`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_pollsip` (
@@ -429,19 +431,20 @@ CREATE TABLE IF NOT EXISTS `wp_pollsip` (
   `pollip_timestamp` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0000-00-00 00:00:00',
   `pollip_user` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
   `pollip_userid` int(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_pollsip`
+-- Дамп даних таблиці `wp_pollsip`
 --
 
 INSERT INTO `wp_pollsip` (`pollip_id`, `pollip_qid`, `pollip_aid`, `pollip_ip`, `pollip_host`, `pollip_timestamp`, `pollip_user`, `pollip_userid`) VALUES
-(1, '1', '2', '127.0.0.1', 'book', '1485283646', 'Guest', 0);
+(1, '1', '2', '127.0.0.1', 'book', '1485283646', 'Guest', 0),
+(2, '3', '10', '127.0.0.1', 'centralmedia', '1488461217', 'Містер Бін', 1);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_pollsq`
+-- Структура таблиці `wp_pollsq`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_pollsq` (
@@ -456,19 +459,19 @@ CREATE TABLE IF NOT EXISTS `wp_pollsq` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_pollsq`
+-- Дамп даних таблиці `wp_pollsq`
 --
 
 INSERT INTO `wp_pollsq` (`pollq_id`, `pollq_question`, `pollq_timestamp`, `pollq_totalvotes`, `pollq_active`, `pollq_expiry`, `pollq_multiple`, `pollq_totalvoters`) VALUES
 (1, 'How Is My Site?', '1482947273', 1, 1, '', 0, 1),
 (2, 'Тестове опитування 1', '1485633445', 0, 1, '', 0, 0),
-(3, 'Тестове опитування 2', '1485633578', 0, 1, '', 0, 0),
+(3, 'Тестове опитування 2', '1485633578', 1, 1, '', 0, 1),
 (4, 'Тестове опитування 3', '1485633642', 0, 1, '', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_postmeta`
+-- Структура таблиці `wp_postmeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_postmeta` (
@@ -479,7 +482,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=909 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_postmeta`
+-- Дамп даних таблиці `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -754,9 +757,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (493, 205, 'post_views_count', '3'),
 (494, 194, 'post_views_count', '6'),
 (495, 196, 'post_views_count', '3'),
-(496, 4, 'post_views_count', '2'),
+(496, 4, 'post_views_count', '3'),
 (497, 137, 'post_views_count', '15'),
-(498, 154, 'post_views_count', '8'),
+(498, 154, 'post_views_count', '10'),
 (499, 207, 'post_views_count', '10'),
 (500, 51, 'post_views_count', '0'),
 (501, 57, 'post_views_count', '0'),
@@ -822,7 +825,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (564, 255, '_edit_lock', '1486416379:1'),
 (565, 255, '_edit_last', '1'),
 (566, 255, 'post_views_count', '1'),
-(567, 251, 'post_views_count', '3'),
+(567, 251, 'post_views_count', '4'),
 (571, 265, '_wp_attached_file', '2017/02/21otkovich.jpg'),
 (572, 265, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:650;s:6:"height";i:462;s:4:"file";s:22:"2017/02/21otkovich.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:22:"21otkovich-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"21otkovich-300x213.jpg";s:5:"width";i:300;s:6:"height";i:213;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"4";s:6:"credit";s:16:"Сивакова";s:6:"camera";s:13:"Canon EOS 60D";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1411063378";s:9:"copyright";s:0:"";s:12:"focal_length";s:3:"104";s:3:"iso";s:3:"100";s:13:"shutter_speed";s:5:"0.002";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}'),
 (573, 265, '_wp_attachment_wp_user_avatar', '10'),
@@ -915,7 +918,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (669, 318, 'post_views_count', '13'),
 (670, 314, 'post_views_count', '15'),
 (671, 249, 'post_views_count', '1'),
-(672, 253, 'post_views_count', '2'),
+(672, 253, 'post_views_count', '3'),
 (673, 322, '_edit_lock', '1486656385:1'),
 (674, 322, '_edit_last', '1'),
 (675, 322, 'partner_news_url', 'http://24tv.ua/golos_ameriki_yes_ne_skasuye_sanktsiyi_proti_rosiyi_n779165'),
@@ -930,7 +933,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (684, 328, '_edit_lock', '1486420560:1'),
 (685, 330, '_edit_lock', '1488273892:1'),
 (686, 330, '_edit_last', '1'),
-(690, 330, 'post_views_count', '14'),
+(690, 330, 'post_views_count', '15'),
 (691, 269, 'voted_IP', 'a:1:{s:9:"127.0.0.1";i:1486994940;}'),
 (692, 269, 'votes_count', '22'),
 (693, 295, 'voted_IP', 'a:1:{s:9:"127.0.0.1";i:1486994958;}'),
@@ -938,8 +941,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (695, 137, 'voted_IP', 'a:1:{s:9:"127.0.0.1";i:1486658270;}'),
 (696, 137, 'votes_count', '1'),
 (697, 295, 'post_views_count', '17'),
-(698, 292, 'post_views_count', '5'),
-(699, 290, 'post_views_count', '3'),
+(698, 292, 'post_views_count', '8'),
+(699, 290, 'post_views_count', '4'),
 (703, 89, 'post_views_count', '2'),
 (704, 335, '_wp_attached_file', '2017/02/alina_shukh_memorial_demyanyuka_2017.jpg'),
 (705, 335, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:500;s:6:"height";i:350;s:4:"file";s:48:"2017/02/alina_shukh_memorial_demyanyuka_2017.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:48:"alina_shukh_memorial_demyanyuka_2017-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:48:"alina_shukh_memorial_demyanyuka_2017-300x210.jpg";s:5:"width";i:300;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}'),
@@ -981,7 +984,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (747, 354, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1680;s:6:"height";i:676;s:4:"file";s:24:"2017/02/a3c657f-1680.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"a3c657f-1680-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:24:"a3c657f-1680-300x121.jpg";s:5:"width";i:300;s:6:"height";i:121;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:24:"a3c657f-1680-768x309.jpg";s:5:"width";i:768;s:6:"height";i:309;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:25:"a3c657f-1680-1024x412.jpg";s:5:"width";i:1024;s:6:"height";i:412;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}'),
 (748, 353, '_thumbnail_id', '354'),
 (749, 353, 'post_views_count', '4'),
-(750, 350, 'post_views_count', '5'),
+(750, 350, 'post_views_count', '6'),
 (751, 359, '_wp_attached_file', '2017/02/a88bf4f-tarasshevchenko-112.jpg'),
 (752, 359, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:112;s:6:"height";i:112;s:4:"file";s:39:"2017/02/a88bf4f-tarasshevchenko-112.jpg";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (753, 359, '_wp_attachment_wp_user_avatar', '13'),
@@ -1005,7 +1008,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (771, 370, '_wp_attachment_wp_user_avatar', '16'),
 (772, 371, '_edit_lock', '1487333328:1'),
 (773, 371, '_edit_last', '1'),
-(774, 371, 'post_views_count', '14'),
+(774, 371, 'post_views_count', '16'),
 (775, 373, '_edit_lock', '1487944651:1'),
 (776, 373, '_edit_last', '1'),
 (777, 373, 'stream_url', 'https://www.youtube.com/watch?v=9CK8kuCZmns'),
@@ -1078,7 +1081,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (887, 436, 'video_thumbnail', '1'),
 (888, 434, '_video_thumbnail', 'http://centralmedia/wp-content/uploads/2017/02/volontery-zrobyly-rekonstruktsiy.jpg'),
 (889, 434, '_thumbnail_id', '436'),
-(890, 434, 'post_views_count', '1'),
+(890, 434, 'post_views_count', '3'),
 (891, 431, 'post_views_count', '2'),
 (892, 438, '_edit_lock', '1487935513:9'),
 (893, 438, '_edit_last', '9'),
@@ -1098,7 +1101,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_posts`
+-- Структура таблиці `wp_posts`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_posts` (
@@ -1128,7 +1131,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=449 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_posts`
+-- Дамп даних таблиці `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -1405,8 +1408,6 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (408, 1, '2017-02-18 22:22:21', '2017-02-18 20:22:21', '', 'lttQwgO0gRQ', '', 'inherit', 'open', 'closed', '', 'lttqwgo0grq', '', '', '2017-02-18 22:22:21', '2017-02-18 20:22:21', '', 406, 'http://centralmedia/wp-content/uploads/2017/02/lttQwgO0gRQ.jpg', 0, 'attachment', 'image/jpeg', 0);
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (420, 1, '2017-02-22 13:57:39', '2017-02-22 11:57:39', '<em>Останні кілька місяців соціальні мережі вивертало від <a href="http://www.epravda.com.ua/cdn/cd1/2017/01/selidovvugillya-ta-inshi/index.html">тендерних скандалів</a>. Мало не щодня ЗМІ та активісти повідомляють про фіктивні роботи чи неймовірно дорогі товари за казенний кошт.</em>\r\n\r\n<em>Така ситуація стала реальністю через законодавчу прогалину.</em>\r\n\r\n<em>Адже нова закупівельна система Prozorro – є. А ефективного держконтролю над торгами немає.</em>\r\n\r\n<strong>Сліпий Левіафан</strong>\r\n\r\nЗдійснення моніторингу закупівель для попередження порушень покладено на <a href="http://www.dkrs.gov.ua/kru/uk/index">Державну аудиторську службу</a>. Втім, <strong>порядок моніторингу не визначений і офіційно не закріплений в жодному документі</strong>.\r\n\r\nЧерез це аудитори не можуть ефективно реагувати на повідомлення громадян про корупцію на тендерах. А ті вимоги по усуненню недоліків, які все ж направляються замовникам торгів, фактично мають силу рекомендацій. І в більшості випадків ігноруються тендерними комітетами.\r\n\r\nЦе підтверджується невтішною статистикою.\r\n\r\nУпродовж 2016 року Держаудитслужба встановила на закупівлях порушень на суму 19,2 мільярдів гривень. Однак, попереджено підозрілих торгів всього на 4,7 мільярди гривень. Тобто, замовники торгів реагували <strong>лише на кожен четвертий</strong>сигнал від аудиторів.\r\n\r\nНе віриться, але причиною такої патової ситуації стали ...реформи, які поступово просуваються в сфері публічних фінансів.\r\n\r\nРік назад вступив в силу революційний закон "<a href="http://zakon0.rada.gov.ua/laws/show/922-19">Про публічні закупівлі</a>", який запровадив систему <a href="https://prozorro.gov.ua/">Prozorro</a>. Цей же закон закріпив за Держаудитслужбою функцію моніторингу на вимогу Угоди про асоціацію з ЄС.\r\n\r\nЩоправда, не визначив <strong>порядок проведення</strong> такого моніторингу.\r\n\r\nХоча тут треба вставити ремарочку. Функція моніторингу за аудитслужбою вперше закріплена ще в вересні 2015 року старим законом про державні закупівлі. Тому, фактично вже півтора роки контроль над тендерами по документах є – а на практиці немає.\r\n\r\n<em>"Моніторинг закупівель є важливою ланкою контролю за використанням публічних коштів в країнах Європейського Союзу. Проте, організація моніторингу закупівель, як, власне, і контролю – це є питання національного регулювання країн-членів Союзу, виходячи з національної системи законодавства, державного управління і навіть адміністративних традицій",</em> – вважає Олександр Шатковський, заступник керівника проекту ЄС "Гармонізація системи державних закупівель України зі стандартами ЄС".\r\n\r\nВласне, для старту самого моніторингу необхідні додаткові документи, які б визначили механізм контролю.\r\n\r\nЗакон про закупівлі передбачає, що порядок моніторингу має розробити та затвердити Міністерство фінансів, якому на час писання закону підпорядковувалися аудитори. Проте, в лютому 2016 року уряд перепорядкував аудиторську службу собі. Таким чином, Мінфін більше не указ.\r\n\r\nВихід із глухого кута в кабміні знайшли за допомогою депутатів профільного парламентського <a href="http://w1.c1.rada.gov.ua/pls/site2/p_komity?pidid=2625">комітету з питань економічної політики</a>. На базі комітету працювала робоча група, до складу якої увійшли аудитори, представники міністерств, депутати та громадськість.\r\n\r\n<a href="http://w1.c1.rada.gov.ua/pls/zweb2/webproc4_1?pf3511=59264">Законопроект №4738</a>, який і затверджує порядок моніторингу, був розроблений та ще в травні 2016 року зареєстрований. Станом на сьогодні документ доопрацьований і готовий з комітету відправитися під купол Верховної Ради.\r\n\r\nНині задача №1 – роз''яснити суспільству основні положення документу, аби він не загубився серед численних популістських ініціатив, які виштовхують дійсно державницькі документи з порядку денного.\r\n\r\n<strong>Кесарю –</strong> <strong>кесареве</strong>\r\n\r\nУ разі швидкого прийняття законопроекту № 4738 стабілізується ринок публічних закупівель, який здригається від корупційних скандалів. Закономірно, бюджетні гроші будуть витрачатися під прозорим державним контролем. Адже <strong>основна мета документу – попередження порушень на тендерах.</strong>\r\n\r\nПолегшення відчують і організатори торгів через зменшення перевірок за результатами проведених закупівель.\r\n\r\nДокумент містить чітко визначені підстави проведення моніторингу по конкретним торгам, а саме:\r\n\r\n1) негативні сигнали за сукупністю автоматичних індикаторів ризиків;\r\n\r\n2) інформація про порушення від інших органів влади;\r\n\r\n3) повідомлення у ЗМІ;\r\n\r\n4) самостійно виявлені порушення аудиторами на порталі Prozorro.\r\n\r\nЩо стосується автоматичних індикаторів ризиків, то передбачається створення відбору підозрілих тендерів за певними критеріями на порталі Prozorro. Перелік таких тендерів регулярно надходитиме в Держаудитслужбу.\r\n\r\n<em>"Ми проаналізували результати у сфері публічних закупівель, долучили фахівців і громадськість та розробили законопроект, який дозволить забезпечити системний моніторинг на підставі аналізу інформації про тендери, а також створить умови для узагальнення видів порушень, виявлених при здійсненні моніторингу",</em> – наголошує голова профільного парламентського комітету з питань економічної політики Андрій Іванчук.\r\n\r\nВарто зазначити, що весь <strong>процес моніторингу по конкретним торгам триватиме онлайн протягом 30 днів. </strong>Усі етапи моніторингу будуть зафіксовані на порталі Prozorro. Будь-хто з ними зможе ознайомитися.\r\n\r\nКоли ж паралельно за скаргами учасників торгів розпочне перевірку Антимонопольний комітет – Держаудитслужба скасовує власний моніторинг тих самих питань, аби не дублювати діяльність.\r\n\r\nЗа результатми моніторингу складається <strong>довідка</strong>, яка також оприлюднюється на порталі Prozorro. Протягом п''яти робочих днів після оприлюднення довідки, організатор торгів має оприлюднити інформацію, яка скасовує або спростовує порушення.\r\n\r\nЯкщо порушення не припинено, аудитори отримують право на проведення <strong>повної перевірки.</strong> Тим самим, усувається явище ігнорування вимог аудитслужби, про які йшлося вище.\r\n\r\n<em>"Головне, щоб такий моніторинг був збалансований, зокрема через розведення повноважень органу оскарження, у нашому випадку Антимонопольного комітету та контролера – Державної аудиторської служби. Ну і звичайно, важливо буде зберегти виважений обґрунтований підхід при визначенні автоматичних індикаторів ризику та порядку їх застосування",</em> – додає Олександр Шатковський.\r\n\r\n<strong>Висновки</strong>\r\n\r\nЗапровадження моніторингу закупівель є нагальним державницьким питанням, передбаченим чинним законом про закупівлі.\r\n\r\nДаний механізм контролю, закладений в законопроекті №4738, покликаний протидіяти корупції на закупівлях до того, як бюджетні гроші отримає недоброчесний підприємець за згодою не менш недоброчесного замовника.\r\n\r\nВажливо, що сам моніторинг відбуватиметься онлайн за чіткими процедурами у визначенні терміни. Це відкриває нові можливості для паралельного громадського контролю. Адже, публічні повідомлення громадян про підозрілі тендери є однією із підстав для початку аналізу аудиторами.\r\n\r\nІ головне, моніторинг закупівель вигідний для держави своїм очікуваним фінансовим результатом.\r\n\r\nМожливо, якби Держаудитслужба отримали повноваження ще рік назад, то змогла би попередити порушень в закупівлях не на п''ять, а на двадцять мільярдів гривень.\r\n\r\n<em>Гліб Канєвський, керівник відділу протидії корупції Центру "Ейдос", спеціально для УП</em>', 'Хто хоче стати мільйонером: тендери є, контролю немає', '', 'publish', 'open', 'closed', '', 'hto-hoche-staty-miljonerom-tendery-ye-kontrolyu-nemaye', '', '', '2017-02-22 13:57:39', '2017-02-22 11:57:39', '', 0, 'http://centralmedia/?post_type=articles&#038;p=420', 0, 'articles', '', 0),
-(421, 9, '2017-02-22 13:56:15', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-02-22 13:56:15', '0000-00-00 00:00:00', '', 0, 'http://centralmedia/?p=421', 0, 'post', '', 0),
-(422, 11, '2017-02-22 13:56:39', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'open', 'closed', '', '', '', '', '2017-02-22 13:56:39', '0000-00-00 00:00:00', '', 0, 'http://centralmedia/?post_type=news&p=422', 0, 'news', '', 0),
 (423, 1, '2017-02-22 13:57:30', '2017-02-22 11:57:30', '', 'd27f165-prozorro690', '', 'inherit', 'open', 'closed', '', 'd27f165-prozorro690', '', '', '2017-02-22 13:57:30', '2017-02-22 11:57:30', '', 420, 'http://centralmedia/wp-content/uploads/2017/02/d27f165-prozorro690.jpg', 0, 'attachment', 'image/jpeg', 0),
 (424, 1, '2017-02-22 13:57:39', '2017-02-22 11:57:39', '<em>Останні кілька місяців соціальні мережі вивертало від <a href="http://www.epravda.com.ua/cdn/cd1/2017/01/selidovvugillya-ta-inshi/index.html">тендерних скандалів</a>. Мало не щодня ЗМІ та активісти повідомляють про фіктивні роботи чи неймовірно дорогі товари за казенний кошт.</em>\r\n\r\n<em>Така ситуація стала реальністю через законодавчу прогалину.</em>\r\n\r\n<em>Адже нова закупівельна система Prozorro – є. А ефективного держконтролю над торгами немає.</em>\r\n\r\n<strong>Сліпий Левіафан</strong>\r\n\r\nЗдійснення моніторингу закупівель для попередження порушень покладено на <a href="http://www.dkrs.gov.ua/kru/uk/index">Державну аудиторську службу</a>. Втім, <strong>порядок моніторингу не визначений і офіційно не закріплений в жодному документі</strong>.\r\n\r\nЧерез це аудитори не можуть ефективно реагувати на повідомлення громадян про корупцію на тендерах. А ті вимоги по усуненню недоліків, які все ж направляються замовникам торгів, фактично мають силу рекомендацій. І в більшості випадків ігноруються тендерними комітетами.\r\n\r\nЦе підтверджується невтішною статистикою.\r\n\r\nУпродовж 2016 року Держаудитслужба встановила на закупівлях порушень на суму 19,2 мільярдів гривень. Однак, попереджено підозрілих торгів всього на 4,7 мільярди гривень. Тобто, замовники торгів реагували <strong>лише на кожен четвертий</strong>сигнал від аудиторів.\r\n\r\nНе віриться, але причиною такої патової ситуації стали ...реформи, які поступово просуваються в сфері публічних фінансів.\r\n\r\nРік назад вступив в силу революційний закон "<a href="http://zakon0.rada.gov.ua/laws/show/922-19">Про публічні закупівлі</a>", який запровадив систему <a href="https://prozorro.gov.ua/">Prozorro</a>. Цей же закон закріпив за Держаудитслужбою функцію моніторингу на вимогу Угоди про асоціацію з ЄС.\r\n\r\nЩоправда, не визначив <strong>порядок проведення</strong> такого моніторингу.\r\n\r\nХоча тут треба вставити ремарочку. Функція моніторингу за аудитслужбою вперше закріплена ще в вересні 2015 року старим законом про державні закупівлі. Тому, фактично вже півтора роки контроль над тендерами по документах є – а на практиці немає.\r\n\r\n<em>"Моніторинг закупівель є важливою ланкою контролю за використанням публічних коштів в країнах Європейського Союзу. Проте, організація моніторингу закупівель, як, власне, і контролю – це є питання національного регулювання країн-членів Союзу, виходячи з національної системи законодавства, державного управління і навіть адміністративних традицій",</em> – вважає Олександр Шатковський, заступник керівника проекту ЄС "Гармонізація системи державних закупівель України зі стандартами ЄС".\r\n\r\nВласне, для старту самого моніторингу необхідні додаткові документи, які б визначили механізм контролю.\r\n\r\nЗакон про закупівлі передбачає, що порядок моніторингу має розробити та затвердити Міністерство фінансів, якому на час писання закону підпорядковувалися аудитори. Проте, в лютому 2016 року уряд перепорядкував аудиторську службу собі. Таким чином, Мінфін більше не указ.\r\n\r\nВихід із глухого кута в кабміні знайшли за допомогою депутатів профільного парламентського <a href="http://w1.c1.rada.gov.ua/pls/site2/p_komity?pidid=2625">комітету з питань економічної політики</a>. На базі комітету працювала робоча група, до складу якої увійшли аудитори, представники міністерств, депутати та громадськість.\r\n\r\n<a href="http://w1.c1.rada.gov.ua/pls/zweb2/webproc4_1?pf3511=59264">Законопроект №4738</a>, який і затверджує порядок моніторингу, був розроблений та ще в травні 2016 року зареєстрований. Станом на сьогодні документ доопрацьований і готовий з комітету відправитися під купол Верховної Ради.\r\n\r\nНині задача №1 – роз''яснити суспільству основні положення документу, аби він не загубився серед численних популістських ініціатив, які виштовхують дійсно державницькі документи з порядку денного.\r\n\r\n<strong>Кесарю –</strong> <strong>кесареве</strong>\r\n\r\nУ разі швидкого прийняття законопроекту № 4738 стабілізується ринок публічних закупівель, який здригається від корупційних скандалів. Закономірно, бюджетні гроші будуть витрачатися під прозорим державним контролем. Адже <strong>основна мета документу – попередження порушень на тендерах.</strong>\r\n\r\nПолегшення відчують і організатори торгів через зменшення перевірок за результатами проведених закупівель.\r\n\r\nДокумент містить чітко визначені підстави проведення моніторингу по конкретним торгам, а саме:\r\n\r\n1) негативні сигнали за сукупністю автоматичних індикаторів ризиків;\r\n\r\n2) інформація про порушення від інших органів влади;\r\n\r\n3) повідомлення у ЗМІ;\r\n\r\n4) самостійно виявлені порушення аудиторами на порталі Prozorro.\r\n\r\nЩо стосується автоматичних індикаторів ризиків, то передбачається створення відбору підозрілих тендерів за певними критеріями на порталі Prozorro. Перелік таких тендерів регулярно надходитиме в Держаудитслужбу.\r\n\r\n<em>"Ми проаналізували результати у сфері публічних закупівель, долучили фахівців і громадськість та розробили законопроект, який дозволить забезпечити системний моніторинг на підставі аналізу інформації про тендери, а також створить умови для узагальнення видів порушень, виявлених при здійсненні моніторингу",</em> – наголошує голова профільного парламентського комітету з питань економічної політики Андрій Іванчук.\r\n\r\nВарто зазначити, що весь <strong>процес моніторингу по конкретним торгам триватиме онлайн протягом 30 днів. </strong>Усі етапи моніторингу будуть зафіксовані на порталі Prozorro. Будь-хто з ними зможе ознайомитися.\r\n\r\nКоли ж паралельно за скаргами учасників торгів розпочне перевірку Антимонопольний комітет – Держаудитслужба скасовує власний моніторинг тих самих питань, аби не дублювати діяльність.\r\n\r\nЗа результатми моніторингу складається <strong>довідка</strong>, яка також оприлюднюється на порталі Prozorro. Протягом п''яти робочих днів після оприлюднення довідки, організатор торгів має оприлюднити інформацію, яка скасовує або спростовує порушення.\r\n\r\nЯкщо порушення не припинено, аудитори отримують право на проведення <strong>повної перевірки.</strong> Тим самим, усувається явище ігнорування вимог аудитслужби, про які йшлося вище.\r\n\r\n<em>"Головне, щоб такий моніторинг був збалансований, зокрема через розведення повноважень органу оскарження, у нашому випадку Антимонопольного комітету та контролера – Державної аудиторської служби. Ну і звичайно, важливо буде зберегти виважений обґрунтований підхід при визначенні автоматичних індикаторів ризику та порядку їх застосування",</em> – додає Олександр Шатковський.\r\n\r\n<strong>Висновки</strong>\r\n\r\nЗапровадження моніторингу закупівель є нагальним державницьким питанням, передбаченим чинним законом про закупівлі.\r\n\r\nДаний механізм контролю, закладений в законопроекті №4738, покликаний протидіяти корупції на закупівлях до того, як бюджетні гроші отримає недоброчесний підприємець за згодою не менш недоброчесного замовника.\r\n\r\nВажливо, що сам моніторинг відбуватиметься онлайн за чіткими процедурами у визначенні терміни. Це відкриває нові можливості для паралельного громадського контролю. Адже, публічні повідомлення громадян про підозрілі тендери є однією із підстав для початку аналізу аудиторами.\r\n\r\nІ головне, моніторинг закупівель вигідний для держави своїм очікуваним фінансовим результатом.\r\n\r\nМожливо, якби Держаудитслужба отримали повноваження ще рік назад, то змогла би попередити порушень в закупівлях не на п''ять, а на двадцять мільярдів гривень.\r\n\r\n<em>Гліб Канєвський, керівник відділу протидії корупції Центру "Ейдос", спеціально для УП</em>', 'Хто хоче стати мільйонером: тендери є, контролю немає', '', 'inherit', 'closed', 'closed', '', '420-revision-v1', '', '', '2017-02-22 13:57:39', '2017-02-22 11:57:39', '', 420, 'http://centralmedia/420-revision-v1/', 0, 'revision', '', 0),
 (425, 1, '2017-02-22 13:58:36', '2017-02-22 11:58:36', '<em>Потрібна лише політична воля, щоб звільнити Дебальцеве, кажуть військові 25-го окремого мотопіхотного батальйону ЗСУ "Київська Русь". Для них це питання принципове.</em>\r\n\r\n<em>Два роки тому вони останніми виходили з Дебальцевого. Нині на Світлодарській дузі допомагають наближати лінію фронту до окупованого міста. Після </em><a href="http://www.pravda.com.ua/news/2016/12/18/7130228/"><em>запеклих боїв у грудні 2016-го</em></a><em> стали на 1,5 кілометри ближче до цілі.</em>\r\n\r\n<em>"Українська правда" побувала на передових позиціях "Київської Русі". Там, зокрема, журналіст дізнався, чому військові батальйону воюють зі зброєю часів Першої та Другої світових воєн.</em>\r\n\r\n– На "Ланосі" туди можна не доїхати, – ніби кепкують з автівки журналістів військові 25 батальйону "Київська Русь" на ґанку свого штабу.\r\n\r\nБійці запрошують у свої машини. Везуть на позиції за селом Троїцьке, що на Луганщині між Попасною та Дебальцевим.\r\n\r\nДорогою стає зрозуміло: тут не до жартів. І не тому, що до опорного пункту на передовій потрібно добиратися засніженою польовою дорогою. "Краєвиди" нагадують: тут можна залишити і техніку, і життя.\r\n<div class="image-box image-box_center">\r\n\r\n<img src="http://img.pravda.com/images/doc/c/4/c493be9-vojna-1.jpg" alt="Позиції батальйону " />\r\n<div class="image-box__caption">Позиції батальйону "Київська Русь" поблизу села Троїцьке</div>\r\n<div class="image-box__author">FB БОГДАНА МАСЛЯКА</div>\r\n</div>\r\nНапередодні ворог застосовував на цій ділянці фронту "Гради" та гаубиці, розповідають військові. На цьому опорному пункті нарахували десятки мін та снарядів, що прилетіли з боку Стаханова.\r\n\r\nАле то було вночі. Вдень тут відносно спокійно. Дехто з військових має можливість перепочити, нарубати дрова, поспілкуватися з гостями.\r\n\r\nКомандир роти з позивним "Скіф" розповідає: його хлопці на цьому опорнику стоять вже майже рік – з 6 квітня 2016-го. Без ротацій. Лише іноді вдається поїхати додому у відпустку.\r\n\r\nСам "Скіф" в АТО потрапив разом з 6-ю хвилею мобілізації у квітні 2015-го. По закінченні терміну служби вирішив підписати контракт і залишитися в батальйоні "Київська Русь".\r\n<div class="image-box image-box_center">\r\n\r\n<img src="http://img.pravda.com/images/doc/7/8/78ac88c-vojna-2.jpg" alt=" " />\r\n<div class="image-box__caption">"Скіф" майже рік на передовій в районі села Троїцького</div>\r\n<div class="image-box__author">ОЛЕКСІЙ БРАТУЩАК</div>\r\n</div>\r\nВорог свої позиції облаштував на відстані трохи більше одного кілометра, розповідає "Скіф". І проводить орієнтування на місцевості:\r\n\r\n<em>– Оно, чорне. "Жопка" ми її називаємо. Чорне на горизонті. Ото їхній РОП</em> (ротний опорний пункт, – УП).\r\n\r\nЧас від часу чути звуки пострілів. Це так званий турбуючий вогонь зі стрілецької зброї, пояснюють військові. Часто українців "турбують" і ворожі диверсійно-розвідувальні групи.\r\n\r\n<em>– От вони позавчора прибігали зранку,</em> – продовжує "Скіф". – <em>Підбігли, явно видно, що залазять сюди. Ми їх вигнали. Тоді десь о 18-й годині вони постріляли. А так, в основному, міни, СПГ </em>(станковий протитанковий гранатомет, калібр 73 мм, – УП) <em>прилітають. Дірка на дірці. Он, наша машина розбита стоїть, а там – теж лахміття, танк підбитий.</em>\r\n<div class="image-box image-box_center">\r\n\r\n<img src="http://img.pravda.com/images/doc/d/2/d27fd47-vojna-3.jpg" alt=" " />\r\n<div class="image-box__caption">"Лахміття" поблизу опорного пункту батальйону "Київська Русь"</div>\r\n<div class="image-box__author">FB БОГДАНА МАСЛЯКА</div>\r\n</div>\r\n<strong>Лінія фронту посунулася на 1,5 км в бік Дебальцевого</strong>\r\n\r\nЗ цього опорнику в контратаку українські військові не ходять.\r\n\r\nНатомість згадують, як їхні побратими брали участь у боях на Світлодарській дузі у грудні 2016-го. Частину бійців "Київської Русі" прикомандирували до 1-го батальйону 54-ї бригади ЗСУ, який стоїть поруч, поблизу села Луганське на трасі Бахмут-Дебальцеве. Запеклі бої тоді тривали майже тиждень.\r\n\r\n<em>– Там из 156 человек 63 было наших. Даже больше,</em> – згадує заступник командира батальйону з позивним "Рем". – <em>У нас тогда трое "200-х"</em> (загиблих, – УП) <em>и 27 "300-х"</em> (поранених, – УП). <em>Потом пошли еще контуженные. Последствия – около 40 у нас было "300-х".</em>\r\n\r\nЗагалом за даними 54-ї бригади у тих боях загинуло 9 військовослужбовців, більше 70-и – травмовані, поранені, контужені.\r\n<div class="image-box image-box_center">\r\n\r\n<img src="http://img.pravda.com/images/doc/0/0/003eebc-vojna-4.jpg" alt=" " />\r\n<div class="image-box__caption">"Ще двоє вийшли". З таким коментарем фото на своїй сторінці виклав комбат "Київської Русі" Євген Лавров (на фото крайній праворуч)</div>\r\n<div class="image-box__author">FB YEVGEN LAVROV</div>\r\n</div>\r\nГрудневу операцію на Світлодарській дузі <a href="http://censor.net.ua/blogs/4691/uje_mojno">публічно розкритикував</a> колишній боєць 25-го батальйону "Київська Русь" з позивним "Зелений". Командир батальйону Євген Лавров про прорахунки говорити відмовляється.\r\n\r\n<em>– Я не можу критикувати своє командування,</em> – каже комбат. – <em>Можливо, коли я звільнюся зі Збройних сил, тоді я свою думку скажу. Мушу або не говорити нічого, або те, що сказали офіційно.</em>\r\n\r\nІнший запеклий бій практично на цій самій ділянці Світлодарської дуги відбувся влітку 2016-го. Тоді <a href="http://www.pravda.com.ua/news/2016/06/29/7113128/">загинув відомий оперний співак Василь Сліпак</a> (позивний "Міф"). Українські військові атакували позицію ворога "Муравєйнік".\r\n\r\n<em>– Летом было меньше раненных, потому что, во-первых, враг не был готов к нашей атаке,</em> – розповідає "Рем". – <em>Всегда надо быть готовым, а они не были готовы. Во-вторых, наши зашли втроем... Три наших человека с 25-ки взяли опорник. Трое! "Бай", "Макс" и "Черный".</em>', 'Батальйон "Київська Русь": Для нас принципово увійти в Дебальцеве першими', '', 'publish', 'open', 'closed', '', 'bataljon-kyyivska-rus-dlya-nas-pryntsypovo-uvijty-v-debaltseve-pershymy', '', '', '2017-02-28 10:51:44', '2017-02-28 08:51:44', '', 0, 'http://centralmedia/?post_type=articles&#038;p=425', 0, 'articles', '', 0),
@@ -1419,7 +1420,6 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (434, 1, '2017-02-22 14:18:27', '2017-02-22 12:18:27', 'Волонтери "Лабораторії реконструкції подій "Jus Talionis" виклали в мережі відеореконструкцію подій 20 лютого у проміжку 08:53–11:00, зібрану із різних камер.\r\n\r\nНа відео "Висота ''''Жовтневий'''' (2-е видання)" синхронізовані 4 камери відеонагляду та велика кількість відео та фотоматеріалів, – близько 100 авторів. Визначені похибки часу кожного фотоапарату та відеокамери.\r\n\r\nУ цей проміжок 08:53–11:00, як зазначають автори відеореконструкції, було вбито 45 із 48 мітингувальників та 2 правоохоронці.\r\n\r\nНа відеореконструкції видно, що відбувалось у всіх куточках Майдану Незалежності і вул. Інститутської в один і той самий момент часу. Як зазначають волонтери, "ці результати дають можливість кожному робити висновки про розвиток подій та тих, хто стріляв".', 'Волонтери зробили реконструкцію подій на Майдані 20 лютого на реальних відео', '', 'publish', 'open', 'closed', '', 'volontery-zrobyly-rekonstruktsiyu-podij-na-majdani-20-lyutogo-na-realnyh-video', '', '', '2017-02-22 14:18:27', '2017-02-22 12:18:27', '', 0, 'http://centralmedia/?post_type=video&#038;p=434', 0, 'video', '', 0),
 (435, 1, '2017-02-22 14:18:27', '2017-02-22 12:18:27', 'Волонтери "Лабораторії реконструкції подій "Jus Talionis" виклали в мережі відеореконструкцію подій 20 лютого у проміжку 08:53–11:00, зібрану із різних камер.\r\n\r\nНа відео "Висота ''''Жовтневий'''' (2-е видання)" синхронізовані 4 камери відеонагляду та велика кількість відео та фотоматеріалів, – близько 100 авторів. Визначені похибки часу кожного фотоапарату та відеокамери.\r\n\r\nУ цей проміжок 08:53–11:00, як зазначають автори відеореконструкції, було вбито 45 із 48 мітингувальників та 2 правоохоронці.\r\n\r\nНа відеореконструкції видно, що відбувалось у всіх куточках Майдану Незалежності і вул. Інститутської в один і той самий момент часу. Як зазначають волонтери, "ці результати дають можливість кожному робити висновки про розвиток подій та тих, хто стріляв".', 'Волонтери зробили реконструкцію подій на Майдані 20 лютого на реальних відео', '', 'inherit', 'closed', 'closed', '', '434-revision-v1', '', '', '2017-02-22 14:18:27', '2017-02-22 12:18:27', '', 434, 'http://centralmedia/434-revision-v1/', 0, 'revision', '', 0),
 (436, 1, '2017-02-22 14:18:27', '2017-02-22 12:18:27', '', 'Волонтери зробили реконструкцію подій на Майдані 20 лютого на реальних відео', '', 'inherit', 'open', 'closed', '', 'volontery-zrobyly-rekonstruktsiyu-podij-na-majdani-20-lyutogo-na-realnyh-video-2', '', '', '2017-02-22 14:18:27', '2017-02-22 12:18:27', '', 434, 'http://centralmedia/video/volontery-zrobyly-rekonstruktsiyu-podij-na-majdani-20-lyutogo-na-realnyh-video/volontery-zrobyly-rekonstruktsiyu-podij-na-majdani-20-lyutogo-na-realnyh-video-2/', 0, 'attachment', 'image/jpeg', 0),
-(437, 1, '2017-02-22 15:01:24', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-02-22 15:01:24', '0000-00-00 00:00:00', '', 0, 'http://centralmedia/?post_type=folk_correspondent&p=437', 0, 'folk_correspondent', '', 0),
 (438, 9, '2017-02-24 13:09:23', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'Lorem ipsum dolor sit amet, consectetur adipiscing', '', 'pending', 'closed', 'closed', '', '', '', '', '2017-02-24 13:09:23', '2017-02-24 11:09:23', '', 0, 'http://centralmedia/?post_type=blogs&#038;p=438', 0, 'blogs', '', 0),
 (439, 9, '2017-02-24 13:09:23', '2017-02-24 11:09:23', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'Lorem ipsum dolor sit amet, consectetur adipiscing', '', 'inherit', 'closed', 'closed', '', '438-revision-v1', '', '', '2017-02-24 13:09:23', '2017-02-24 11:09:23', '', 438, 'http://centralmedia/438-revision-v1/', 0, 'revision', '', 0),
 (440, 9, '2017-02-24 13:27:56', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'Lorem ipsum dolor sit amet, consectetur adipiscing', '', 'pending', 'open', 'closed', '', '', '', '', '2017-02-24 13:27:56', '2017-02-24 11:27:56', '', 0, 'http://centralmedia/?post_type=blogs&#038;p=440', 0, 'blogs', '', 0),
@@ -1435,7 +1435,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_termmeta`
+-- Структура таблиці `wp_termmeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_termmeta` (
@@ -1448,7 +1448,7 @@ CREATE TABLE IF NOT EXISTS `wp_termmeta` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_terms`
+-- Структура таблиці `wp_terms`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_terms` (
@@ -1459,7 +1459,7 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_terms`
+-- Дамп даних таблиці `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -1491,7 +1491,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_term_relationships`
+-- Структура таблиці `wp_term_relationships`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
@@ -1501,7 +1501,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_term_relationships`
+-- Дамп даних таблиці `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -1557,7 +1557,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_term_taxonomy`
+-- Структура таблиці `wp_term_taxonomy`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
@@ -1570,7 +1570,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_term_taxonomy`
+-- Дамп даних таблиці `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -1602,7 +1602,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_usermeta`
+-- Структура таблиці `wp_usermeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_usermeta` (
@@ -1610,10 +1610,10 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=419 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=503 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_usermeta`
+-- Дамп даних таблиці `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1896,12 +1896,96 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (414, 1, 'metaboxhidden_articles', 'a:1:{i:0;s:7:"slugdiv";}'),
 (416, 11, 'session_tokens', 'a:1:{s:64:"d737412efce97ff4283d6f249066e37d77e7b63def795f37bc57dd8be8ac5f00";a:4:{s:10:"expiration";i:1487937393;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:114:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36";s:5:"login";i:1487764593;}}'),
 (417, 9, 'session_tokens', 'a:1:{s:64:"d4f36ca1d788ea2435404807cd524238c7dfa2f06043b929a3e91751a45609c1";a:4:{s:10:"expiration";i:1488107313;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:114:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36";s:5:"login";i:1487934513;}}'),
-(418, 1, 'session_tokens', 'a:1:{s:64:"383fa84fb9f4041206e6cbffdabcce21c53d2e57480bad42d414002f62c57ca6";a:4:{s:10:"expiration";i:1488444544;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:114:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36";s:5:"login";i:1488271744;}}');
+(418, 1, 'session_tokens', 'a:1:{s:64:"0b236d440d37f3a4a718cf7cfd1aebf7619e59b37e6ad74e57fb34b7115626fa";a:4:{s:10:"expiration";i:1488623053;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36";s:5:"login";i:1488450253;}}'),
+(419, 17, 'nickname', 'sdrgftulk'),
+(420, 17, 'first_name', 'qwearsdtguyi'),
+(421, 17, 'last_name', 'wqertjuy'),
+(422, 17, 'description', 'werthkj'),
+(423, 17, 'rich_editing', 'true'),
+(424, 17, 'comment_shortcuts', 'false'),
+(425, 17, 'admin_color', 'fresh'),
+(426, 17, 'use_ssl', '0'),
+(427, 17, 'show_admin_bar_front', 'true'),
+(428, 17, 'locale', ''),
+(429, 17, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(430, 17, 'wp_user_level', '0'),
+(431, 18, 'nickname', 'sdrgftulksd'),
+(432, 18, 'first_name', 'qwearasdsdtguyi'),
+(433, 18, 'last_name', 'wqertjuyasd'),
+(434, 18, 'description', 'werthkjasd'),
+(435, 18, 'rich_editing', 'true'),
+(436, 18, 'comment_shortcuts', 'false'),
+(437, 18, 'admin_color', 'fresh'),
+(438, 18, 'use_ssl', '0'),
+(439, 18, 'show_admin_bar_front', 'true'),
+(440, 18, 'locale', ''),
+(441, 18, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(442, 18, 'wp_user_level', '0'),
+(443, 19, 'nickname', 'efwqefrwqw'),
+(444, 19, 'first_name', ''),
+(445, 19, 'last_name', ''),
+(446, 19, 'description', ''),
+(447, 19, 'rich_editing', 'true'),
+(448, 19, 'comment_shortcuts', 'false'),
+(449, 19, 'admin_color', 'fresh'),
+(450, 19, 'use_ssl', '0'),
+(451, 19, 'show_admin_bar_front', 'true'),
+(452, 19, 'locale', ''),
+(453, 19, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(454, 19, 'wp_user_level', '0'),
+(455, 20, 'nickname', 'adminsdsdsds'),
+(456, 20, 'first_name', ''),
+(457, 20, 'last_name', ''),
+(458, 20, 'description', ''),
+(459, 20, 'rich_editing', 'true'),
+(460, 20, 'comment_shortcuts', 'false'),
+(461, 20, 'admin_color', 'fresh'),
+(462, 20, 'use_ssl', '0'),
+(463, 20, 'show_admin_bar_front', 'true'),
+(464, 20, 'locale', ''),
+(465, 20, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(466, 20, 'wp_user_level', '0'),
+(467, 21, 'nickname', 'asdsadsad'),
+(468, 21, 'first_name', 'dsdsds'),
+(469, 21, 'last_name', 'dsdsds'),
+(470, 21, 'description', 'dsdsdsds'),
+(471, 21, 'rich_editing', 'true'),
+(472, 21, 'comment_shortcuts', 'false'),
+(473, 21, 'admin_color', 'fresh'),
+(474, 21, 'use_ssl', '0'),
+(475, 21, 'show_admin_bar_front', 'true'),
+(476, 21, 'locale', ''),
+(477, 21, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(478, 21, 'wp_user_level', '0'),
+(479, 22, 'nickname', 'asdsadsadsdsdsds'),
+(480, 22, 'first_name', 'dsdsds'),
+(481, 22, 'last_name', 'dsdsds'),
+(482, 22, 'description', 'dsdsdsds'),
+(483, 22, 'rich_editing', 'true'),
+(484, 22, 'comment_shortcuts', 'false'),
+(485, 22, 'admin_color', 'fresh'),
+(486, 22, 'use_ssl', '0'),
+(487, 22, 'show_admin_bar_front', 'true'),
+(488, 22, 'locale', ''),
+(489, 22, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(490, 22, 'wp_user_level', '0'),
+(491, 23, 'nickname', 'asdsadsadsdsdssdsdsdds'),
+(492, 23, 'first_name', 'dsdsds'),
+(493, 23, 'last_name', 'dsdsds'),
+(494, 23, 'description', 'dsdsdsds'),
+(495, 23, 'rich_editing', 'true'),
+(496, 23, 'comment_shortcuts', 'false'),
+(497, 23, 'admin_color', 'fresh'),
+(498, 23, 'use_ssl', '0'),
+(499, 23, 'show_admin_bar_front', 'true'),
+(500, 23, 'locale', ''),
+(501, 23, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
+(502, 23, 'wp_user_level', '0');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wp_users`
+-- Структура таблиці `wp_users`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_users` (
@@ -1915,10 +1999,10 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
   `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_status` int(11) NOT NULL DEFAULT '0',
   `display_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wp_users`
+-- Дамп даних таблиці `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
@@ -1934,14 +2018,21 @@ INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 (13, 'user8', '$P$BA.gc3DDPtdmvPGWDqBbaKY2EDrtvj1', 'user8', 'user8@mail.ua', '', '2017-02-12 19:01:00', '1486926061:$P$BD0E/8qp0US7.i2EVD0yNVLVf9q01Q/', 0, 'Шевченко Тарас'),
 (14, 'user9', '$P$BXUjeRAaIn2EiPx./qgxGsd8h.njt51', 'user9', 'user9@mail.ua', '', '2017-02-12 19:02:51', '1486926172:$P$BfNCFJdUliqK98jjaM6rMFUBLUWfMU1', 0, 'Яхно Олеся'),
 (15, 'user10', '$P$Bn50w9h6i4Ot3.SxdAD7qmnS5ZW.V.1', 'user10', 'user10@mail.ua', '', '2017-02-12 19:09:48', '1486926588:$P$BqgCdcE/s.VfA7oflo8zLsG20hvrFP.', 0, 'Соколенко Наталя'),
-(16, 'user11', '$P$B.h22Om7xqLOhMQZ/SzDCXsk6MDE921', 'user11', 'user11@mail.ua', '', '2017-02-12 19:13:27', '1486926807:$P$BHFggDxkUvowddU/lYuFrDxAJF9hCk0', 0, 'Лещенко Сергій');
+(16, 'user11', '$P$B.h22Om7xqLOhMQZ/SzDCXsk6MDE921', 'user11', 'user11@mail.ua', '', '2017-02-12 19:13:27', '1486926807:$P$BHFggDxkUvowddU/lYuFrDxAJF9hCk0', 0, 'Лещенко Сергій'),
+(17, 'sdrgftulk', '$P$BFllgjllxayO6sOJi6jfZ6vAbuMTV3/', 'sdrgftulk', 'romaniv.yura95@gmail.com', '', '2017-03-02 09:59:24', '', 0, 'wqertjuy qwearsdtguyi'),
+(18, 'sdrgftulksd', '$P$Bo0yJ2YpjRwcF1lDmTX.BVl6Fj0OuK0', 'sdrgftulksd', 'rosdmaniv.yura95@gmail.com', '', '2017-03-02 10:02:01', '', 0, 'wqertjuyasd qwearasdsdtguyi'),
+(19, 'efwqefrwqw', '$P$BQKEBnJCWHA6xeNjvLcl2v.shTVsZb.', 'efwqefrwqw', 'romaniv.yura95@gmail.comewewe', '', '2017-03-02 10:03:29', '', 0, 'efwqefrwqw'),
+(20, 'adminsdsdsds', '$P$BXr8mWGvJrxmGFh/ZCqrLku1fkQvBL1', 'adminsdsdsds', 'roasdsadmandsdiv.yura95@gmail.com', '', '2017-03-02 10:05:33', '', 0, 'adminsdsdsds'),
+(21, 'asdsadsad', '$P$BPo/DFgGw4jWxZyEemsWAAXbYtdnk9/', 'asdsadsad', 'romaniv.yursdsdsdsdsdsa95@gmail.com', '', '2017-03-02 10:07:40', '', 0, 'dsdsds dsdsds'),
+(22, 'asdsadsadsdsdsds', '$P$BqaWG6bx0GUItncNH38D04ed5ELjUj1', 'asdsadsadsdsdsds', 'romdsdsdsaniv.yursdsdsdsdsdsa95@gmail.com', '', '2017-03-02 10:08:57', '', 0, 'dsdsds dsdsds'),
+(23, 'asdsadsadsdsdssdsdsdds', '$P$B1tlRagvfCJO.eOl3Q2tS1ZtFuW5Rv.', 'asdsadsadsdsdssdsdsdds', 'romdsdsdssdsdsaniv.yursdsdsdsdsdsa95@gmail.com', '', '2017-03-02 10:09:38', '', 0, 'dsdsds dsdsds');
 
 --
--- Индексы сохранённых таблиц
+-- Індекси збережених таблиць
 --
 
 --
--- Индексы таблицы `wp_commentmeta`
+-- Індекси таблиці `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1949,7 +2040,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wp_comments`
+-- Індекси таблиці `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -1960,27 +2051,27 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Индексы таблицы `wp_links`
+-- Індекси таблиці `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Индексы таблицы `wp_options`
+-- Індекси таблиці `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
--- Индексы таблицы `wp_pollsa`
+-- Індекси таблиці `wp_pollsa`
 --
 ALTER TABLE `wp_pollsa`
   ADD PRIMARY KEY (`polla_aid`);
 
 --
--- Индексы таблицы `wp_pollsip`
+-- Індекси таблиці `wp_pollsip`
 --
 ALTER TABLE `wp_pollsip`
   ADD PRIMARY KEY (`pollip_id`),
@@ -1989,13 +2080,13 @@ ALTER TABLE `wp_pollsip`
   ADD KEY `pollip_ip_qid_aid` (`pollip_ip`,`pollip_qid`,`pollip_aid`);
 
 --
--- Индексы таблицы `wp_pollsq`
+-- Індекси таблиці `wp_pollsq`
 --
 ALTER TABLE `wp_pollsq`
   ADD PRIMARY KEY (`pollq_id`);
 
 --
--- Индексы таблицы `wp_postmeta`
+-- Індекси таблиці `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2003,7 +2094,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wp_posts`
+-- Індекси таблиці `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -2013,7 +2104,7 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Индексы таблицы `wp_termmeta`
+-- Індекси таблиці `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2021,7 +2112,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wp_terms`
+-- Індекси таблиці `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -2029,14 +2120,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Индексы таблицы `wp_term_relationships`
+-- Індекси таблиці `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Индексы таблицы `wp_term_taxonomy`
+-- Індекси таблиці `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -2044,7 +2135,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Индексы таблицы `wp_usermeta`
+-- Індекси таблиці `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -2052,7 +2143,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wp_users`
+-- Індекси таблиці `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -2061,79 +2152,79 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT для збережених таблиць
 --
 
 --
--- AUTO_INCREMENT для таблицы `wp_commentmeta`
+-- AUTO_INCREMENT для таблиці `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT для таблицы `wp_comments`
+-- AUTO_INCREMENT для таблиці `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
--- AUTO_INCREMENT для таблицы `wp_links`
+-- AUTO_INCREMENT для таблиці `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT для таблицы `wp_options`
+-- AUTO_INCREMENT для таблиці `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6700;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6722;
 --
--- AUTO_INCREMENT для таблицы `wp_pollsa`
+-- AUTO_INCREMENT для таблиці `wp_pollsa`
 --
 ALTER TABLE `wp_pollsa`
   MODIFY `polla_aid` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
--- AUTO_INCREMENT для таблицы `wp_pollsip`
+-- AUTO_INCREMENT для таблиці `wp_pollsip`
 --
 ALTER TABLE `wp_pollsip`
-  MODIFY `pollip_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `pollip_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT для таблицы `wp_pollsq`
+-- AUTO_INCREMENT для таблиці `wp_pollsq`
 --
 ALTER TABLE `wp_pollsq`
   MODIFY `pollq_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT для таблицы `wp_postmeta`
+-- AUTO_INCREMENT для таблиці `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=909;
 --
--- AUTO_INCREMENT для таблицы `wp_posts`
+-- AUTO_INCREMENT для таблиці `wp_posts`
 --
 ALTER TABLE `wp_posts`
   MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=449;
 --
--- AUTO_INCREMENT для таблицы `wp_termmeta`
+-- AUTO_INCREMENT для таблиці `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT для таблицы `wp_terms`
+-- AUTO_INCREMENT для таблиці `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
--- AUTO_INCREMENT для таблицы `wp_term_taxonomy`
+-- AUTO_INCREMENT для таблиці `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
--- AUTO_INCREMENT для таблицы `wp_usermeta`
+-- AUTO_INCREMENT для таблиці `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-  MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=419;
+  MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=503;
 --
--- AUTO_INCREMENT для таблицы `wp_users`
+-- AUTO_INCREMENT для таблиці `wp_users`
 --
 ALTER TABLE `wp_users`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
