@@ -19,7 +19,7 @@
                                 ?>
                             </div>
                             <div>
-                                <img class="user-video-width" src="<?php echo get_the_post_thumbnail_url( '', 'large' ); ?>">
+                                <img class="user-video-width" alt="video" src="<?php echo get_the_post_thumbnail_url( '', 'large' ); ?>">
                             </div>
                             <div class="single-post-text">
                                 <?php the_content(); ?>
@@ -115,7 +115,7 @@
 <div class="block-with-line hide-on-small-only">
     <div class="big-sign-line">ОСТАННІ <span>НОВИНИ</span></div>
     <div class="block-line"></div>
-    <div class="small-sign-line"><img class="line-img" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
+    <div class="small-sign-line"><img class="line-img" alt="line" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
 </div>
 <div class="second-block-with-line hide-on-med-and-up">
     <div class="big-sign-line">ПОПЕРЕДНІ <span>СТАТТІ</span></div>

@@ -13,7 +13,7 @@
                                 <div class="one-blog-sign-content">
                                     <div class="one-blog-sign-img">
                                         <a href="#">
-                                            <img class="one-blog-sign-img-width" src="<?php echo get_wp_user_avatar_src( $author_id, 'thumbnail' ); ?>">
+                                            <img class="one-blog-sign-img-width" alt="one blog" src="<?php echo get_wp_user_avatar_src( $author_id, 'thumbnail' ); ?>">
                                         </a>
                                     </div>
                                     <div class="one-blog-sign-title">
@@ -75,14 +75,14 @@
                             <div class="col l12 s12 m12">
                                 <div class="previous-blog-box">
                                     <div class="view-count-blog">
-                                        <img class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                                        <img alt="count" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
                                         <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
                                     </div>
                                     <div class="row">
                                     <div class="col l12 m12 s12">
                                     <div class="previous-blog-img-archive">
                                         <a href="' . get_the_permalink() . '" >
-                                            <img class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'medium' ) .'">
+                                            <img class="previous-blog-img-width" alt="previlious blog" src="' . get_wp_user_avatar_src( $author_id, 'medium' ) .'">
                                         </a>
                                     </div>
                                     </div>
@@ -142,7 +142,7 @@
     <div class="block-with-line hide-on-small-only">
         <div class="big-sign-line">ПОПУЛЯРНІ-<span>СТАТТІ</span></div>
         <div class="block-line"></div>
-        <div class="small-sign-line">НОВИНИ<img class="line-img" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
+        <div class="small-sign-line">НОВИНИ<img class="line-img" alt="line" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
     </div>
     <div class="second-block-with-line hide-on-med-and-up">
         <div class="big-sign-line">ПОПУЛЯРНІ-<span>СТАТТІ</span></div>
@@ -237,7 +237,7 @@
 <div class="five-block-with-line hide-on-med-and-down">
     <div class="big-sign-line">НОВИНИ <span>ПАРТНЕРІВ</span></div>
     <div class="block-line"></div>
-    <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
+    <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" alt="line" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
 </div>
 
 <div class="five-block-with-line hide-on-large-only">
@@ -255,7 +255,7 @@
     </div>
 
     <div class="five-block-with-line hide-on-large-only">
-        <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
+        <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" alt="line" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
         <div class="block-line"></div>
     </div>
     <div class="col l6 s12 m6 ">
@@ -265,6 +265,6 @@
         ?>
     </div>
 </div>
-
+</div>
 
 <?php get_footer(); ?>

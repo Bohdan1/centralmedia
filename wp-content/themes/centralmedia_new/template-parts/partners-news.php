@@ -15,7 +15,7 @@
                 echo '
                     <div class="partner-news-block-content">
                         <div class="news-main-img">
-                            <img class="news-main-img-width" src="' . get_stylesheet_directory_uri() . '/img/loading-circles.svg">
+                            <img class="news-main-img-width" alt="main news" src="' . get_stylesheet_directory_uri() . '/img/loading-circles.svg">
                         </div>
                         <div class="news-main-title ">
                             <a href="' . get_post_meta( $post->ID, 'partner_news_url', true ) . '" class="black-text" target="_blank">' .

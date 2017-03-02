@@ -12,7 +12,7 @@
 	<div class="block-with-line hide-on-small-only">
 		<div class="big-sign-line">ПОПЕРЕДНІ <span>ВІДЕО</span></div>
 		<div class="block-line"></div>
-		<div class="small-sign-line"><img class="line-img" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
+		<div class="small-sign-line"><img class="line-img" alt="line" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
 	</div>
 	<div class="second-block-with-line hide-on-med-and-up">
 		<div class="big-sign-line">ПОПЕРЕДНІ <span>ВІДЕО</span></div>
@@ -143,7 +143,7 @@
 				<div class="col l3 s12 m4 top-five-video-width">
 					<div style="background-image: url('<?php bloginfo('template_url') ?>/img/3.jpg');" class="second-article-block-all-article-side">
 						<div class="mask">
-							<div class="view-count"><img class="count-width" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
+							<div class="view-count"><img class="count-width" alt="count" src="<?php bloginfo('template_url') ?>/img/eye.svg"><span class="count-number"> 523</span></div>
 							<div  class="button-position-popular-video-content-box-main">
 								<a href="#" ><img class="button-hover button-position-popular-video-content-box-width" src="<?php bloginfo('template_url') ?>/img/play-button.svg" alt="Логотип"></a>
 							</div>
@@ -159,7 +159,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<?php
         //show advertising block
         get_template_part('template-parts/advertising', 'block-1');

@@ -227,7 +227,7 @@ function show_small_post( $height = null, $post_id = null) {
                         $category = get_the_category( $post_id );
                         if ( !empty($category) ) {
                             $category = $category[0];
-                            echo '<span ' . get_category_link( $category->cat_ID ) . ' class="no-hover-blog top-states-small">' . $category->cat_name . '</span>';
+                            echo '<span class="no-hover-blog top-states-small">' . $category->cat_name . '</span>';
                         }
                         echo '
                     </div>
@@ -309,7 +309,7 @@ function show_small_video() {
                         $category = get_the_category();
                         if ( !empty($category) ) {
                             $category = $category[0];
-                            echo '<span' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog top-states-small">' . $category->cat_name . '</span>';
+                            echo '<span class="no-hover-blog top-states-small">' . $category->cat_name . '</span>';
                         }
                         echo '
                     </div>
@@ -1103,7 +1103,7 @@ function show_no_img_post() {
             $output .=
                 '<a href="#" data-post_id="'.$post_id.'" class="black-text">
                     <span class="vortex-p-like-comment 13  icon-thumbs-up-1"></span>
-                    <span title="Подобається"class="qtip like">Подобається</span>
+                    <span title="Подобається" class="qtip like">Подобається</span>
                 </a>';
             }
         $output .= '(Всього <span class="count">'.$vote_count.'</span> вподобань)</p>';

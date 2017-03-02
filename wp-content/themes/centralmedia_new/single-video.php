@@ -113,7 +113,7 @@
     <div class="block-with-line hide-on-small-only">
         <div class="big-sign-line">ПОПЕРЕДНІ <span>ВІДЕО</span></div>
         <div class="block-line"></div>
-        <div class="small-sign-line"><img class="line-img" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
+        <div class="small-sign-line"><img class="line-img" alt="line" src="<?php bloginfo('template_url') ?>/img/menu.svg"></div>
     </div>
     <div class="second-block-with-line hide-on-med-and-up">
         <div class="big-sign-line">ПОПЕРЕДНІ <span>ВІДЕО</span></div>
@@ -136,5 +136,5 @@
         //latest news and polls
         get_template_part('content', 'footer');
     ?>
-
+</div>
     <?php get_footer(); ?>
