@@ -2053,6 +2053,9 @@ right: auto;
 {
 transform: skewX(0deg);
 }
+.slider-box-remake:hover {
+transform: skewX(0deg);
+}
 .nar-kor-mob{ 
 display: block;
 height: 200px;
@@ -2226,12 +2229,12 @@ transform: skewX(0deg);
 .left-block{
 left: 0%;
 width: 100%;
-height: 400px;
+height: 316px;
 background-size: cover;
 }
 .home-content {
     position: relative;
-    height: 500px;
+    height: 416px;
 }
 .header-margin-tag{
 	padding-top: 70px;
@@ -2643,6 +2646,9 @@ margin: 0 auto;
 }
 .popular-video{
 	padding-left: 0px;
+}
+.fix-height-top3{
+	bottom: 0%;
 }
 
 } 

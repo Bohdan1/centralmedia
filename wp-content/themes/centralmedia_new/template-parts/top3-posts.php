@@ -41,7 +41,7 @@
 								<img class="play-button button-hover center" src="' . get_template_directory_uri( $posts_id[0] ) . '/img/play-button.svg" alt="Логотип">
 							</span>
 						</div>
-						<div class="content-box">
+						<div class="content-box fix-height-top3">
 							<div class="title-tag">';
 			                    $category = get_the_category( $posts_id[0] );
 			                    if ( !empty( $category ) ) {

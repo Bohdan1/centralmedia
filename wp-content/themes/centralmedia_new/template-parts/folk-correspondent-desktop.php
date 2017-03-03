@@ -19,15 +19,17 @@
 					$query->the_post();
 					echo '
 					<div class="user-news-block">
-						<div class=" col l12 m7 s12 " style="width: 50% !important;">
-							<img alt="img" class="user-video-width " src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
-						</div>
-						<div class="col l12 m4 s12" style="width: 50% !important;">
-							<div class="user-video-name">' . get_post_meta( $post->ID, 'folk_correspondent_name', true ) . '</div>
-							<div class="user-video-date">' . get_the_time('j F Y') . '</div>
-							<div class="user-video-time">' . get_the_time('G:i') . '</div>
-							<div class="user-news-title">' . short_post_desc( 400 ) . '</div>
-						</div>
+						<a href="' . get_the_permalink() . '" class="no-hover-blog-black black-text">
+							<div class=" col l12 m7 s12 " style="width: 50% !important;">
+								<img alt="img" class="user-video-width " src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
+							</div>
+							<div class="col l12 m4 s12" style="width: 50% !important;">
+								<div class="user-video-name">' . get_post_meta( $post->ID, 'folk_correspondent_name', true ) . '</div>
+								<div class="user-video-date">' . get_the_time('j F Y') . '</div>
+								<div class="user-video-time">' . get_the_time('G:i') . '</div>
+								<div class="user-news-title">' . short_post_desc( 400 ) . '</div>
+							</div>
+						</a>
 					</div>';
 				} //end while
 			} //end if

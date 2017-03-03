@@ -29,7 +29,6 @@
             <?php
                     endwhile; // End the loop.
                     echo '<div class="clear"></div>';
-                    the_posts_pagination( $pagination_args );
                     wp_reset_postdata();
                 else :
                     // If no content, include the "No posts found" template.

@@ -276,3 +276,11 @@
 		text-align: center;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.rb-grid li h3 {
+	font-size: 1.75em;
+	font-weight: 100;
+	color: white;
+}
+}

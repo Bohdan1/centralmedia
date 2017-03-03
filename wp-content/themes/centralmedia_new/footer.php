@@ -290,10 +290,5 @@
     }
     setDate();
 </script>
-<script>
-    $(document).ready(function(){
-    $('.materialboxed').materialbox();
-  });
-</script>
 </body>
 </html>
