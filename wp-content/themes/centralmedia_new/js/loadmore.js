@@ -15,7 +15,8 @@ jQuery(function($) {
 					$('#news_loadmore').text('Більше новин').before(data); // вставляем новые посты
 					news_current_page++; // увеличиваем номер страницы на единицу
 					if (news_current_page == news_max_pages) $("#news_loadmore").remove(); // если последняя страница, удаляем кнопку
-				} else {
+				}
+				else {
 					$('#news_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 				}
 			}
@@ -90,5 +91,30 @@ jQuery(function($) {
 			}
 		});
 	});
+
+	/*
+	$('#search_loadmore').click(function() {
+		$(this).text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+		var data = {
+			'action': 'loadmore',
+			'wp_query': true_posts,
+			'page' : current_page
+		};
+		$.ajax({
+			url:ajaxurl, // обработчик
+			data:data, // данные
+			type:'POST', // тип запроса
+			success:function(data) {
+				if( data ) { 
+					$('#search_loadmore').text('Показати більше').before(data); // вставляем новые посты
+					current_page++; // увеличиваем номер страницы на единицу
+					if (current_page == max_pages) $("#search_loadmore").remove(); // если последняя страница, удаляем кнопку
+				} else {
+					$('#search_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+				}
+			}
+		});
+	});
+	*/
 
 });

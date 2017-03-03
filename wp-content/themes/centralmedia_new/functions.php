@@ -464,7 +464,7 @@ function show_archive_blog() {
             </div>`
             <div class="previous-blog-title ">
                 <a href="' . get_the_permalink() . '" class="black-text">' .
-                    short_post_title(55) . '
+                    short_post_title(90) . '
                 </a>
             </div>
             <div class="previous-blog-tag">';
@@ -520,38 +520,6 @@ function show_no_img_post() {
     }
 //end and author tag settings
 
-
-/*
-//settings for display archive posts
-    function my_pre_get_posts( $query ) {
-        if ( !is_admin() && $query->is_main_query() ) {
-            $queried_object = get_queried_object();
-            if ( $query->is_archive ) {
-                if ( $queried_object->query_var == 'news' ) { //якщо запит виконується не в адмінці, на сторінці архівів, сторінка є ахівом новин та якщо запит є головним
-                    $query->set( 'posts_per_page', 10 );
-                }
-                else if ( $queried_object->query_var == 'articles' ) {
-                    $query->set( 'posts_per_page', 12 );
-                }
-                else if ( $queried_object->query_var == 'blogs' ) {
-                    $query->set( 'posts_per_page', 6 );
-                }
-                else if ( $queried_object->query_var == 'video' ) {
-                    $query->set( 'posts_per_page', 12 );
-                }
-                else if ( $queried_object->query_var == 'partner-news' ) {
-                    $query->set( 'posts_per_page', 15 );
-                }
-            }
-            else if ( $query->is_search ) {
-                $query->set( 'posts_per_page', 10 );
-            }
-        }
-    }
-    add_action( 'pre_get_posts', 'my_pre_get_posts' );
-//end settings for display archive posts
-*/
-
 /*
 //pagination settings
     //delete H2 from pagination template
@@ -569,7 +537,6 @@ function show_no_img_post() {
         );
 //end pagination settings
 */
-
 
 
 //login form settings
@@ -1027,11 +994,39 @@ function show_no_img_post() {
         $args['paged'] = $_POST['page'] + 1; // следующая страница
         $args['post_status'] = 'publish';
         $q = new WP_Query( $args );
-        if( $q->have_posts() ):
-            while( $q->have_posts() ): $q->the_post();
-                //show_short_latest_news();
+
+        /*
+            $current_url = $_SERVER['HTTP_REFERER'];
+            $search_page_url = '/?s=';
+            //$test = strpos( $current_url, $search_page_url );
+            if ( strpos( $current_url, $search_page_url ) ) {
+                $args = unserialize( stripslashes( $_POST['wp_query'] ) );
+                $args['paged'] = $_POST['page'] + 1; // следующая страница
+                $args['post_status'] = 'publish';
+                $q = new WP_Query( $args );
+                
+                if ( $q->have_posts() ) {
+                    while ( $q->have_posts() ) {
+                        $q->the_post();
+                        show_no_img_post();
+                    } //end while
+                } //end if
+            } //end if
+        */
+        
+        if( $q->have_posts() ) {
+            while( $q->have_posts() ) {
+                $q->the_post();
                 if ( get_post_type() == "news" ) {
-                    show_latest_news();
+                    //визначаємо чи ми на архівній сторінці новин (бо там виводиться інший шаблон)
+                    $archive_news_url = get_site_url() . '/news/';
+                    $current_url = $_SERVER['HTTP_REFERER'];
+                    if ( $archive_news_url == $current_url ) {
+                        show_latest_news();
+                    }
+                    else {
+                        show_short_latest_news();
+                    }
                 }
                 else if ( get_post_type() == "video" ) {
                     echo '<div class="col l3 s12 m4 top-five-video-width">';
@@ -1048,8 +1043,8 @@ function show_no_img_post() {
                         show_archive_blog();
                     echo '</div>';
                 }
-            endwhile;
-        endif;
+            } //end while
+        } //end if
         wp_reset_postdata();
         die();
     }

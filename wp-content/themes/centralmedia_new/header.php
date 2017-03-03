@@ -158,7 +158,7 @@
         <div class="modal-content">
             <h4>ПОШУК</h4>
             <form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <input class="search-button" type="search" placeholder="Пошук..." required name="s">
+                <input class="search-button" type="search" autofocus placeholder="Пошук..." required name="s">
             </form>
         </div>
         <div class="modal-footer">

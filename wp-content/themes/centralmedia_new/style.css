@@ -1355,16 +1355,16 @@ margin-top: -10px;
 }
 
 .button_loadmore{
-background: rgba(235, 31, 31, 0.9);
-color: #FFF;
-padding: 10px;
-text-align: center;
--moz-border-radius: 4px;
--webkit-border-radius: 4px;
-border-radius: 4px;
-margin: 20px 0;
-cursor: pointer;
-font-size: 25px;
+	background: rgba(235, 31, 31, 0.9);
+	color: #FFF;
+	padding: 10px !important;
+	text-align: center;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin: 20px 0;
+	cursor: pointer;
+	font-size: 25px;
 }
 
 .wp-polls-form strong{
