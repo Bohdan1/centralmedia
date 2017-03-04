@@ -1,25 +1,23 @@
 <?php
-    $plan_current = 'one';
+    
+    $plan_is_free = get_option('gs-pro') ? false : true;
 
     $plans = array(
-        'Free' => 'one',
-        'Starter' => 'two',
-        'Growth' => 'three',
-        'Insights' => 'four'
+        'Free Apps' => 'one',
+        'Paid Apps' => 'two'
     );
     $categories = array(
-        'Most Popular' => 'popular',        
-        'Sharing Apps' => 'sharing',
+        'Sharing Apps' => 'sharing',        
+        'Tracking & Engagement Tools' => 'tracking',
         'Follow Apps' => 'follow',
-        'eCommerce & Integrations' => 'ecommerce_integrations'
+        'Integrations' => 'integrations'
     );
     $apps = array(
         'Floating Sharing Bar' => array(
             'file' => 'floating-bar',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'sharing',
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('floating_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/floating_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('floating-bar'),
@@ -27,10 +25,9 @@
         ),
         'Horizontal Sharing Bar' => array(
             'file' => 'sharing-bar',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'sharing',
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('sharing_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/groups/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('sharing-bar'),
@@ -38,10 +35,9 @@
         ),
         'Mobile Sharing Bar' => array(
             'file' => 'mobile-bar',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'sharing',
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('mobile_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/mobile_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('mobile-bar'),
@@ -50,9 +46,8 @@
         'Image Sharing' => array(
             'file' => 'image-sharing',
             'category' => 'sharing',
-            'nocode' => true,
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('image_sharing'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/image_sharing/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('hello_buddies'),
@@ -61,9 +56,8 @@
         'Reaction Buttons' => array(
             'file' => 'reaction_buttons',
             'category' => 'sharing',
-            'nocode' => true,
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('reaction_buttons'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/reaction_buttons/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('image-sharing'),
@@ -71,10 +65,9 @@
         ),
         'Hello Buddy' => array(
             'file' => 'hello_buddy',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'tracking',
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('hello_buddy'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/hello_buddies/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('image-sharing'),
@@ -82,10 +75,9 @@
         ),
         'Copy Paste Share Tracking' => array(
             'file' => 'address-tracker',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'tracking',
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('address_tracking'),
             'only_activate' => true,
             'href' => $GS->api_url('sites/activate/' . get_option('gs-api-key') . '/address-tracker'),
@@ -94,9 +86,8 @@
         'Native Sharing Bar' => array(
             'file' => 'native-bar',
             'category' => 'sharing',
-            'nocode' => true,
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('native_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/native_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('native-bar'),
@@ -105,9 +96,8 @@
         'Horizontal Follow Bar' => array(
             'file' => 'follow-bar',
             'category' => 'follow',
-            'nocode' => true,
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('follow_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/follow_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('follow-bar'),
@@ -116,9 +106,8 @@
         'Floating Follow Bar' => array(
             'file' => 'floating-follow-bar',
             'category' => 'follow',
-            'nocode' => true,
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('floating_follow_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/follow_floating_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('floating-follow-bar'),
@@ -127,9 +116,8 @@
         'Mobile Follow Bar' => array(
             'file' => 'mobile-follow-bar',
             'category' => 'follow',
-            'nocode' => true,
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('mobile_follow_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/follow_mobile_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('mobile-follow-bar'),
@@ -137,10 +125,9 @@
         ),
         'Welcome Bar' => array(
             'file' => 'welcome-bar',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'tracking',
             'new' => false,
-            'plan' => 1,
+            'plan' => 'one',
             'active' => $GS->is_active('welcome_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/welcome_bars/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('welcome-bar'),
@@ -148,10 +135,9 @@
         ),
         'Subscriber Bar' => array(
             'file' => 'subscriber-bar',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'tracking',
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('subscriber_bar'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/subscribe_bars/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('subscriber-bar'),
@@ -160,9 +146,8 @@
         'Big Total Shares Horizontal' => array(
             'file' => 'social-bar-big-counter',
             'category' => 'sharing',
-            'nocode' => true,
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('social_bar_big_counter'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/big_counter_sharing_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('social-bar-big-counter'),
@@ -170,43 +155,19 @@
         ),
         'Big Total Shares Floating' => array(
             'file' => 'floating-bar-big-counter',
-            'category' => 'popular',
-            'nocode' => true,
+            'category' => 'sharing',
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('floating_bar_big_counter'),
             'only_activate' => false,
             'href' => $GS->gs_account() . '/sites/gs-wordpress/big_counter_floating_bar/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('floating-bar-big-counter'),
             'desc' => "Increase engagement by showing the total number of shares in a big counter on top of your floating share bar."
         ),
-        'Custom Sharing Actions' => array(
-            'file' => 'custom-actions',
-            'category' => 'sharing',
-            'nocode' => true,
-            'new' => false,
-            'plan' => 1,
-            'active' => $GS->is_active('custom_actions'),
-            'only_activate' => false,
-            'href' => $GS->gs_account() . '/sites/gs-wordpress/elements/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('custom-actions'),
-            'desc' => "Sometimes we need to say more than a simple 'Like'. Here you'll find more than 50 custom stories such as Awesome, Wish or Love."
-        ),
-        'Price Alert' => array(
-            'file' => 'price-alert',
-            'category' => 'ecommerce_integrations',
-            'nocode' => true,
-            'new' => false,
-            'plan' => 2,
-            'active' => $GS->is_active('price_alert'),
-            'only_activate' => false,
-            'href' => $GS->gs_account() . '/sites/gs-wordpress/price_alerts/new?api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('price-alert'),
-            'desc' => "Allow your visitors to get notified when a price drop occurs on a product they want to purchase. Increase sales and fight cart abandonment."
-        ),
         'Google Analytics' => array(
             'file' => 'ga_integration',
-            'category' => 'ecommerce_integrations',
-            'nocode' => true,
+            'category' => 'integrations',
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('ga_integration'),
             'only_activate' => true,
             'href' => $GS->api_url('sites/activate/' . get_option('gs-api-key') . '/ga_integration'),
@@ -214,37 +175,14 @@
         ),
         'MailChimp' => array(
             'file' => 'mailchimp',
-            'category' => 'ecommerce_integrations',
-            'nocode' => true,
+            'category' => 'integrations',
             'new' => false,
-            'plan' => 2,
+            'plan' => 'two',
             'active' => $GS->is_active('mailchimp'),
             'only_activate' => true,
             'href' => $GS->gs_account() . '/auth/mailchimp',
             'desc' => "Automatically connect your Subscriber Bar & Price Alert features with your Mailchimp account"
-        ),
-        'Bitly' => array(
-            'file' => 'bitly',
-            'category' => 'ecommerce_integrations',
-            'nocode' => true,
-            'new' => false,
-            'plan' => 2,
-            'active' => $GS->is_active('bitly'),
-            'only_activate' => true,
-            'href' => $GS->gs_account() . '/auth/bitly',
-            'desc' => "Activating our Bitly integration will allow your readers to share using your Bitly account. Easy, no code required!"
-        ),
-        'InfusionSoft' => array(
-            'file' => 'infusionsoft',
-            'category' => 'ecommerce_integrations',
-            'nocode' => true,
-            'new' => false,
-            'plan' => 2,
-            'active' => $GS->is_active('infusionsoft'),
-            'only_activate' => true,
-            'href' => $GS->gs_account() . '/auth/infusionsoft',
-            'desc' => "Connect to Infusionsoft account and grow your CRM list with our Subscriber Bar"
-        ),
+        )
     );
 
     $plan_class = array_values($plans);
@@ -254,11 +192,20 @@
 
     function plan_class($plan_id) {
         global $plan_class;
-        return $plan_class[$plan_id - 1];
+        global $plans;
+        // return $plan_class[$plan_id - 1];
+        return array_search($plan_id, $plans);
     }
 
     function plan_name($plan_id) {
         global $plan_name;
-        return $plan_name[$plan_id - 1];
+        global $plans;
+        // return $plan_name[$plan_id - 1];
+        return array_search($plan_id, $plans);
+    }
+
+    function category_name($category_key) {
+        global $categories;
+        return array_search($category_key, $categories);
     }
 ?>

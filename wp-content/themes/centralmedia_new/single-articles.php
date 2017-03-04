@@ -102,19 +102,23 @@
 </div>
 </div>
 
-<div class="row">
-    <div class="third-block-with-line-single-news">
-        <div class="big-sign-line">КОМЕНТАРІ<span></span></div>
-        <div class="block-line"></div>
-    </div>
-</div>
-<div  class="comment-block">
-        <?php
-            if ( comments_open() || get_comments_number() ) { 
-                comments_template(); 
-            }
-        ?>
-</div>
+<?php
+    if ( comments_open() || get_comments_number() ) { 
+        echo '
+            <div class="row">
+                <div class="third-block-with-line-single-news">
+                     <div class="big-sign-line">КОМЕНТАРІ<span></span></div>
+                    <div class="block-line"></div>
+                </div>
+            </div>
+            <div class="comment-block">';
+                comments_template();
+        echo '
+            </div>';
+    }
+?>
+
+
 <div class="row one-news-content">
     <?php
         //slider for blogers

@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'register_styles' );
 // register_sidebar();
 
 // додаємо ще один розмір картинок 1430x550 з обрізанням для слайдера статтей
-add_image_size('1430x550', 1450, 550, true);
+add_image_size('1430x550', 1450, 550, true); //for article slider (homepage)
 
 function short_post_desc( $charlength ) {        //function for display short content for posts
     //$excerpt = get_the_content();
@@ -33,7 +33,8 @@ function short_post_desc( $charlength ) {        //function for display short co
     if ( mb_strlen( $excerpt ) > $charlength ) {
         $subex = mb_substr( $excerpt, 0, $charlength );
         return $subex . '...';
-    } else {
+    }
+    else {
         return $excerpt;
     }
 }
@@ -44,7 +45,8 @@ function short_post_title( $charlength, $post_id = null ) {        //function fo
     if ( mb_strlen( $excerpt ) > $charlength ) {
         $subex = mb_substr( $excerpt, 0, $charlength );
         return $subex . '...';
-    } else {
+    }
+    else {
         return $excerpt;
     }
 }
@@ -441,32 +443,28 @@ function show_archive_blog() {
     $author_id = get_the_author_meta( 'ID' );
     echo '
         <div class="previous-blog-box">
-            <div class="view-count-blog">
-                <img alt="img" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
-                <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
-            </div>
-            <div class="row">
-                <div class="col l2 m5 s12">
-                    <div class="previous-blog-img">
-                        <a href="' . get_the_permalink() . '" >
+            <a class="black-text no-hover-blog-black" href="' . get_the_permalink() . '">
+                <div class="view-count-blog">
+                    <img alt="img" class="count-width" src="' . get_stylesheet_directory_uri() . '/img/eye-black.svg">
+                    <span class="count-number">' . getPostViews( get_the_ID() ) . '</span>
+                </div>
+                <div class="row">
+                    <div class="col l2 m5 s12">
+                        <div class="previous-blog-img">
                             <img alt="img" class="previous-blog-img-width" src="' . get_wp_user_avatar_src( $author_id, 'thumbnail' ) .'">
-                        </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col l10 m7 s12">
-                    <div class="previous-blog-name ">
-                        <a href="' . get_author_posts_url( $author_id ) . '" class="black-text">' .
+                    <div class="col l10 m7 s12">
+                        <div class="previous-blog-name ">' .
                             get_the_author_meta('first_name') . ' ' . get_the_author_meta( 'last_name' ) . '
-                        </a>
+                        </div>
+                        <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
                     </div>
-                    <div class="previous-blog-time ">' . get_the_time('d.m.Y') . '</div>
-                </div>
-            </div>`
-            <div class="previous-blog-title ">
-                <a href="' . get_the_permalink() . '" class="black-text">' .
+                </div>`
+                <div class="previous-blog-title ">' .
                     short_post_title(90) . '
-                </a>
-            </div>
+                </div>
+            </a>
             <div class="previous-blog-tag">';
                 $category = get_the_category( $post_id );
                 if ( !empty($category) ) {
@@ -784,25 +782,49 @@ function show_no_img_post() {
 
 
 //hide not used fields
-    function is_user_role( $role, $user_id = null ) {
-        $user = is_numeric( $user_id ) ? get_userdata( $user_id ) : wp_get_current_user();
 
-        if( ! $user )
-            return false;
+function is_user_role( $role, $user_id = null ) {
+    $user = is_numeric( $user_id ) ? get_userdata( $user_id ) : wp_get_current_user();
+    if( ! $user )
+        return false;
+    return in_array( $role, (array) $user->roles );
+}
 
-        return in_array( $role, (array) $user->roles );
+function remove_menus() {
+    if ( is_user_role( 'administrator' ) || is_user_role( 'editor' ) ) {
+        remove_menu_page( 'edit.php' );                   //Записи
+        remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
+        remove_menu_page( 'themes.php' );                 //Теми
+        remove_menu_page( 'plugins.php' );                //Плагіни
+        remove_menu_page( 'tools.php' );                  //Інструменти
+        //remove_menu_page( 'options-general.php' );        //Налаштування
+        remove_menu_page( 'vortex_like_dislike' );   //Плагін Rating System
+        remove_menu_page( 'wp-share-buttons-analytics-by-getsocial/init.php' );   //Плагін GetSocial
+        remove_menu_page( 'wpcf7' );   //Плагін Contact Form 7
     }
-
-
+    else {
+        remove_menu_page( 'index.php' );                  //Консоль
+        remove_menu_page( 'edit.php' );                   //Записи
+        remove_menu_page( 'upload.php' );                 //Медіафайли
+        remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
+        remove_menu_page( 'edit-comments.php' );          //Комментарі
+        remove_menu_page( 'themes.php' );                 //Теми
+        remove_menu_page( 'plugins.php' );                //Плагіни
+        remove_menu_page( 'users.php' );                  //Користувачі
+        remove_menu_page( 'tools.php' );                  //Інструменти
+        remove_menu_page( 'options-general.php' );        //Налаштування
+    }
+}
+add_action( 'admin_menu', 'remove_menus' );
+/*
     function remove_menus() {
         global $menu;
         $restricted = array();
-        if ( !is_user_role( 'administrator' ) || !is_user_role( 'editor' ) ) {
+        if ( is_user_role( 'administrator' ) || is_user_role( 'editor' ) ) {
             $restricted = array(
                 //__('Dashboard'),
                 __('Posts'),
                 __('Pages'),
-                __('Comments'),
                 __('Tools'),
             );
         }
@@ -811,9 +833,10 @@ function show_no_img_post() {
                 //__('Dashboard'),
                 __('Posts'),
                 __('Pages'),
+                __('Comments'),
+                __('Tools'),
             );
         }
-
         end ( $menu );
         while ( prev($menu) ) {
             $value = explode(' ', $menu[key($menu)][0]);
@@ -823,6 +846,7 @@ function show_no_img_post() {
         }
     }
     add_action( 'admin_menu', 'remove_menus' );
+*/
 //end hide not used fields
 
 
@@ -916,10 +940,10 @@ function show_no_img_post() {
     function getPostViews( $postID ) {
         $count_key = 'post_views_count';
         $count = get_post_meta( $postID, $count_key, true );
-        if( $count=='' ) {
+        if( $count == '' ) {
             delete_post_meta( $postID, $count_key );
-            add_post_meta( $postID, $count_key, '0' );
-            return "0";
+            add_post_meta( $postID, $count_key, '1' );
+            return "1";
         }
         return $count;
     }
@@ -931,9 +955,9 @@ function show_no_img_post() {
             $count_key = 'post_views_count';
             $count = get_post_meta( $postID, $count_key, true );
             if( $count == '' ) {
-                $count = 0;
+                $count = 1;
                 delete_post_meta( $postID, $count_key );
-                add_post_meta( $postID, $count_key, '0' );
+                add_post_meta( $postID, $count_key, '1' );
             }
             else {
                 $count++;

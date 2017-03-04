@@ -4,8 +4,8 @@ Contributors: GetSocial.io, joaoromao
 Tags: addthis, addtoany, share, sharing, social, analytics, button, facebook share, facebook button, like button, tweet button, twitter share, pinterest share, pin button, floating buttons, share, share button, share buttons, share links, shareaholic, sharethis, social analytics, social media, social bookmarking, social buttons, social media, social plugin, social share buttons, social sharing, mobile share bar, mobile sharing, top bar, welcome bar, hello bar, follow buttons, instagram, youtube, increase followers, increase shares, increase traffic, copy paste shares, google analytics integration, yummly, flickr, rss, mailchimp, popup, list builder, infusion soft, bitly, exit intent, time on page, automatic popup, fly-in, exit popup, popup builder, share popup, wordpress popup, subscribe popup, popup on exit, reaction buttons, reactions, reaction bar, virality alerts, alerts, dark social, scheduling, scheduler, automatic social media, automation, automatic facebook
 
 Requires at least: 3.0
-Tested up to: 4.7
-Stable tag: 3.2.3
+Tested up to: 4.7.2
+Stable tag: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,7 +39,8 @@ With GetSocial you get **social share buttons** to increase your reach and boost
 
 <h4>Analytics and Automation</h4>
 
-- **Real-Time Analytics**: Our analytics lets you understand, in real-time, how much social traffic each network is driving to your website and identify the best content to feature and promote on social media.- **Virality Alerts**: Know when the pages of your website are getting viral.
+- **Real-Time Analytics**: Our analytics lets you understand, in real-time, how much social traffic each network is driving to your website and identify the best content to feature and promote on social media.
+- **Virality Alerts**: Know when the pages of your website are getting viral.
 - **Dark Social Share Tracking**: Track 80% of the shares that Google Analytics doesn’t know about.
 - **Virality Score**: Always know the pages that generate the most organic traffic.
 - **Social Automation**: Automate the publishing of posts on Facebook. We’ll always select the posts that will generate the most traffic.
@@ -73,8 +74,6 @@ With GetSocial you get **social share buttons** to increase your reach and boost
 * **Google Analytics Integration:** Merge the data obtain by GetSocial with the powerful Google Analytics so you can track your conversions from when someone clicks a friend’s share to the moment a purchase or objective is met.
 
 <a href="https://www.youtube.com/watch?v=wDZvmwHk6FA">On this video</a> you can find a step by step tutorial on how to install this plugin in your WordPress Account. We also provide a text-based tutorial here:  <a href="https://getsocial.io/tutorials/wordpress">How to add free Social Share Buttons on WordPress</a> 
-
-Here you can find a step by step tutorial on how to manually install this plugin in your WordPress Account: 
 
 == Installation ==
 
@@ -244,11 +243,15 @@ We have a free plan called Test Plan and it’s meant as a demo for you to test 
 9. Analytics for your Social Bars
 
 == Changelog ==
+**4.0**
+
+- Introduction of new pricing structure and reposition as a premium tools & analytics platform.
+- Discontinuing of the free plan
+
 **3.2.3**
 
 - Updates to UserVoice support tool
 
-== Changelog ==
 **3.2.2**
 
 - Bug fixes

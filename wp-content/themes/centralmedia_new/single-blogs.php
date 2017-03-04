@@ -17,8 +17,8 @@
                                         </a>
                                     </div>
                                     <div class="one-blog-sign-title">
-                                        <a href="#" class="black-text">
-                                        <?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
+                                        <?php echo '<a href="' . get_author_posts_url( $author_id ) . '" class="black-text">'; ?>
+                                            <?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?>
                                         </a>
                                     </div>
                                     <div class="one-blog-sign-text">
@@ -121,17 +121,20 @@
 </div>
 
 <div style="margin-bottom: 0px;" class="row">
-    <div class="third-block-with-line">
-        <div class="big-sign-line">КОМЕНТАРІ<span></span></div>
-        <div class="block-line"></div>
-    </div>
-    <div  class="comment-block">
-        <?php
-            if ( comments_open() || get_comments_number() ) { 
-                comments_template(); 
-            }
-        ?>
-    </div>
+    <?php
+        if ( comments_open() || get_comments_number() ) { 
+            echo '
+                <div class="third-block-with-line">
+                    <div class="big-sign-line">КОМЕНТАРІ<span></span></div>
+                    <div class="block-line"></div>
+                </div>
+                <div  class="comment-block">';
+                    comments_template();
+            echo '
+                </div>';
+        }
+    ?>
+    
     <div class="row one-news-content">
         <?php
             //slider for blogers
@@ -179,8 +182,9 @@
                         }
                         else {
                             echo '<div class="col l6 s12 m6 ">';
-                                show_big_post();
+                                show_small_post();
                             echo '</div>';
+                            $posts_count++;
                         }
                     } //end while
                 } //end if

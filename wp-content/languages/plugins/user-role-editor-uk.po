@@ -1,0 +1,796 @@
+# Translation of Plugins - User Role Editor - Development (trunk) in Ukrainian
+# This file is distributed under the same license as the Plugins - User Role Editor - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-01-24 11:29:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Plugins - User Role Editor - Development (trunk)\n"
+
+#. Author of the plugin/theme
+msgid "Vladimir Garagulya"
+msgstr "Platform IT"
+
+#. Description of the plugin/theme
+msgid "Change/add/delete WordPress user roles and capabilities."
+msgstr ""
+
+#. #-#-#-#-#  tmp-user-role-editor.pot (User Role Editor 4.19.2)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  tmp-user-role-editor.pot (User Role Editor 4.19.2)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://www.role-editor.com"
+msgstr ""
+
+#: includes/ure-user-edit.php:92
+msgid "Other Roles:"
+msgstr "Інші ролі:"
+
+#: includes/ure-user-edit.php:82
+msgid "bbPress Role:"
+msgstr ""
+
+#: includes/ure-user-edit.php:72
+msgid "Primary Role:"
+msgstr "Основна роль:"
+
+#: includes/ure-user-edit.php:35
+msgid "Change capabilities for user"
+msgstr "Зміна можливостей для користувача"
+
+#: includes/ure-user-edit.php:32
+msgid "Network Super Admin"
+msgstr ""
+
+#: includes/ure-role-edit.php:83 includes/ure-user-edit.php:131
+msgid "Custom capabilities:"
+msgstr "Користувацькі можливості: "
+
+#: includes/ure-role-edit.php:65 includes/ure-user-edit.php:112
+msgid "Quick filter:"
+msgstr "Швидкий фільтр:"
+
+#: includes/ure-role-edit.php:63 includes/ure-user-edit.php:110
+msgid "Core capabilities:"
+msgstr "Основні можливості:"
+
+#: includes/ure-role-edit.php:56
+msgid "Apply to All Sites"
+msgstr ""
+
+#: includes/ure-role-edit.php:44
+msgid "If checked, then apply action to ALL sites of this Network"
+msgstr ""
+
+#: includes/ure-role-edit.php:30 includes/ure-user-edit.php:54
+msgid "Show capabilities in human readable form"
+msgstr "Показати можливості в читабельній формі"
+
+#: includes/ure-role-edit.php:17
+msgid "Select Role and change its capabilities:"
+msgstr "Виберіть роль і змініть її можливості:"
+
+#: includes/settings-template.php:177
+msgid "Allow non super administrators to create, edit, and delete users"
+msgstr ""
+
+#: includes/settings-template.php:151
+msgid "Note for multisite environment: take into account that other default roles should exist at the site, in order to be assigned to the new registered users."
+msgstr ""
+
+#: includes/settings-template.php:145
+msgid "Other default roles for new registered user: "
+msgstr "Інші ролі за замовчуванням для нових зареєстрованих користувачів: "
+
+#: includes/settings-template.php:138
+msgid "Primary default role: "
+msgstr "Основна роль за замовчуванням:"
+
+#: includes/settings-template.php:90 includes/settings-template.php:126
+#: includes/settings-template.php:158 includes/settings-template.php:190
+msgid "Save"
+msgstr "Зберегти"
+
+#: includes/settings-template.php:39
+msgid "About"
+msgstr "Про"
+
+#: includes/settings-template.php:17
+msgid "User Role Editor - Options"
+msgstr "Редактор ролей користувачів - Параметри"
+
+#: includes/class-user-role-editor.php:912
+msgid " Capability name (ID) must contain latin characters, digits, hyphens or underscore only!"
+msgstr ""
+
+#: includes/class-user-role-editor.php:911
+msgid " Capability name (ID) can not be empty!"
+msgstr ""
+
+#: includes/class-user-role-editor.php:910
+msgid "Warning! Be careful - removing critical capability could crash some plugin or other custom code"
+msgstr ""
+
+#: includes/class-user-role-editor.php:908
+msgid "Set New Default Role"
+msgstr "Встановити нову роль за замовчуванням"
+
+#: includes/class-user-role-editor.php:907
+msgid "Default Role"
+msgstr "Роль за замовчуванням"
+
+#: includes/class-user-role-editor.php:906
+msgid "Continue?"
+msgstr "Продовжити?"
+
+#: includes/class-user-role-editor.php:904
+msgid "For more information on how to undo changes and restore plugin capabilities go to"
+msgstr ""
+
+#: includes/class-user-role-editor.php:903
+msgid "If any plugins have changed capabilities in any way upon installation (such as S2Member, WooCommerce, and many more), those capabilities will be DELETED!"
+msgstr ""
+
+#: includes/class-user-role-editor.php:902
+msgid "DANGER! Resetting will restore default settings from WordPress Core."
+msgstr ""
+
+#: includes/class-user-role-editor.php:901
+msgid "Reset"
+msgstr "Скидання"
+
+#: includes/class-user-role-editor.php:900
+#: includes/class-user-role-editor.php:909
+msgid "Delete Capability"
+msgstr "Видалити можливості"
+
+#: includes/class-user-role-editor.php:899
+msgid "Add Capability"
+msgstr "Додати можливості"
+
+#: includes/class-user-role-editor.php:898
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: includes/class-user-role-editor.php:897
+msgid "Delete Role"
+msgstr "Видалити роль"
+
+#: includes/class-user-role-editor.php:895
+msgid "Add Role"
+msgstr "Додати роль"
+
+#: includes/class-user-role-editor.php:894
+msgid " WordPress does not support numeric Role name (ID). Add latin characters to it."
+msgstr ""
+
+#: includes/class-user-role-editor.php:893
+msgid " Role name (ID) must contain latin characters, digits, hyphens or underscore only!"
+msgstr ""
+
+#: includes/class-user-role-editor.php:892
+msgid " Role name (ID) can not be empty!"
+msgstr ""
+
+#: includes/class-user-role-editor.php:891
+#: includes/class-user-role-editor.php:896
+msgid "Rename Role"
+msgstr "Перейменувати роль"
+
+#: includes/class-user-role-editor.php:890
+msgid "Add New Role"
+msgstr "Додати нову роль"
+
+#: includes/class-user-role-editor.php:889
+msgid "Please confirm permissions update"
+msgstr "Будь ласка, підтвердіть оновлення дозволів"
+
+#: includes/class-user-role-editor.php:888
+msgid "Update"
+msgstr "Оновити"
+
+#: includes/class-user-role-editor.php:887
+msgid "Reverse"
+msgstr "Зворотний"
+
+#: includes/class-user-role-editor.php:886
+msgid "Unselect All"
+msgstr "Зняти все"
+
+#: includes/class-user-role-editor.php:885
+msgid "Select All"
+msgstr "Вибрати все"
+
+#: includes/class-user-role-editor.php:756
+msgid "You do not have sufficient permissions to manage options for User Role Editor."
+msgstr "У вас немає достатніх повноважень для управління параметрами редактора ролей користувачів."
+
+#: includes/class-user-role-editor.php:731
+msgid "Default Roles are updated"
+msgstr "Ролі за замовчуванням будуть оновлені"
+
+#: includes/class-user-role-editor.php:685
+#: includes/class-user-role-editor.php:703
+#: includes/class-user-role-editor.php:747
+msgid "User Role Editor options are updated"
+msgstr "Параметри редактора ролей користувачів оновлені"
+
+#: includes/class-user-role-editor.php:586 includes/settings-template.php:34
+msgid "Multisite"
+msgstr "Мультисайтовий"
+
+#: includes/class-user-role-editor.php:580 includes/settings-template.php:30
+msgid "Default Roles"
+msgstr "Ролі за замовчуванням"
+
+#: includes/class-user-role-editor.php:574 includes/settings-template.php:26
+msgid "Additional Modules"
+msgstr "Додаткові модулі"
+
+#: includes/class-user-role-editor.php:568 includes/settings-template.php:21
+msgid "General"
+msgstr "Загальний"
+
+#: includes/class-user-role-editor.php:535
+msgid "Settings"
+msgstr "Налаштування"
+
+#: includes/class-user-role-editor.php:298
+#: includes/class-user-role-editor.php:300
+msgid "You do not have permission to edit this user."
+msgstr ""
+
+#: includes/class-user-role-editor.php:235
+msgid "Provide new role"
+msgstr ""
+
+#: includes/class-user-role-editor.php:234
+msgid "No rights"
+msgstr ""
+
+#: includes/class-user-role-editor.php:233
+msgid "Change role for users without role"
+msgstr ""
+
+#: includes/class-user-other-roles.php:215
+msgid "Additional Capabilities"
+msgstr ""
+
+#: includes/class-user-other-roles.php:169
+msgid "Edit"
+msgstr "Редагувати"
+
+#: includes/class-user-other-roles.php:162
+#: includes/class-user-role-editor.php:438
+msgid "Capabilities"
+msgstr ""
+
+#: includes/class-user-other-roles.php:83
+msgid "Select additional roles for this user"
+msgstr ""
+
+#: includes/class-user-other-roles.php:82
+#: includes/class-user-other-roles.php:183
+#: includes/class-user-other-roles.php:243
+msgid "Other Roles"
+msgstr ""
+
+#: includes/class-ure-screen-help.php:82
+msgid "Allow non super-admininstrators to create, edit and delete users"
+msgstr ""
+
+#: includes/class-ure-screen-help.php:63
+msgid "Other default roles for new registered user"
+msgstr ""
+
+#: includes/class-ure-screen-help.php:45 includes/settings-template.php:111
+msgid "Count users without role"
+msgstr ""
+
+#: includes/class-ure-screen-help.php:25 includes/settings-template.php:77
+msgid "Edit user capabilities"
+msgstr ""
+
+#: includes/class-ure-screen-help.php:21 includes/settings-template.php:69
+#: includes/ure-role-edit.php:40 includes/ure-user-edit.php:64
+msgid "Show deprecated capabilities"
+msgstr ""
+
+#: includes/class-ure-screen-help.php:18 includes/settings-template.php:61
+msgid "Show capabilities in the human readable form"
+msgstr "Показати можливості в читабельною формі"
+
+#: includes/class-ure-screen-help.php:15 includes/settings-template.php:53
+msgid "Show Administrator role at User Role Editor"
+msgstr "Показати роль адміністратора в редакторі ролі користувача"
+
+#: includes/class-ure-screen-help.php:12 includes/class-ure-screen-help.php:41
+#: includes/class-ure-screen-help.php:60 includes/class-ure-screen-help.php:79
+msgid "User Role Editor Options page help"
+msgstr "Редактор ролей користувачів сторінка варіантів довідки"
+
+#: includes/class-ure-lib.php:2751
+msgid "Denied: %s"
+msgstr "Відмовлено: %s"
+
+#: includes/class-ure-lib.php:2636
+msgid "&mdash; No role for this site &mdash;"
+msgstr ""
+
+#: includes/class-ure-lib.php:2592
+msgid "None"
+msgstr "Немає"
+
+#: includes/class-ure-lib.php:2579
+msgid "Delete All Unused Roles"
+msgstr ""
+
+#: includes/class-ure-lib.php:2506
+msgid "FAQ"
+msgstr "Часті питання"
+
+#: includes/class-ure-lib.php:2505 includes/class-user-role-editor.php:546
+msgid "Changelog"
+msgstr "Список змін"
+
+#: includes/class-ure-lib.php:2504
+msgid "Plugin download"
+msgstr ""
+
+#: includes/class-ure-lib.php:2503
+msgid "Plugin webpage"
+msgstr ""
+
+#: includes/class-ure-lib.php:2502
+msgid "Author's website"
+msgstr ""
+
+#: includes/class-ure-lib.php:2501
+msgid "Version:"
+msgstr ""
+
+#: includes/class-ure-lib.php:2433
+msgid "Capability %s was removed successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:2414
+msgid "Error! You do not have permission to delete this capability: %s!"
+msgstr ""
+
+#: includes/class-ure-lib.php:2385
+msgid "Capability %s exists already"
+msgstr ""
+
+#: includes/class-ure-lib.php:2383
+msgid "Capability %s is added successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:2370
+msgid "Error: Capability name must contain latin characters and digits only!"
+msgstr ""
+
+#: includes/class-ure-lib.php:2247
+msgid "Export"
+msgstr ""
+
+#: includes/class-ure-lib.php:2246
+msgid "Delete themes"
+msgstr ""
+
+#: includes/class-ure-lib.php:2245
+msgid "Edit theme options"
+msgstr ""
+
+#: includes/class-ure-lib.php:2244
+msgid "Promote users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2243
+msgid "Add users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2242
+msgid "Remove users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2241
+msgid "List users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2240
+msgid "Update core"
+msgstr ""
+
+#: includes/class-ure-lib.php:2239
+msgid "Install themes"
+msgstr ""
+
+#: includes/class-ure-lib.php:2238
+msgid "Update themes"
+msgstr ""
+
+#: includes/class-ure-lib.php:2237
+msgid "Install plugins"
+msgstr ""
+
+#: includes/class-ure-lib.php:2236
+msgid "Delete plugins"
+msgstr ""
+
+#: includes/class-ure-lib.php:2235
+msgid "Update plugins"
+msgstr ""
+
+#: includes/class-ure-lib.php:2234
+msgid "Edit dashboard"
+msgstr ""
+
+#: includes/class-ure-lib.php:2233
+msgid "Unfiltered upload"
+msgstr ""
+
+#: includes/class-ure-lib.php:2232
+msgid "Create users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2231
+msgid "Delete users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2230
+msgid "Read private pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2229
+msgid "Edit private pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2228
+msgid "Delete private pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2227
+msgid "Read private posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2226
+msgid "Edit private posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2225
+msgid "Delete private posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2224
+msgid "Delete published posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2223
+msgid "Delete others posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2222
+msgid "Delete posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2221
+msgid "Delete published pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2220
+msgid "Delete others pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2219
+msgid "Delete pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2218
+msgid "Publish pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2217
+msgid "Edit published pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2216
+msgid "Edit others pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2215
+msgid "Level 0"
+msgstr ""
+
+#: includes/class-ure-lib.php:2214
+msgid "Level 1"
+msgstr ""
+
+#: includes/class-ure-lib.php:2213
+msgid "Level 2"
+msgstr ""
+
+#: includes/class-ure-lib.php:2212
+msgid "Level 3"
+msgstr ""
+
+#: includes/class-ure-lib.php:2211
+msgid "Level 4"
+msgstr ""
+
+#: includes/class-ure-lib.php:2210
+msgid "Level 5"
+msgstr ""
+
+#: includes/class-ure-lib.php:2209
+msgid "Level 6"
+msgstr ""
+
+#: includes/class-ure-lib.php:2208
+msgid "Level 7"
+msgstr ""
+
+#: includes/class-ure-lib.php:2207
+msgid "Level 8"
+msgstr ""
+
+#: includes/class-ure-lib.php:2206
+msgid "Level 9"
+msgstr ""
+
+#: includes/class-ure-lib.php:2205
+msgid "Level 10"
+msgstr ""
+
+#: includes/class-ure-lib.php:2204
+msgid "Read"
+msgstr ""
+
+#: includes/class-ure-lib.php:2203
+msgid "Edit pages"
+msgstr ""
+
+#: includes/class-ure-lib.php:2202
+msgid "Publish posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2201
+msgid "Edit published posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2200
+msgid "Edit others posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2199
+msgid "Edit posts"
+msgstr ""
+
+#: includes/class-ure-lib.php:2198
+msgid "Unfiltered html"
+msgstr ""
+
+#: includes/class-ure-lib.php:2197
+msgid "Import"
+msgstr ""
+
+#: includes/class-ure-lib.php:2196
+msgid "Upload files"
+msgstr ""
+
+#: includes/class-ure-lib.php:2195
+msgid "Manage links"
+msgstr ""
+
+#: includes/class-ure-lib.php:2194
+msgid "Manage categories"
+msgstr ""
+
+#: includes/class-ure-lib.php:2193
+msgid "Moderate comments"
+msgstr ""
+
+#: includes/class-ure-lib.php:2192
+msgid "Manage options"
+msgstr ""
+
+#: includes/class-ure-lib.php:2191
+msgid "Edit files"
+msgstr ""
+
+#: includes/class-ure-lib.php:2190
+msgid "Edit users"
+msgstr ""
+
+#: includes/class-ure-lib.php:2189
+msgid "Edit plugins"
+msgstr ""
+
+#: includes/class-ure-lib.php:2188
+msgid "Activate plugins"
+msgstr ""
+
+#: includes/class-ure-lib.php:2187
+msgid "Edit themes"
+msgstr ""
+
+#: includes/class-ure-lib.php:2186
+msgid "Switch themes"
+msgstr ""
+
+#: includes/class-ure-lib.php:2184
+msgid "Subscriber"
+msgstr ""
+
+#: includes/class-ure-lib.php:2183
+msgid "Contributor"
+msgstr ""
+
+#: includes/class-ure-lib.php:2182
+msgid "Author"
+msgstr "Автор"
+
+#: includes/class-ure-lib.php:2181
+msgid "Editor"
+msgstr ""
+
+#: includes/class-ure-lib.php:2165
+msgid "This role does not exist - "
+msgstr ""
+
+#: includes/class-ure-lib.php:2163
+msgid "Can not set Administrator role as a default one"
+msgstr ""
+
+#: includes/class-ure-lib.php:2160
+msgid "Default role for new users is set to %s successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:2157
+msgid "Error encountered during default role change operation"
+msgstr ""
+
+#: includes/class-ure-lib.php:2129
+msgid "Role %s is deleted successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:2127
+msgid "Unused roles are deleted successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:2125
+msgid "Error encountered during role delete operation"
+msgstr ""
+
+#: includes/class-ure-lib.php:2052
+msgid "Role %s is renamed to %s successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:2044
+msgid "Role %s does not exists"
+msgstr ""
+
+#: includes/class-ure-lib.php:2037
+msgid "Error: Empty role display name is not allowed."
+msgstr ""
+
+#: includes/class-ure-lib.php:2019
+msgid "Error: Role ID is empty!"
+msgstr ""
+
+#: includes/class-ure-lib.php:1995
+msgid "Role %s is created successfully"
+msgstr ""
+
+#: includes/class-ure-lib.php:1993
+msgid "Error is encountered during new role create operation"
+msgstr ""
+
+#: includes/class-ure-lib.php:1978
+msgid "Role %s exists already"
+msgstr ""
+
+#: includes/class-ure-lib.php:1963 includes/class-ure-lib.php:2030
+msgid "Error: WordPress does not support numeric Role name (ID). Add latin characters to it."
+msgstr ""
+
+#: includes/class-ure-lib.php:1959 includes/class-ure-lib.php:2026
+msgid "Error: Role ID must contain latin characters, digits, hyphens or underscore only!"
+msgstr ""
+
+#: includes/class-ure-lib.php:1913
+msgid "Error is occur. Please check the log file."
+msgstr ""
+
+#: includes/class-ure-lib.php:1697 includes/class-ure-lib.php:1950
+#: includes/class-ure-lib.php:2066 includes/class-ure-lib.php:2114
+#: includes/class-ure-lib.php:2362 includes/class-ure-lib.php:2407
+#: includes/class-user-role-editor.php:828
+msgid "Insufficient permissions to work with User Role Editor"
+msgstr "Недостатньо дозволів для роботи з редактором ролей користувачів"
+
+#: includes/class-ure-lib.php:1442
+msgid "Help"
+msgstr "Допомога"
+
+#: includes/class-ure-lib.php:1441
+msgid "user capability"
+msgstr ""
+
+#: includes/class-ure-lib.php:1440
+msgid "read about"
+msgstr ""
+
+#: includes/class-ure-lib.php:558
+msgid "User Roles are restored to WordPress default values. "
+msgstr ""
+
+#: includes/class-ure-lib.php:500
+msgid "Error occured during user update"
+msgstr "Помилка при оновленні користувача"
+
+#: includes/class-ure-lib.php:495
+msgid "User capabilities are updated successfully"
+msgstr "Можливості користувача оновлені успішно"
+
+#: includes/class-ure-lib.php:488
+msgid "Error occured during role(s) update"
+msgstr "Сталася помилка під час оновлення ролей"
+
+#: includes/class-ure-lib.php:482
+msgid "Roles are updated for all network"
+msgstr "Ролі оновлені для всієї мережі"
+
+#: includes/class-ure-lib.php:480
+msgid "Role is updated successfully"
+msgstr "Роль оновлена успішно"
+
+#: includes/class-ure-lib.php:437
+msgid "does not exist"
+msgstr "не існує"
+
+#: includes/class-ure-lib.php:436
+msgid "Role"
+msgstr "Роль"
+
+#: includes/class-ure-lib.php:436
+msgid "Error: "
+msgstr "Помилка: "
+
+#. #-#-#-#-#  tmp-user-role-editor.pot (User Role Editor 4.19.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/class-ure-lib.php:339 includes/class-user-role-editor.php:596
+#: includes/class-user-role-editor.php:625
+msgid "User Role Editor"
+msgstr "Редактор ролей користувачів"
+
+#: includes/class-ure-lib.php:322
+msgid "Capability name (ID): "
+msgstr "Назва можливості (ID): "
+
+#: includes/class-ure-lib.php:315
+msgid "Delete:"
+msgstr "Видалити:"
+
+#: includes/class-ure-lib.php:300
+msgid "Select Role:"
+msgstr "Виберіть роль:"
+
+#: includes/class-ure-lib.php:284
+msgid "Make copy of: "
+msgstr "Зробіть копію: "
+
+#: includes/class-ure-lib.php:282 includes/class-ure-lib.php:293
+msgid "Display Role Name: "
+msgstr "Відображати ім'я ролі: "
+
+#: includes/class-ure-lib.php:280 includes/class-ure-lib.php:291
+msgid "Role name (ID): "
+msgstr "Ім'я ролі (ID): "
+
+#: includes/class-ure-lib.php:247
+msgid "Error: wrong request"
+msgstr "Помилка: неправильний запит"

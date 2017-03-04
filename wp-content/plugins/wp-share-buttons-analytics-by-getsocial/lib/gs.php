@@ -2,7 +2,7 @@
 
 class GS {
 
-    public $plugin_version = "3.2.3";
+    public $plugin_version = "4.0";
     private $gs_url = "https://api.at.getsocial.io";
     private $gs_account = "https://getsocial.io";
     private $gs_url_api = "//api.at.getsocial.io";
@@ -63,6 +63,7 @@ class GS {
     function save($site_info) {
         update_option('gs-identifier', $site_info['identifier']);
         update_option('gs-pro', $site_info['pro']);
+        update_option('gs-user-email', $site_info['user_email']);
         update_option('gs-apps', json_encode($site_info['gs_apps']));
         update_option('gs-ask-review', $site_info['ask_review']);
         update_option('gs-has-subscriptions', $site_info['has_subscriptions']);

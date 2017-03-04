@@ -1,5 +1,21 @@
+ver. 0.99.16
+  - видалив файли:
+    - content.php
+    - single.php
+  - виправив:
+    - виводило 5 популярних статтей замість 3 (single-blogs.php)
+    - додав можливість коментувати народного кориспондента (custom-posts-types.php)
+    - виводило блок з коментарями коли вони були закриті (усі файли single)
+    - 2 блоги замість 3 на головній (content-home-mobile.php)
+  - приховав непотріб для адміна (functions.php)
+  - оновив плагіни:
+    - Akismet
+    - Contact Form 7
+    - Share Buttons & tools to grow traffic by GetSocial.io
+
 ver. 0.99.15
   - зменшили висоту top-3
+
 ver. 0.99.14
   - зробив правильне виведення шаблонів для новин в архівній сторінці( шаблон: show_latest_news() ) та на всіх інших сторінках( шаблон: show_short_latest_news() ) (function.php)
   - focus для форми пошуку

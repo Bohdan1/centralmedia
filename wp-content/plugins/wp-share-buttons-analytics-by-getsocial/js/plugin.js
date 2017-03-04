@@ -199,8 +199,7 @@ jQuery(function($){
 
     jQuery(document).on('click', '.only-activate', function(e){
 
-        if ($(this)[0].pathname == "/auth/mailchimp" || 
-            $(this)[0].pathname == "/auth/infusionsoft") {
+        if ($(this)[0].pathname == "/auth/mailchimp") {
 
             if ($(this).attr('prevent')) {
                 alert("You need to install Hello Buddy, Subscriber Bar or Price Alert to work with this app");
@@ -208,10 +207,6 @@ jQuery(function($){
                 window.open($(this).attr('href'), '_blank')
             }
             return;
-        }
-
-        if ($(this)[0].pathname == "/auth/bitly") {
-            window.open($(this).attr('href'), '_blank')
         }
 
         e.preventDefault();
@@ -304,7 +299,6 @@ jQuery(function($){
     }
 
     function filterApps() {
-
         var filters = [],
             title = '',
             categoryFilter = '';
@@ -316,7 +310,7 @@ jQuery(function($){
             var filter = $(el).data('filter'),
                 filterIsActive = !$(el).hasClass('trans'),
                 isCategoryFilter = $(el).parent().attr('id') === 'app-filter-dropdown',
-                filter_name = filter === 'two' ? 'starter' : filter;
+                filter_name = filter === 'two' ? 'tools' : filter;
 
             if(typeof(filter) === 'undefined') return;
 
@@ -324,7 +318,7 @@ jQuery(function($){
                 filters.push('filter-' + filter);
 
                 if(title.length > 0) title += '<i class="fa fa-plus"></i>';
-
+                
                 if(isCategoryFilter) {
                     categoryFilter = filter;
 
@@ -353,8 +347,7 @@ jQuery(function($){
         }
 
         $.each($('.app-group'), function(i, group){
-
-            var selectedApps = $(group).find('.app-link-wrapper').filter(function () { 
+            var selectedApps = $(group).find('.app-link-wrapper').filter(function () {
                 return this.style.display == 'block'; 
             });
             
@@ -453,15 +446,11 @@ jQuery(function($){
     
     modal('#settings');
 
-    modal('#install-ga-analytics');
+    modal('#install-ga_integration');
 
     modal('#install-copy-and-share');
 
     modal('#install-mailchimp');
-
-    modal('#install-bitly');
-
-    modal('#install-infusionsoft');
 
     modal('#thankyou');
 

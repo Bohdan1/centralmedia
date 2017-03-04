@@ -1,35 +1,45 @@
 <div class="app-grid">
     <?php $i = 0; ?>
-    <?php foreach ($plan_categories as $cat) { ?>
+    <?php if ($plan_is_free) {
+        $boxes_array = $plan_class;
+    } else {
+        $boxes_array = $plan_categories;
+    } ?>
+    <?php foreach ($boxes_array as $cat) { ?>
         <?php $count = 0; ?>
         <?php
             foreach ($apps as $app => $settings) {
                 if ($settings['category'] == $cat) { 
                     $count++; 
                 }
+                if ($settings['plan'] == $cat) { 
+                    $count++; 
+                }
             }
         ?>
         <div class="app-group active">
             <div class="app-group-title">
-                <h2><?php echo $plan_categories_name[$i] ?> <span>(<?php echo $count; echo $count > 1 ? ' Apps' : ' App' ?>)</span></h2>
+                <h2><?php echo $plan_is_free ? $plan_name[$i] : $plan_categories_name[$i] ?> <span>(<?php echo $count; echo $count > 1 ? ' Apps' : ' App' ?>)</span></h2>
                 <a class="app-group-toggle" href="javascript:void(0)">
                     <i class="fa fa-minus-square"></i><span>Open</span>
                 </a>
             </div>            
             <div class="app-group-body gs-clearfix">
                 <?php foreach($apps as $app => $settings) { ?>
-                    <?php if($settings['category'] == $cat) { ?>
-                        <div class="app-link-wrapper <?php if($settings['nocode']){ echo 'filter-nocode'; } ?> filter-<?php echo plan_class($settings['plan']); ?> filter-<?php echo $settings['category']; ?>">
+                    <?php $current_box = $plan_is_free ? $settings['plan'] : $settings['category']; ?>
+                    <?php if($current_box == $cat) { ?>
+                        <div class="app-link-wrapper filter-<?php echo $settings['plan']; ?> filter-<?php echo $settings['category']; ?>">
                             <div class="app-link">
-                                <?php if ($settings['nocode']) { ?>
-                                    <div class="app-badge nocode">No Code</div>
-                                <?php } ?>
                                 <div class="app-badge-group">
                                     <?php if ($settings['new']) { ?>
                                         <div class="app-badge new">New</div>
                                     <?php } ?>
-                                    <?php if ($plan_current == 'one' && $settings['plan'] > 1) { ?>
-                                        <div class="app-badge plan-<?php echo plan_class($settings['plan']); ?>">
+                                    <?php if ($plan_is_free)  { ?>
+                                        <div class="app-badge <?php echo $settings['category']; ?>">
+                                            <?php echo category_name($settings['category']); ?>
+                                        </div>
+                                    <?php } elseif($settings['plan'] == 'two') { ?>
+                                        <div class="app-badge plan-<?php echo $settings['plan']; ?>">
                                             <?php echo plan_name($settings['plan']); ?>
                                         </div>
                                     <?php } ?>
@@ -59,31 +69,11 @@
                                                         Install App
                                                     </a>
                                                 <?php } ?>
-                                                
-                                                <?php if ($app == 'Google Analytics') { ?>
-                                                    <a id="install-ga-analytics" href="#" class="gs-button gs-primary trans border getsocial-tab only-activate">
+                                                <?php if ($app == 'Google Analytics' || $app == 'MailChimp') { ?>
+                                                    <a id="install-<?php echo $settings['file'] ?>" href="#" class="gs-button gs-primary trans border getsocial-tab only-activate">
                                                         Install App
                                                     </a>
                                                 <?php } ?>
-                                                
-                                                <?php if ($app == 'MailChimp') { ?>
-                                                    <a id="install-mailchimp" href="#" class="gs-button gs-primary trans border getsocial-tab only-activate">
-                                                        Install App
-                                                    </a>
-                                                <?php } ?>
-
-                                                <?php if ($app == 'Bitly') { ?>
-                                                    <a id="install-bitly" href="#" class="gs-button gs-primary trans border getsocial-tab only-activate">
-                                                        Install App
-                                                    </a>
-                                                <?php } ?>
-
-                                                <?php if ($app == 'InfusionSoft') { ?>
-                                                    <a id="install-infusionsoft" href="#" class="gs-button gs-primary trans border getsocial-tab only-activate">
-                                                        Install App
-                                                    </a>
-                                                <?php } ?>
-
                                             <?php } elseif ($app == 'Hello Buddy' && $settings['active'] == 'active') { ?>
                                                 <a href="<?php echo $GS->gs_account(); ?>/sites/gs-wordpress?edit-hello-buddy<?php echo '&api_key=' . $GS->api_key . '&amp;source=wordpress' . $GS->utms('hello_buddies') ?>" target="_blank" class="gs-button gs-primary trans border getsocial-tab">
                                                     Edit App
@@ -94,10 +84,10 @@
                                                 // Prevent instalation of mailchimp app without Price Alert or Subscriber Bar
                                                 $prevent_install = "";
 
-                                                if (($app == 'MailChimp' || $app == 'InfusionSoft') && !$GS->has_subscriptions()) {
+                                                if ($app == 'MailChimp' && !$GS->has_subscriptions()) {
                                                     $prevent_install = 'prevent="true"';
                                                 } ?>
-                                                <a href="<?php echo $settings['href'] ?>" target="<?php echo ($settings['only_activate'] && ($app != 'MailChimp' || $app !='InfusionSoft') ? '' : '_blank') ?>" class="gs-button gs-primary trans border getsocial-tab <?php echo ($settings['only_activate'] ? 'only-activate' : ''); ?>" <?php echo $prevent_install; ?>>
+                                                <a href="<?php echo $settings['href'] ?>" target="<?php echo ($settings['only_activate'] && $app != 'MailChimp' ? '' : '_blank') ?>" class="gs-button gs-primary trans border getsocial-tab <?php echo ($settings['only_activate'] ? 'only-activate' : ''); ?>" <?php echo $prevent_install; ?>>
                                                     
                                                     <?php echo ($settings['active']) ? 'Edit App' : 'Install App' ?>
 

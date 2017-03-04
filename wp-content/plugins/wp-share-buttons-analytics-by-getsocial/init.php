@@ -161,7 +161,7 @@ if (get_option('gs-popup-showed')  != "showed") {
         <div class="modal-cover modal-close"></div>
     </div>
     <!-- Install Google Analytics Modal -->
-    <div id="install-ga-analytics-modal" class="modal-wrapper hide">
+    <div id="install-ga_integration-modal" class="modal-wrapper hide">
         <div class="gs-modal small text-center">
             <div class="text-block">
                 <div class="modal-title">
@@ -179,7 +179,7 @@ if (get_option('gs-popup-showed')  != "showed") {
             </div>
             <div class="form-button-group">
                 <a href="<?php echo $GS->gs_account() ?>/sites/gs-wordpress/billing/select_tier?api_key=<?php echo $GS->api_key ?>&amp;source=wordpress<?php echo $GS->utms('pro_header') ?>" target="_blank" class="gs-button gs-success plan-two">
-                    Upgrade to Starter
+                    Upgrade to Tools
                 </a>
                 <a href="javascript:void(0)" class="gs-button gs-error trans modal-close">Cancel</a>
             </div>
@@ -205,7 +205,7 @@ if (get_option('gs-popup-showed')  != "showed") {
             </div>
             <div class="form-button-group">
                 <a href="<?php echo $GS->gs_account() ?>/sites/gs-wordpress/billing/select_tier?api_key=<?php echo $GS->api_key ?>&amp;source=wordpress<?php echo $GS->utms('pro_header') ?>" target="_blank" class="gs-button gs-success plan-two">
-                    Upgrade to Starter
+                    Upgrade to Tools
                 </a>
                 <a href="javascript:void(0)" class="gs-button gs-error trans modal-close">Cancel</a>
             </div>
@@ -220,7 +220,7 @@ if (get_option('gs-popup-showed')  != "showed") {
                     <p class="title">MailChimp Integration</p>
                 </div>
                 <p class="text-center">
-                    Real-time integration with MailChimp. Connect our Subscriber Bar & Price Alert features to the world’s #1 e-mail marketing tool.
+                    Real-time integration with MailChimp. Connect our Subscriber Bar features to the world’s #1 e-mail marketing tool.
                 </p>
                 <div class="clearfix text-center" style="margin-top: 30px">
                     <div class="col-16" style="margin-top: 30px">
@@ -230,63 +230,7 @@ if (get_option('gs-popup-showed')  != "showed") {
             </div> 
             <div class="form-button-group">
                 <a href="<?php echo $GS->gs_account() ?>/sites/gs-wordpress/billing/select_tier?api_key=<?php echo $GS->api_key ?>&amp;source=wordpress<?php echo $GS->utms('pro_header') ?>" target="_blank" class="gs-button gs-success plan-two">
-                    Upgrade to Starter
-                </a>
-                <a href="javascript:void(0)" class="gs-button gs-error trans modal-close">Cancel</a>
-            </div>
-        </div>
-        <div class="modal-cover modal-close"></div>
-    </div>
-    <!-- Install Bitly Modal -->
-    <div id="install-bitly-modal" class="modal-wrapper hide">
-        <div class="gs-modal small text-center">
-            <div class="text-block">
-                <div class="modal-title">
-                    <p class="title">Bitly Integration</p>
-                </div>
-                <p class="text-center">
-                    Activating our Bitly integration will allow your readers to share using your Bitly account. Easy, no code required!
-                </p>
-                <br>
-                <div class="before-after">
-                    <div>
-                        <strong>Before</strong>
-                        <img src="<?php echo plugins_url( '/img/modals/bitly_via_before.png', __FILE__ ) ?>" alt="">
-                    </div>
-                    <div>
-                        <strong>After</strong>
-                        <img src="<?php echo plugins_url( '/img/modals/bitly_via_after.png', __FILE__ ) ?>" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="form-button-group">
-                <a href="<?php echo $GS->gs_account() ?>/sites/gs-wordpress/billing/select_tier?api_key=<?php echo $GS->api_key ?>&amp;source=wordpress<?php echo $GS->utms('pro_header') ?>" target="_blank" class="gs-button gs-success plan-two">
-                    Upgrade to Starter
-                </a>
-                <a href="javascript:void(0)" class="gs-button gs-error trans modal-close">Cancel</a>
-            </div>
-        </div>
-        <div class="modal-cover modal-close"></div>
-    </div>
-    <!-- Install InfusionSoft Modal -->
-    <div id="install-infusionsoft-modal" class="modal-wrapper hide">
-        <div class="gs-modal small text-center">
-            <div class="text-block">
-                <div class="modal-title">
-                    <p class="title">InfusionSoft Integration</p>
-                </div>
-                <p class="text-center">
-                    By linking your InfusionSoft account, you'll be able to automatically send all emails captured on Subscriber Bar & Hello Buddy features.
-                </p>
-                <div class="clearfix text-center" style="margin-top: 30px">
-                    <div class="col-16" style="margin-bottom: 30px">
-                        <img src="<?php echo plugins_url( '/img/modals/infusionsoft.png', __FILE__ ) ?>" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="form-button-group">
-                <a href="<?php echo $GS->gs_account() ?>/sites/gs-wordpress/billing/select_tier?api_key=<?php echo $GS->api_key ?>&amp;source=wordpress<?php echo $GS->utms('pro_header') ?>" target="_blank" class="gs-button gs-success plan-two">
-                    Upgrade to Starter
+                    Upgrade to Tools
                 </a>
                 <a href="javascript:void(0)" class="gs-button gs-error trans modal-close">Cancel</a>
             </div>
@@ -309,7 +253,7 @@ if (get_option('gs-popup-showed')  != "showed") {
         <div class="modal-cover modal-close"></div>
     </div>
 </div>
-<?php if(get_option('gs-api-key') != '') { ?>
+<?php if(get_option('gs-pro')) { ?>
 <script>
 /* Intercom Settings */
 window.intercomSettings = {

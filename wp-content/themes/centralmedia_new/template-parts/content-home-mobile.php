@@ -277,7 +277,7 @@
 		<?php 
 			$args = array(
 				'post_type' => 'blogs',
-				'posts_per_page' => 3,
+				'posts_per_page' => 2,
 				'publish' => true,
 				'orderby' => 'date',
 				'order' => 'DESC'

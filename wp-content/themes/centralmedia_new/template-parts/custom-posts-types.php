@@ -157,7 +157,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions' ), // 'author',
+            'supports' => array( 'title', 'editor', 'comments', 'revisions' ), // 'author', 'thumbnail',
             'taxonomies' => array( 'category' ), //'post_tag', 
             'has_archive' => true,
             'rewrite' => true,
@@ -359,7 +359,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail' ), // 'author', 'comments', 'revisions'
+            'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ), // 'author', 'revisions' 
             //'taxonomies' => array( 'post_tag', 'category' ),
             'has_archive' => true,
             'rewrite' => true,

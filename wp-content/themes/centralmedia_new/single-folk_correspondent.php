@@ -43,25 +43,29 @@
                 <div class="block-line"></div>
             </div>
             <?php
-                //show latest news
-                get_template_part('template-parts/latest', 'news');
+                    //show latest news
+                    get_template_part('template-parts/latest', 'news');
             ?>
         </div>
     </div>
 </div>
 
 <div style="margin-bottom: 0px;" class="row">
-    <div class="third-block-with-line">
-        <div class="big-sign-line">КОМЕНТАРІ<span></span></div>
-        <div class="block-line"></div>
-    </div>
-    <div  class="comment-block">
-        <?php
-            if ( comments_open() || get_comments_number() ) { 
-                comments_template(); 
-            }
-        ?>
-    </div>
+    
+    <?php
+        if ( comments_open() || get_comments_number() ) { 
+            echo '
+                <div class="third-block-with-line">
+                    <div class="big-sign-line">КОМЕНТАРІ<span></span></div>
+                    <div class="block-line"></div>
+                </div>
+                <div  class="comment-block">';
+                    comments_template();
+            echo '
+                </div>';
+        }
+    ?>
+    
     <div class="row one-news-content">
         <?php
             //slider for blogers

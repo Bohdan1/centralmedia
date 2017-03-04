@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <div class="header-margin-blog">
 <div class="row ">
     <div class="col l8 s12 m7">
@@ -24,7 +25,8 @@
                     echo 'Блогів не знайдено';
                 }
                 
-                if ( $query->max_num_pages > 1 ) { ?>
+                if ( $query->max_num_pages > 1 ) { 
+            ?>
                     <script>
                         var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
                         var true_posts = '<?php echo serialize( $query->query_vars ); ?>';

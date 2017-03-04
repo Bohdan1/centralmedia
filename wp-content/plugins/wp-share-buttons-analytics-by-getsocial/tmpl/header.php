@@ -62,17 +62,13 @@ wp_enqueue_script('gs-plugin');
                     </a>
                     <div class="submenu-wrapper">
                         <ul class="submenu">
+                            <?php if (get_option('gs-pro')) { ?>
                             <li>
-                                <?php if(get_option('gs-api-key') == '') { ?>
-                                    <a href="mailto:support@getsocial.io">
-                                        Email Support
-                                    </a>
-                                <?php } else { ?>
-                                    <a href="javascript:Intercom('show');" id="help">
-                                        Email Support
-                                    </a>
-                                <?php } ?>
+                                <a href="mailto:b33e7fd1@incoming.intercom-mail.com">
+                                    Email Support
+                                </a>
                             </li>
+                            <?php } ?>
                             <li>
                                 <a href="http://help.getsocial.io/" target="_blank">
                                     <i class="fa fa-life-bouy"></i> Documentation
@@ -84,7 +80,7 @@ wp_enqueue_script('gs-plugin');
                 <?php if (get_option('gs-api-key') != '' && !$GS->is_pro()): ?>
                     <li id="cta-nav" class="right-link">
                         <a href="<?php echo $GS->gs_account() ?>/sites/gs-wordpress/billing/select_tier?api_key=<?php echo $GS->api_key ?>&amp;source=wordpress<?php echo $GS->utms('pro_header') ?>" target="_blank" class="plan-two">
-                            Upgrade to STARTER
+                            Upgrade to TOOLS
                         </a>
                     </li>
                     <?php if (get_option('gs-ask-review')): ?>
