@@ -49,9 +49,6 @@
 				$post_count++;
 			} //end while
 		} //end if
-		else {
-			echo 'Блогів не знайдено';
-		}
 		
 		if ( $post_count < $need_blogs) {
 			$args = array(
@@ -72,7 +69,10 @@
 					show_blog_for_slider();
 				} //end while
 			} //end if
-		} //end else if
+		} //end if
+		else {
+			echo 'Блогів не знайдено';
+		}
 		wp_reset_postdata();
 	?>
 </section>

@@ -5,8 +5,10 @@
         <div class="col l8 s12 m7">
             <?php 
                 if ( have_posts() ) :
+                    global $displayed_posts;		//variable to prevent duplicate blogs
                     while ( have_posts() ) : the_post(); // Start the Loop.
-                    $author_id = get_the_author_meta('ID');
+                        $author_id = get_the_author_meta('ID');
+                        $displayed_posts[] = get_the_ID();
             ?>
                         <div class="one-video-post">
                             <div class="col l12 s12 m12 "> 
@@ -58,11 +60,13 @@
                 <div class="block-line"></div>
             </div>
                  <div class="previous-blog">
-            <?php 
+            <?php
+                global $displayed_posts;
                 $args = array(
                     'post_type' => 'blogs',
                     'posts_per_page' => 3,
                     'publish' => true,
+                    'post__not_in' => $displayed_posts, //displays all blogs, other than those
                     'orderby' => 'date',
                     'order' => 'DESC'
                 );

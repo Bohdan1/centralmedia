@@ -56,14 +56,14 @@
 				<span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
 			</div>
 		</div>
-
 		
 		<?php
 			global $latest_articles;
 			$popular_days_article = 21;
+			$need_posts = 2;
 			$args = array(
 				'post_type' => 'articles',
-				'posts_per_page' => 2,
+				'posts_per_page' => $need_posts,
 				'publish' => true,
 				'date_query' => array(
 					'after' => $popular_days_article . ' days ago',
@@ -85,11 +85,11 @@
 				}
 			}
 			//якщо немає або недостатньо публікованих статтей за останні $popular_days_article
-			if( $articles_count < 2) {
+			if( $articles_count < $need_posts) {
 				global $latest_articles;
 				$args = array(
 					'post_type' => 'articles',
-					'posts_per_page' => 2 - $articles_count,
+					'posts_per_page' => $need_posts - $articles_count,
 					'publish' => true,
 					'date_query' => array(
 						'before' => $popular_days_article . ' days ago',

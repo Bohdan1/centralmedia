@@ -6,7 +6,9 @@
         <?php 
         	$post_categories = array();
             if ( have_posts() ) :
+                global $displayed_posts;		//variable to prevent duplicate articles
                 while ( have_posts() ) : the_post(); // Start the Loop.
+                    $displayed_posts[] = get_the_ID();
 					foreach ( get_the_category() as $category ) { 
 						$post_categories[] = $category->cat_ID;
 					}
@@ -42,21 +44,23 @@
             <div class="block-line"></div>
         </div>
         <?php
+            global $displayed_posts;
             $popular_days_post = 30;
+            $need_posts = 4;
             $args = array(
                 'post_type' => array( 'news', 'articles', 'video', 'blogs' ),
-                'posts_per_page' => 4,
+                'posts_per_page' => $need_posts,
                 'category__in' => $post_categories,
                 'publish' => true,
                 'date_query' => array(
                     'after' => $popular_days_post . ' days ago',
                 ),
+                'post__not_in' => $displayed_posts, //displays all articles, other than those
                 'orderby' => 'date',
                 'order' => 'DESC'
             );
             $query = new WP_Query( $args );
             $posts_count = 0;
-            $posts_exclude = array();
             
             //якщо є публікації з такими категоріями, які публіковані за останні $popular_days_post днів
             if ( $query->have_posts() && !empty( $post_categories) ) {
@@ -72,16 +76,16 @@
                         show_homepage_blog();
                     }
                     $posts_count++;
-                    $posts_exclude[] = get_the_ID();
+                    $displayed_posts[] = get_the_ID();
                 }
             }
-            if ( $posts_count < 4 ) {
+            if ( $posts_count < $need_posts ) {
                 echo '<div>' . $test .'</div>';
                 $args = array(
                     'post_type' => 'articles',
-                    'posts_per_page' => 4 - $posts_count,
+                    'posts_per_page' => $need_posts - $posts_count,
                     'publish' => true,
-                    'post__not_in' => $posts_exclude, //displays all articles, other than those
+                    'post__not_in' => $displayed_posts, //displays all articles, other than those
                     'orderby' => 'date',
                     'order' => 'DESC'
                 );

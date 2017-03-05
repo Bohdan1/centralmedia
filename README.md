@@ -1,3 +1,8 @@
+ver. 0.99.17
+  - виправив:
+    - напис "блогів не знайдено" перед слайдером блогів (slider-blogers.php)
+    - дублювання основного поста у сайдбарі (single-video.php, single-articles.php, single-blogs.php, single-news.php) 
+
 ver. 0.99.16
   - видалив файли:
     - content.php

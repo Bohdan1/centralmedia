@@ -5,7 +5,9 @@
         <div class="col l8 s12 m8">
             <?php 
                 if ( have_posts() ) :
+                    global $displayed_posts;		//variable to prevent duplicate video
                     while ( have_posts() ) : the_post(); // Start the Loop.
+                        $displayed_posts[] = get_the_ID();
             ?>
                         <div class="one-video-post">
                             <div class="one-video-post-name">
@@ -43,14 +45,17 @@
                 <div class="block-line"></div>
             </div>
             <?php
+                global $displayed_posts;
                 $popular_days_post = 21;
+                $need_posts = 4;
                 $args = array(
                     'post_type' => 'news',
-                    'posts_per_page' => 4,
+                    'posts_per_page' => $need_posts,
                     'publish' => true,
                     'date_query' => array(
                         'after' => $popular_days_post . ' days ago',
                     ),
+                    'post__not_in' => $displayed_posts, //displays all news, other than those
                     'meta_key' => 'post_views_count',
                     'orderby' => 'meta_value_num'
                     //'order' => 'DESC'
@@ -66,14 +71,15 @@
                     }
                 }
                 //якщо немає або недостатньо публікованих відео за останні $popular_days_post
-                if( $posts_count < 4) {
+                if( $posts_count < $need_posts) {
                     $args = array(
                         'post_type' => 'news',
-                        'posts_per_page' => 4 - $posts_count,
+                        'posts_per_page' => $need_posts - $posts_count,
                         'publish' => true,
                         'date_query' => array(
                             'before' => $popular_days_post . ' days ago',
-                            ),
+                        ),
+                        'post__not_in' => $displayed_posts, //displays all news, other than those
                         'orderby' => 'date',
                         'order' => 'DESC'
                         );
