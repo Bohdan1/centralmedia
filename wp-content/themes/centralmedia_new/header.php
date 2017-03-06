@@ -169,9 +169,9 @@
     <!-- Modal Structure -->
     <div id="modal4" class="modal">
         <div class="modal-content">
-            <h4>НАРОДНИЙ КОРИСПОНДЕНТ</h4>
+            <h4>НАРОДНИЙ КОРЕСПОНДЕНТ</h4>
             <p>Поділіться своєю новиною!</p>
-            <?php echo do_shortcode( '[contact-form-7 id="388" title="Народний кориспондент"]' ); ?>
+            <?php echo do_shortcode( '[contact-form-7 id="388" title="Народний кореспондент"]' ); ?>
         </div>
         <div class="modal-footer">
             <a href="#!" class=" modal-action modal-close waves-effect waves-green black-text btn-flat">Закрити</a>

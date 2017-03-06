@@ -1495,7 +1495,7 @@ a:hover {
 }
 
 .one-blog-sign-img-width {
-    width: 100px;
+    width: 150px;
 }
 
 .one-blog-sign-img {
@@ -1825,7 +1825,7 @@ filter: alpha(opacity=40);
 }
 
 .blogger-name {
-    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 25px;
     font-weight: bold;
     color: #900022;

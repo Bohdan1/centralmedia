@@ -322,23 +322,23 @@
 
     function register_cpt_folk_correspondent() {
         $labels = array( 
-            'name' => _x( 'Народний кориспондент', 'folk_correspondent' ),
-            'singular_name' => _x( 'Народний кориспондент', 'folk_correspondent' ),
-            'add_new' => _x( 'Додати народний кориспондент', 'folk_correspondent' ),
-            'add_new_item' => _x( 'Додати новий народний кориспондент', 'folk_correspondent' ),
-            'edit_item' => _x( 'Редагувати народний кориспондент', 'folk_correspondent' ),
-            'new_item' => _x( 'Новий народний кориспондент', 'folk_correspondent' ),
+            'name' => _x( 'Народний кореспондент', 'folk_correspondent' ),
+            'singular_name' => _x( 'Народний кореспондент', 'folk_correspondent' ),
+            'add_new' => _x( 'Додати народний кореспондент', 'folk_correspondent' ),
+            'add_new_item' => _x( 'Додати новий народний кореспондент', 'folk_correspondent' ),
+            'edit_item' => _x( 'Редагувати народний кореспондент', 'folk_correspondent' ),
+            'new_item' => _x( 'Новий народний кореспондент', 'folk_correspondent' ),
             'view_item' => _x( 'Переглянути', 'folk_correspondent' ),
             'search_items' => _x( 'Пошук', 'folk_correspondent' ),
-            'not_found' => _x( 'Народний кориспондент не знайдено', 'folk_correspondent' ),
-            'not_found_in_trash' => _x( 'Народних кориспондентів в корзині не знайдено', 'folk_correspondent' ),
+            'not_found' => _x( 'Народний кореспондент не знайдено', 'folk_correspondent' ),
+            'not_found_in_trash' => _x( 'Народних кореспондентів в корзині не знайдено', 'folk_correspondent' ),
             'parent_item_colon' => _x( 'Батьківський елемент', 'folk_correspondent' ),
-            'all_items' => _x( 'Всі народні кориспонденти', 'folk_correspondent' ),
-            'name_admin_bar' => _x( 'Народний кориспондент', 'folk_correspondent'),    //назва в адмін барі (тулбарі)
+            'all_items' => _x( 'Всі народні кореспонденти', 'folk_correspondent' ),
+            'name_admin_bar' => _x( 'Народний кореспондент', 'folk_correspondent'),    //назва в адмін барі (тулбарі)
         );
         $args = array( 
             'labels' => $labels,
-            'description' => 'Народний кориспондент',
+            'description' => 'Народний кореспондент',
             'public' => true,
             'publicly_queryable' => true,
             'exclude_from_search' => true,
@@ -360,7 +360,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ), // 'author', 'revisions' 
-            //'taxonomies' => array( 'post_tag', 'category' ),
+            'taxonomies' => array( 'category' ), // 'post_tag',
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -550,7 +550,7 @@
     add_action( 'add_meta_boxes', function() {
         add_meta_box(
             'folk_correspondent_info',
-            'Ім\'я та прізвище народного кориспондента:',
+            'Ім\'я та прізвище народного кореспондента:',
             'folk_correspondent_info_cb',
             'folk_correspondent',
             'advanced',

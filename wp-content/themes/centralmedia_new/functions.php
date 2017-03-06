@@ -79,6 +79,7 @@ function display_post_type() {
     else if ( $post_type == 'cultural_events' ) return 'Культурні події';
     else if ( $post_type == 'partner-news' ) return 'Новини партнерів';
     else if ( $post_type == 'streams' ) return 'Стріми';
+    else if ( $post_type == 'folk_correspondent' ) return 'Народний кореспондент';
 }
 
 //show latest news
@@ -229,7 +230,7 @@ function show_big_post() {
                                 $max_categories = count( $category );
                             }
                             for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<span  class="no-hover-blog article-slider-tags article-slider-tags-padding article-slider-tags-size">' . $category[$i]->cat_name . '</span>';
+                                echo '<span class="no-hover-blog article-slider-tags article-slider-tags-padding article-slider-tags-size">' . $category[$i]->cat_name . '</span>';
                             }
                         }
                         echo '
@@ -573,7 +574,7 @@ function show_no_img_post() {
                 <i class="material-icons black-text">&#xE14C;</i>
             </a>
             <div id="popup_name" class="popup_block">
-                <div id="loginForm" action="" method="post">
+                <div id="loginForm">
                     <div class="cont-side">
                         <div class="row logged-user">
                             <div class="col l5 s12 m12 logged-user-photo">

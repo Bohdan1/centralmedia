@@ -1,203 +1,179 @@
 <div id="disable-mat-padding" class="col l9 s12 left-block">
-<?php
-	$posts_id = array();
-	if ( get_post( get_option('block1_post_id') ) && get_post( get_option('block2_post_id') ) && get_post( get_option('block3_post_id') ) ) {
-		$posts_id[] = intval( get_option('block1_post_id') );
-		$posts_id[] = intval( get_option('block2_post_id') );
-		$posts_id[] = intval( get_option('block3_post_id') );
-	}
-	else {
-		$args = array(
-			'post_type' => array ('news', 'articles', 'video'),
-			'posts_per_page' => 3,
-			'publish' => true,
-			'orderby' => 'date',
-			'order' => 'DESC'
-		);
-		$query = new WP_Query( $args );
-		if( $query->have_posts() ) {
-			while ( $query->have_posts() ) {
-				$query->the_post();
-				$posts_id[] = get_the_ID();
-			} //end while
-		} //end if
-	}
+	<?php
+		$posts_id = array();
+		if ( get_post( get_option('block1_post_id') ) && get_post( get_option('block2_post_id') ) && get_post( get_option('block3_post_id') ) ) {
+			$posts_id[] = intval( get_option('block1_post_id') );
+			$posts_id[] = intval( get_option('block2_post_id') );
+			$posts_id[] = intval( get_option('block3_post_id') );
+		}
+		else {
+			$args = array(
+				'post_type' => array ('news', 'articles', 'video'),
+				'posts_per_page' => 3,
+				'publish' => true,
+				'orderby' => 'date',
+				'order' => 'DESC'
+			);
+			$query = new WP_Query( $args );
+			if( $query->have_posts() ) {
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					$posts_id[] = get_the_ID();
+				} //end while
+			} //end if
+		}
 
 
-	if ( get_post_type( $posts_id[0] ) == 'streams' ) {
-		echo '
-			<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '"  >
-			</iframe>
-		';
-	}
-	else if ( get_post_type( $posts_id[0] ) == 'video' ) {
-		echo '
-		
-			<div style="background-size:cover; background-position:center; background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . ');"  class="left-block-content">
-				<a href="' . get_the_permalink( $posts_id[0] ) . '">
-					<div class="mask">
-						<div class="button-position  hide-on-small-only">
-							<span >
-								<img class="play-button button-hover center" src="' . get_template_directory_uri( $posts_id[0] ) . '/img/play-button.svg" alt="Логотип">
-							</span>
-						</div>
-						<div class="content-box fix-height-top3">
-							<div class="title-tag">';
-			                    $category = get_the_category( $posts_id[0] );
-			                    if ( !empty( $category ) ) {
-			                        $max_categories = 3;    //the maximum number of categories that need to display
-			                        if ( count( $category ) < $max_categories ) {
-			                            $max_categories = count( $category );
-			                        }
-			                        for ( $i = 0; $i < $max_categories; $i++ ) {
-			                            echo '<span class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</span>';
-			                        }
-			                    }
-			                    echo '
-			                </div>
-							<div class="box-title box-title-main">
-								<span class="hover-link" >' .
-									get_the_title( $posts_id[0] ) .'
+		if ( get_post_type( $posts_id[0] ) == 'streams' ) {
+			echo '
+				<iframe class="stream-template" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[0], 'stream_url', true ) ) . '"  >
+				</iframe>
+			';
+		}
+		else if ( get_post_type( $posts_id[0] ) == 'video' ) {
+			echo '
+				<div style="background-size:cover; background-position:center; background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . ');"  class="left-block-content">
+					<a href="' . get_the_permalink( $posts_id[0] ) . '">
+						<div class="mask">
+							<div class="button-position  hide-on-small-only">
+								<span>
+									<img class="play-button button-hover center" src="' . get_template_directory_uri( $posts_id[0] ) . '/img/play-button.svg" alt="Логотип">
 								</span>
 							</div>
-							<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '
+							<div class="content-box fix-height-top3">';
+								$category = get_the_category( $posts_id[0] );
+								if ( !empty( $category ) ) {
+									echo '
+								<div class="title-tag">';
+									$max_categories = 3;    //the maximum number of categories that need to display
+									if ( count( $category ) < $max_categories ) {
+										$max_categories = count( $category );
+									}
+									for ( $i = 0; $i < $max_categories; $i++ ) {
+										echo '<span class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</span>';
+									}
+									echo '
+								</div>';
+								}
+								echo '
+								<div class="box-title box-title-main">
+									<span class="hover-link" >' .
+										short_post_title( 70, $posts_id[0] ) . '
+									</span>
+								</div>
+								<div class="box-title-time box-title-time-main">' . 
+									get_the_time('d.m.Y', $posts_id[0]) . '
+								</div>
 							</div>
 						</div>
-					</div>
-				</a>
-				
-			<div class="social-menu-bottom hide">
-				<div class="menu-list">
-					<a href="https://www.youtube.com/channel/UCYMgvYAKTnPfZ8FjuXLYaEQ" >
-						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип">
 					</a>
-				</div>
-				<div class="menu-list">
-					<a href="https://www.facebook.com/centralnemedia/">
-						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип">
+				</div>';
+		}
+		else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
+			echo '
+				<div style="background-position:center; background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . '); background-size:cover;" class="left-block-content">
+					<a href="' . get_the_permalink( $posts_id[0] ) . '">
+						<div class="mask">
+							<div class="content-box">';
+								$category = get_the_category( $posts_id[0] );
+								if ( !empty( $category ) ) {
+									echo '
+								<div class="title-tag">';
+									$max_categories = 3;    //the maximum number of categories that need to display
+									if ( count( $category ) < $max_categories ) {
+										$max_categories = count( $category );
+									}
+									for ( $i = 0; $i < $max_categories; $i++ ) {
+										echo '<span  class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</span>';
+									}
+									echo '
+								</div>';
+								}
+								echo '
+								<div class="box-title box-title-main">
+									<span class="hover-link">' .
+										short_post_title( 70, $posts_id[0] ) . '
+									</span>
+								</div>
+								<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
+							</div>
+						</div>
 					</a>
-				</div>
-				<div class="menu-list">
-					<a href="https://twitter.com/CentralneMedia" >
-						<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип">
-					</a>
-				</div>
-			</div>
-		</div>';
-	}
-	else if ( get_post_type( $posts_id[0] ) == 'news' || get_post_type( $posts_id[0] ) == 'articles' ) {
-		echo '
-		<a href="' . get_the_permalink( $posts_id[0] ) . '">
-			<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[0], 'large' ) . '); background-size:cover;" class="left-block-content">
-			<div class="mask">
-			
-				<div class="content-box">
-					<div class="title-tag">';
-                        $category = get_the_category( $posts_id[0] );
-                        if ( !empty( $category ) ) {
-                            $max_categories = 3;    //the maximum number of categories that need to display
-                            if ( count( $category ) < $max_categories ) {
-                                $max_categories = count( $category );
-                            }
-                            for ( $i = 0; $i < $max_categories; $i++ ) {
-                                echo '<span  class="no-hover-blog main-slider-tags">' . $category[$i]->cat_name . '</span>';
-                            }
-                        }
-                        echo '
-					</div>
-					<div class="box-title box-title-main">
-						<span class="hover-link">' .
-							get_the_title( $posts_id[0] ) .'
-						</span>
-					</div>
-					<div class="box-title-time box-title-time-main">' . get_the_time('d.m.Y', $posts_id[0]) . '</div>
-				</div>	
-				</div>
-				</a>
-				<div class="social-menu-bottom hide-on-large-only ">
-					<div class="menu-list">
-						<a href="#" >
-							<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/youtube.svg" alt="Логотип">
-						</a>
-					</div>
-					<div class="menu-list">
-						<a href="#">
-							<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/facebook.svg" alt="Логотип">
-						</a>
-					</div>
-					<div class="menu-list">
-						<a href="#" >
-							<img class="social-logo" src="' . get_template_directory_uri() . '/img/social/twitter.svg" alt="Логотип">
-						</a>
-					</div>
-				</div>
-			</div>';
-	}
-?>
+				</div>';
+		}
+	?>
 </div>
 
 <div class="col l3 s12 right-block hide-on-med-and-down">
-		<?php
-			for ($i = 1; $i < 3; $i++) {
-				if ( get_post_type( $posts_id[$i] ) == 'streams' ) {
-					echo '
-						<iframe class="right-block-video center" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[$i], 'stream_url', true ) ) . '"  ></iframe>
-					';
-				}
-				else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
-					echo '
-				<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
+	<?php
+		for ($i = 1; $i < 3; $i++) {
+			if ( get_post_type( $posts_id[$i] ) == 'streams' ) {
+				echo '
+					<iframe class="right-block-video center" src="https://www.youtube.com/embed/' . youtube_iframe_url( get_post_meta( $posts_id[$i], 'stream_url', true ) ) . '"  ></iframe>
+				';
+			}
+			else if ( get_post_type( $posts_id[$i] ) == 'video' ) {
+				echo '
+				<div style="background-position:center; background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
 					<a href="' . get_the_permalink( $posts_id[$i] ) . '">
 						<div class="mask">
 							<div class="button-position-template hide-on-small-only">
-								<span  >
+								<span>
 									<img class="play-button-template button-hover center" src="' . get_template_directory_uri() . '/img/play-button.svg" alt="Переглянути">
 								</span>
-							</div>
-							<div class="">';
-		                        $category = get_the_category( $posts_id[$i] );
-		                        if ( !empty( $category ) ) {
-		                            $category = $category[0];
-		                            echo '<span class="title-tag-top3 no-hover-blog top-states-small">' . $category->cat_name . '</span>';
-		                        }
-		                        echo '
-							</div>
+							</div>';
+								$category = get_the_category( $posts_id[$i] );
+								if ( !empty( $category ) ) {
+									echo '
+									<div>';
+										$category = $category[0];
+										echo '
+										<span class="title-tag-top3 no-hover-blog top-states-small">' .
+											$category->cat_name . '
+										</span>';
+										echo '
+									</div>';
+								}
+								echo '
 						</div>
 						<div class="right-block-second-sign ">
 							<span class="hover-link">' .
-								short_post_title( 80, $posts_id[$i] ) . '
+								short_post_title( 55, $posts_id[$i] ) . '
 							</span>
 						</div>
 					</a>
 				</div>
-					';
-				}
-				else if ( get_post_type( $posts_id[$i] ) == 'news' || get_post_type( $posts_id[$i] ) == 'articles' ) {
-					echo '
-
-						<div style="background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
+				';
+			}
+			else if ( get_post_type( $posts_id[$i] ) == 'news' || get_post_type( $posts_id[$i] ) == 'articles' ) {
+				echo '
+					<div style="background-position:center; background-image: url(' . get_the_post_thumbnail_url( $posts_id[$i], 'medium' ) . ');" class="right-block-second ">
 						<a href="' . get_the_permalink( $posts_id[$i] ) . '">
-							<div class="mask">
-								<div class="right-block-second-tag ">
-									<span class="no-hover-blog">';
-				                        $category = get_the_category( $posts_id[$i] );
-				                        if ( !empty( $category ) ) {
-				                            $category = $category[0];
-				                            echo '<a href="' . get_category_link( $category->cat_ID ) . '" class="no-hover-blog">' . $category->cat_name . '</a>';
-				                        }
-				                        echo '
-									</span>
-								</div>
+							<div class="mask">';
+								$category = get_the_category( $posts_id[$i] );
+								if ( !empty( $category ) ) {
+									echo '
+									<div class="title-tag-top3 no-hover-blog top-states-small">
+										<span class="no-hover-blog">';
+											$category = $category[0];
+											echo '
+											<span class="no-hover-blog">' . 
+												$category->cat_name . '
+											</span>';
+											echo '
+										</span>
+									</div>';
+								}
+								echo '
 							</div>
 							<div class="right-block-second-sign ">
 								<span class="hover-link">' .
-									short_post_title( 80, $posts_id[$i] ) . '
+									short_post_title( 55, $posts_id[$i] ) . '
 								</span>
 							</div>
-							</a>
-						</div>
-						';
-				}
+						</a>
+					</div>';
 			}
-		?>
+		}
+	?>
 </div>

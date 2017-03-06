@@ -20,6 +20,21 @@
                                     echo '<span style="float:right"> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</span>'; 
                                 ?>
                             </div>
+                            <div class="white-text">
+                                <?php
+                                    $category = get_the_category();
+                                    if ( !empty( $category ) ) {
+                                        $max_categories = 4;    //the maximum number of categories that need to display
+                                        if ( count( $category ) < $max_categories ) {
+                                            $max_categories = count( $category );
+                                        }
+                                        for ( $i = 0; $i < $max_categories; $i++ ) {
+                                             echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
+                                        }
+                                    }
+                                ?>
+                            </div>
+                            <br>
                             <div>
                                 <iframe class="center" src="https://www.youtube.com/embed/<?php echo youtube_iframe_url( custom_post_permalink() ); ?>" style="width: 100%; height: 500px"></iframe>
                             </div>

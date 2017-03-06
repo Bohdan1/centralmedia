@@ -9,7 +9,7 @@
 				$cat_id = get_cat_ID( single_cat_title('', 0) ); //ID required category
 
 				$args = array(
-                    'post_type' => array('news', 'articles', 'video', 'blogs', 'cultural_events', 'partner-news' , 'streams'),
+                    'post_type' => array('news', 'articles', 'video', 'blogs', 'cultural_events', 'partner-news' , 'streams', 'folk_correspondent'),
                     'cat' => $cat_id,
                     'posts_per_page' => 10,
                     'publish' => true,

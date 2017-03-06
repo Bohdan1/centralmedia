@@ -22,6 +22,20 @@
                                 echo '<span style="float:right"> Кількість переглядів: ' . getPostViews( get_the_ID() ) . '</span>'; 
                             ?>
 			            </div>
+                        <div class="white-text">
+                            <?php
+                                $category = get_the_category();
+                                if ( !empty( $category ) ) {
+                                    $max_categories = 4;    //the maximum number of categories that need to display
+                                    if ( count( $category ) < $max_categories ) {
+                                        $max_categories = count( $category );
+                                    }
+                                    for ( $i = 0; $i < $max_categories; $i++ ) {
+                                        echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags">' . $category[$i]->cat_name . '</a>';
+                                    }
+                                }
+                            ?>
+                        </div>
 			            <div>
 			            	<img class="user-video-width" alt="video" src="<?php echo get_the_post_thumbnail_url( '', 'large' ); ?>">
 			            </div>
