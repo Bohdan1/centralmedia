@@ -283,11 +283,12 @@ function show_small_post( $height = null, $post_id = null) {
 function show_big_video() {
     echo '
         <div class="col l12 s12 m12 full-width-mob ">
+         <a href="'. get_the_permalink() . '" >
             <div class="second-article-block-all-video" style="background-image: url(' . get_the_post_thumbnail_url( '', 'large' ) . ');">
             <div class="button-position-popular-video-content-box-main-top-slide">
-                        <a href="'. get_the_permalink() . '" >
+                        <span>
                             <img alt="img" class="button-hover button-position-main-video-top-slide" src="' . get_template_directory_uri() . '/img/play-button.svg">
-                        </a>
+                        </span>
                     </div>
                 <div class="mask">
                     
@@ -305,15 +306,15 @@ function show_big_video() {
                                     $max_categories = count( $category );
                                 }
                                 for ( $i = 0; $i < $max_categories; $i++ ) {
-                                    echo '<a href="' . get_category_link( $category[$i]->cat_ID ) . '" class="no-hover-blog article-slider-tags article-slider-tags-padding">' . $category[$i]->cat_name . '</a>';
+                                    echo '<span class="no-hover-blog article-slider-tags article-slider-tags-padding">' . $category[$i]->cat_name . '</span>';
                                 }
                             }
                             echo '
                         </div>
                         <div class="box-title fix-mob-article ">
-                            <a href="'. get_the_permalink() . '" >' .
+                            <span class="hover-link">' .
                                 short_post_title(120) . '
-                            </a>
+                            </span>
                         </div>
                         <div class="box-title-time fix-mob-article">' . 
                             get_the_time('d.m.Y', $post_id) . '
@@ -321,6 +322,7 @@ function show_big_video() {
                     </div>
                 </div>
             </div>
+           </a>
         </div>';
 }
 

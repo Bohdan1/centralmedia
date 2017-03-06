@@ -1789,7 +1789,7 @@ filter: alpha(opacity=40);
 
 .header-margin-blog {
     padding-top: 100px;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 .tag-name-description {
@@ -2132,7 +2132,7 @@ label {
 }
 
 .advertisment-block {
-    max-height: 200px;
+    max-height: 100%;
 }
 
 .single-post-text a {
