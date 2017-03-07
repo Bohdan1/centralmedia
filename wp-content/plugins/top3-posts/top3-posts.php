@@ -18,7 +18,7 @@ function top3_posts_menu() {
 	add_menu_page(
 		'Налаштування плагіна ' . TOP3_PLUGIN_NAME,
 		TOP3_PLUGIN_NAME,
-		8,
+		'edit_dashboard',
 		TOP3_PLUGIN_ID,
 		'render_top3_settings_page',
 		'dashicons-welcome-view-site',

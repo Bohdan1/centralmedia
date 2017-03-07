@@ -29,7 +29,9 @@
 <h1> Налаштування реклами </h1>
 
 <form enctype="multipart/form-data" action="" method="POST">
-	<div>Блок реклами: 2180x320 px</div>
+	<!--
+		<div>Блок реклами: 2180x320 px</div>
+	-->
 	<?php wp_nonce_field( 'block1_advertising_img', 'fileup_nonce' ); ?>
 	<div><input name="block1_advertising_img" type="file" /></div>
 	<div style="margin-bottom:10px">
