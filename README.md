@@ -1,5 +1,9 @@
+ver. 0.99.21
+  - зробив виведення ID для публікацій в адмінці (functions.php)
+  - пошук top3 публікацій по ID (/top3-posts/settings.php)
+
 ver. 0.99.20
-	- додав повноваження для top3-posts - "edit_dashboard" (top3-posts.php)
+  - додав повноваження для top3-posts - "edit_dashboard" (top3-posts.php)
 	- надав заст. гол. редактора повноваження до top3-posts
 	- видалив лишні теги з адмінки (залишив теги: CentralMedia та Оновлюється)
 	- створив файли документації для сайту
