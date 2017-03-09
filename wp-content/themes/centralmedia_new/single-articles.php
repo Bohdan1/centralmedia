@@ -44,12 +44,6 @@
                                 }
                             ?>
 			            </div>
-                        <?php
-                            $post_img_url = get_the_post_thumbnail_url( '', 'large' );
-                            if ( $post_img_url ) {
-                                echo '<img class="user-video-width" alt="Зображення новини" src="' . $post_img_url . '">';
-                            }
-                        ?>
 
 			            <div class="single-post-text">
 			            	<?php the_content(); ?>
