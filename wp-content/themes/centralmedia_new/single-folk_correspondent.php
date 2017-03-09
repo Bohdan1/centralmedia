@@ -51,47 +51,22 @@
                     wp_reset_postdata();
                 else :
                     // If no content, include the "No posts found" template.
-                    echo '<div> Народних кореспондентів не знайдено </div>';
+                    echo '<div>Народного кореспондента не знайдено</div>';
                 endif;
             ?>
         </div>
 
-        <div class="five-block-with-line hide-on-med-and-down">
-            <div class="big-sign-line">
-                НОВИНИ
-                <span>ПАРТНЕРІВ</span>
-            </div>
-            <div class="block-line"></div>
-            <div class="small-sign-line">ОПИТУВАННЯ
-                <img class="line-img-five" alt="line" src="<?php bloginfo('template_url') ?>/img/medical-result.svg">
-            </div>
-        </div>
-
-        <div class="five-block-with-line hide-on-large-only">
-            <div class="big-sign-line">НОВИНИ
-            <span>ПАРТНЕРІВ</span>
-        </div>
-            <div class="block-line"></div>
-        </div>
-
-        <div class="row">
-            <div class="col l6 s12 m6 devider">
-                <?php
-                    //show partners news
-                    get_template_part('template-parts/partners', 'news');
-                ?>
-            </div>
-            <div class="five-block-with-line hide-on-large-only">
-                <div class="small-sign-line">ОПИТУВАННЯ<img class="line-img-five" alt="line" src="<?php bloginfo('template_url') ?>/img/medical-result.svg"></div>
+        <div class="col l4 m4 s12">
+            <div class="third-block-with-line">
+                <div class="big-sign-line-one-video"><span>НОВИНИ</span></div>
                 <div class="block-line"></div>
             </div>
-            <div class="col l6 s12 m6 ">
-                <?php
-                    //show polls
-                    get_template_part('template-parts/polls');
-                ?>
-            </div>
+            <?php
+                //show latest news
+                get_template_part('template-parts/latest', 'news');
+            ?>
         </div>
+        
     </div>
 </div>
 
@@ -181,16 +156,53 @@
         </div>
     </div>
 
+    
     <div class="advertisment-all-blogs">
         <?php
             //show advertising block
             get_template_part('template-parts/advertising', 'block-1');
-        ?>
+            ?>
+        </div>
     </div>
 
-    <?php
-        //latest news and polls
-        get_template_part('content', 'footer');
-    ?>
-</div>
+    <div class="five-block-with-line hide-on-med-and-down">
+        <div class="big-sign-line">
+            НОВИНИ
+            <span>ПАРТНЕРІВ</span>
+        </div>
+        <div class="block-line"></div>
+        <div class="small-sign-line">ОПИТУВАННЯ
+            <img class="line-img-five" alt="line" src="<?php bloginfo('template_url') ?>/img/medical-result.svg">
+        </div>
+    </div>
+
+    <div class="five-block-with-line hide-on-large-only">
+        <div class="big-sign-line">НОВИНИ
+        <span>ПАРТНЕРІВ</span>
+    </div>
+        <div class="block-line"></div>
+    </div>
+
+    <div class="row">
+        <div class="col l6 s12 m6 devider">
+            <?php
+                //show partners news
+                get_template_part('template-parts/partners', 'news');
+            ?>
+        </div>
+        <div class="five-block-with-line hide-on-large-only">
+            <div class="small-sign-line">ОПИТУВАННЯ
+                <img class="line-img-five" alt="line" src="<?php bloginfo('template_url') ?>/img/medical-result.svg">
+            </div>
+            <div class="block-line"></div>
+        </div>
+        <div class="col l6 s12 m6 ">
+            <?php
+                //show polls
+                get_template_part('template-parts/polls');
+            ?>
+        </div>
+    </div>
+
+
     <?php get_footer(); ?>

@@ -77,6 +77,6 @@
 </div>
 <br>
 
-<?php get_template_part('content', 'footer') ?>
+<?php get_template_part('template-parts/content', 'footer') ?>
 
 <?php get_footer(); ?>

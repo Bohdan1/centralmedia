@@ -154,7 +154,7 @@
 
 	<?php
         //latest news and polls
-        get_template_part('content', 'footer');
+        get_template_part('template-parts/content', 'footer');
     ?>
 
 </div>

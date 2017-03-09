@@ -1,3 +1,7 @@
+ver. 0.99.25
+  - баги на сторінці single-folk_correspondent.php
+  - переніс content-footer.php в папку template-parts
+
 ver. 0.99.24
   - виправив помилку з дублюванням головних зображень (single-articles.php)
 
