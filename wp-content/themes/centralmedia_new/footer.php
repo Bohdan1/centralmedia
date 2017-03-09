@@ -4,7 +4,10 @@
         <div class="row">
             <div class="col l6 m12 s12">
                 <a href="<?php echo get_home_url(); ?>"><img class="footer-logo" src="<?php bloginfo('template_url') ?>/img/logo/CMedia.svg" alt="Логотип"></a>
-                <p class="footer-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p class="footer-about">Передрук або часткове відтворення матеріалів опублікованих на central-media.net дозволене за умови посилання на “Центральне медіа”.<br>
+Для інтернет-видань обов'язковим є пряме, відкрите для пошукових систем, гіперпосилання в першому абзаці на конкретний матеріал central-media.net<br>
+Редакція не несе відповідальності за достовірність інформації опублікованої в розділі “Народний кореспондент” і може не погоджуватись з думками авторів блогів.
+</p>
                 <div class="clear"></div>
             </div>
             <div class="col l6 m12 s12">
@@ -38,18 +41,16 @@
                 </div>
                 <div class="social-text-footer">
                     <div>
-                        Засновник проекту: Олег Стефанюк<br>
-                        Головний редактор: Олег Стефаюк<br>
-                        Редактор-засновник: Олег Стефанюк<br>
-                        E-mail редакції: email@gmail.com<br>
-                        Webmaster: email@gmail.com
+                        Головний редактор: Мирослав Откович<br>
+                        Електронна адреса: centralnemedia@gmail.com<br>
+                        Електронна адреса редакції: centralmediared@gmail.com
                     </div>
                 </div>
             </div>
         </div>
         <div class="madeby">
         <a href="http://platform-it.com/">
-            Made by PLATFORM IT-COMPANY
+            made by platform it-company
             </a>
         </div>
     </div>
