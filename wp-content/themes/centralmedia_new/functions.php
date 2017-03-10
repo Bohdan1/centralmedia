@@ -1192,15 +1192,24 @@ function youtube_iframe_url( $url ) {
 add_action( 'admin_menu', 'add_user_menu_bubble' );
 function add_user_menu_bubble() {
 	global $menu;
-	$count = wp_count_posts( 'blogs' )->pending; //На підтверджені
-	if ( $count ) {
+	$blogs_pending_count = wp_count_posts( 'blogs' )->pending; //На підтверджені
+	$folk_correspondent_pending_count = wp_count_posts( 'folk_correspondent' )->pending; //На підтверджені
+	if ( $blogs_pending_count ) {
         foreach( $menu as $key => $value ) {
-			if( $menu[$key][2] == 'edit.php?post_type=blogs' ) {
-				$menu[$key][0] .= ' <span class="awaiting-mod"><span class="pending-count">' . $count . '</span></span>';
+			if ( $menu[$key][2] == 'edit.php?post_type=blogs' ) {
+				$menu[$key][0] .= ' <span class="awaiting-mod"><span class="pending-count">' . $blogs_pending_count . '</span></span>';
 				break;
-			}
-		}
-	}
+			} //end if
+		} //end while
+	} //end if
+    if ( $folk_correspondent_pending_count ) {
+        foreach( $menu as $key => $value ) {
+            if ( $menu[$key][2] == 'edit.php?post_type=folk_correspondent' ) {
+                $menu[$key][0] .= ' <span class="awaiting-mod"><span class="pending-count">' . $folk_correspondent_pending_count . '</span></span>';
+                break;
+            } //end if
+		} //end while
+	} //end if
 }
 
 // колонка "ID" в админке

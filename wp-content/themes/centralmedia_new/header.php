@@ -31,8 +31,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <?php wp_head(); ?>
-
-
 </head>
 <body>
     <div class="header">
@@ -143,7 +141,6 @@
             <?php
         }
         ?>
-
         <li><a class="black-text" href="<?php echo get_post_type_archive_link('articles'); ?>">СТАТТІ</a></li>
         <li><a class="black-text" href="<?php echo get_post_type_archive_link('video'); ?>">ВІДЕО</a></li>
         <li><a class="black-text" href="<?php echo get_post_type_archive_link('blogs'); ?>">БЛОГИ</a></li>
@@ -167,6 +164,7 @@
     </div>
 
     <!-- Modal Structure -->
+    <!--
     <div id="modal4" class="modal">
         <div class="modal-content">
             <h4>НАРОДНИЙ КОРЕСПОНДЕНТ</h4>
@@ -177,5 +175,99 @@
             <a href="#!" class=" modal-action modal-close waves-effect waves-green black-text btn-flat">Закрити</a>
         </div>
     </div>
+    -->
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <h4>НАРОДНИЙ КОРИСПОНДЕНТ</h4>
+            <p>Поділіться своєю новиною!</p>
+            <form name="send" method="post" action="" enctype="multipart/form-data">
+                <div class="share-name">
+                    Ім'я та прізвище:
+                    <input type="text" name="author-name" size="20" required>
+                </div>
+                <!--
+                <div class="share-name">
+                    Фото або відео:
+                    <input type="file" size="20" name="post-files[]" multiple="multiple" required accept="image/*,video/*">
+                    <input type="hidden" name="post_id" id="post_id" value="55" />
+                    <?php wp_nonce_field( 'my_image_upload', 'my_image_upload_nonce' ); ?>
+                    <code>максимальний розмір 200мб</code>
+                </div>
+                <div class="share-text">
+                    Коментар:
+                    <textarea name="description" cols="40" rows="3" required=""></textarea>
+                </div>
+                -->
+                <?php wp_editor( '', 'wpeditor', array('textarea_name' => 'content', 'quicktags' => 0, 'drag_drop_upload' => 1) ); ?>
+                <div class="share-button">
+                    <input class="btn-flat" type="submit" value="Відправити">
+                    <input class="btn-flat" type="reset" value="Очистити">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green black-text btn-flat">
+                Закрити
+            </a>
+        </div>
+    </div>
+
+    <?php
+        define( 'WP_USE_THEMES', false );
+        require( $_SERVER['DOCUMENT_ROOT'] .'/wp-blog-header.php' );
+        
+        if ( isset( $_POST['author-name'] ) ) {
+             $post_title = 'Народний кориспондент'; //$_POST['title'];
+            $post_author = $_POST['author-name'];
+            $post_files = $_FILES['post-files'];
+            $post_content = $_POST['content'];
+            $new_post = array(
+                'ID' => '',
+                //'post_author' => $user->ID,
+                //'post_category' => array( $post_category ),
+                'post_content' => $post_content,
+                'post_title' => $post_author,
+                'post_status' => 'pending',//'draft',
+                'post_type' => 'folk_correspondent'
+            );
+            $post_id = wp_insert_post( $new_post );
+            $post = get_post( $post_id );
+            echo '
+                <script>
+                    alert("Повідомлення відправлено!");
+                </script>
+            ';
+
+
+            /*
+            $post_title = 'Народний кориспондент'; //$_POST['title'];
+            $post_author = $_POST['author-name'];
+            $post_files = $_FILES['post-files'];
+            echo '
+                <script> 
+                    console.log(' . json_encode( $post_files ) . ');
+                </script>
+            ';
+            $post_desc = $_POST['description'];
+            $new_post = array(
+                'ID' => '',
+                //'post_author' => $user->ID,
+                //'post_category' => array( $post_category ),
+                'post_content' => $post_file . $post_desc,
+                'post_title' => $post_author,
+                'post_status' => 'pending',//'draft',
+                'post_type' => 'folk_correspondent'
+            );
+            $post_id = wp_insert_post( $new_post );
+            $post = get_post( $post_id );
+            echo '
+                <script>
+                    alert("Повідомлення відправлено!");
+                </script>
+            ';
+            */
+        }
+    ?>
 
 
