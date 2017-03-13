@@ -233,8 +233,6 @@
                         }
                     }
                 }
-                echo '<br><br><br><br><br><br><br>';
-                var_dump($upload_files_IDs);
 
                 //за допомогою ID завантажених файлів получаємо посилання на них
                 $post_thumbnail_ID = false; //змінна для перевірки чи задане головне зображення для поста
@@ -256,8 +254,6 @@
                         $upload_files_url .= wp_get_attachment_url( $upload_files_ID ) . '<br>';
                     }
                 }
-                echo '<br><br>';
-                var_dump($upload_files_url);
             }
             
             $post_author = $_POST['author-name'];
