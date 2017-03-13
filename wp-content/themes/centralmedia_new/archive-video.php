@@ -3,7 +3,7 @@
 <div class="row home-content">
 	<?php
 		//template for top-3 posts
-		get_template_part('template-parts/top3', 'posts');
+		get_template_part('template-parts/top3-posts/video', 'top3-posts');
 	?>
 </div>
 

@@ -1,3 +1,18 @@
+# centralmedia
+
+ver. 0.99.28
+  - top3 posts. Окремі блоки для: (plugins\top3-posts: settings.php та check-form-data.php)
+    - головної
+    - архіву відео
+    - архіву статтей
+  - вивів нові блоки на відповідних сторінках
+    - головна (content-home-desktop.php та content-home-mobile.php)
+    - архів відео (archive-video.php)
+    - архів статтей (archive-articles.php)
+    - архів блогів (archive-blogs.php)
+  - редагував документацію для top3-posts
+
+
 ver. 0.99.27
   - доробив функціонал форми народного кореспондента (functions.php, header.php)
   - якщо в народному кореспонденті не задано головне зображення, то на головній виводиться тільки текст (folk-correspondent-desktop.php, folk-correspondent-mobile.php)
