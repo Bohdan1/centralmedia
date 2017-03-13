@@ -1256,7 +1256,7 @@ footer {
 
 .user-video-width {
     margin-top: 10px;
-    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .user-video {
@@ -2889,4 +2889,23 @@ iframe {
     .fix-height-top3 {
         bottom: 0%;
     }
+}
+
+
+/* класи для правильного відображення зображень, редагованих у візуальному редакторі */
+
+.alignleft {
+    display: inline;
+    float: left;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }

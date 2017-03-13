@@ -179,27 +179,23 @@
 
     <div id="modal4" class="modal">
         <div class="modal-content">
-            <h4>НАРОДНИЙ КОРИСПОНДЕНТ</h4>
+            <h4>НАРОДНИЙ КОРЕСПОНДЕНТ</h4>
             <p>Поділіться своєю новиною!</p>
             <form name="send" method="post" action="" enctype="multipart/form-data">
                 <div class="share-name">
                     Ім'я та прізвище:
                     <input type="text" name="author-name" size="20" required>
                 </div>
-                <!--
                 <div class="share-name">
                     Фото або відео:
                     <input type="file" size="20" name="post-files[]" multiple="multiple" required accept="image/*,video/*">
-                    <input type="hidden" name="post_id" id="post_id" value="55" />
-                    <?php wp_nonce_field( 'my_image_upload', 'my_image_upload_nonce' ); ?>
+                    <?php wp_nonce_field( 'post-files', 'post-files_nonce' ); ?>
                     <code>максимальний розмір 200мб</code>
                 </div>
                 <div class="share-text">
                     Коментар:
                     <textarea name="description" cols="40" rows="3" required=""></textarea>
                 </div>
-                -->
-                <?php wp_editor( '', 'wpeditor', array('textarea_name' => 'content', 'quicktags' => 0, 'drag_drop_upload' => 1) ); ?>
                 <div class="share-button">
                     <input class="btn-flat" type="submit" value="Відправити">
                     <input class="btn-flat" type="reset" value="Очистити">
@@ -214,59 +210,80 @@
     </div>
 
     <?php
+        //обробка файлів завантажених через форму Народного кореспондента
         define( 'WP_USE_THEMES', false );
         require( $_SERVER['DOCUMENT_ROOT'] .'/wp-blog-header.php' );
-        
+
         if ( isset( $_POST['author-name'] ) ) {
-             $post_title = 'Народний кориспондент'; //$_POST['title'];
+            if ( isset( $_POST['post-files_nonce'] ) && wp_verify_nonce( $_POST['post-files_nonce'], 'post-files' ) ) {
+                $files = $_FILES["post-files"];
+                foreach ( $files['name'] as $key => $value ) {
+                    if ( $files['name'][$key] ) {
+                        $file = array(
+                            'name' => $files['name'][$key],
+                            'type' => $files['type'][$key],
+                            'tmp_name' => $files['tmp_name'][$key],
+                            'error' => $files['error'][$key],
+                            'size' => $files['size'][$key]
+                        );
+                        $_FILES = array ( "post-files" => $file );
+                        foreach ( $_FILES as $file => $array ) {
+                            //завантажуємо файли на сервер та зберігаємо їхній ID в масив $upload_files_IDs
+                            $upload_files_IDs[] = folk_correspondent_attachment( $file, 0 );
+                        }
+                    }
+                }
+                echo '<br><br><br><br><br><br><br>';
+                var_dump($upload_files_IDs);
+
+                //за допомогою ID завантажених файлів получаємо посилання на них
+                $post_thumbnail_ID = false; //змінна для перевірки чи задане головне зображення для поста
+                foreach( $upload_files_IDs as $upload_files_ID ) {
+                    //визначаємо тип файлу, щоб правильно його добавити в контент поста
+                    if ( wp_attachment_is( 'image', $upload_files_ID ) ) {
+                        //якщо головне зображення не задане, то присвоюємо змінній $post_thumbnail_ID ID потрібної картинки
+                        if ( $post_thumbnail_ID == false ) {
+                            $post_thumbnail_ID = $upload_files_ID;
+                        }
+                        else {
+                            $upload_files_url .= '<img src="' . wp_get_attachment_url( $upload_files_ID ) . '"><br>';
+                        }
+                    }
+                    else if ( wp_attachment_is( 'video', $upload_files_ID ) ) {
+                        $upload_files_url .= '[video src="' . wp_get_attachment_url( $upload_files_ID ) . '"]<br>';
+                    }
+                    else {
+                        $upload_files_url .= wp_get_attachment_url( $upload_files_ID ) . '<br>';
+                    }
+                }
+                echo '<br><br>';
+                var_dump($upload_files_url);
+            }
+            
             $post_author = $_POST['author-name'];
             $post_files = $_FILES['post-files'];
-            $post_content = $_POST['content'];
+            $post_content = $_POST['description'];
             $new_post = array(
                 'ID' => '',
                 //'post_author' => $user->ID,
                 //'post_category' => array( $post_category ),
-                'post_content' => $post_content,
+                'post_content' => $upload_files_url . $post_content,
                 'post_title' => $post_author,
                 'post_status' => 'pending',//'draft',
-                'post_type' => 'folk_correspondent'
+                'post_type' => 'folk_correspondent',
+                'meta_input' => array( 'folk_correspondent_name' => $post_author )
             );
             $post_id = wp_insert_post( $new_post );
-            $post = get_post( $post_id );
-            echo '
+            //$post = get_post( $post_id );
+            
+            set_post_thumbnail( $post_id, $post_thumbnail_ID );
+
+            if ( $post_id != 0 ) {
+                echo '
                 <script>
                     alert("Повідомлення відправлено!");
-                </script>
-            ';
-
-
-            /*
-            $post_title = 'Народний кориспондент'; //$_POST['title'];
-            $post_author = $_POST['author-name'];
-            $post_files = $_FILES['post-files'];
-            echo '
-                <script> 
-                    console.log(' . json_encode( $post_files ) . ');
-                </script>
-            ';
-            $post_desc = $_POST['description'];
-            $new_post = array(
-                'ID' => '',
-                //'post_author' => $user->ID,
-                //'post_category' => array( $post_category ),
-                'post_content' => $post_file . $post_desc,
-                'post_title' => $post_author,
-                'post_status' => 'pending',//'draft',
-                'post_type' => 'folk_correspondent'
-            );
-            $post_id = wp_insert_post( $new_post );
-            $post = get_post( $post_id );
-            echo '
-                <script>
-                    alert("Повідомлення відправлено!");
-                </script>
-            ';
-            */
+                </script>';
+            }
         }
     ?>
 

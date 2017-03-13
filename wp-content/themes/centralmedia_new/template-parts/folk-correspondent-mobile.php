@@ -13,10 +13,19 @@
 				$query->the_post();
 				echo '
 				<div class="nar-kor-block">
-					<a href="' . get_the_permalink() . '" class="no-hover-blog-black black-text">
-						<div class="nar-kor-img-mob">
-							<img alt="img" class="center" width="100%" src="' . get_the_post_thumbnail_url( '', 'medium' ) . '">
+					<a href="' . get_the_permalink() . '" class="no-hover-blog-black black-text">';
+						$post_thumbnail_url = get_the_post_thumbnail_url( '', 'medium' );
+						if ( $post_thumbnail_url ) {
+							echo '
+								<div class="nar-kor-img-mob">
+									<img alt="img" class="center" width="100%" src="' . $post_thumbnail_url . '">
+								</div>';
+						}
+						echo '
+						<div class="nar-kor-text-mob">' .
+							get_post_meta( $post->ID, 'folk_correspondent_name', true ) . '
 						</div>
+						<div class="nar-kor-text-mob">' . get_the_time('j F Y') . ' о ' . get_the_time('G:i') . '</div>
 						<div class="nar-kor-text-mob">' .
 							short_post_desc( 400 ) . '
 						</div>
