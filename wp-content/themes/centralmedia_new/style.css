@@ -1304,7 +1304,7 @@ footer {
     position: fixed;
     z-index: 999;
     display: none;
-    bottom: 100px;
+    bottom: 110px;
     right: 15px;
     cursor: pointer;
 }
@@ -1312,7 +1312,7 @@ footer {
 #people-share {
     position: fixed;
     z-index: 9999;
-    bottom: 40px;
+    bottom: 53px;
     right: 15px;
     cursor: pointer;
 }
@@ -2909,3 +2909,53 @@ iframe {
     margin-right: auto;
     margin-left: auto;
 }
+
+
+/* pagination */
+.pagination {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: auto;
+    height: auto;
+    right: auto;
+    position: static;
+    margin-top: 0px;
+    color: #000;
+    text-align: center;
+}
+
+.pagination a {
+    color: #000;
+}
+
+.prev {
+    font-weight: bolder;
+    color: #d82d19;
+    font-size: 25px;
+}
+
+.next {
+    font-weight: bolder;
+    color: #d82d19;
+    font-size: 25px;
+}
+
+.page-numbers {
+    color: black !important;
+    text-decoration: none;
+    margin: 7px;
+}
+
+.current {
+    background-color: #d82d19;
+    width: auto;
+    height: auto;
+    right: auto;
+    position: static;
+    margin: 7px;
+    color: white !important;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+
+/* end pagination */

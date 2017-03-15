@@ -508,11 +508,11 @@ function show_no_img_post() {
 
     function author_posts_count( $author_id ) {        //counting the number of posts
         $published_posts = array();
-        $published_posts[] = count_user_posts( $author_id, 'news', true );
-        $published_posts[] = count_user_posts( $author_id, 'articles', true );
+        //$published_posts[] = count_user_posts( $author_id, 'news', true );
+        //$published_posts[] = count_user_posts( $author_id, 'articles', true );
         $published_posts[] = count_user_posts( $author_id, 'blogs', true );
-        $published_posts[] = count_user_posts( $author_id, 'partner-news', true );
-        $published_posts[] = count_user_posts( $author_id, 'video', true );
+        //$published_posts[] = count_user_posts( $author_id, 'partner-news', true );
+        //$published_posts[] = count_user_posts( $author_id, 'video', true );
         $posts_count = 0;
         for ( $i = 0; $i < count( $published_posts ); $i++ ) {
             $posts_count += $published_posts[$i];
@@ -521,23 +521,30 @@ function show_no_img_post() {
     }
 //end and author tag settings
 
-/*
+
 //pagination settings
     //delete H2 from pagination template
     add_filter( 'navigation_markup_template', 'my_navigation_template', 10, 2 );
     function my_navigation_template( $template, $class ) {
-        return '
-        <nav class="%1$s" role="navigation">
-            <div class="nav-links">%3$s</div>
-        </nav>    
-        ';
+	    return '
+	    <nav class="%1$s" role="navigation">
+	        <div class="nav-links">%3$s</div>
+	    </nav>    
+	    ';
     }
     $pagination_args = array(
         'prev_text' => __( '&#8249;' ),
         'next_text' => __( '&#8250;' ),
-        );
+    );
+
+	/*
+    Вид базового шаблону:
+    <nav class="navigation %1$s" role="navigation">
+    <h2 class="screen-reader-text">%2$s</h2>
+    <div class="nav-links">%3$s</div>
+    </nav>
+    */
 //end pagination settings
-*/
 
 
 //login form settings
@@ -785,71 +792,38 @@ function show_no_img_post() {
 
 
 //hide not used fields
-
-function is_user_role( $role, $user_id = null ) {
-    $user = is_numeric( $user_id ) ? get_userdata( $user_id ) : wp_get_current_user();
-    if( ! $user )
-        return false;
-    return in_array( $role, (array) $user->roles );
-}
-
-function remove_menus() {
-    if ( is_user_role( 'administrator' ) || is_user_role( 'editor' ) ) {
-        remove_menu_page( 'edit.php' );                   //Записи
-        remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
-        remove_menu_page( 'themes.php' );                 //Теми
-        remove_menu_page( 'plugins.php' );                //Плагіни
-        remove_menu_page( 'tools.php' );                  //Інструменти
-        //remove_menu_page( 'options-general.php' );        //Налаштування
-        remove_menu_page( 'vortex_like_dislike' );   //Плагін Rating System
-        remove_menu_page( 'wp-share-buttons-analytics-by-getsocial/init.php' );   //Плагін GetSocial
-        remove_menu_page( 'wpcf7' );   //Плагін Contact Form 7
+    function is_user_role( $role, $user_id = null ) {
+        $user = is_numeric( $user_id ) ? get_userdata( $user_id ) : wp_get_current_user();
+        if( ! $user )
+            return false;
+        return in_array( $role, (array) $user->roles );
     }
-    else {
-        remove_menu_page( 'index.php' );                  //Консоль
-        remove_menu_page( 'edit.php' );                   //Записи
-        remove_menu_page( 'upload.php' );                 //Медіафайли
-        remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
-        remove_menu_page( 'edit-comments.php' );          //Комментарі
-        remove_menu_page( 'themes.php' );                 //Теми
-        remove_menu_page( 'plugins.php' );                //Плагіни
-        remove_menu_page( 'users.php' );                  //Користувачі
-        remove_menu_page( 'tools.php' );                  //Інструменти
-        remove_menu_page( 'options-general.php' );        //Налаштування
-    }
-}
-add_action( 'admin_menu', 'remove_menus' );
-/*
+
     function remove_menus() {
-        global $menu;
-        $restricted = array();
         if ( is_user_role( 'administrator' ) || is_user_role( 'editor' ) ) {
-            $restricted = array(
-                //__('Dashboard'),
-                __('Posts'),
-                __('Pages'),
-                __('Tools'),
-            );
+            remove_menu_page( 'edit.php' );                   //Записи
+            remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
+            remove_menu_page( 'themes.php' );                 //Теми
+            remove_menu_page( 'plugins.php' );                //Плагіни
+            remove_menu_page( 'tools.php' );                  //Інструменти
+            //remove_menu_page( 'options-general.php' );      //Налаштування
+            remove_menu_page( 'vortex_like_dislike' );        //Плагін Rating System
+            remove_menu_page( 'social-warfare' );             //Плагін Social Warfare
         }
-        else{
-            $restricted = array(
-                //__('Dashboard'),
-                __('Posts'),
-                __('Pages'),
-                __('Comments'),
-                __('Tools'),
-            );
-        }
-        end ( $menu );
-        while ( prev($menu) ) {
-            $value = explode(' ', $menu[key($menu)][0]);
-            if( in_array( ($value[0] != NULL ? $value[0] : "" ) , $restricted ) ) {
-                unset( $menu[key($menu)] );
-            }
+        else {
+            remove_menu_page( 'index.php' );                  //Консоль
+            remove_menu_page( 'edit.php' );                   //Записи
+            remove_menu_page( 'upload.php' );                 //Медіафайли
+            remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
+            remove_menu_page( 'edit-comments.php' );          //Комментарі
+            remove_menu_page( 'themes.php' );                 //Теми
+            remove_menu_page( 'plugins.php' );                //Плагіни
+            remove_menu_page( 'users.php' );                  //Користувачі
+            remove_menu_page( 'tools.php' );                  //Інструменти
+            remove_menu_page( 'options-general.php' );        //Налаштування
         }
     }
     add_action( 'admin_menu', 'remove_menus' );
-*/
 //end hide not used fields
 
 
@@ -1009,7 +983,7 @@ add_action( 'admin_menu', 'remove_menus' );
 
 
 
-//get news using ajax
+//get posts using ajax
     function true_loadmore_scripts() {
         wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
         wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
@@ -1077,7 +1051,7 @@ add_action( 'admin_menu', 'remove_menus' );
     }
     add_action('wp_ajax_loadmore', 'true_load_posts');
     add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
-//end get news using ajax
+//end get posts using ajax
 
 
 
@@ -1264,4 +1238,6 @@ function folk_correspondent_attachment( $file_handler, $post_id, $set_thu=false 
 	//if ($set_thu) set_post_thumbnail($post_id, $attach_id);
 	return $attach_id;
 }
+
+
 ?>

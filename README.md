@@ -1,5 +1,12 @@
 # centralmedia
 
+ver. 0.99.29
+  - видалив плагіни:
+    - GetSocial
+    - Contact Form 7
+  - встановив плагін Social Warfare (кнопки поділитися у соц. мережах)
+  - підняв кнопки "олівець" та "вгору" (style.css)
+
 ver. 0.99.28
   - top3 posts. Окремі блоки для: (plugins\top3-posts: settings.php та check-form-data.php)
     - головної
