@@ -496,11 +496,15 @@ function show_no_img_post() {
 }
 
 
-//tag and author settings
+//category, tag and author settings
     function my_pre_get_tags( $query ) {
         if ( !is_admin() && $query->is_archive ) {
-            if ( $query->is_tag || $query->is_author ) {
-                $query->set( 'post_type', array('news', 'articles', 'blogs', 'partner-news', 'video') );
+            if ( $query->is_tag || $query->is_category ) {
+                //$query->set( 'post_type', array('news', 'articles', 'blogs', 'partner-news', 'video') );
+                $query->set( 'post_type', 'any' );
+            }
+            else if ( $query->is_author  ) {
+                 $query->set( 'post_type', 'blogs' );
             }
         }
     }
@@ -994,30 +998,28 @@ function show_no_img_post() {
         $args = unserialize( stripslashes( $_POST['query'] ) );
         $args['paged'] = $_POST['page'] + 1; // следующая страница
         $args['post_status'] = 'publish';
-        $q = new WP_Query( $args );
 
         /*
-            $current_url = $_SERVER['HTTP_REFERER'];
-            $search_page_url = '/?s=';
-            //$test = strpos( $current_url, $search_page_url );
-            if ( strpos( $current_url, $search_page_url ) ) {
-                $args = unserialize( stripslashes( $_POST['wp_query'] ) );
-                $args['paged'] = $_POST['page'] + 1; // следующая страница
-                $args['post_status'] = 'publish';
-                $q = new WP_Query( $args );
-                
-                if ( $q->have_posts() ) {
-                    while ( $q->have_posts() ) {
-                        $q->the_post();
-                        show_no_img_post();
-                    } //end while
-                } //end if
-            } //end if
+        $current_url = $_SERVER['HTTP_REFERER'];
+        $category_url = get_site_url() . '/category/';
+        $search_url = get_site_url();
+        $search_url = '/?s=';
+
+        if ( stripos( $current_url, $search_url ) ) {
+             $args['post_type'] = array('news', 'articles', 'video', 'blogs', 'cultural_events', 'partner-news' , 'streams', 'folk_correspondent');
+        }
         */
-        
-        if( $q->have_posts() ) {
-            while( $q->have_posts() ) {
+
+        $q = new WP_Query( $args );
+
+        if ( $q->have_posts() ) {
+            while ( $q->have_posts() ) {
                 $q->the_post();
+                /*
+                if ( stripos( $current_url, $search_url ) ) {
+                    show_no_img_post();
+                }
+                */
                 if ( get_post_type() == "news" ) {
                     //визначаємо чи ми на архівній сторінці новин (бо там виводиться інший шаблон)
                     $archive_news_url = get_site_url() . '/news/';

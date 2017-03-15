@@ -35,25 +35,16 @@
 			</div>
 			
 			<?php 
-				$args = array(
-					'post_type' => 'blogs',
-					'author' => $author_id,
-					'posts_per_page' => 10,
-					'publish' => true,
-					'orderby' => 'date',
-					'order' => 'DESC'
-				);
-				$query = new WP_Query( $args );
-				if( $query->have_posts() ) {
-					while ( $query->have_posts() ) {
-						$query->the_post();
-						echo show_no_img_post();
-					} //end while
-				} //end if
-				else {
-					echo 'Блогів не знайдено';
-				}
-				wp_reset_postdata();
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post(); // Start the Loop
+                        show_no_img_post();
+                    endwhile; //end while
+					echo '<div class="clear"></div>';
+					the_posts_pagination( $pagination_args );
+					wp_reset_postdata();
+				else :
+					echo '<div class="tag-name-description"> У даного автора немає публікацій </div>';
+				endif; //end if
 			?>
 		</div>
 		<div class="col l4 s12 m6">

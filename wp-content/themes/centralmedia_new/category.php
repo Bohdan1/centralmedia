@@ -4,28 +4,22 @@
 	<div class="row">
 		<div class="col l8 m7 s12"> 
 			<div class="tag-name"><?php single_cat_title(); ?></div>
-			<div class="tag-name-description">Матеріали за темою</div>
 			<?php
-				$cat_id = get_cat_ID( single_cat_title('', 0) ); //ID required category
-
-				$args = array(
-                    'post_type' => array('news', 'articles', 'video', 'blogs', 'cultural_events', 'partner-news' , 'streams', 'folk_correspondent'),
-                    'cat' => $cat_id,
-                    'posts_per_page' => 10,
-                    'publish' => true,
-                    'orderby' => 'date'
-                    //'order' => 'DESC'
-                );
-                $query = new WP_Query( $args );
-                if( $query->have_posts() ) {
-                    while ( $query->have_posts() ) {
-                        $query->the_post();
+				if ( have_posts() ) :
+					$slovo = getNumEnding( $query->found_posts, array('запис', 'записи', 'записів') );
+					echo '
+					<div class="tag-name-description">
+						Матеріали за темою (' . $wp_query->found_posts . ' ' . $slovo . ')
+					</div>';
+                    while ( have_posts() ) : the_post(); // Start the Loop
                         show_no_img_post();
-                    }
-                }
-				else {
-					echo '<div> Публікацій за даною категорією не знайдено </div>';
-				}
+                    endwhile; //end while
+					echo '<div class="clear"></div>';
+					the_posts_pagination( $pagination_args );
+					wp_reset_postdata();
+				else :
+					echo '<div class="tag-name-description"> Публікацій за даною темою не знайдено </div>';
+				endif; //end if
 			?>
 		</div>
 
@@ -51,7 +45,6 @@
 						echo '</div>';
 					}
 				}
-
 			?>
 		</div>
 	</div>

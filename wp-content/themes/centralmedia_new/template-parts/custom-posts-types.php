@@ -341,7 +341,7 @@
             'description' => 'Народний кореспондент',
             'public' => true,
             'publicly_queryable' => true,
-            'exclude_from_search' => true,
+            'exclude_from_search' => false,
             'show_ui' => true,
             'show_in_menu' => true,
             'show_in_nav_menus' => true,

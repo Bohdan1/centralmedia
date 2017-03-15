@@ -2966,3 +2966,7 @@ iframe {
 span.swp_share {
     color: white;
 }
+
+.swp_count .swp_label {
+    display:none;
+}
