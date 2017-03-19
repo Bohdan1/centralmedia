@@ -573,9 +573,10 @@ function show_no_img_post() {
                         <div>
                             <a href="<?php bloginfo('url') ?>/wp-login.php?action=lostpassword" id="forgot" class="  black-text waves-effect waves-red btn-flat">Забули пароль?</a>
                         </div>
+                        <?php echo do_shortcode('[apsl-login-lite login_text="Увійти через соц. мережі:"]'); ?>
                     </div>
                 </form>
-                <div class="modal-fooedter "> </div>
+                <div class="modal-fooedter"> </div>
             </div>
         </div>
     <? else: ?>
@@ -805,14 +806,15 @@ function show_no_img_post() {
 
     function remove_menus() {
         if ( is_user_role( 'administrator' ) || is_user_role( 'editor' ) ) {
-            remove_menu_page( 'edit.php' );                   //Записи
-            remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
-            remove_menu_page( 'themes.php' );                 //Теми
-            remove_menu_page( 'plugins.php' );                //Плагіни
-            remove_menu_page( 'tools.php' );                  //Інструменти
-            //remove_menu_page( 'options-general.php' );      //Налаштування
-            remove_menu_page( 'vortex_like_dislike' );        //Плагін Rating System
-            remove_menu_page( 'social-warfare' );             //Плагін Social Warfare
+            remove_menu_page( 'edit.php' );                       //Записи
+            remove_menu_page( 'edit.php?post_type=page' );        //Сторінки
+            remove_menu_page( 'themes.php' );                     //Теми
+            remove_menu_page( 'plugins.php' );                    //Плагіни
+            remove_menu_page( 'tools.php' );                      //Інструменти
+            //remove_menu_page( 'options-general.php' );          //Налаштування
+            remove_menu_page( 'vortex_like_dislike' );            //Плагін Rating System
+            remove_menu_page( 'social-warfare' );                 //Плагін Social Warfare
+            //remove_menu_page( 'accesspress-social-login-lite' );  //Плагін AccessPress Social Login Lite
         }
         else {
             remove_menu_page( 'index.php' );                  //Консоль
