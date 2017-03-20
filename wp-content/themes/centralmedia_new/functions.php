@@ -1190,7 +1190,8 @@ function add_user_menu_bubble() {
 	} //end if
 }
 
-// колонка "ID" в админке
+
+// колонка "ID" в админці
 add_action('admin_init', 'admin_area_ID');
 function admin_area_ID() {
     // для таксономий (рубрик, меток и т.д.)
@@ -1242,6 +1243,24 @@ function folk_correspondent_attachment( $file_handler, $post_id, $set_thu=false 
 	//if ($set_thu) set_post_thumbnail($post_id, $attach_id);
 	return $attach_id;
 }
+
+
+
+// Відключити автоматичне оновлення ядра
+define( 'WP_AUTO_UPDATE_CORE', false );
+add_filter( 'pre_site_transient_update_core', create_function('$a', "return null;") );
+wp_clear_scheduled_hook('wp_version_check');
+
+
+
+//сортування записів по даті в адмінці
+function order_posts_in_admin_by_id( $query ) {
+	if ( is_admin() && $query->is_main_query() ) {
+		$query->set( 'orderby', 'date' );
+		$query->set( 'order', 'DESC' );
+	}
+}
+add_action( 'pre_get_posts', 'order_posts_in_admin_by_id' );
 
 
 ?>
